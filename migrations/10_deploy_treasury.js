@@ -1,10 +1,10 @@
-const TVTToken = artifacts.require("TVT/TVTToken");
+const TVT = artifacts.require("TVT/TVT");
 const Treasury = artifacts.require("Treasury");
 
 module.exports = async function (deployer, _network, _accounts) {
-  const token = await TVTToken.deployed();
+  const tvt = await TVT.deployed();
 
-  const treasury = await deployer.deploy(Treasury, token.address);
+  const treasury = await deployer.deploy(Treasury, tvt.address);
 
   console.log("Deployed", treasury.address);
 };
