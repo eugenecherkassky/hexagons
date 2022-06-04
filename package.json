@@ -1,0 +1,42 @@
+{
+  "name": "tivan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "analyze": "myth analyze --solc-json mythril.json contracts/**/*.sol",
+    "check": "npm-check --skip-unused",
+    "compile": "truffle compile -all",
+    "migrate": "truffle migrate",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenecherkassky/solidity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugenecherkassky/solidity/issues"
+  },
+  "homepage": "https://github.com/eugenecherkassky/solidity#readme",
+  "devDependencies": {
+    "@openzeppelin/contracts": "4.6.0",
+    "@openzeppelin/truffle-upgrades": "1.15.0",
+    "chai": "4.3.6",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0",
+    "npm-check": "5.9.2",
+    "web3-utils": "1.7.3"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "2.0.8",
+    "dotenv": "16.0.1",
+    "truffle": "5.5.16",
+    "truffle-hdwallet-provider": "1.0.17"
+  }
+}
