@@ -3,13 +3,10 @@ pragma solidity 0.8.7;
 
 import "../BaseDeposit.sol";
 
-/**
- * @dev Refil condition.
- */
-abstract contract RefilCondition {
+abstract contract RefillCondition {
     bool internal _isRefillable;
 
-    error RefilConstraint();
+    error RefillConstraint();
 
     constructor(bool isRefillable) {
         _isRefillable = isRefillable;
@@ -24,7 +21,7 @@ abstract contract RefilCondition {
         uint256
     ) internal view virtual {
         if (!_isRefillable && transactions.length != 0) {
-            revert RefilConstraint();
+            revert RefillConstraint();
         }
     }
 }

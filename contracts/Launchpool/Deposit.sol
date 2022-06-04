@@ -8,17 +8,14 @@ import "./ILaunchpool.sol";
 
 import "./Condition/AmountCondition.sol";
 import "./Condition/PeriodCondition.sol";
-import "./Condition/RefilCondition.sol";
+import "./Condition/RefillCondition.sol";
 import "./Condition/TerminationCondition.sol";
 
-/**
- * @dev Deposit
- */
 contract Deposit is
     BaseDeposit,
     AmountCondition,
     PeriodCondition,
-    RefilCondition,
+    RefillCondition,
     TerminationCondition,
     ReentrancyGuard
 {
@@ -34,7 +31,7 @@ contract Deposit is
         BaseDeposit(launchpool, treasury)
         AmountCondition(options.amountMaximum, options.amountMinimum)
         PeriodCondition(options.periodMaximum, options.periodMinimum)
-        RefilCondition(options.isRefillable)
+        RefillCondition(options.isRefillable)
         TerminationCondition(options.isTerminatable, options.terminationPenalty)
     {
         _rate = options.rate;
@@ -63,18 +60,6 @@ contract Deposit is
                 penaltyAmount
             );
         }
-    }
-
-    function deposit(uint256 amount) external {
-        _preValidateDeposit(_transactions, amount);
-
-        Transaction storage transaction = _addTransaction(
-            TransactionKind.DEPOSIT,
-            _msgSender(),
-            amount
-        );
-
-        _transfer(transaction);
     }
 
     function isActive() external view returns (bool) {
@@ -130,6 +115,18 @@ contract Deposit is
         return _rate;
     }
 
+    function refill(uint256 amount) external {
+        _preValidateDeposit(_transactions, amount);
+
+        Transaction storage transaction = _addTransaction(
+            TransactionKind.DEPOSIT,
+            _msgSender(),
+            amount
+        );
+
+        _transfer(transaction);
+    }
+
     function withdraw() external onlyOwner {
         for (uint256 i = 0; i < _transactions.length; i++) {
             if (
@@ -171,7 +168,7 @@ contract Deposit is
     function _preValidateDeposit(
         Transaction[] memory transactions,
         uint256 amount
-    ) internal view override(AmountCondition, RefilCondition) {
+    ) internal view override(AmountCondition, RefillCondition) {
         super._preValidateDeposit(transactions, amount);
     }
 }

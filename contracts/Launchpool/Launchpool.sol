@@ -36,7 +36,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         _treasury = treasury;
     }
 
-    function createDeposit(string memory program) external {
+    function createDeposit(string memory program, uint256 amount) external {
         address owner = _msgSender();
 
         Deposit deposit = new Deposit(
@@ -49,9 +49,11 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
         _ownerDeposits[owner].push(deposit);
 
+        deposit.transferOwnership(owner);
+
         emit LaunchpoolDepositCreated(address(deposit));
 
-        deposit.transferOwnership(owner);
+        deposit.refill(amount);
     }
 
     function initialize(
