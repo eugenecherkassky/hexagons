@@ -6,11 +6,11 @@ const Treasury = artifacts.require("Treasury");
 const TVTToken = artifacts.require("TVT/TVTToken");
 const TVTBToken = artifacts.require("TVTB/TVTBToken");
 
-const depositOptions = require("./DepositOptions");
+const depositPrograms = require("./DepositPrograms");
 
 module.exports = {
   createLaunchpool: function (mint, treasury) {
-    return Launchpool.new(treasury, depositOptions, [
+    return Launchpool.new(treasury, depositPrograms, [
       {
         agreement: mint,
         reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,

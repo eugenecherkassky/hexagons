@@ -12,7 +12,7 @@ import "./Deposit.sol";
 contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     Deposit[] private _deposits;
 
-    BaseDeposit.Options[] private _depositOptions;
+    BaseDeposit.Options[] private _depositPrograms;
 
     mapping(address => Deposit[]) private _ownerDeposits;
 
@@ -22,16 +22,16 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
     IBankAccount private _treasury;
 
-    error LaunchpoolDepositOptionsNotExist(string program);
+    error LaunchpoolDepositProgramNotExists(string program);
 
     event LaunchpoolDepositCreated(address account);
 
     constructor(
         IBankAccount treasury,
-        BaseDeposit.Options[] memory depositOptions,
+        BaseDeposit.Options[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) BankAccount(treasury.getToken()) Refillable(refillableAgreements) {
-        initialize(depositOptions, refillableAgreements);
+        initialize(depositPrograms, refillableAgreements);
 
         _treasury = treasury;
     }
@@ -42,7 +42,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         Deposit deposit = new Deposit(
             this,
             _treasury,
-            getDepositOptions(program)
+            getDepositProgramOptions(program)
         );
 
         _deposits.push(deposit);
@@ -55,13 +55,13 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     }
 
     function initialize(
-        BaseDeposit.Options[] memory depositOptions,
+        BaseDeposit.Options[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) public initializer {
-        delete _depositOptions;
+        delete _depositPrograms;
 
-        for (uint8 i = 0; i < depositOptions.length; i++) {
-            _depositOptions.push(depositOptions[i]);
+        for (uint8 i = 0; i < depositPrograms.length; i++) {
+            _depositPrograms.push(depositPrograms[i]);
         }
 
         _setRefillableAgreements(refillableAgreements);
@@ -84,18 +84,26 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         return _ownerDeposits[_msgSender()];
     }
 
-    function getDepositOptions(string memory program)
+    function getDepositPrograms()
+        public
+        view
+        returns (BaseDeposit.Options[] memory)
+    {
+        return _depositPrograms;
+    }
+
+    function getDepositProgramOptions(string memory program)
         public
         view
         returns (BaseDeposit.Options memory)
     {
-        for (uint8 i = 0; i < _depositOptions.length; i++) {
-            if (_isEqual(_depositOptions[i].program, program)) {
-                return _depositOptions[i];
+        for (uint8 i = 0; i < _depositPrograms.length; i++) {
+            if (_isEqual(_depositPrograms[i].program, program)) {
+                return _depositPrograms[i];
             }
         }
 
-        revert LaunchpoolDepositOptionsNotExist(program);
+        revert LaunchpoolDepositProgramNotExists(program);
     }
 
     function getTransfersAmount(uint256 date) external view returns (uint256) {

@@ -3,7 +3,7 @@ const Launchpool = artifacts.require("Launchpool/Launchpool");
 const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
 
-const depositOptions = require("../test/DepositOptions");
+const depositPrograms = require("../test/DepositPrograms");
 
 module.exports = async function (deployer, _network, _accounts) {
   require("dotenv").config();
@@ -16,7 +16,7 @@ module.exports = async function (deployer, _network, _accounts) {
   const launchpool = await deployer.deploy(
     Launchpool,
     treasury.address,
-    depositOptions,
+    depositPrograms,
     [
       {
         agreement: mint.address,
