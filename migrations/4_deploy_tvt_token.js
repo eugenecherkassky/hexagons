@@ -1,6 +1,6 @@
 const TVTToken = artifacts.require("TVT/TVTToken");
 
-module.exports = function (deployer) {
+module.exports = async function (deployer) {
   require("dotenv").config();
 
   deployer.deploy(

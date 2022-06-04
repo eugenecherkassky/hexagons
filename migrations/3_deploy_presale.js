@@ -6,7 +6,7 @@ module.exports = async function (deployer, _network, _accounts) {
 
   const tvt = await TVT.deployed();
 
-  const crowdsale = await deployer.deploy(Presale, tvt.address, false);
+  const presale = await deployer.deploy(Presale, tvt.address, false);
 
-  console.log("Deployed", crowdsale.address);
+  console.log("Deployed", presale.address);
 };
