@@ -24,6 +24,22 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
         uint8 terminationPenalty;
     }
 
+    struct Parameters {
+        address agreement;
+        uint256 amount;
+        uint256 amountMaximum;
+        uint256 amountMinimum;
+        uint256 beginDateTime;
+        bool isClosed;
+        bool isRefillable;
+        bool isTerminatable;
+        uint256 periodMaximum;
+        uint256 periodMinimum;
+        string program;
+        uint8 rate;
+        uint8 terminationPenalty;
+    }
+
     enum TransactionKind {
         DEPOSIT,
         PENALTY,
@@ -49,7 +65,7 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
 
     constructor(ILaunchpool launchpool, IBankAccount treasury)
         Ownable()
-        BankAccount(launchpool.getToken())
+        BankAccount(treasury.getToken())
     {
         _launchpool = launchpool;
         _treasury = treasury;

@@ -5,7 +5,6 @@ import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
 import "../Date.sol";
 import "../Refillable.sol";
-
 import "./ILaunchpool.sol";
 import "./Deposit.sol";
 
@@ -24,7 +23,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
     error LaunchpoolDepositProgramNotExists(string program);
 
-    event LaunchpoolDepositCreated(address account);
+    event LaunchpoolDepositCreated(Deposit deposit);
 
     constructor(
         IBankAccount treasury,
@@ -36,7 +35,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         _treasury = treasury;
     }
 
-    function createDeposit(string memory program, uint256 amount) external {
+    function createDeposit(string memory program) external {
         address owner = _msgSender();
 
         Deposit deposit = new Deposit(
@@ -51,9 +50,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
         deposit.transferOwnership(owner);
 
-        emit LaunchpoolDepositCreated(address(deposit));
-
-        deposit.refill(amount);
+        emit LaunchpoolDepositCreated(deposit);
     }
 
     function initialize(
@@ -82,8 +79,38 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         return false;
     }
 
-    function getDeposits() external view returns (Deposit[] memory) {
-        return _ownerDeposits[_msgSender()];
+    function getDeposits()
+        external
+        view
+        returns (BaseDeposit.Parameters[] memory)
+    {
+        address owner = _msgSender();
+
+        BaseDeposit.Parameters[] memory deposits = new BaseDeposit.Parameters[](
+            _ownerDeposits[owner].length
+        );
+
+        for (uint8 i = 0; i < _ownerDeposits[owner].length; i++) {
+            Deposit deposit = _ownerDeposits[owner][i];
+
+            deposits[i] = BaseDeposit.Parameters({
+                agreement: address(deposit),
+                amount: deposit.getBalance(),
+                amountMaximum: deposit.getAmountMaximum(),
+                amountMinimum: deposit.getAmountMinimum(),
+                beginDateTime: deposit.getBeginDateTime(),
+                isClosed: deposit.isClosed(),
+                isRefillable: deposit.getIsRefillable(),
+                isTerminatable: deposit.getIsTerminatable(),
+                periodMaximum: deposit.getPeriodMaximum(),
+                periodMinimum: deposit.getPeriodMinimum(),
+                program: deposit.getProgram(),
+                rate: deposit.getRate(),
+                terminationPenalty: deposit.getTerminationPenalty()
+            });
+        }
+
+        return deposits;
     }
 
     function getDepositPrograms()

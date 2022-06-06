@@ -19,6 +19,8 @@ contract Deposit is
     TerminationCondition,
     ReentrancyGuard
 {
+    string private _program;
+
     uint8 private _rate;
 
     error DepositAlreadyClosed();
@@ -34,6 +36,7 @@ contract Deposit is
         RefillCondition(options.isRefillable)
         TerminationCondition(options.isTerminatable, options.terminationPenalty)
     {
+        _program = options.program;
         _rate = options.rate;
     }
 
@@ -91,6 +94,14 @@ contract Deposit is
         return false;
     }
 
+    function getBaseToCalculateReward(uint256 date)
+        external
+        view
+        returns (uint256)
+    {
+        return (_getDepositedAmountOnDate(date) * _rate) / 10**2;
+    }
+
     function getBeginDateTime() external view returns (uint256) {
         return getBeginDateTime(_transactions);
     }
@@ -103,12 +114,8 @@ contract Deposit is
         return _getPeriodDateTime(_transactions, _periodMinimum);
     }
 
-    function getBaseToCalculateReward(uint256 date)
-        external
-        view
-        returns (uint256)
-    {
-        return (_getDepositedAmountOnDate(date) * _rate) / 10**2;
+    function getProgram() external view returns (string memory) {
+        return _program;
     }
 
     function getRate() external view returns (uint8) {
