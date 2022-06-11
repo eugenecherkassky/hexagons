@@ -11,7 +11,7 @@ import "./Deposit.sol";
 contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     Deposit[] private _deposits;
 
-    BaseDeposit.Options[] private _depositPrograms;
+    BaseDeposit.ProgramParameters[] private _depositPrograms;
 
     mapping(address => Deposit[]) private _ownerDeposits;
 
@@ -27,7 +27,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
     constructor(
         IBankAccount treasury,
-        BaseDeposit.Options[] memory depositPrograms,
+        BaseDeposit.ProgramParameters[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) BankAccount(treasury.getToken()) Refillable(refillableAgreements) {
         initialize(depositPrograms, refillableAgreements);
@@ -41,7 +41,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         Deposit deposit = new Deposit(
             this,
             _treasury,
-            getDepositProgramOptions(program)
+            getDepositProgram(program)
         );
 
         _deposits.push(deposit);
@@ -54,7 +54,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     }
 
     function initialize(
-        BaseDeposit.Options[] memory depositPrograms,
+        BaseDeposit.ProgramParameters[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) public initializer {
         delete _depositPrograms;
@@ -82,26 +82,31 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     function getDeposits()
         external
         view
-        returns (BaseDeposit.Parameters[] memory)
+        returns (BaseDeposit.DepositParameters[] memory)
     {
         address owner = _msgSender();
 
-        BaseDeposit.Parameters[] memory deposits = new BaseDeposit.Parameters[](
-            _ownerDeposits[owner].length
-        );
+        BaseDeposit.DepositParameters[]
+            memory deposits = new BaseDeposit.DepositParameters[](
+                _ownerDeposits[owner].length
+            );
 
         for (uint8 i = 0; i < _ownerDeposits[owner].length; i++) {
             Deposit deposit = _ownerDeposits[owner][i];
 
-            deposits[i] = BaseDeposit.Parameters({
+            deposits[i] = BaseDeposit.DepositParameters({
                 agreement: address(deposit),
                 amount: deposit.getBalance(),
+                amountDeposit: deposit.getAmountDeposit(),
                 amountMaximum: deposit.getAmountMaximum(),
                 amountMinimum: deposit.getAmountMinimum(),
+                amountReward: deposit.getAmountReward(),
                 beginDateTime: deposit.getBeginDateTime(),
-                isClosed: deposit.isClosed(),
-                isRefillable: deposit.getIsRefillable(),
+                isActive: deposit.isActive(),
+                isDepositable: deposit.getIsDepositable(),
                 isTerminatable: deposit.getIsTerminatable(),
+                isWithdrawable: deposit.isWithdrawable(),
+                isWithdrawed: deposit.isWithdrawed(),
                 periodMaximum: deposit.getPeriodMaximum(),
                 periodMinimum: deposit.getPeriodMinimum(),
                 program: deposit.getProgram(),
@@ -113,18 +118,10 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         return deposits;
     }
 
-    function getDepositPrograms()
+    function getDepositProgram(string memory program)
         public
         view
-        returns (BaseDeposit.Options[] memory)
-    {
-        return _depositPrograms;
-    }
-
-    function getDepositProgramOptions(string memory program)
-        public
-        view
-        returns (BaseDeposit.Options memory)
+        returns (BaseDeposit.ProgramParameters memory)
     {
         for (uint8 i = 0; i < _depositPrograms.length; i++) {
             if (_isEqual(_depositPrograms[i].program, program)) {
@@ -133,6 +130,14 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         }
 
         revert LaunchpoolDepositProgramNotExists(program);
+    }
+
+    function getDepositPrograms()
+        public
+        view
+        returns (BaseDeposit.ProgramParameters[] memory)
+    {
+        return _depositPrograms;
     }
 
     function getTransfersAmount(uint256 date) external view returns (uint256) {

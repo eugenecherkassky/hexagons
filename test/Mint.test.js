@@ -62,14 +62,14 @@ contract("Mint", async function () {
     });
 
     it("tracks distribution", async function () {
-      await this.launchpool.createDeposit("refillable").should.be.fulfilled;
+      await this.launchpool.createDeposit("depositable").should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
+      const [deposit] = await this.launchpool.getDeposits();
 
-      const deposit = await Deposit.at(depositAddress);
+      const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(deposit.address, 5);
-      await deposit.deposit(5).should.be.fulfilled;
+      await this.token.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
       await this.mint.distribute().should.be.fulfilled;
 

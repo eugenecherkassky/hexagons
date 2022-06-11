@@ -12,10 +12,10 @@ import "./ILaunchpool.sol";
  * @dev Base deposit
  */
 abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
-    struct Options {
+    struct ProgramParameters {
         uint256 amountMaximum;
         uint256 amountMinimum;
-        bool isRefillable;
+        bool isDepositable;
         bool isTerminatable;
         uint256 periodMaximum;
         uint256 periodMinimum;
@@ -24,15 +24,19 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
         uint8 terminationPenalty;
     }
 
-    struct Parameters {
+    struct DepositParameters {
         address agreement;
         uint256 amount;
+        uint256 amountDeposit;
         uint256 amountMaximum;
         uint256 amountMinimum;
+        uint256 amountReward;
         uint256 beginDateTime;
-        bool isClosed;
-        bool isRefillable;
+        bool isActive;
+        bool isDepositable;
         bool isTerminatable;
+        bool isWithdrawable;
+        bool isWithdrawed;
         uint256 periodMaximum;
         uint256 periodMinimum;
         string program;

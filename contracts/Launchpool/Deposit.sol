@@ -7,15 +7,15 @@ import "./BaseDeposit.sol";
 import "./ILaunchpool.sol";
 
 import "./Condition/AmountCondition.sol";
+import "./Condition/DepositCondition.sol";
 import "./Condition/PeriodCondition.sol";
-import "./Condition/RefillCondition.sol";
 import "./Condition/TerminationCondition.sol";
 
 contract Deposit is
     BaseDeposit,
     AmountCondition,
+    DepositCondition,
     PeriodCondition,
-    RefillCondition,
     TerminationCondition,
     ReentrancyGuard
 {
@@ -23,75 +23,76 @@ contract Deposit is
 
     uint8 private _rate;
 
-    error DepositAlreadyClosed();
+    error DepositAlreadyWithdrawed();
 
     constructor(
         ILaunchpool launchpool,
         IBankAccount treasury,
-        BaseDeposit.Options memory options
+        BaseDeposit.ProgramParameters memory parameters
     )
         BaseDeposit(launchpool, treasury)
-        AmountCondition(options.amountMaximum, options.amountMinimum)
-        PeriodCondition(options.periodMaximum, options.periodMinimum)
-        RefillCondition(options.isRefillable)
-        TerminationCondition(options.isTerminatable, options.terminationPenalty)
+        AmountCondition(parameters.amountMaximum, parameters.amountMinimum)
+        DepositCondition(parameters.isDepositable)
+        PeriodCondition(parameters.periodMaximum, parameters.periodMinimum)
+        TerminationCondition(
+            parameters.isTerminatable,
+            parameters.terminationPenalty
+        )
     {
-        _program = options.program;
-        _rate = options.rate;
+        _program = parameters.program;
+        _rate = parameters.rate;
     }
 
-    function close() external onlyOwner nonReentrant {
-        _preValidateClose(
-            _transactions,
-            _getPeriodDateTime(_transactions, _periodMinimum)
-        );
+    function deposit(uint256 amount) external {
+        _preValidateDeposit(_transactions, amount);
 
-        _launchpool.transferDailyRewards();
-
-        uint256 penaltyAmount = _getPenaltyAmount();
-
-        _addTransaction(
-            TransactionKind.WITHDRAW,
+        Transaction storage transaction = _addTransaction(
+            TransactionKind.DEPOSIT,
             _msgSender(),
-            getBalance() - penaltyAmount
+            amount
         );
 
-        if (penaltyAmount > 0) {
-            _addTransaction(
-                TransactionKind.PENALTY,
-                address(_treasury),
-                penaltyAmount
-            );
-        }
+        _transfer(transaction);
     }
 
-    function isActive() external view returns (bool) {
+    function isActive() public view returns (bool) {
         return isActive(block.timestamp);
     }
 
     function isActive(uint256 date) public view returns (bool) {
         return
             date < _getPeriodDateTime(_transactions, _periodMaximum) &&
-            !isClosed(date);
+            !isWithdrawed();
     }
 
-    function isClosed() public view returns (bool) {
-        return isClosed(block.timestamp);
+    function isWithdrawable() external view returns (bool) {
+        return isWithdrawable(block.timestamp);
     }
 
-    function isClosed(uint256 date) public view returns (bool) {
+    function isWithdrawable(uint256 date) public view returns (bool) {
+        return
+            date < _getPeriodDateTime(_transactions, _periodMinimum) &&
+            !isWithdrawed();
+    }
+
+    function isWithdrawed() public view returns (bool) {
         for (uint256 i = _transactions.length; i > 0; i--) {
             Transaction memory transaction = _transactions[i - 1];
 
-            if (
-                transaction.kind == TransactionKind.WITHDRAW &&
-                transaction.created <= date
-            ) {
+            if (transaction.kind == TransactionKind.WITHDRAW) {
                 return true;
             }
         }
 
         return false;
+    }
+
+    function getAmountDeposit() external view returns (uint256) {
+        return _getTransactionsAmounts()[uint8(TransactionKind.DEPOSIT)];
+    }
+
+    function getAmountReward() public view returns (uint256) {
+        return _getTransactionsAmounts()[uint8(TransactionKind.REWARD)];
     }
 
     function getBaseToCalculateReward(uint256 date)
@@ -122,19 +123,14 @@ contract Deposit is
         return _rate;
     }
 
-    function refill(uint256 amount) external {
-        _preValidateDeposit(_transactions, amount);
-
-        Transaction storage transaction = _addTransaction(
-            TransactionKind.DEPOSIT,
-            _msgSender(),
-            amount
+    function withdraw() external onlyOwner nonReentrant {
+        _preValidateWithdraw(
+            _transactions,
+            _getPeriodDateTime(_transactions, _periodMinimum)
         );
 
-        _transfer(transaction);
-    }
+        _close();
 
-    function withdraw() external onlyOwner {
         for (uint256 i = 0; i < _transactions.length; i++) {
             if (
                 _transactions[i].kind == TransactionKind.PENALTY ||
@@ -145,37 +141,53 @@ contract Deposit is
         }
     }
 
-    function _getPenaltyAmount() private view returns (uint256) {
+    function _close() private {
+        _launchpool.transferDailyRewards();
+
+        uint256 amountPenalty = _getAmountPenalty();
+
+        _addTransaction(
+            TransactionKind.WITHDRAW,
+            _msgSender(),
+            getBalance() - amountPenalty
+        );
+
+        if (amountPenalty > 0) {
+            _addTransaction(
+                TransactionKind.PENALTY,
+                address(_treasury),
+                amountPenalty
+            );
+        }
+    }
+
+    function _getAmountPenalty() private view returns (uint256) {
         if (
             block.timestamp > _getPeriodDateTime(_transactions, _periodMaximum)
         ) {
             return 0;
         }
 
-        uint256 rewardAmount = _getRewardAmount();
+        uint256 rewardAmount = getAmountReward();
 
         return (rewardAmount * _terminationPenalty) / 10**4;
-    }
-
-    function _getRewardAmount() private view returns (uint256) {
-        return _getTransactionsAmounts()[uint8(TransactionKind.REWARD)];
-    }
-
-    function _preValidateClose(
-        Transaction[] memory transactions,
-        uint256 periodMinimumDateTime
-    ) internal view override(PeriodCondition, TerminationCondition) {
-        if (isClosed()) {
-            revert DepositAlreadyClosed();
-        }
-
-        super._preValidateClose(transactions, periodMinimumDateTime);
     }
 
     function _preValidateDeposit(
         Transaction[] memory transactions,
         uint256 amount
-    ) internal view override(AmountCondition, RefillCondition) {
+    ) internal view override(AmountCondition, DepositCondition) {
         super._preValidateDeposit(transactions, amount);
+    }
+
+    function _preValidateWithdraw(
+        Transaction[] memory transactions,
+        uint256 periodMinimumDateTime
+    ) internal view override(PeriodCondition, TerminationCondition) {
+        if (isWithdrawed()) {
+            revert DepositAlreadyWithdrawed();
+        }
+
+        super._preValidateWithdraw(transactions, periodMinimumDateTime);
     }
 }

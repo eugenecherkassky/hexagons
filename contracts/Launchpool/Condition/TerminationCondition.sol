@@ -26,7 +26,7 @@ abstract contract TerminationCondition {
         return _terminationPenalty;
     }
 
-    function _preValidateClose(
+    function _preValidateWithdraw(
         BaseDeposit.Transaction[] memory,
         uint256 periodMinimumDateTime
     ) internal view virtual {

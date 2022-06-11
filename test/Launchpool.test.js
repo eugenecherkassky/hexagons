@@ -43,12 +43,14 @@ contract("Launchpool", async function ([ownerAccount]) {
     });
 
     it("tracks deposit program options", async function () {
-      const options = await this.launchpool.getDepositProgramOptions("base");
+      const parameters = await this.launchpool.getDepositProgram(
+        depositPrograms[0].program
+      );
 
       const {
         amountMaximum,
         amountMinimum,
-        isRefillable,
+        isDepositable,
         isTerminatable,
         periodMaximum,
         periodMinimum,
@@ -57,15 +59,17 @@ contract("Launchpool", async function ([ownerAccount]) {
         terminationPenalty,
       } = depositPrograms[0];
 
-      options.amountMaximum.should.be.equal(amountMaximum.toString());
-      options.amountMinimum.should.be.equal(amountMinimum.toString());
-      options.isRefillable.should.be.equal(isRefillable);
-      options.isTerminatable.should.be.equal(isTerminatable);
-      options.periodMaximum.should.be.equal(periodMaximum.toString());
-      options.periodMinimum.should.be.equal(periodMinimum.toString());
-      options.program.should.be.equal(program);
-      options.rate.should.be.equal(rate.toString());
-      options.terminationPenalty.should.be.equal(terminationPenalty.toString());
+      parameters.amountMaximum.should.be.equal(amountMaximum.toString());
+      parameters.amountMinimum.should.be.equal(amountMinimum.toString());
+      parameters.isDepositable.should.be.equal(isDepositable);
+      parameters.isTerminatable.should.be.equal(isTerminatable);
+      parameters.periodMaximum.should.be.equal(periodMaximum.toString());
+      parameters.periodMinimum.should.be.equal(periodMinimum.toString());
+      parameters.program.should.be.equal(program);
+      parameters.rate.should.be.equal(rate.toString());
+      parameters.terminationPenalty.should.be.equal(
+        terminationPenalty.toString()
+      );
     });
   });
 
@@ -74,30 +78,30 @@ contract("Launchpool", async function ([ownerAccount]) {
       const transaction = await this.launchpool.createDeposit("terminatable")
         .should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
+      const [deposit] = await this.launchpool.getDeposits();
 
-      depositAddress.should.be.equal(transaction.logs[0].args.account);
+      deposit.agreement.should.be.equal(transaction.logs[0].args.deposit);
     });
 
     it("tracks deposit", async function () {
       await this.launchpool.createDeposit("terminatable").should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
-      const deposit = await Deposit.at(depositAddress);
+      const [deposit] = await this.launchpool.getDeposits();
+      const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(deposit.address, 1);
-      await deposit.deposit(1).should.be.fulfilled;
+      await this.token.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
-      (await deposit.getBalance()).toString().should.be.equal("1");
-      (await deposit.getTransactions()).length.should.be.equal(1);
+      (await depositContract.getBalance()).toString().should.be.equal("1");
+      (await depositContract.getTransactions()).length.should.be.equal(1);
 
-      const options = await this.launchpool.getDepositProgramOptions(
-        "terminatable"
-      );
+      const options = await this.launchpool.getDepositProgram("terminatable");
 
-      const beginDateTime = await deposit.getBeginDateTime();
-      const periodMaximumDateTime = await deposit.getPeriodMaximumDateTime();
-      const periodMinimumDateTime = await deposit.getPeriodMinimumDateTime();
+      const beginDateTime = await depositContract.getBeginDateTime();
+      const periodMaximumDateTime =
+        await depositContract.getPeriodMaximumDateTime();
+      const periodMinimumDateTime =
+        await depositContract.getPeriodMinimumDateTime();
 
       periodMinimumDateTime
         .sub(beginDateTime)
@@ -109,26 +113,26 @@ contract("Launchpool", async function ([ownerAccount]) {
         .toString()
         .should.be.equal(options.periodMaximum);
 
-      await this.token.approve(deposit.address, 1);
-      await deposit.deposit(1).should.be.fulfilled;
+      await this.token.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
-      (await deposit.getBalance()).toString().should.be.equal("2");
-      (await deposit.getTransactions()).length.should.be.equal(2);
+      (await depositContract.getBalance()).toString().should.be.equal("2");
+      (await depositContract.getTransactions()).length.should.be.equal(2);
     });
 
     it("tracks refil", async function () {
       await this.launchpool.createDeposit("terminatable").should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
-      const deposit = await Deposit.at(depositAddress);
+      const [deposit] = await this.launchpool.getDeposits();
+      const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(deposit.address, 1);
-      await deposit.deposit(1).should.be.fulfilled;
+      await this.token.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
       await this.mint.distribute();
 
       const prevBalance = {
-        deposit: await this.token.balanceOf(deposit.address),
+        deposit: await this.token.balanceOf(depositContract.address),
         launchpool: await this.token.balanceOf(this.launchpool.address),
         mint: await this.token.balanceOf(this.mint.address),
         owner: await this.token.balanceOf(ownerAccount),
@@ -137,7 +141,7 @@ contract("Launchpool", async function ([ownerAccount]) {
       await this.launchpool.refill();
 
       const nextBalance = {
-        deposit: await this.token.balanceOf(deposit.address),
+        deposit: await this.token.balanceOf(depositContract.address),
         launchpool: await this.token.balanceOf(this.launchpool.address),
         mint: await this.token.balanceOf(this.mint.address),
         owner: await this.token.balanceOf(ownerAccount),
@@ -160,33 +164,35 @@ contract("Launchpool", async function ([ownerAccount]) {
         .should.be.equal("0");
     });
 
-    it("tracks deposit, refil", async function () {
-      await this.launchpool.createDeposit("nonrefillable").should.be.fulfilled;
+    it("tracks deposit, deposit", async function () {
+      await this.launchpool.createDeposit(
+        "not depositable"
+      ).should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
-      const deposit = await Deposit.at(depositAddress);
+      const [deposit] = await this.launchpool.getDeposits();
+      const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(deposit.address, 2);
+      await this.token.approve(depositContract.address, 2);
 
-      await deposit.deposit(1).should.be.fulfilled;
+      await depositContract.deposit(1).should.be.fulfilled;
 
-      await deposit.deposit(1).should.be.rejected;
+      await depositContract.deposit(1).should.be.rejected;
 
-      (await deposit.getBalance()).toString().should.be.equal("1");
-      (await deposit.getTransactions()).length.should.be.equal(1);
+      (await depositContract.getBalance()).toString().should.be.equal("1");
+      (await depositContract.getTransactions()).length.should.be.equal(1);
     });
 
-    it("tracks close & withdraw", async function () {
-      await this.launchpool.createDeposit("refillable").should.be.fulfilled;
+    it("tracks withdraw", async function () {
+      await this.launchpool.createDeposit("depositable").should.be.fulfilled;
 
-      const [depositAddress] = await this.launchpool.getDeposits();
+      const [deposit] = await this.launchpool.getDeposits();
 
-      const deposit = await Deposit.at(depositAddress);
+      const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(deposit.address, 5);
-      await deposit.deposit(5).should.be.fulfilled;
+      await this.token.approve(depositContract.address, 5);
+      await depositContract.deposit(5).should.be.fulfilled;
 
-      await deposit.close().should.be.rejected;
+      await depositContract.withdraw().should.be.rejected;
 
       await timeout(15 * 1000);
 
