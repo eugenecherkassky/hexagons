@@ -25,7 +25,6 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
     }
 
     struct DepositParameters {
-        address agreement;
         uint256 amount;
         uint256 amountDeposit;
         uint256 amountMaximum;

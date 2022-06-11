@@ -28,7 +28,7 @@ contract Deposit is
     constructor(
         ILaunchpool launchpool,
         IBankAccount treasury,
-        BaseDeposit.ProgramParameters memory parameters
+        Deposit.ProgramParameters memory parameters
     )
         BaseDeposit(launchpool, treasury)
         AmountCondition(parameters.amountMaximum, parameters.amountMinimum)
@@ -62,37 +62,7 @@ contract Deposit is
     function isActive(uint256 date) public view returns (bool) {
         return
             date < _getPeriodDateTime(_transactions, _periodMaximum) &&
-            !isWithdrawed();
-    }
-
-    function isWithdrawable() external view returns (bool) {
-        return isWithdrawable(block.timestamp);
-    }
-
-    function isWithdrawable(uint256 date) public view returns (bool) {
-        return
-            date < _getPeriodDateTime(_transactions, _periodMinimum) &&
-            !isWithdrawed();
-    }
-
-    function isWithdrawed() public view returns (bool) {
-        for (uint256 i = _transactions.length; i > 0; i--) {
-            Transaction memory transaction = _transactions[i - 1];
-
-            if (transaction.kind == TransactionKind.WITHDRAW) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    function getAmountDeposit() external view returns (uint256) {
-        return _getTransactionsAmounts()[uint8(TransactionKind.DEPOSIT)];
-    }
-
-    function getAmountReward() public view returns (uint256) {
-        return _getTransactionsAmounts()[uint8(TransactionKind.REWARD)];
+            !_isWithdrawed();
     }
 
     function getBaseToCalculateReward(uint256 date)
@@ -103,8 +73,38 @@ contract Deposit is
         return (_getDepositedAmountOnDate(date) * _rate) / 10**2;
     }
 
-    function getBeginDateTime() external view returns (uint256) {
+    function getBeginDateTime() public view returns (uint256) {
         return getBeginDateTime(_transactions);
+    }
+
+    function getParameters()
+        external
+        view
+        returns (BaseDeposit.DepositParameters memory)
+    {
+        return
+            BaseDeposit.DepositParameters({
+                amount: getBalance(),
+                amountDeposit: _getTransactionsAmounts()[
+                    uint8(TransactionKind.DEPOSIT)
+                ],
+                amountMaximum: _amountMaximum,
+                amountMinimum: _amountMinimum,
+                amountReward: _getTransactionsAmounts()[
+                    uint8(TransactionKind.REWARD)
+                ],
+                beginDateTime: getBeginDateTime(),
+                isActive: isActive(),
+                isDepositable: _isDepositable,
+                isTerminatable: _isTerminatable,
+                isWithdrawable: _isWithdrawable(),
+                isWithdrawed: _isWithdrawed(),
+                periodMaximum: _periodMaximum,
+                periodMinimum: _periodMinimum,
+                program: _program,
+                rate: _rate,
+                terminationPenalty: _terminationPenalty
+            });
     }
 
     function getPeriodMaximumDateTime() external view returns (uint256) {
@@ -161,6 +161,28 @@ contract Deposit is
         }
     }
 
+    function _isWithdrawable() private view returns (bool) {
+        return _isWithdrawable(block.timestamp);
+    }
+
+    function _isWithdrawable(uint256 date) private view returns (bool) {
+        return
+            date < _getPeriodDateTime(_transactions, _periodMinimum) &&
+            !_isWithdrawed();
+    }
+
+    function _isWithdrawed() private view returns (bool) {
+        for (uint256 i = _transactions.length; i > 0; i--) {
+            Transaction memory transaction = _transactions[i - 1];
+
+            if (transaction.kind == TransactionKind.WITHDRAW) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     function _getAmountPenalty() private view returns (uint256) {
         if (
             block.timestamp > _getPeriodDateTime(_transactions, _periodMaximum)
@@ -168,9 +190,11 @@ contract Deposit is
             return 0;
         }
 
-        uint256 rewardAmount = getAmountReward();
+        uint256 amountReward = _getTransactionsAmounts()[
+            uint8(TransactionKind.REWARD)
+        ];
 
-        return (rewardAmount * _terminationPenalty) / 10**4;
+        return (amountReward * _terminationPenalty) / 10**4;
     }
 
     function _preValidateDeposit(
@@ -184,7 +208,7 @@ contract Deposit is
         Transaction[] memory transactions,
         uint256 periodMinimumDateTime
     ) internal view override(PeriodCondition, TerminationCondition) {
-        if (isWithdrawed()) {
+        if (_isWithdrawed()) {
             revert DepositAlreadyWithdrawed();
         }
 

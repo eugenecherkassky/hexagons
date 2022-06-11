@@ -18,14 +18,6 @@ abstract contract TerminationCondition {
         _terminationPenalty = terminationPenalty;
     }
 
-    function getIsTerminatable() external view returns (bool) {
-        return _isTerminatable;
-    }
-
-    function getTerminationPenalty() external view returns (uint8) {
-        return _terminationPenalty;
-    }
-
     function _preValidateWithdraw(
         BaseDeposit.Transaction[] memory,
         uint256 periodMinimumDateTime

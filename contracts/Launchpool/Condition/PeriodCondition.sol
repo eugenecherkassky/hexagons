@@ -29,14 +29,6 @@ abstract contract PeriodCondition {
         return 0;
     }
 
-    function getPeriodMaximum() external view returns (uint256) {
-        return _periodMaximum;
-    }
-
-    function getPeriodMinimum() external view returns (uint256) {
-        return _periodMinimum;
-    }
-
     function _getPeriodDateTime(
         BaseDeposit.Transaction[] memory transactions,
         uint256 period

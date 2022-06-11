@@ -8,10 +8,18 @@ import "../Refillable.sol";
 import "./ILaunchpool.sol";
 import "./Deposit.sol";
 
+/**
+ * @dev Launchpool
+ */
 contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
+    struct DepositListItems {
+        address agreement;
+        Deposit.DepositParameters parameters;
+    }
+
     Deposit[] private _deposits;
 
-    BaseDeposit.ProgramParameters[] private _depositPrograms;
+    Deposit.ProgramParameters[] private _depositPrograms;
 
     mapping(address => Deposit[]) private _ownerDeposits;
 
@@ -27,7 +35,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
     constructor(
         IBankAccount treasury,
-        BaseDeposit.ProgramParameters[] memory depositPrograms,
+        Deposit.ProgramParameters[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) BankAccount(treasury.getToken()) Refillable(refillableAgreements) {
         initialize(depositPrograms, refillableAgreements);
@@ -54,7 +62,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     }
 
     function initialize(
-        BaseDeposit.ProgramParameters[] memory depositPrograms,
+        Deposit.ProgramParameters[] memory depositPrograms,
         Refillable.RefillableSupplier[] memory refillableAgreements
     ) public initializer {
         delete _depositPrograms;
@@ -79,39 +87,19 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         return false;
     }
 
-    function getDeposits()
-        external
-        view
-        returns (BaseDeposit.DepositParameters[] memory)
-    {
+    function getDeposits() external view returns (DepositListItems[] memory) {
         address owner = _msgSender();
 
-        BaseDeposit.DepositParameters[]
-            memory deposits = new BaseDeposit.DepositParameters[](
-                _ownerDeposits[owner].length
-            );
+        DepositListItems[] memory deposits = new DepositListItems[](
+            _ownerDeposits[owner].length
+        );
 
-        for (uint8 i = 0; i < _ownerDeposits[owner].length; i++) {
+        for (uint256 i = 0; i < _ownerDeposits[owner].length; i++) {
             Deposit deposit = _ownerDeposits[owner][i];
 
-            deposits[i] = BaseDeposit.DepositParameters({
+            deposits[i] = DepositListItems({
                 agreement: address(deposit),
-                amount: deposit.getBalance(),
-                amountDeposit: deposit.getAmountDeposit(),
-                amountMaximum: deposit.getAmountMaximum(),
-                amountMinimum: deposit.getAmountMinimum(),
-                amountReward: deposit.getAmountReward(),
-                beginDateTime: deposit.getBeginDateTime(),
-                isActive: deposit.isActive(),
-                isDepositable: deposit.getIsDepositable(),
-                isTerminatable: deposit.getIsTerminatable(),
-                isWithdrawable: deposit.isWithdrawable(),
-                isWithdrawed: deposit.isWithdrawed(),
-                periodMaximum: deposit.getPeriodMaximum(),
-                periodMinimum: deposit.getPeriodMinimum(),
-                program: deposit.getProgram(),
-                rate: deposit.getRate(),
-                terminationPenalty: deposit.getTerminationPenalty()
+                parameters: deposit.getParameters()
             });
         }
 
@@ -121,7 +109,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     function getDepositProgram(string memory program)
         public
         view
-        returns (BaseDeposit.ProgramParameters memory)
+        returns (Deposit.ProgramParameters memory)
     {
         for (uint8 i = 0; i < _depositPrograms.length; i++) {
             if (_isEqual(_depositPrograms[i].program, program)) {
@@ -135,7 +123,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     function getDepositPrograms()
         public
         view
-        returns (BaseDeposit.ProgramParameters[] memory)
+        returns (Deposit.ProgramParameters[] memory)
     {
         return _depositPrograms;
     }

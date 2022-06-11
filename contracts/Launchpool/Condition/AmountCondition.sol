@@ -19,14 +19,6 @@ abstract contract AmountCondition {
         _amountMinimum = minimum;
     }
 
-    function getAmountMaximum() external view returns (uint256) {
-        return _amountMaximum;
-    }
-
-    function getAmountMinimum() external view returns (uint256) {
-        return _amountMinimum;
-    }
-
     function _getAmount(BaseDeposit.Transaction[] memory transactions)
         internal
         pure

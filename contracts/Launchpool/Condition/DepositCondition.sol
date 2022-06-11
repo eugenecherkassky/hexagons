@@ -3,6 +3,9 @@ pragma solidity 0.8.7;
 
 import "../BaseDeposit.sol";
 
+/**
+ * @dev Deposit condition.
+ */
 abstract contract DepositCondition {
     bool internal _isDepositable;
 
@@ -10,10 +13,6 @@ abstract contract DepositCondition {
 
     constructor(bool isDepositable) {
         _isDepositable = isDepositable;
-    }
-
-    function getIsDepositable() external view returns (bool) {
-        return _isDepositable;
     }
 
     function _preValidateDeposit(
