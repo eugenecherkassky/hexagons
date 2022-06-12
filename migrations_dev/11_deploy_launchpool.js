@@ -36,5 +36,5 @@ module.exports = async function (deployer, _network, _accounts) {
     },
   ]);
 
-  // console.log("Deployed", launchpool.address);
+  console.log("Deployed", launchpool.address);
 };

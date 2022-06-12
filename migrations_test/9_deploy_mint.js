@@ -7,7 +7,5 @@ module.exports = async function (deployer) {
   await deployer.deploy(Date);
   await deployer.link(Date, Mint);
 
-  const mint = await deployer.deploy(Mint, process.env.REACT_APP_CONTRACT_TVT);
-
-  console.log("Deployed", mint.address);
+  deployer.deploy(Mint, process.env.REACT_APP_CONTRACT_TVT);
 };

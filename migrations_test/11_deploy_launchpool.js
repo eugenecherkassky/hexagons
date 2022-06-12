@@ -35,6 +35,4 @@ module.exports = async function (deployer, _network, _accounts) {
       share: 100,
     },
   ]);
-
-  // console.log("Deployed", launchpool.address);
 };

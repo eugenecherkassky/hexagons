@@ -1,0 +1,896 @@
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
+> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
+> Compiling @openzeppelin/contracts/utils/Address.sol
+> Compiling @openzeppelin/contracts/utils/Context.sol
+> Compiling @openzeppelin/contracts/utils/Counters.sol
+> Compiling @openzeppelin/contracts/utils/Strings.sol
+> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
+> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
+> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
+> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
+> Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+undefined:1730
+                  "nodeType"; "VariableDeclaration",
+                            ^
+
+SyntaxError: Unexpected token ; in JSON at position 78276
+    at JSON.parse (<anonymous>)
+    at FS.getContractName (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/sources/fs.js:44:1)
+    at FS.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/sources/fs.js:25:1)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/resolver.js:52:1
+    at Array.forEach (<anonymous>)
+    at Resolver.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/resolver.js:51:1)
+    at Object.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:175:1)
+    at ResolverIntercept.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/ResolverIntercept.js:22:1)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/1_initial_migration.js:1:30
+    at Script.runInContext (node:vm:139:12)
+    at Script.runInNewContext (node:vm:144:17)
+    at Object.file (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/require/require.js:94:1)
+    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:42:1)
+    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
+    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
+    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
+    at Object.runAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:121:1)
+    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:86:1)
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
+    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
+    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+Error: Problem parsing artifact: Crowdsale.json
+    at readAndParseArtifactFiles (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:85:1)
+    at Object.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:41:1)
+    at Generator.next (<anonymous>)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:27:1
+    at new Promise (<anonymous>)
+    at exports.modules.238230.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:23:1)
+    at Object.updated (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:40:1)
+    at Profiler.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/index.js:37:1)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/index.js:5:43)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+Error: Problem parsing artifact: Crowdsale.json
+    at readAndParseArtifactFiles (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:85:1)
+    at Object.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:41:1)
+    at Generator.next (<anonymous>)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:27:1
+    at new Promise (<anonymous>)
+    at exports.modules.238230.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:23:1)
+    at Object.updated (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/updated.js:40:1)
+    at Profiler.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/index.js:37:1)
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/profiler/dist/src/index.js:5:43)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npm run migrate-test                 
+
+> tivan@1.0.0 migrate-test
+> cp .env_test .env && rm -rf migrations && cp -R migrations_test migrations && npx truffle migrate --reset --compile-all --network testnet
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Ballot.sol
+> Compiling ./contracts/BankAccount.sol
+> Compiling ./contracts/BankAccountSupplier.sol
+> Compiling ./contracts/Crowdsale.sol
+> Compiling ./contracts/Date.sol
+> Compiling ./contracts/IBankAccount.sol
+> Compiling ./contracts/IBankAccountSupplier.sol
+> Compiling ./contracts/Launchpool/BaseDeposit.sol
+> Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
+> Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
+> Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
+> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
+> Compiling ./contracts/Launchpool/Deposit.sol
+> Compiling ./contracts/Launchpool/ILaunchpool.sol
+> Compiling ./contracts/Launchpool/Launchpool.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/Mint.sol
+> Compiling ./contracts/Presale.sol
+> Compiling ./contracts/Refillable.sol
+> Compiling ./contracts/TVT/BEP20.sol
+> Compiling ./contracts/TVT/IBEP20.sol
+> Compiling ./contracts/TVT/TVT.sol
+> Compiling ./contracts/TVT/TVTToken.sol
+> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
+> Compiling ./contracts/TVTB/TVTBToken.sol
+> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
+> Compiling ./contracts/Treasury.sol
+> Compiling @openzeppelin/contracts/access/AccessControl.sol
+> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
+> Compiling @openzeppelin/contracts/access/IAccessControl.sol
+> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
+> Compiling @openzeppelin/contracts/access/Ownable.sol
+> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
+> Compiling @openzeppelin/contracts/security/Pausable.sol
+> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
+> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
+> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
+> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
+> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
+> Compiling @openzeppelin/contracts/utils/Address.sol
+> Compiling @openzeppelin/contracts/utils/Context.sol
+> Compiling @openzeppelin/contracts/utils/Counters.sol
+> Compiling @openzeppelin/contracts/utils/Strings.sol
+> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
+> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
+> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
+> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
+> Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 29999542 (0x1c9c1b6)
+
+
+1_initial_migration.js
+======================
+
+undefined:1730
+                  "nodeType"; "VariableDeclaration",
+                            ^
+
+SyntaxError: Unexpected token ; in JSON at position 78276
+    at JSON.parse (<anonymous>)
+    at FS.getContractName (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/sources/fs.js:44:1)
+    at FS.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/sources/fs.js:25:1)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/resolver.js:52:1
+    at Array.forEach (<anonymous>)
+    at Resolver.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/resolver/dist/lib/resolver.js:51:1)
+    at Object.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:175:1)
+    at ResolverIntercept.require (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/ResolverIntercept.js:22:1)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/1_initial_migration.js:1:30
+    at Script.runInContext (node:vm:139:12)
+    at Script.runInNewContext (node:vm:144:17)
+    at Object.file (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/require/require.js:94:1)
+    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:42:1)
+    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
+    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
+    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
+    at Object.runAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:121:1)
+    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:86:1)
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
+    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
+    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+UnhandledRejections detected
+Promise {
+  <rejected> SyntaxError: Unexpected token ; in JSON at position 78276
+      at JSON.parse (<anonymous>)
+      at Artifactor.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:33:1)
+      at Generator.next (<anonymous>)
+      at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:8:1
+      at new Promise (<anonymous>)
+      at exports.modules.529463.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:4:1)
+      at Artifactor.save (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:25:1)
+      at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:76:1
+      at Array.forEach (<anonymous>)
+      at Artifactor.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:74:1)
+      at Generator.next (<anonymous>)
+      at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:8:1
+      at new Promise (<anonymous>)
+      at exports.modules.529463.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:4:1)
+      at Artifactor.saveAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:49:1)
+      at Object.save (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/workflow-compile/index.js:129:1)
+      at Object.compileAndSave (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/workflow-compile/index.js:101:1)
+      at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:17:1)
+      at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
+} SyntaxError: Unexpected token ; in JSON at position 78276
+    at JSON.parse (<anonymous>)
+    at Artifactor.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:33:1)
+    at Generator.next (<anonymous>)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:8:1
+    at new Promise (<anonymous>)
+    at exports.modules.529463.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:4:1)
+    at Artifactor.save (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:25:1)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:76:1
+    at Array.forEach (<anonymous>)
+    at Artifactor.<anonymous> (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:74:1)
+    at Generator.next (<anonymous>)
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:8:1
+    at new Promise (<anonymous>)
+    at exports.modules.529463.__awaiter (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:4:1)
+    at Artifactor.saveAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/artifactor/dist/index.js:49:1)
+    at Object.save (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/workflow-compile/index.js:129:1)
+    at Object.compileAndSave (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/workflow-compile/index.js:101:1)
+    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:17:1)
+    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npm i
+npm WARN deprecated testrpc@0.0.1: testrpc has been renamed to ganache-cli, please use this package from now on.
+npm WARN deprecated safe-event-emitter@1.0.1: Renamed to @metamask/safe-event-emitter
+npm WARN deprecated mkdirp-promise@5.0.1: This package is broken and no longer maintained. 'mkdirp' itself supports promises now, please switch to that.
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated eth-sig-util@1.4.2: Deprecated in favor of '@metamask/eth-sig-util'
+npm WARN deprecated eth-sig-util@1.4.2: Deprecated in favor of '@metamask/eth-sig-util'
+npm WARN deprecated ipld-raw@6.0.0: This module has been superseded by the multiformats module
+npm WARN deprecated eth-sig-util@3.0.1: Deprecated in favor of '@metamask/eth-sig-util'
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cids@1.1.9: This module has been superseded by the multiformats module
+npm WARN deprecated cross-spawn-async@2.2.5: cross-spawn no longer requires a build toolchain, use it instead
+npm WARN deprecated ethereumjs-block@2.2.2: New package name format for new versions: @ethereumjs/block. Please update.
+npm WARN deprecated ethereumjs-tx@2.1.2: New package name format for new versions: @ethereumjs/tx. Please update.
+npm WARN deprecated @nodefactory/filsnap-adapter@0.2.2: Package is deprecated in favour of @chainsafe/filsnap-adapter
+npm WARN deprecated ipld-dag-cbor@0.17.1: This module has been superseded by @ipld/dag-cbor and multiformats
+npm WARN deprecated multicodec@1.0.4: This module has been superseded by the multiformats module
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.2.1: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.2.1: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@4.0.6: This module has been superseded by the multiformats module
+npm WARN deprecated uuid@3.3.2: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@3.1.2: This module has been superseded by the multiformats module
+npm WARN deprecated uuid@3.3.2: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated ethereumjs-tx@1.3.7: New package name format for new versions: @ethereumjs/tx. Please update.
+npm WARN deprecated ipld-dag-pb@0.20.0: This module has been superseded by @ipld/dag-pb and multiformats
+npm WARN deprecated multibase@0.6.1: This module has been superseded by the multiformats module
+npm WARN deprecated multibase@0.7.0: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@0.5.7: This module has been superseded by the multiformats module
+npm WARN deprecated node-pre-gyp@0.11.0: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@3.2.1: This module has been superseded by the multiformats module
+npm WARN deprecated ethereumjs-vm@2.6.0: New package name format for new versions: @ethereumjs/vm. Please update.
+npm WARN deprecated uuid@2.0.1: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated multicodec@2.1.3: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@2.1.3: This module has been superseded by the multiformats module
+npm WARN deprecated multicodec@2.1.3: This module has been superseded by the multiformats module
+npm WARN deprecated uuid@2.0.1: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated ethereumjs-block@1.7.1: New package name format for new versions: @ethereumjs/block. Please update.
+npm WARN deprecated ethereumjs-common@1.5.2: New package name format for new versions: @ethereumjs/common. Please update.
+npm WARN deprecated cids@0.7.5: This module has been superseded by the multiformats module
+npm WARN deprecated @ensdomains/ens@0.4.5: Please use @ensdomains/ens-contracts
+npm WARN deprecated @ensdomains/resolver@0.2.4: Please use @ensdomains/ens-contracts
+npm WARN deprecated truffle-hdwallet-provider@1.0.17: WARNING: This package has been renamed to @truffle/hdwallet-provider.
+npm WARN deprecated core-js@2.6.12: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+
+added 1600 packages, and audited 1631 packages in 3m
+
+137 packages are looking for funding
+  run `npm fund` for details
+
+47 vulnerabilities (1 low, 16 moderate, 30 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npm run migrate-test
+
+> tivan@1.0.0 migrate-test
+> cp .env_test .env && rm -rf migrations && cp -R migrations_test migrations && npx truffle migrate --reset --compile-all --network testnet
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Ballot.sol
+> Compiling ./contracts/BankAccount.sol
+> Compiling ./contracts/BankAccountSupplier.sol
+> Compiling ./contracts/Crowdsale.sol
+> Compiling ./contracts/Date.sol
+> Compiling ./contracts/IBankAccount.sol
+> Compiling ./contracts/IBankAccountSupplier.sol
+> Compiling ./contracts/Launchpool/BaseDeposit.sol
+> Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
+> Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
+> Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
+> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
+> Compiling ./contracts/Launchpool/Deposit.sol
+> Compiling ./contracts/Launchpool/ILaunchpool.sol
+> Compiling ./contracts/Launchpool/Launchpool.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/Mint.sol
+> Compiling ./contracts/Presale.sol
+> Compiling ./contracts/Refillable.sol
+> Compiling ./contracts/TVT/BEP20.sol
+> Compiling ./contracts/TVT/IBEP20.sol
+> Compiling ./contracts/TVT/TVT.sol
+> Compiling ./contracts/TVT/TVTToken.sol
+> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
+> Compiling ./contracts/TVTB/TVTBToken.sol
+> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
+> Compiling ./contracts/Treasury.sol
+> Compiling @openzeppelin/contracts/access/AccessControl.sol
+> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
+> Compiling @openzeppelin/contracts/access/IAccessControl.sol
+> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
+> Compiling @openzeppelin/contracts/access/Ownable.sol
+> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
+> Compiling @openzeppelin/contracts/security/Pausable.sol
+> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
+> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
+> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
+> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
+> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
+> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
+> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
+> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
+> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
+> Compiling @openzeppelin/contracts/utils/Address.sol
+> Compiling @openzeppelin/contracts/utils/Context.sol
+> Compiling @openzeppelin/contracts/utils/Counters.sol
+> Compiling @openzeppelin/contracts/utils/Strings.sol
+> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
+> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
+> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
+> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
+> Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x7930c88b741ce052adf856156b2ee7b11875778fe0357d167cd8d4f0e3416169
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x7673914DB98ccF7d1C897313b88ef5CEb09462E0
+   > block number:        20122019
+   > block timestamp:     1655008534
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.19002286
+   > gas used:            153922 (0x25942)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00153922 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122022)
+   > confirmation number: 3 (block: 20122024)
+   > confirmation number: 4 (block: 20122025)
+   > confirmation number: 5 (block: 20122026)
+   > confirmation number: 6 (block: 20122027)
+   > confirmation number: 8 (block: 20122029)
+   > confirmation number: 9 (block: 20122030)
+   > confirmation number: 11 (block: 20122032)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00153922 ETH
+
+
+9_deploy_mint.js
+================
+
+   Deploying 'Date'
+   ----------------
+   > transaction hash:    0x89812c6bed7b6588072eb77c21b0c4daf3f57f11d73a058034588ae5ac99b630
+   > Blocks: 4            Seconds: 13
+   > contract address:    0x4120Ee745Acf200bC00e8e0FB1f78bBc117D26b9
+   > block number:        20122041
+   > block timestamp:     1655008600
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.1884961
+   > gas used:            110386 (0x1af32)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00110386 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122044)
+   > confirmation number: 3 (block: 20122046)
+   > confirmation number: 4 (block: 20122047)
+   > confirmation number: 5 (block: 20122048)
+   > confirmation number: 7 (block: 20122050)
+   > confirmation number: 8 (block: 20122051)
+   > confirmation number: 9 (block: 20122052)
+   > confirmation number: 10 (block: 20122053)
+
+   Linking
+   -------
+   * Contract: Mint <--> Library: Date (at address: 0x4120Ee745Acf200bC00e8e0FB1f78bBc117D26b9)
+
+   Deploying 'Mint'
+   ----------------
+   > transaction hash:    0x34d1ed42be1a6cb67c3c4a98c5e121941c2cc8cd4bdee123092344b4548ed1b8
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x2912E797e6D118C198d7Ae0cdB094B9428A845e5
+   > block number:        20122058
+   > block timestamp:     1655008651
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.17735424
+   > gas used:            1114186 (0x11004a)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01114186 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122061)
+   > confirmation number: 2 (block: 20122062)
+   > confirmation number: 4 (block: 20122064)
+   > confirmation number: 5 (block: 20122065)
+   > confirmation number: 6 (block: 20122066)
+   > confirmation number: 8 (block: 20122068)
+   > confirmation number: 9 (block: 20122069)
+   > confirmation number: 10 (block: 20122070)
+Deployed 0x2912E797e6D118C198d7Ae0cdB094B9428A845e5
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01224572 ETH
+
+
+10_deploy_treasury.js
+=====================
+
+   Deploying 'Treasury'
+   --------------------
+   > transaction hash:    0x029b3152c81d0608370a18aa01663856561b38e963374353b55262d9fcb271e9
+   > Blocks: 5            Seconds: 13
+   > contract address:    0xbCA95eC7EDD8aE7486f70567F806C8B7E3B1AEA1
+   > block number:        20122080
+   > block timestamp:     1655008717
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.16939189
+   > gas used:            768945 (0xbbbb1)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00768945 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 2 (block: 20122083)
+   > confirmation number: 3 (block: 20122084)
+   > confirmation number: 5 (block: 20122086)
+   > confirmation number: 6 (block: 20122087)
+   > confirmation number: 7 (block: 20122088)
+   > confirmation number: 9 (block: 20122090)
+   > confirmation number: 10 (block: 20122091)
+
+Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
+
+
+TypeError: Cannot read properties of undefined (reading 'address')
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/10_deploy_treasury.js:11:36)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 29882814 (0x1c7f9be)
+
+
+10_deploy_treasury.js
+=====================
+
+   Deploying 'Treasury'
+   --------------------
+   > transaction hash:    0xf783f515d10fd1b158ddd3eda8355ab4ef7639bc18d5830f8cf13b753e5ab6d0
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xe64F94bCf375b07205CE3947f2a20f9b4Bb4Fa78
+   > block number:        20122143
+   > block timestamp:     1655008906
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.16170244
+   > gas used:            768945 (0xbbbb1)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00768945 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122146)
+   > confirmation number: 3 (block: 20122148)
+   > confirmation number: 4 (block: 20122149)
+   > confirmation number: 5 (block: 20122150)
+   > confirmation number: 7 (block: 20122152)
+   > confirmation number: 8 (block: 20122153)
+   > confirmation number: 9 (block: 20122154)
+   > confirmation number: 11 (block: 20122156)
+
+Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
+
+
+TypeError: Cannot read properties of undefined (reading 'address')
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/10_deploy_treasury.js:11:36)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+10_deploy_treasury.js
+=====================
+
+   Deploying 'Treasury'
+   --------------------
+   > transaction hash:    0xf1086ff2c48db64515737b045cac5d90d34204dfffdacf36138db54684361222
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x59da9D1eFb15472Cf11E65b290E3361cC00A799B
+   > block number:        20122180
+   > block timestamp:     1655009017
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.15401299
+   > gas used:            768945 (0xbbbb1)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00768945 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122183)
+   > confirmation number: 3 (block: 20122185)
+   > confirmation number: 4 (block: 20122186)
+   > confirmation number: 5 (block: 20122187)
+   > confirmation number: 7 (block: 20122189)
+   > confirmation number: 8 (block: 20122190)
+   > confirmation number: 9 (block: 20122191)
+   > confirmation number: 11 (block: 20122193)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00768945 ETH
+
+
+11_deploy_launchpool.js
+=======================
+
+   Linking
+   -------
+   * Contract: Launchpool <--> Library: Date (at address: 0x4120Ee745Acf200bC00e8e0FB1f78bBc117D26b9)
+
+   Deploying 'Launchpool'
+   ----------------------
+   > transaction hash:    0xcb78fb146cce186c3761b42add3b27039b615a4530a0eaba70e07dc911b45667
+   > Blocks: 4            Seconds: 13
+   > contract address:    0xAE24eCac90E40Fcad12ee5E841FBcd0bc02cA6cF
+   > block number:        20122202
+   > block timestamp:     1655009083
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.09744381
+   > gas used:            5629628 (0x55e6bc)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05629628 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 2 (block: 20122206)
+   > confirmation number: 3 (block: 20122207)
+   > confirmation number: 4 (block: 20122208)
+   > confirmation number: 6 (block: 20122210)
+   > confirmation number: 7 (block: 20122211)
+   > confirmation number: 8 (block: 20122212)
+   > confirmation number: 10 (block: 20122214)
+Deployed 0xAE24eCac90E40Fcad12ee5E841FBcd0bc02cA6cF
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.05629628 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.06398573 ETH
+
+
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle commpile                 
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --reset --network testnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xcb63af679bee67f42d613d8b4f66f5dfd620555e1abd7d60dbfc9ef22eab4430
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xf112BC520FdCbD897D496041dCB0cC78B72deEB0
+   > block number:        20122557
+   > block timestamp:     1655010148
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.09484059
+   > gas used:            153922 (0x25942)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00153922 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 2 (block: 20122560)
+   > confirmation number: 3 (block: 20122561)
+   > confirmation number: 5 (block: 20122563)
+   > confirmation number: 6 (block: 20122564)
+   > confirmation number: 7 (block: 20122565)
+   > confirmation number: 9 (block: 20122567)
+   > confirmation number: 10 (block: 20122568)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00153922 ETH
+
+
+9_deploy_mint.js
+================
+
+   Replacing 'Date'
+   ----------------
+   > transaction hash:    0x276311ecfc0cedc688ecf05d04c6a31840f7fa812ed2df562fd6db9a8d977a5d
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xFEB7B8434E971fc15C02F0ddd2BA1a4fC5290137
+   > block number:        20122576
+   > block timestamp:     1655010205
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.09331383
+   > gas used:            110386 (0x1af32)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00110386 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122579)
+   > confirmation number: 3 (block: 20122581)
+   > confirmation number: 4 (block: 20122582)
+   > confirmation number: 5 (block: 20122583)
+   > confirmation number: 7 (block: 20122585)
+   > confirmation number: 8 (block: 20122586)
+   > confirmation number: 9 (block: 20122587)
+   > confirmation number: 11 (block: 20122589)
+
+   Linking
+   -------
+   * Contract: Mint <--> Library: Date (at address: 0xFEB7B8434E971fc15C02F0ddd2BA1a4fC5290137)
+
+   Replacing 'Mint'
+   ----------------
+   > transaction hash:    0x52fc962804a5da840914b6ab9c9303789cf60ccaf8f7781250ad60bfee92c139
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xd55AC1d0E04E72a90CeafD8c39B1a5bB04Cf123E
+   > block number:        20122593
+   > block timestamp:     1655010256
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.08217197
+   > gas used:            1114186 (0x11004a)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01114186 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122596)
+   > confirmation number: 3 (block: 20122598)
+   > confirmation number: 4 (block: 20122599)
+   > confirmation number: 5 (block: 20122600)
+   > confirmation number: 7 (block: 20122602)
+   > confirmation number: 8 (block: 20122603)
+   > confirmation number: 9 (block: 20122604)
+   > confirmation number: 11 (block: 20122606)
+Deployed 0xd55AC1d0E04E72a90CeafD8c39B1a5bB04Cf123E
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01224572 ETH
+
+
+10_deploy_treasury.js
+=====================
+
+   Replacing 'Treasury'
+   --------------------
+   > transaction hash:    0xc652a5c143b0d7bf82fa2ba9c595af8bf7ba985844180685f52d9d5f7adb3940
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x0Dc40326DeC62F574b00e1cCAE9eFd57EfE7B289
+   > block number:        20122614
+   > block timestamp:     1655010319
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.07420962
+   > gas used:            768945 (0xbbbb1)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00768945 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 1 (block: 20122617)
+   > confirmation number: 3 (block: 20122619)
+   > confirmation number: 4 (block: 20122620)
+   > confirmation number: 5 (block: 20122621)
+   > confirmation number: 7 (block: 20122623)
+   > confirmation number: 8 (block: 20122624)
+   > confirmation number: 9 (block: 20122625)
+   > confirmation number: 11 (block: 20122627)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00768945 ETH
+
+
+11_deploy_launchpool.js
+=======================
+
+   Linking
+   -------
+   * Contract: Launchpool <--> Library: Date (at address: 0xFEB7B8434E971fc15C02F0ddd2BA1a4fC5290137)
+
+   Replacing 'Launchpool'
+   ----------------------
+   > transaction hash:    0x3ae332aef8a64cb8cdcbe99bee7a54a1c00e489b6e5fa31db15070dec78dad34
+   > Blocks: 4            Seconds: 13
+   > contract address:    0x28c40E771278A1306e1720BECE08157aC4C105E2
+   > block number:        20122636
+   > block timestamp:     1655010385
+   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   > balance:             0.01764068
+   > gas used:            5629604 (0x55e6a4)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05629604 ETH
+
+   Pausing for 10 confirmations...
+
+   --------------------------------
+   > confirmation number: 2 (block: 20122640)
+   > confirmation number: 3 (block: 20122641)
+   > confirmation number: 4 (block: 20122642)
+   > confirmation number: 6 (block: 20122644)
+   > confirmation number: 7 (block: 20122645)
+   > confirmation number: 8 (block: 20122646)
+   > confirmation number: 10 (block: 20122648)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.05629604 ETH
+
+Summary
+=======
+> Total deployments:   5
+> Final cost:          0.07777043 ETH
+
+
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % 
