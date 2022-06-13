@@ -2,7 +2,7 @@ const TVT = artifacts.require("TVT/TVT");
 const Date = artifacts.require("Date");
 const Mint = artifacts.require("Mint");
 
-module.exports = async function (deployer, _network, accounts) {
+module.exports = async function (deployer) {
   require("dotenv").config();
 
   const tvt = await TVT.deployed();
