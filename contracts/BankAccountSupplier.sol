@@ -22,6 +22,8 @@ abstract contract BankAccountSupplier is
 
     constructor(IERC20 token) BankAccount(token) {}
 
+    function distribute() external virtual override {}
+
     function initialize(BankAccountRecipient[] memory recipients)
         external
         initializer

@@ -23,6 +23,8 @@ interface IBankAccountSupplier is IBankAccount {
         view
         returns (BankAccountRecipient[] memory);
 
+    function distribute() external;
+
     function getPayments() external view returns (Payment[] memory);
 
     function pay(address sender) external;

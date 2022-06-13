@@ -133,6 +133,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     }
 
     function transferDailyRewards() external override {
+        // TODO can be runned not only by deposit
         address deposit = _msgSender();
 
         uint256 amount = _getDepositRewards(deposit);

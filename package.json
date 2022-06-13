@@ -10,8 +10,6 @@
     "analyze": "myth analyze --solc-json mythril.json contracts/**/*.sol",
     "check": "npm-check --skip-unused",
     "compile": "truffle compile -all",
-    "migrate-dev": "cp .env_dev .env && rm -rf migrations && cp -R migrations_dev migrations && npx truffle migrate --reset --compile-all --network development",
-    "migrate-test": "cp .env_test .env && rm -rf migrations && cp -R migrations_test migrations && npx truffle migrate --reset --compile-all --network testnet",
     "test": "truffle test"
   },
   "repository": {

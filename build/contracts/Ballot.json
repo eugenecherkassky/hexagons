@@ -123,7 +123,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -163,7 +164,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -176,7 +178,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -455,7 +458,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_contract$_TVTBToken_$11232_fromMemory",
+            "name": "abi_decode_tuple_t_contract$_TVTBToken_$11245_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -483,7 +486,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_tuple_t_contract$_TVTBToken_$11232_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n        value0 := value\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_tuple_t_contract$_TVTBToken_$11245_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n        value0 := value\n    }\n}",
       "id": 59,
       "language": "Yul",
       "name": "#utility.yul"
@@ -3921,7 +3924,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_contract$_TVTBToken_$11232__to_t_address__fromStack_reversed",
+            "name": "abi_encode_tuple_t_contract$_TVTBToken_$11245__to_t_address__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -5038,7 +5041,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_tuple_t_string_memory_ptrt_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := 0xffffffffffffffff\n        if gt(offset, _1) { revert(0, 0) }\n        let _2 := add(headStart, offset)\n        if iszero(slt(add(_2, 0x1f), dataEnd)) { revert(0, 0) }\n        let _3 := calldataload(_2)\n        if gt(_3, _1) { panic_error_0x41() }\n        let _4 := not(31)\n        let memPtr := mload(64)\n        let newFreePtr := add(memPtr, and(add(and(add(_3, 0x1f), _4), 63), _4))\n        if or(gt(newFreePtr, _1), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n        mstore(memPtr, _3)\n        if gt(add(add(_2, _3), 0x20), dataEnd) { revert(0, 0) }\n        calldatacopy(add(memPtr, 0x20), add(_2, 0x20), _3)\n        mstore(add(add(memPtr, _3), 0x20), 0)\n        value0 := memPtr\n        value1 := calldataload(add(headStart, 0x20))\n        value2 := calldataload(add(headStart, 64))\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_array_address_dyn(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        let _1 := 0x20\n        pos := add(pos, _1)\n        let srcPtr := add(value, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, and(mload(srcPtr), sub(shl(160, 1), 1)))\n            pos := add(pos, _1)\n            srcPtr := add(srcPtr, _1)\n        }\n        end := pos\n    }\n    function abi_encode_struct_Poll(value, pos) -> end\n    {\n        let memberValue0 := mload(value)\n        mstore(pos, 0xa0)\n        let length := mload(memberValue0)\n        mstore(add(pos, 0xa0), length)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 0x20) }\n        {\n            mstore(add(add(pos, i), 192), mload(add(add(memberValue0, i), 0x20)))\n        }\n        if gt(i, length)\n        {\n            mstore(add(add(pos, length), 192), 0)\n        }\n        let _1 := add(pos, and(add(length, 31), not(31)))\n        mstore(add(pos, 0x20), mload(add(value, 0x20)))\n        mstore(add(pos, 0x40), mload(add(value, 0x40)))\n        let memberValue0_1 := mload(add(value, 0x60))\n        mstore(add(pos, 0x60), add(sub(_1, pos), 192))\n        let tail := abi_encode_array_address_dyn(memberValue0_1, add(_1, 192))\n        mstore(add(pos, 0x80), mload(add(value, 0x80)))\n        end := tail\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_array$_t_struct$_Poll_$5262_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Poll_$5262_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        let _1 := 32\n        let tail_1 := add(headStart, _1)\n        mstore(headStart, _1)\n        let pos := tail_1\n        let length := mload(value0)\n        mstore(tail_1, length)\n        pos := add(headStart, 64)\n        let tail_2 := add(add(headStart, shl(5, length)), 64)\n        let srcPtr := add(value0, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, add(sub(tail_2, headStart), not(63)))\n            tail_2 := abi_encode_struct_Poll(mload(srcPtr), tail_2)\n            srcPtr := add(srcPtr, _1)\n            pos := add(pos, _1)\n        }\n        tail := tail_2\n    }\n    function abi_encode_tuple_t_contract$_TVTBToken_$11232__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_struct$_Poll_$5262_memory_ptr__to_t_struct$_Poll_$5262_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_struct_Poll(value0, add(headStart, 32))\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_tuple_t_string_memory_ptrt_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := 0xffffffffffffffff\n        if gt(offset, _1) { revert(0, 0) }\n        let _2 := add(headStart, offset)\n        if iszero(slt(add(_2, 0x1f), dataEnd)) { revert(0, 0) }\n        let _3 := calldataload(_2)\n        if gt(_3, _1) { panic_error_0x41() }\n        let _4 := not(31)\n        let memPtr := mload(64)\n        let newFreePtr := add(memPtr, and(add(and(add(_3, 0x1f), _4), 63), _4))\n        if or(gt(newFreePtr, _1), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n        mstore(memPtr, _3)\n        if gt(add(add(_2, _3), 0x20), dataEnd) { revert(0, 0) }\n        calldatacopy(add(memPtr, 0x20), add(_2, 0x20), _3)\n        mstore(add(add(memPtr, _3), 0x20), 0)\n        value0 := memPtr\n        value1 := calldataload(add(headStart, 0x20))\n        value2 := calldataload(add(headStart, 64))\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_array_address_dyn(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        let _1 := 0x20\n        pos := add(pos, _1)\n        let srcPtr := add(value, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, and(mload(srcPtr), sub(shl(160, 1), 1)))\n            pos := add(pos, _1)\n            srcPtr := add(srcPtr, _1)\n        }\n        end := pos\n    }\n    function abi_encode_struct_Poll(value, pos) -> end\n    {\n        let memberValue0 := mload(value)\n        mstore(pos, 0xa0)\n        let length := mload(memberValue0)\n        mstore(add(pos, 0xa0), length)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 0x20) }\n        {\n            mstore(add(add(pos, i), 192), mload(add(add(memberValue0, i), 0x20)))\n        }\n        if gt(i, length)\n        {\n            mstore(add(add(pos, length), 192), 0)\n        }\n        let _1 := add(pos, and(add(length, 31), not(31)))\n        mstore(add(pos, 0x20), mload(add(value, 0x20)))\n        mstore(add(pos, 0x40), mload(add(value, 0x40)))\n        let memberValue0_1 := mload(add(value, 0x60))\n        mstore(add(pos, 0x60), add(sub(_1, pos), 192))\n        let tail := abi_encode_array_address_dyn(memberValue0_1, add(_1, 192))\n        mstore(add(pos, 0x80), mload(add(value, 0x80)))\n        end := tail\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_array$_t_struct$_Poll_$5262_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_Poll_$5262_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        let _1 := 32\n        let tail_1 := add(headStart, _1)\n        mstore(headStart, _1)\n        let pos := tail_1\n        let length := mload(value0)\n        mstore(tail_1, length)\n        pos := add(headStart, 64)\n        let tail_2 := add(add(headStart, shl(5, length)), 64)\n        let srcPtr := add(value0, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, add(sub(tail_2, headStart), not(63)))\n            tail_2 := abi_encode_struct_Poll(mload(srcPtr), tail_2)\n            srcPtr := add(srcPtr, _1)\n            pos := add(pos, _1)\n        }\n        tail := tail_2\n    }\n    function abi_encode_tuple_t_contract$_TVTBToken_$11245__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_struct$_Poll_$5262_memory_ptr__to_t_struct$_Poll_$5262_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_struct_Poll(value0, add(headStart, 32))\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n}",
       "id": 59,
       "language": "Yul",
       "name": "#utility.yul"
@@ -5118,7 +5121,7 @@
         4296
       ],
       "TVTBToken": [
-        11232
+        11245
       ]
     },
     "id": 5531,
@@ -5154,7 +5157,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5531,
-        "sourceUnit": 11233,
+        "sourceUnit": 11246,
         "src": "109:30:32",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5405,7 +5408,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_TVTBToken_$11232",
+              "typeIdentifier": "t_contract$_TVTBToken_$11245",
               "typeString": "contract TVTBToken"
             },
             "typeName": {
@@ -5415,13 +5418,13 @@
                 "id": 5267,
                 "name": "TVTBToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 11232,
+                "referencedDeclaration": 11245,
                 "src": "439:9:32"
               },
-              "referencedDeclaration": 11232,
+              "referencedDeclaration": 11245,
               "src": "439:9:32",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                "typeIdentifier": "t_contract$_TVTBToken_$11245",
                 "typeString": "contract TVTBToken"
               }
             },
@@ -5597,7 +5600,7 @@
                       "referencedDeclaration": 5269,
                       "src": "735:6:32",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                        "typeIdentifier": "t_contract$_TVTBToken_$11245",
                         "typeString": "contract TVTBToken"
                       }
                     },
@@ -5611,13 +5614,13 @@
                       "referencedDeclaration": 5288,
                       "src": "744:5:32",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                        "typeIdentifier": "t_contract$_TVTBToken_$11245",
                         "typeString": "contract TVTBToken"
                       }
                     },
                     "src": "735:14:32",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                      "typeIdentifier": "t_contract$_TVTBToken_$11245",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -5650,7 +5653,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                    "typeIdentifier": "t_contract$_TVTBToken_$11245",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -5660,13 +5663,13 @@
                       "id": 5286,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 11232,
+                      "referencedDeclaration": 11245,
                       "src": "708:9:32"
                     },
-                    "referencedDeclaration": 11232,
+                    "referencedDeclaration": 11245,
                     "src": "708:9:32",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                      "typeIdentifier": "t_contract$_TVTBToken_$11245",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -6602,7 +6605,7 @@
                             "referencedDeclaration": 5269,
                             "src": "1674:6:32",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                              "typeIdentifier": "t_contract$_TVTBToken_$11245",
                               "typeString": "contract TVTBToken"
                             }
                           }
@@ -6610,7 +6613,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                              "typeIdentifier": "t_contract$_TVTBToken_$11245",
                               "typeString": "contract TVTBToken"
                             }
                           ],
@@ -6660,10 +6663,10 @@
                       "name": "TVTBToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11232,
+                      "referencedDeclaration": 11245,
                       "src": "1656:9:32",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_TVTBToken_$11232_$",
+                        "typeIdentifier": "t_type$_t_contract$_TVTBToken_$11245_$",
                         "typeString": "type(contract TVTBToken)"
                       }
                     },
@@ -6678,7 +6681,7 @@
                     "src": "1656:26:32",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                      "typeIdentifier": "t_contract$_TVTBToken_$11245",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -6725,7 +6728,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                    "typeIdentifier": "t_contract$_TVTBToken_$11245",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -6735,13 +6738,13 @@
                       "id": 5382,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 11232,
+                      "referencedDeclaration": 11245,
                       "src": "1628:9:32"
                     },
-                    "referencedDeclaration": 11232,
+                    "referencedDeclaration": 11245,
                     "src": "1628:9:32",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                      "typeIdentifier": "t_contract$_TVTBToken_$11245",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -7702,7 +7705,7 @@
                           "referencedDeclaration": 5394,
                           "src": "2383:8:32",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_TVTBToken_$11232_$",
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_TVTBToken_$11245_$",
                             "typeString": "function () view returns (contract TVTBToken)"
                           }
                         },
@@ -7717,7 +7720,7 @@
                         "src": "2383:10:32",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                          "typeIdentifier": "t_contract$_TVTBToken_$11245",
                           "typeString": "contract TVTBToken"
                         }
                       },
@@ -7728,7 +7731,7 @@
                       "lValueRequested": false,
                       "memberName": "getNumber",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 11213,
+                      "referencedDeclaration": 11226,
                       "src": "2383:20:32",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
@@ -8263,7 +8266,7 @@
                             "referencedDeclaration": 5394,
                             "src": "2801:8:32",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_TVTBToken_$11232_$",
+                              "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_TVTBToken_$11245_$",
                               "typeString": "function () view returns (contract TVTBToken)"
                             }
                           },
@@ -8278,7 +8281,7 @@
                           "src": "2801:10:32",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_TVTBToken_$11232",
+                            "typeIdentifier": "t_contract$_TVTBToken_$11245",
                             "typeString": "contract TVTBToken"
                           }
                         },
@@ -8442,9 +8445,17 @@
     "name": "solc",
     "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "97": {
+      "events": {},
+      "links": {},
+      "address": "0x4260d08272Ef2894bC8fb6DC53A25f67e67A4d0F",
+      "transactionHash": "0xd47bca3ea21f0d090aec1005f92d411af45b373c0fc8667100042ce60bbc6b42"
+    }
+  },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-12T04:35:15.310Z",
+  "updatedAt": "2022-06-13T07:48:45.833Z",
+  "networkType": "ethereum",
   "devdoc": {
     "details": "It's a basic contract for ballot",
     "kind": "dev",

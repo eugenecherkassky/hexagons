@@ -6,7 +6,7 @@ import "./BankAccountSupplier.sol";
 contract Mint is BankAccountSupplier {
     constructor(IERC20 token) BankAccountSupplier(token) {}
 
-    function distribute() external {
+    function distribute() external override {
         uint256 date = _getLastPaymentDate();
 
         if (date == 0) {

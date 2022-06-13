@@ -85,7 +85,8 @@
       "name": "buyTokens",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -98,7 +99,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -111,7 +113,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -124,7 +127,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -161,7 +165,8 @@
     },
     {
       "stateMutability": "payable",
-      "type": "receive"
+      "type": "receive",
+      "payable": true
     },
     {
       "inputs": [],
@@ -174,7 +179,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"},{\"internalType\":\"contract ERC20PresetMinterPauser\",\"name\":\"token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"AfterCrowdsaleBuyTokens\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"oldRate\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newRate\",\"type\":\"uint256\"}],\"name\":\"BeforeCrowdsaleSetRate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"buyTokens\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getToken\",\"outputs\":[{\"internalType\":\"contract ERC20PresetMinterPauser\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getWeiRaised\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"rate\",\"type\":\"uint256\"}],\"name\":\"setRate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"details\":\"Extension of ERC20Crowdsale contract whose tokens are minted in each purchase. Token ownership should be transferred to TVTTokenCrowdsale for minting.\",\"kind\":\"dev\",\"methods\":{\"buyTokens()\":{\"details\":\"low level token purchase ***DO NOT OVERRIDE*** This function has a non-reentrancy guard, so it shouldn't be called by another `nonReentrant` function.\"},\"getRate()\":{\"returns\":{\"_0\":\"the number of token units a buyer gets per wei.\"}},\"getToken()\":{\"returns\":{\"_0\":\"the token being sold.\"}},\"getWeiRaised()\":{\"returns\":{\"_0\":\"the amount of wei raised.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setRate(uint256)\":{\"params\":{\"rate\":\"Number of token units a buyer gets per wei\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"TVTTokenCrowdsale\",\"version\":1},\"userdoc\":{\"events\":{\"AfterCrowdsaleBuyTokens(address,uint256,uint256)\":{\"notice\":\"Event for token purchase logging\"}},\"kind\":\"user\",\"methods\":{\"setRate(uint256)\":{\"notice\":\"This function set the rate of token\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TVT/TVTTokenCrowdsale.sol\":\"TVTTokenCrowdsale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xb4d87ee2ead4bd192b41c128f287d4b7f24b9e0cd740cc9b476881c461286007\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://861c3abaa2b388a0228469080470d2254e8e91fd09aa0abda8b9ef3babf03ee5\",\"dweb:/ipfs/QmZFg88WPesuMo6GMtf3fi9NHQ5tENYLDZsFQSWgoq13TN\"]},\"@openzeppelin/contracts/access/AccessControlEnumerable.sol\":{\"keccak256\":\"0x13f5e15f2a0650c0b6aaee2ef19e89eaf4870d6e79662d572a393334c1397247\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7ee05f28f549a5d6515e152580716b87636ed4bfab9812499a6e3803df88288b\",\"dweb:/ipfs/QmeEnhdwY1t5Y3YU5a4ffzgXuToydH2PNdNxV9W7dEPRQJ\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"@openzeppelin/contracts/access/IAccessControlEnumerable.sol\":{\"keccak256\":\"0xba4459ab871dfa300f5212c6c30178b63898c03533a1ede28436f11546626676\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dcc7b09bfa6e18aab262ca372f4a9b1fc82e294b430706a4e1378cf58e6a276\",\"dweb:/ipfs/QmT8oSAcesdctR15HMLhr2a1HRpXymxdjTfdtfTYJcj2N2\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/security/Pausable.sol\":{\"keccak256\":\"0xe68ed7fb8766ed1e888291f881e36b616037f852b37d96877045319ad298ba87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1d491a2ca79dbf44bc02e876e21a5847a2cbcc011188532ad8662cdc1c134a4e\",\"dweb:/ipfs/QmUQXhSV8ZvHLzfdG89ZNSh1nLrAYyjnNBLznJGwGcwVk8\"]},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"keccak256\":\"0x0e9621f60b2faabe65549f7ed0f24e8853a45c1b7990d47e8160e523683f3935\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://287a2f8d5814dd0f05f22b740f18ca8321acc21c9bd03a6cb2203ea626e2f3f2\",\"dweb:/ipfs/QmZRQv9iuwU817VuqkA2WweiaibKii69x9QxYBBEfbNEud\"]},\"@openzeppelin/contracts/token/ERC20/ERC20.sol\":{\"keccak256\":\"0xe0c8b625a79bac0fe80f17cfb521e072805cc9cef1c96a5caf45b264e74812fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://12fd1efc9ad061ef675bd50fb0c8e3c6f2952a09f8df0e3c688b8d81b8918838\",\"dweb:/ipfs/QmawN6PjTwy91pU7ANjCSgbsLc8TDA6hwu9GsFFaNSuhb5\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol\":{\"keccak256\":\"0x0d19410453cda55960a818e02bd7c18952a5c8fe7a3036e81f0d599f34487a7b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4c0f62d3d5bef22b5ca00cc3903e7de6152cb68d2d22401a463f373cda54c00f\",\"dweb:/ipfs/QmSfzjZux7LC7NW2f7rjCXTHeFMUCWERqDkhpCTBy7kxTe\"]},\"@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol\":{\"keccak256\":\"0x978847fbff92d66d27d8767402a90ba996970b1936b372406aa17f5492bd8dc5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1414cb92779420b50d3e796b47bad6ea800ef1805bc6f9bf35a3ccb4e17db3dc\",\"dweb:/ipfs/QmaMzwYqLiivfaWSgqeaAPboBtJjVD1hSrH48p7ExJZ7DG\"]},\"@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol\":{\"keccak256\":\"0x2cd54808b851c4db22f459065af0b7a952262741a85a73923e7a660767cd7baa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://750c4a78e953fe92317bba7166afd0a4b7725723e5822ea1b92ffd4e72d2d36b\",\"dweb:/ipfs/QmZNyCSrdYXGQfmB6LkbX8R6y4gGZRNh1d2pJobYBpkaRF\"]},\"@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol\":{\"keccak256\":\"0xc3d946432c0ddbb1f846a0d3985be71299df331b91d06732152117f62f0be2b5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4632c341a06ba5c079b51ca5a915efab4e6ab57735b37839b3e8365ff806a43e\",\"dweb:/ipfs/QmTHT3xHYed2wajEoA5qu7ii2BxLpPhQZHwAhtLK5Z7ANK\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x2ccf9d2313a313d41a791505f2b5abfdc62191b5d4334f7f7a82691c088a1c87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3a57d0854b2fdce6ebff933a48dca2445643d1eccfc27f00292e937f26c6a58\",\"dweb:/ipfs/QmW45rZooS9TqR4YXUbjRbtf2Bpb5ouSarBvfW1LdGprvV\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30\",\"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65\",\"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN\"]},\"@openzeppelin/contracts/utils/structs/EnumerableSet.sol\":{\"keccak256\":\"0xacac2065b3ed1facff1163435890d4a6bcdc474e857e8e2c91ae5fb50418f723\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://acd44ec097dd623f40870ca848c31deb02dca032ec9c56bd2e52ee103d35ce6d\",\"dweb:/ipfs/Qme3CuA45xCft72RjE6s4bmhffpe2NHvHULH9fh5oPbzBv\"]},\"project:/contracts/Crowdsale.sol\":{\"keccak256\":\"0x285faa7954accee740b00f02c54979c11d653340384599ac1b1f893b2f94b43b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6f85038385abc394ea681b7592b13ccb3aa6ca0f43cfd311bc13f4c0675d87e6\",\"dweb:/ipfs/QmcjQcgkWa3ZPTCzUEjXxoM3RjP4T6uDCMSiFnUvhRARen\"]},\"project:/contracts/TVT/TVTTokenCrowdsale.sol\":{\"keccak256\":\"0xd2a3f7c40ccd41ce9c65bb01f527f912a5bf7d3c91c93d62b73b07847cc46ad3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://414665fcfd86c3deab5ca21c67e9e3ca2c25522909576f9829a83dd238849afb\",\"dweb:/ipfs/QmRojs8AoYGcQTm2trqMK4Sq27VFSnHCK9bHytPgXJB1Xf\"]}},\"version\":1}",
@@ -3513,7 +3519,7 @@
         4019
       ],
       "Crowdsale": [
-        6250
+        6255
       ],
       "ERC165": [
         4320
@@ -3567,15 +3573,15 @@
         4296
       ],
       "TVTTokenCrowdsale": [
-        11157
+        11170
       ]
     },
-    "id": 11158,
+    "id": 11171,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11083,
+        "id": 11096,
         "literals": [
           "solidity",
           "0.8",
@@ -3587,10 +3593,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
         "file": "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
-        "id": 11084,
+        "id": 11097,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 11158,
+        "scope": 11171,
         "sourceUnit": 1828,
         "src": "56:81:55",
         "symbolAliases": [],
@@ -3599,11 +3605,11 @@
       {
         "absolutePath": "project:/contracts/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 11085,
+        "id": 11098,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 11158,
-        "sourceUnit": 6251,
+        "scope": 11171,
+        "sourceUnit": 6256,
         "src": "139:26:55",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3613,13 +3619,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 11087,
+              "id": 11100,
               "name": "Crowdsale",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6250,
+              "referencedDeclaration": 6255,
               "src": "395:9:55"
             },
-            "id": 11088,
+            "id": 11101,
             "nodeType": "InheritanceSpecifier",
             "src": "395:9:55"
           }
@@ -3627,16 +3633,16 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 11086,
+          "id": 11099,
           "nodeType": "StructuredDocumentation",
           "src": "167:197:55",
           "text": " @title TVTTokenCrowdsale\n @dev Extension of ERC20Crowdsale contract whose tokens are minted in each purchase.\n Token ownership should be transferred to TVTTokenCrowdsale for minting."
         },
         "fullyImplemented": true,
-        "id": 11157,
+        "id": 11170,
         "linearizedBaseContracts": [
-          11157,
-          6250,
+          11170,
+          6255,
           921,
           647,
           4019
@@ -3646,9 +3652,9 @@
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 11092,
+            "id": 11105,
             "libraryName": {
-              "id": 11089,
+              "id": 11102,
               "name": "SafeERC20",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 2051,
@@ -3657,10 +3663,10 @@
             "nodeType": "UsingForDirective",
             "src": "411:27:55",
             "typeName": {
-              "id": 11091,
+              "id": 11104,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 11090,
+                "id": 11103,
                 "name": "IERC20",
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 1585,
@@ -3676,12 +3682,12 @@
           },
           {
             "constant": false,
-            "id": 11095,
+            "id": 11108,
             "mutability": "mutable",
             "name": "_token",
             "nameLocation": "504:6:55",
             "nodeType": "VariableDeclaration",
-            "scope": 11157,
+            "scope": 11170,
             "src": "472:38:55",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3690,10 +3696,10 @@
               "typeString": "contract ERC20PresetMinterPauser"
             },
             "typeName": {
-              "id": 11094,
+              "id": 11107,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 11093,
+                "id": 11106,
                 "name": "ERC20PresetMinterPauser",
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 1827,
@@ -3710,7 +3716,7 @@
           },
           {
             "body": {
-              "id": 11123,
+              "id": 11136,
               "nodeType": "Block",
               "src": "590:153:55",
               "statements": [
@@ -3722,7 +3728,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 11115,
+                        "id": 11128,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3730,11 +3736,11 @@
                         "leftExpression": {
                           "arguments": [
                             {
-                              "id": 11109,
+                              "id": 11122,
                               "name": "token",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11100,
+                              "referencedDeclaration": 11113,
                               "src": "629:5:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_ERC20PresetMinterPauser_$1827",
@@ -3749,7 +3755,7 @@
                                 "typeString": "contract ERC20PresetMinterPauser"
                               }
                             ],
-                            "id": 11108,
+                            "id": 11121,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -3761,14 +3767,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 11107,
+                              "id": 11120,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "621:7:55",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 11110,
+                          "id": 11123,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3789,7 +3795,7 @@
                           "arguments": [
                             {
                               "hexValue": "30",
-                              "id": 11113,
+                              "id": 11126,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3811,7 +3817,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 11112,
+                            "id": 11125,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -3823,14 +3829,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 11111,
+                              "id": 11124,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "639:7:55",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 11114,
+                          "id": 11127,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3853,7 +3859,7 @@
                       },
                       {
                         "hexValue": "43726f776473616c653a20746f6b656e20697320746865207a65726f2061646472657373",
-                        "id": 11116,
+                        "id": 11129,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3879,7 +3885,7 @@
                           "typeString": "literal_string \"Crowdsale: token is the zero address\""
                         }
                       ],
-                      "id": 11106,
+                      "id": 11119,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -3893,7 +3899,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11117,
+                    "id": 11130,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3908,23 +3914,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11118,
+                  "id": 11131,
                   "nodeType": "ExpressionStatement",
                   "src": "600:111:55"
                 },
                 {
                   "expression": {
-                    "id": 11121,
+                    "id": 11134,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 11119,
+                      "id": 11132,
                       "name": "_token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11095,
+                      "referencedDeclaration": 11108,
                       "src": "722:6:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_ERC20PresetMinterPauser_$1827",
@@ -3934,11 +3940,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 11120,
+                      "id": 11133,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11100,
+                      "referencedDeclaration": 11113,
                       "src": "731:5:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_ERC20PresetMinterPauser_$1827",
@@ -3951,24 +3957,24 @@
                       "typeString": "contract ERC20PresetMinterPauser"
                     }
                   },
-                  "id": 11122,
+                  "id": 11135,
                   "nodeType": "ExpressionStatement",
                   "src": "722:14:55"
                 }
               ]
             },
-            "id": 11124,
+            "id": 11137,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
               {
                 "arguments": [
                   {
-                    "id": 11103,
+                    "id": 11116,
                     "name": "rate",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11097,
+                    "referencedDeclaration": 11110,
                     "src": "584:4:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -3976,13 +3982,13 @@
                     }
                   }
                 ],
-                "id": 11104,
+                "id": 11117,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 11102,
+                  "id": 11115,
                   "name": "Crowdsale",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6250,
+                  "referencedDeclaration": 6255,
                   "src": "574:9:55"
                 },
                 "nodeType": "ModifierInvocation",
@@ -3993,17 +3999,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11101,
+              "id": 11114,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11097,
+                  "id": 11110,
                   "mutability": "mutable",
                   "name": "rate",
                   "nameLocation": "537:4:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11124,
+                  "scope": 11137,
                   "src": "529:12:55",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4012,7 +4018,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11096,
+                    "id": 11109,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "529:7:55",
@@ -4025,12 +4031,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11100,
+                  "id": 11113,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "567:5:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11124,
+                  "scope": 11137,
                   "src": "543:29:55",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4039,10 +4045,10 @@
                     "typeString": "contract ERC20PresetMinterPauser"
                   },
                   "typeName": {
-                    "id": 11099,
+                    "id": 11112,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 11098,
+                      "id": 11111,
                       "name": "ERC20PresetMinterPauser",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 1827,
@@ -4061,12 +4067,12 @@
               "src": "528:45:55"
             },
             "returnParameters": {
-              "id": 11105,
+              "id": 11118,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "590:0:55"
             },
-            "scope": 11157,
+            "scope": 11170,
             "src": "517:226:55",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -4074,7 +4080,7 @@
           },
           {
             "body": {
-              "id": 11138,
+              "id": 11151,
               "nodeType": "Block",
               "src": "868:64:55",
               "statements": [
@@ -4084,11 +4090,11 @@
                       {
                         "arguments": [
                           {
-                            "id": 11134,
+                            "id": 11147,
                             "name": "_token",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11095,
+                            "referencedDeclaration": 11108,
                             "src": "917:6:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC20PresetMinterPauser_$1827",
@@ -4103,7 +4109,7 @@
                               "typeString": "contract ERC20PresetMinterPauser"
                             }
                           ],
-                          "id": 11133,
+                          "id": 11146,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4115,14 +4121,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 11132,
+                            "id": 11145,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "909:7:55",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 11135,
+                        "id": 11148,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4145,7 +4151,7 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 11131,
+                      "id": 11144,
                       "name": "ERC20PresetMinterPauser",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -4156,7 +4162,7 @@
                         "typeString": "type(contract ERC20PresetMinterPauser)"
                       }
                     },
-                    "id": 11136,
+                    "id": 11149,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4171,21 +4177,21 @@
                       "typeString": "contract ERC20PresetMinterPauser"
                     }
                   },
-                  "functionReturnParameters": 11130,
-                  "id": 11137,
+                  "functionReturnParameters": 11143,
+                  "id": 11150,
                   "nodeType": "Return",
                   "src": "878:47:55"
                 }
               ]
             },
             "documentation": {
-              "id": 11125,
+              "id": 11138,
               "nodeType": "StructuredDocumentation",
               "src": "749:48:55",
               "text": " @return the token being sold."
             },
             "functionSelector": "21df0da7",
-            "id": 11139,
+            "id": 11152,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4193,23 +4199,23 @@
             "nameLocation": "811:8:55",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11126,
+              "id": 11139,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "819:2:55"
             },
             "returnParameters": {
-              "id": 11130,
+              "id": 11143,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11129,
+                  "id": 11142,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11139,
+                  "scope": 11152,
                   "src": "843:23:55",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4218,10 +4224,10 @@
                     "typeString": "contract ERC20PresetMinterPauser"
                   },
                   "typeName": {
-                    "id": 11128,
+                    "id": 11141,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 11127,
+                      "id": 11140,
                       "name": "ERC20PresetMinterPauser",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 1827,
@@ -4239,7 +4245,7 @@
               ],
               "src": "842:25:55"
             },
-            "scope": 11157,
+            "scope": 11170,
             "src": "802:130:55",
             "stateMutability": "view",
             "virtual": false,
@@ -4247,10 +4253,10 @@
           },
           {
             "baseFunctions": [
-              6159
+              6164
             ],
             "body": {
-              "id": 11155,
+              "id": 11168,
               "nodeType": "Block",
               "src": "1220:58:55",
               "statements": [
@@ -4258,11 +4264,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 11151,
+                        "id": 11164,
                         "name": "beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11142,
+                        "referencedDeclaration": 11155,
                         "src": "1246:11:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4270,11 +4276,11 @@
                         }
                       },
                       {
-                        "id": 11152,
+                        "id": 11165,
                         "name": "tokenAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11144,
+                        "referencedDeclaration": 11157,
                         "src": "1259:11:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4297,18 +4303,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 11148,
+                          "id": 11161,
                           "name": "getToken",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11139,
+                          "referencedDeclaration": 11152,
                           "src": "1230:8:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC20PresetMinterPauser_$1827_$",
                             "typeString": "function () view returns (contract ERC20PresetMinterPauser)"
                           }
                         },
-                        "id": 11149,
+                        "id": 11162,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4323,7 +4329,7 @@
                           "typeString": "contract ERC20PresetMinterPauser"
                         }
                       },
-                      "id": 11150,
+                      "id": 11163,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4337,7 +4343,7 @@
                         "typeString": "function (address,uint256) external"
                       }
                     },
-                    "id": 11153,
+                    "id": 11166,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4352,19 +4358,19 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11154,
+                  "id": 11167,
                   "nodeType": "ExpressionStatement",
                   "src": "1230:41:55"
                 }
               ]
             },
             "documentation": {
-              "id": 11140,
+              "id": 11153,
               "nodeType": "StructuredDocumentation",
               "src": "938:173:55",
               "text": " @dev Overrides delivery by minting tokens upon purchase.\n @param beneficiary Token purchaser\n @param tokenAmount Number of tokens to be minted"
             },
-            "id": 11156,
+            "id": 11169,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4372,23 +4378,23 @@
             "nameLocation": "1125:14:55",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 11146,
+              "id": 11159,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1207:8:55"
             },
             "parameters": {
-              "id": 11145,
+              "id": 11158,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11142,
+                  "id": 11155,
                   "mutability": "mutable",
                   "name": "beneficiary",
                   "nameLocation": "1148:11:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11156,
+                  "scope": 11169,
                   "src": "1140:19:55",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4397,7 +4403,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11141,
+                    "id": 11154,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1140:7:55",
@@ -4411,12 +4417,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11144,
+                  "id": 11157,
                   "mutability": "mutable",
                   "name": "tokenAmount",
                   "nameLocation": "1169:11:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11156,
+                  "scope": 11169,
                   "src": "1161:19:55",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4425,7 +4431,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11143,
+                    "id": 11156,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1161:7:55",
@@ -4440,19 +4446,19 @@
               "src": "1139:42:55"
             },
             "returnParameters": {
-              "id": 11147,
+              "id": 11160,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1220:0:55"
             },
-            "scope": 11157,
+            "scope": 11170,
             "src": "1116:162:55",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           }
         ],
-        "scope": 11158,
+        "scope": 11171,
         "src": "365:915:55",
         "usedErrors": []
       }
@@ -4463,9 +4469,17 @@
     "name": "solc",
     "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "97": {
+      "events": {},
+      "links": {},
+      "address": "0x73cfa562847df74aCDe03783fa802942c9d865D4",
+      "transactionHash": "0xf0b2b0031c26a15a2e4d0a4f92049ec66a642b8b23df7d4cf63ccf6356d03b40"
+    }
+  },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-12T04:35:15.365Z",
+  "updatedAt": "2022-06-13T07:45:29.991Z",
+  "networkType": "ethereum",
   "devdoc": {
     "details": "Extension of ERC20Crowdsale contract whose tokens are minted in each purchase. Token ownership should be transferred to TVTTokenCrowdsale for minting.",
     "kind": "dev",

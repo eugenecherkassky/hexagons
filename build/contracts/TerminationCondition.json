@@ -27,7 +27,7 @@
         5619
       ],
       "BaseDeposit": [
-        6745
+        6753
       ],
       "Context": [
         4019
@@ -39,7 +39,7 @@
         517
       ],
       "IBankAccount": [
-        6299
+        6304
       ],
       "IERC165": [
         4332
@@ -48,7 +48,7 @@
         1585
       ],
       "ILaunchpool": [
-        7555
+        7563
       ],
       "Ownable": [
         647
@@ -57,15 +57,15 @@
         4296
       ],
       "TerminationCondition": [
-        7052
+        7060
       ]
     },
-    "id": 7053,
+    "id": 7061,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7005,
+        "id": 7013,
         "literals": [
           "solidity",
           "0.8",
@@ -77,11 +77,11 @@
       {
         "absolutePath": "project:/contracts/Launchpool/BaseDeposit.sol",
         "file": "../BaseDeposit.sol",
-        "id": 7006,
+        "id": 7014,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 7053,
-        "sourceUnit": 6746,
+        "scope": 7061,
+        "sourceUnit": 6754,
         "src": "56:28:43",
         "symbolAliases": [],
         "unitAlias": ""
@@ -92,15 +92,15 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 7007,
+          "id": 7015,
           "nodeType": "StructuredDocumentation",
           "src": "86:38:43",
           "text": " @dev Termination condition."
         },
         "fullyImplemented": true,
-        "id": 7052,
+        "id": 7060,
         "linearizedBaseContracts": [
-          7052
+          7060
         ],
         "name": "TerminationCondition",
         "nameLocation": "143:20:43",
@@ -108,12 +108,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 7009,
+            "id": 7017,
             "mutability": "mutable",
             "name": "_isTerminatable",
             "nameLocation": "184:15:43",
             "nodeType": "VariableDeclaration",
-            "scope": 7052,
+            "scope": 7060,
             "src": "170:29:43",
             "stateVariable": true,
             "storageLocation": "default",
@@ -122,7 +122,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 7008,
+              "id": 7016,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "170:4:43",
@@ -135,12 +135,12 @@
           },
           {
             "constant": false,
-            "id": 7011,
+            "id": 7019,
             "mutability": "mutable",
             "name": "_terminationPenalty",
             "nameLocation": "221:19:43",
             "nodeType": "VariableDeclaration",
-            "scope": 7052,
+            "scope": 7060,
             "src": "206:34:43",
             "stateVariable": true,
             "storageLocation": "default",
@@ -149,7 +149,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 7010,
+              "id": 7018,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "206:5:43",
@@ -161,12 +161,12 @@
             "visibility": "internal"
           },
           {
-            "id": 7013,
+            "id": 7021,
             "name": "TerminationConstraint",
             "nameLocation": "253:21:43",
             "nodeType": "ErrorDefinition",
             "parameters": {
-              "id": 7012,
+              "id": 7020,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "274:2:43"
@@ -175,23 +175,23 @@
           },
           {
             "body": {
-              "id": 7028,
+              "id": 7036,
               "nodeType": "Block",
               "src": "342:99:43",
               "statements": [
                 {
                   "expression": {
-                    "id": 7022,
+                    "id": 7030,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 7020,
+                      "id": 7028,
                       "name": "_isTerminatable",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7009,
+                      "referencedDeclaration": 7017,
                       "src": "352:15:43",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -201,11 +201,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 7021,
+                      "id": 7029,
                       "name": "isTerminatable",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7015,
+                      "referencedDeclaration": 7023,
                       "src": "370:14:43",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -218,23 +218,23 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 7023,
+                  "id": 7031,
                   "nodeType": "ExpressionStatement",
                   "src": "352:32:43"
                 },
                 {
                   "expression": {
-                    "id": 7026,
+                    "id": 7034,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 7024,
+                      "id": 7032,
                       "name": "_terminationPenalty",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7011,
+                      "referencedDeclaration": 7019,
                       "src": "394:19:43",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -244,11 +244,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 7025,
+                      "id": 7033,
                       "name": "terminationPenalty",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 7017,
+                      "referencedDeclaration": 7025,
                       "src": "416:18:43",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -261,13 +261,13 @@
                       "typeString": "uint8"
                     }
                   },
-                  "id": 7027,
+                  "id": 7035,
                   "nodeType": "ExpressionStatement",
                   "src": "394:40:43"
                 }
               ]
             },
-            "id": 7029,
+            "id": 7037,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -275,17 +275,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7018,
+              "id": 7026,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7015,
+                  "id": 7023,
                   "mutability": "mutable",
                   "name": "isTerminatable",
                   "nameLocation": "300:14:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7029,
+                  "scope": 7037,
                   "src": "295:19:43",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -294,7 +294,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 7014,
+                    "id": 7022,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "295:4:43",
@@ -307,12 +307,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 7017,
+                  "id": 7025,
                   "mutability": "mutable",
                   "name": "terminationPenalty",
                   "nameLocation": "322:18:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7029,
+                  "scope": 7037,
                   "src": "316:24:43",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -321,7 +321,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 7016,
+                    "id": 7024,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "316:5:43",
@@ -336,12 +336,12 @@
               "src": "294:47:43"
             },
             "returnParameters": {
-              "id": 7019,
+              "id": 7027,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "342:0:43"
             },
-            "scope": 7052,
+            "scope": 7060,
             "src": "283:158:43",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -349,7 +349,7 @@
           },
           {
             "body": {
-              "id": 7050,
+              "id": 7058,
               "nodeType": "Block",
               "src": "586:136:43",
               "statements": [
@@ -359,13 +359,13 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 7044,
+                    "id": 7052,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 7039,
+                      "id": 7047,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -375,11 +375,11 @@
                       "prefix": true,
                       "src": "600:16:43",
                       "subExpression": {
-                        "id": 7038,
+                        "id": 7046,
                         "name": "_isTerminatable",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7009,
+                        "referencedDeclaration": 7017,
                         "src": "601:15:43",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -398,17 +398,17 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 7043,
+                      "id": 7051,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 7040,
+                        "id": 7048,
                         "name": "periodMinimumDateTime",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 7035,
+                        "referencedDeclaration": 7043,
                         "src": "620:21:43",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -419,7 +419,7 @@
                       "operator": ">",
                       "rightExpression": {
                         "expression": {
-                          "id": 7041,
+                          "id": 7049,
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -430,7 +430,7 @@
                             "typeString": "block"
                           }
                         },
-                        "id": 7042,
+                        "id": 7050,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -455,11 +455,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 7049,
+                  "id": 7057,
                   "nodeType": "IfStatement",
                   "src": "596:120:43",
                   "trueBody": {
-                    "id": 7048,
+                    "id": 7056,
                     "nodeType": "Block",
                     "src": "661:55:43",
                     "statements": [
@@ -468,18 +468,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 7045,
+                            "id": 7053,
                             "name": "TerminationConstraint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 7013,
+                            "referencedDeclaration": 7021,
                             "src": "682:21:43",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
                               "typeString": "function () pure"
                             }
                           },
-                          "id": 7046,
+                          "id": 7054,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -494,7 +494,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 7047,
+                        "id": 7055,
                         "nodeType": "RevertStatement",
                         "src": "675:30:43"
                       }
@@ -503,7 +503,7 @@
                 }
               ]
             },
-            "id": 7051,
+            "id": 7059,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -511,47 +511,47 @@
             "nameLocation": "456:20:43",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7036,
+              "id": 7044,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7033,
+                  "id": 7041,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7051,
+                  "scope": 7059,
                   "src": "486:32:43",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Transaction_$6425_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$6433_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct BaseDeposit.Transaction[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 7031,
+                      "id": 7039,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 7030,
+                        "id": 7038,
                         "name": "BaseDeposit.Transaction",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 6425,
+                        "referencedDeclaration": 6433,
                         "src": "486:23:43"
                       },
-                      "referencedDeclaration": 6425,
+                      "referencedDeclaration": 6433,
                       "src": "486:23:43",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Transaction_$6425_storage_ptr",
+                        "typeIdentifier": "t_struct$_Transaction_$6433_storage_ptr",
                         "typeString": "struct BaseDeposit.Transaction"
                       }
                     },
-                    "id": 7032,
+                    "id": 7040,
                     "nodeType": "ArrayTypeName",
                     "src": "486:25:43",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Transaction_$6425_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$6433_storage_$dyn_storage_ptr",
                       "typeString": "struct BaseDeposit.Transaction[]"
                     }
                   },
@@ -559,12 +559,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 7035,
+                  "id": 7043,
                   "mutability": "mutable",
                   "name": "periodMinimumDateTime",
                   "nameLocation": "536:21:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7051,
+                  "scope": 7059,
                   "src": "528:29:43",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -573,7 +573,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7034,
+                    "id": 7042,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "528:7:43",
@@ -588,22 +588,22 @@
               "src": "476:87:43"
             },
             "returnParameters": {
-              "id": 7037,
+              "id": 7045,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "586:0:43"
             },
-            "scope": 7052,
+            "scope": 7060,
             "src": "447:275:43",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
-        "scope": 7053,
+        "scope": 7061,
         "src": "125:599:43",
         "usedErrors": [
-          7013
+          7021
         ]
       }
     ],
@@ -615,7 +615,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-12T04:35:15.322Z",
+  "updatedAt": "2022-06-13T07:39:59.742Z",
   "devdoc": {
     "details": "Termination condition.",
     "kind": "dev",

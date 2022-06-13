@@ -1,12 +1,10 @@
+const TVT = artifacts.require("TVT/TVT");
 const Treasury = artifacts.require("Treasury");
 
 module.exports = async function (deployer) {
-  require("dotenv").config();
+  const tvt = await TVT.deployed();
 
-  const treasury = await deployer.deploy(
-    Treasury,
-    process.env.REACT_APP_CONTRACT_TVT
-  );
+  const treasury = await deployer.deploy(Treasury, tvt.address);
 
-  // console.log("Deployed", treasury.address);
+  console.log("Deployed", treasury.address);
 };

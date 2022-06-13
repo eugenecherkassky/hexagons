@@ -5,7 +5,7 @@ const Treasury = artifacts.require("Treasury");
 
 const depositPrograms = require("../test/DepositPrograms");
 
-module.exports = async function (deployer, _network, _accounts) {
+module.exports = async function (deployer) {
   require("dotenv").config();
 
   const mint = await Mint.deployed();
@@ -36,5 +36,5 @@ module.exports = async function (deployer, _network, _accounts) {
     },
   ]);
 
-  // console.log("Deployed", launchpool.address);
+  console.log("Deployed", launchpool.address);
 };

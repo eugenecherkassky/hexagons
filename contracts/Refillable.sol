@@ -35,8 +35,11 @@ abstract contract Refillable is Context, IBankAccount {
         address sender = _msgSender();
 
         for (uint256 i = 0; i < _refillableSuppliers.length; i++) {
-            RefillableSupplier memory supplier = _refillableSuppliers[i];
-            supplier.agreement.pay(sender);
+            IBankAccountSupplier supplier = _refillableSuppliers[i].agreement;
+
+            supplier.distribute();
+
+            supplier.pay(sender);
         }
     }
 
