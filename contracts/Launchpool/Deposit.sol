@@ -43,16 +43,8 @@ contract Deposit is
         _rate = parameters.rate;
     }
 
-    function deposit(uint256 amount) external {
-        _preValidateDeposit(_transactions, amount);
-
-        Transaction storage transaction = _addTransaction(
-            TransactionKind.DEPOSIT,
-            _msgSender(),
-            amount
-        );
-
-        _transfer(transaction);
+    receive() external payable {
+        _deposit(msg.sender, msg.value / 10**18);
     }
 
     function isActive() public view returns (bool) {
@@ -159,6 +151,18 @@ contract Deposit is
                 amountPenalty
             );
         }
+    }
+
+    function _deposit(address sender, uint256 amount) private {
+        _preValidateDeposit(_transactions, amount);
+
+        Transaction storage transaction = _addTransaction(
+            TransactionKind.DEPOSIT,
+            sender,
+            amount
+        );
+
+        _transfer(transaction);
     }
 
     function _isWithdrawable() private view returns (bool) {

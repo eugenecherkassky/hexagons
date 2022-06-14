@@ -199,15 +199,15 @@
         6326
       ],
       "Refillable": [
-        9670
+        9689
       ]
     },
-    "id": 9671,
+    "id": 9690,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9386,
+        "id": 9405,
         "literals": [
           "solidity",
           "0.8",
@@ -219,10 +219,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
         "file": "@openzeppelin/contracts/utils/Context.sol",
-        "id": 9387,
+        "id": 9406,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 9671,
+        "scope": 9690,
         "sourceUnit": 4020,
         "src": "56:51:50",
         "symbolAliases": [],
@@ -231,10 +231,10 @@
       {
         "absolutePath": "project:/contracts/IBankAccount.sol",
         "file": "./IBankAccount.sol",
-        "id": 9388,
+        "id": 9407,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 9671,
+        "scope": 9690,
         "sourceUnit": 6305,
         "src": "109:28:50",
         "symbolAliases": [],
@@ -243,10 +243,10 @@
       {
         "absolutePath": "project:/contracts/IBankAccountSupplier.sol",
         "file": "./IBankAccountSupplier.sol",
-        "id": 9389,
+        "id": 9408,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 9671,
+        "scope": 9690,
         "sourceUnit": 6352,
         "src": "138:36:50",
         "symbolAliases": [],
@@ -257,25 +257,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 9390,
+              "id": 9409,
               "name": "Context",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 4019,
               "src": "208:7:50"
             },
-            "id": 9391,
+            "id": 9410,
             "nodeType": "InheritanceSpecifier",
             "src": "208:7:50"
           },
           {
             "baseName": {
-              "id": 9392,
+              "id": 9411,
               "name": "IBankAccount",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 6304,
               "src": "217:12:50"
             },
-            "id": 9393,
+            "id": 9412,
             "nodeType": "InheritanceSpecifier",
             "src": "217:12:50"
           }
@@ -283,9 +283,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": false,
-        "id": 9670,
+        "id": 9689,
         "linearizedBaseContracts": [
-          9670,
+          9689,
           6304,
           4019
         ],
@@ -295,16 +295,16 @@
         "nodes": [
           {
             "canonicalName": "Refillable.RefillableSupplier",
-            "id": 9399,
+            "id": 9418,
             "members": [
               {
                 "constant": false,
-                "id": 9396,
+                "id": 9415,
                 "mutability": "mutable",
                 "name": "agreement",
                 "nameLocation": "293:9:50",
                 "nodeType": "VariableDeclaration",
-                "scope": 9399,
+                "scope": 9418,
                 "src": "272:30:50",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -313,10 +313,10 @@
                   "typeString": "contract IBankAccountSupplier"
                 },
                 "typeName": {
-                  "id": 9395,
+                  "id": 9414,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 9394,
+                    "id": 9413,
                     "name": "IBankAccountSupplier",
                     "nodeType": "IdentifierPath",
                     "referencedDeclaration": 6351,
@@ -333,12 +333,12 @@
               },
               {
                 "constant": false,
-                "id": 9398,
+                "id": 9417,
                 "mutability": "mutable",
                 "name": "reward",
                 "nameLocation": "320:6:50",
                 "nodeType": "VariableDeclaration",
-                "scope": 9399,
+                "scope": 9418,
                 "src": "312:14:50",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -347,7 +347,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 9397,
+                  "id": 9416,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "312:7:50",
@@ -362,70 +362,70 @@
             "name": "RefillableSupplier",
             "nameLocation": "243:18:50",
             "nodeType": "StructDefinition",
-            "scope": 9670,
+            "scope": 9689,
             "src": "236:97:50",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 9403,
+            "id": 9422,
             "mutability": "mutable",
             "name": "_refillableSuppliers",
             "nameLocation": "368:20:50",
             "nodeType": "VariableDeclaration",
-            "scope": 9670,
+            "scope": 9689,
             "src": "339:49:50",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
               "typeString": "struct Refillable.RefillableSupplier[]"
             },
             "typeName": {
               "baseType": {
-                "id": 9401,
+                "id": 9420,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 9400,
+                  "id": 9419,
                   "name": "RefillableSupplier",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 9399,
+                  "referencedDeclaration": 9418,
                   "src": "339:18:50"
                 },
-                "referencedDeclaration": 9399,
+                "referencedDeclaration": 9418,
                 "src": "339:18:50",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                  "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                   "typeString": "struct Refillable.RefillableSupplier"
                 }
               },
-              "id": 9402,
+              "id": 9421,
               "nodeType": "ArrayTypeName",
               "src": "339:20:50",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr",
                 "typeString": "struct Refillable.RefillableSupplier[]"
               }
             },
             "visibility": "private"
           },
           {
-            "id": 9407,
+            "id": 9426,
             "name": "RefillableSupplierNotExists",
             "nameLocation": "401:27:50",
             "nodeType": "ErrorDefinition",
             "parameters": {
-              "id": 9406,
+              "id": 9425,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9405,
+                  "id": 9424,
                   "mutability": "mutable",
                   "name": "supplier",
                   "nameLocation": "437:8:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9407,
+                  "scope": 9426,
                   "src": "429:16:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -434,7 +434,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9404,
+                    "id": 9423,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "429:7:50",
@@ -452,22 +452,22 @@
             "src": "395:52:50"
           },
           {
-            "id": 9411,
+            "id": 9430,
             "name": "RefillableTooMuchAgreements",
             "nameLocation": "458:27:50",
             "nodeType": "ErrorDefinition",
             "parameters": {
-              "id": 9410,
+              "id": 9429,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9409,
+                  "id": 9428,
                   "mutability": "mutable",
                   "name": "maxNumber",
                   "nameLocation": "492:9:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9411,
+                  "scope": 9430,
                   "src": "486:15:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -476,7 +476,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 9408,
+                    "id": 9427,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "486:5:50",
@@ -494,7 +494,7 @@
           },
           {
             "body": {
-              "id": 9422,
+              "id": 9441,
               "nodeType": "Block",
               "src": "560:52:50",
               "statements": [
@@ -502,14 +502,14 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 9419,
+                        "id": 9438,
                         "name": "suppliers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9415,
+                        "referencedDeclaration": 9434,
                         "src": "595:9:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct Refillable.RefillableSupplier memory[] memory"
                         }
                       }
@@ -517,22 +517,22 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct Refillable.RefillableSupplier memory[] memory"
                         }
                       ],
-                      "id": 9418,
+                      "id": 9437,
                       "name": "_setRefillableAgreements",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9669,
+                      "referencedDeclaration": 9688,
                       "src": "570:24:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr_$returns$__$",
                         "typeString": "function (struct Refillable.RefillableSupplier memory[] memory)"
                       }
                     },
-                    "id": 9420,
+                    "id": 9439,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -547,13 +547,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9421,
+                  "id": 9440,
                   "nodeType": "ExpressionStatement",
                   "src": "570:35:50"
                 }
               ]
             },
-            "id": 9423,
+            "id": 9442,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
@@ -561,47 +561,47 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9416,
+              "id": 9435,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9415,
+                  "id": 9434,
                   "mutability": "mutable",
                   "name": "suppliers",
                   "nameLocation": "549:9:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9423,
+                  "scope": 9442,
                   "src": "521:37:50",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Refillable.RefillableSupplier[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9413,
+                      "id": 9432,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 9412,
+                        "id": 9431,
                         "name": "RefillableSupplier",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 9399,
+                        "referencedDeclaration": 9418,
                         "src": "521:18:50"
                       },
-                      "referencedDeclaration": 9399,
+                      "referencedDeclaration": 9418,
                       "src": "521:18:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                        "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                         "typeString": "struct Refillable.RefillableSupplier"
                       }
                     },
-                    "id": 9414,
+                    "id": 9433,
                     "nodeType": "ArrayTypeName",
                     "src": "521:20:50",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr",
                       "typeString": "struct Refillable.RefillableSupplier[]"
                     }
                   },
@@ -611,12 +611,12 @@
               "src": "520:39:50"
             },
             "returnParameters": {
-              "id": 9417,
+              "id": 9436,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "560:0:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "509:103:50",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -624,7 +624,7 @@
           },
           {
             "functionSelector": "63909f86",
-            "id": 9430,
+            "id": 9449,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -632,17 +632,17 @@
             "nameLocation": "627:15:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9426,
+              "id": 9445,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9425,
+                  "id": 9444,
                   "mutability": "mutable",
                   "name": "date",
                   "nameLocation": "651:4:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9430,
+                  "scope": 9449,
                   "src": "643:12:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -651,7 +651,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9424,
+                    "id": 9443,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "643:7:50",
@@ -666,17 +666,17 @@
               "src": "642:14:50"
             },
             "returnParameters": {
-              "id": 9429,
+              "id": 9448,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9428,
+                  "id": 9447,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9430,
+                  "scope": 9449,
                   "src": "688:4:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -685,7 +685,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9427,
+                    "id": 9446,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "688:4:50",
@@ -699,7 +699,7 @@
               ],
               "src": "687:6:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "618:76:50",
             "stateMutability": "view",
             "virtual": true,
@@ -707,32 +707,32 @@
           },
           {
             "body": {
-              "id": 9439,
+              "id": 9458,
               "nodeType": "Block",
               "src": "814:44:50",
               "statements": [
                 {
                   "expression": {
-                    "id": 9437,
+                    "id": 9456,
                     "name": "_refillableSuppliers",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9403,
+                    "referencedDeclaration": 9422,
                     "src": "831:20:50",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                       "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 9436,
-                  "id": 9438,
+                  "functionReturnParameters": 9455,
+                  "id": 9457,
                   "nodeType": "Return",
                   "src": "824:27:50"
                 }
               ]
             },
             "functionSelector": "d622989a",
-            "id": 9440,
+            "id": 9459,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -740,53 +740,53 @@
             "nameLocation": "709:22:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9431,
+              "id": 9450,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "731:2:50"
             },
             "returnParameters": {
-              "id": 9436,
+              "id": 9455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9435,
+                  "id": 9454,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9440,
+                  "scope": 9459,
                   "src": "781:27:50",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Refillable.RefillableSupplier[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9433,
+                      "id": 9452,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 9432,
+                        "id": 9451,
                         "name": "RefillableSupplier",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 9399,
+                        "referencedDeclaration": 9418,
                         "src": "781:18:50"
                       },
-                      "referencedDeclaration": 9399,
+                      "referencedDeclaration": 9418,
                       "src": "781:18:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                        "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                         "typeString": "struct Refillable.RefillableSupplier"
                       }
                     },
-                    "id": 9434,
+                    "id": 9453,
                     "nodeType": "ArrayTypeName",
                     "src": "781:20:50",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr",
                       "typeString": "struct Refillable.RefillableSupplier[]"
                     }
                   },
@@ -795,7 +795,7 @@
               ],
               "src": "780:29:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "700:158:50",
             "stateMutability": "view",
             "virtual": false,
@@ -803,23 +803,23 @@
           },
           {
             "body": {
-              "id": 9480,
+              "id": 9499,
               "nodeType": "Block",
               "src": "891:275:50",
               "statements": [
                 {
                   "assignments": [
-                    9444
+                    9463
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9444,
+                      "id": 9463,
                       "mutability": "mutable",
                       "name": "sender",
                       "nameLocation": "909:6:50",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9480,
+                      "scope": 9499,
                       "src": "901:14:50",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -828,7 +828,7 @@
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 9443,
+                        "id": 9462,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "901:7:50",
@@ -841,12 +841,12 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9447,
+                  "id": 9466,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 9445,
+                      "id": 9464,
                       "name": "_msgSender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -857,7 +857,7 @@
                         "typeString": "function () view returns (address)"
                       }
                     },
-                    "id": 9446,
+                    "id": 9465,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -877,23 +877,23 @@
                 },
                 {
                   "body": {
-                    "id": 9478,
+                    "id": 9497,
                     "nodeType": "Block",
                     "src": "999:161:50",
                     "statements": [
                       {
                         "assignments": [
-                          9461
+                          9480
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 9461,
+                            "id": 9480,
                             "mutability": "mutable",
                             "name": "supplier",
                             "nameLocation": "1034:8:50",
                             "nodeType": "VariableDeclaration",
-                            "scope": 9478,
+                            "scope": 9497,
                             "src": "1013:29:50",
                             "stateVariable": false,
                             "storageLocation": "default",
@@ -902,10 +902,10 @@
                               "typeString": "contract IBankAccountSupplier"
                             },
                             "typeName": {
-                              "id": 9460,
+                              "id": 9479,
                               "nodeType": "UserDefinedTypeName",
                               "pathNode": {
-                                "id": 9459,
+                                "id": 9478,
                                 "name": "IBankAccountSupplier",
                                 "nodeType": "IdentifierPath",
                                 "referencedDeclaration": 6351,
@@ -921,28 +921,28 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 9466,
+                        "id": 9485,
                         "initialValue": {
                           "expression": {
                             "baseExpression": {
-                              "id": 9462,
+                              "id": 9481,
                               "name": "_refillableSuppliers",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9403,
+                              "referencedDeclaration": 9422,
                               "src": "1045:20:50",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                                 "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                               }
                             },
-                            "id": 9464,
+                            "id": 9483,
                             "indexExpression": {
-                              "id": 9463,
+                              "id": 9482,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9449,
+                              "referencedDeclaration": 9468,
                               "src": "1066:1:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -956,18 +956,18 @@
                             "nodeType": "IndexAccess",
                             "src": "1045:23:50",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage",
+                              "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage",
                               "typeString": "struct Refillable.RefillableSupplier storage ref"
                             }
                           },
-                          "id": 9465,
+                          "id": 9484,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "agreement",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 9396,
+                          "referencedDeclaration": 9415,
                           "src": "1045:33:50",
                           "typeDescriptions": {
                             "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
@@ -983,18 +983,18 @@
                           "expression": {
                             "argumentTypes": [],
                             "expression": {
-                              "id": 9467,
+                              "id": 9486,
                               "name": "supplier",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9461,
+                              "referencedDeclaration": 9480,
                               "src": "1093:8:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
                                 "typeString": "contract IBankAccountSupplier"
                               }
                             },
-                            "id": 9469,
+                            "id": 9488,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1008,7 +1008,7 @@
                               "typeString": "function () external"
                             }
                           },
-                          "id": 9470,
+                          "id": 9489,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1023,7 +1023,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9471,
+                        "id": 9490,
                         "nodeType": "ExpressionStatement",
                         "src": "1093:21:50"
                       },
@@ -1031,11 +1031,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 9475,
+                              "id": 9494,
                               "name": "sender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9444,
+                              "referencedDeclaration": 9463,
                               "src": "1142:6:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -1051,18 +1051,18 @@
                               }
                             ],
                             "expression": {
-                              "id": 9472,
+                              "id": 9491,
                               "name": "supplier",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9461,
+                              "referencedDeclaration": 9480,
                               "src": "1129:8:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
                                 "typeString": "contract IBankAccountSupplier"
                               }
                             },
-                            "id": 9474,
+                            "id": 9493,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1076,7 +1076,7 @@
                               "typeString": "function (address) external"
                             }
                           },
-                          "id": 9476,
+                          "id": 9495,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1091,7 +1091,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9477,
+                        "id": 9496,
                         "nodeType": "ExpressionStatement",
                         "src": "1129:20:50"
                       }
@@ -1102,17 +1102,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9455,
+                    "id": 9474,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 9452,
+                      "id": 9471,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9449,
+                      "referencedDeclaration": 9468,
                       "src": "961:1:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1123,18 +1123,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 9453,
+                        "id": 9472,
                         "name": "_refillableSuppliers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9403,
+                        "referencedDeclaration": 9422,
                         "src": "965:20:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                           "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                         }
                       },
-                      "id": 9454,
+                      "id": 9473,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1153,20 +1153,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 9479,
+                  "id": 9498,
                   "initializationExpression": {
                     "assignments": [
-                      9449
+                      9468
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 9449,
+                        "id": 9468,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "954:1:50",
                         "nodeType": "VariableDeclaration",
-                        "scope": 9479,
+                        "scope": 9498,
                         "src": "946:9:50",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -1175,7 +1175,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 9448,
+                          "id": 9467,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "946:7:50",
@@ -1187,10 +1187,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 9451,
+                    "id": 9470,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 9450,
+                      "id": 9469,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1209,7 +1209,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 9457,
+                      "id": 9476,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1219,11 +1219,11 @@
                       "prefix": false,
                       "src": "994:3:50",
                       "subExpression": {
-                        "id": 9456,
+                        "id": 9475,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9449,
+                        "referencedDeclaration": 9468,
                         "src": "994:1:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1235,7 +1235,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 9458,
+                    "id": 9477,
                     "nodeType": "ExpressionStatement",
                     "src": "994:3:50"
                   },
@@ -1245,7 +1245,7 @@
               ]
             },
             "functionSelector": "538e0759",
-            "id": 9481,
+            "id": 9500,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1253,18 +1253,18 @@
             "nameLocation": "873:6:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9441,
+              "id": 9460,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "879:2:50"
             },
             "returnParameters": {
-              "id": 9442,
+              "id": 9461,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "891:0:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "864:302:50",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -1272,67 +1272,67 @@
           },
           {
             "body": {
-              "id": 9539,
+              "id": 9558,
               "nodeType": "Block",
               "src": "1287:519:50",
               "statements": [
                 {
                   "assignments": [
-                    9492
+                    9511
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9492,
+                      "id": 9511,
                       "mutability": "mutable",
                       "name": "supplier",
                       "nameLocation": "1323:8:50",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9539,
+                      "scope": 9558,
                       "src": "1297:34:50",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                        "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                         "typeString": "struct Refillable.RefillableSupplier"
                       },
                       "typeName": {
-                        "id": 9491,
+                        "id": 9510,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 9490,
+                          "id": 9509,
                           "name": "RefillableSupplier",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 9399,
+                          "referencedDeclaration": 9418,
                           "src": "1297:18:50"
                         },
-                        "referencedDeclaration": 9399,
+                        "referencedDeclaration": 9418,
                         "src": "1297:18:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                          "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                           "typeString": "struct Refillable.RefillableSupplier"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9495,
+                  "id": 9514,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 9493,
+                      "id": 9512,
                       "name": "_getRefillableSupplierBySender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9612,
+                      "referencedDeclaration": 9631,
                       "src": "1334:30:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_RefillableSupplier_$9399_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_RefillableSupplier_$9418_memory_ptr_$",
                         "typeString": "function () view returns (struct Refillable.RefillableSupplier memory)"
                       }
                     },
-                    "id": 9494,
+                    "id": 9513,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1343,7 +1343,7 @@
                     "src": "1334:32:50",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                      "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                       "typeString": "struct Refillable.RefillableSupplier memory"
                     }
                   },
@@ -1352,17 +1352,17 @@
                 },
                 {
                   "assignments": [
-                    9497
+                    9516
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9497,
+                      "id": 9516,
                       "mutability": "mutable",
                       "name": "rewardAmount",
                       "nameLocation": "1385:12:50",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9539,
+                      "scope": 9558,
                       "src": "1377:20:50",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -1371,7 +1371,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 9496,
+                        "id": 9515,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "1377:7:50",
@@ -1383,30 +1383,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9503,
+                  "id": 9522,
                   "initialValue": {
                     "arguments": [
                       {
                         "expression": {
-                          "id": 9499,
+                          "id": 9518,
                           "name": "supplier",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9492,
+                          "referencedDeclaration": 9511,
                           "src": "1440:8:50",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                            "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                             "typeString": "struct Refillable.RefillableSupplier memory"
                           }
                         },
-                        "id": 9500,
+                        "id": 9519,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "reward",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 9398,
+                        "referencedDeclaration": 9417,
                         "src": "1440:15:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1414,11 +1414,11 @@
                         }
                       },
                       {
-                        "id": 9501,
+                        "id": 9520,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9485,
+                        "referencedDeclaration": 9504,
                         "src": "1469:6:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1437,18 +1437,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 9498,
+                      "id": 9517,
                       "name": "_getRefillableRewardAmount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9568,
+                      "referencedDeclaration": 9587,
                       "src": "1400:26:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
                         "typeString": "function (uint256,uint256) pure returns (uint256)"
                       }
                     },
-                    "id": 9502,
+                    "id": 9521,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1472,17 +1472,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9506,
+                    "id": 9525,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 9504,
+                      "id": 9523,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9485,
+                      "referencedDeclaration": 9504,
                       "src": "1500:6:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1492,11 +1492,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": ">",
                     "rightExpression": {
-                      "id": 9505,
+                      "id": 9524,
                       "name": "rewardAmount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9497,
+                      "referencedDeclaration": 9516,
                       "src": "1509:12:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1509,11 +1509,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 9538,
+                  "id": 9557,
                   "nodeType": "IfStatement",
                   "src": "1496:304:50",
                   "trueBody": {
-                    "id": 9537,
+                    "id": 9556,
                     "nodeType": "Block",
                     "src": "1523:277:50",
                     "statements": [
@@ -1523,14 +1523,14 @@
                             {
                               "arguments": [
                                 {
-                                  "id": 9514,
+                                  "id": 9533,
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
                                   "referencedDeclaration": 4294967268,
                                   "src": "1594:4:50",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_Refillable_$9670",
+                                    "typeIdentifier": "t_contract$_Refillable_$9689",
                                     "typeString": "contract Refillable"
                                   }
                                 }
@@ -1538,11 +1538,11 @@
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_Refillable_$9670",
+                                    "typeIdentifier": "t_contract$_Refillable_$9689",
                                     "typeString": "contract Refillable"
                                   }
                                 ],
-                                "id": 9513,
+                                "id": 9532,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1554,14 +1554,14 @@
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 9512,
+                                  "id": 9531,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
                                   "src": "1586:7:50",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 9515,
+                              "id": 9534,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1581,17 +1581,17 @@
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               },
-                              "id": 9518,
+                              "id": 9537,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
-                                "id": 9516,
+                                "id": 9535,
                                 "name": "amount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9485,
+                                "referencedDeclaration": 9504,
                                 "src": "1617:6:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -1601,11 +1601,11 @@
                               "nodeType": "BinaryOperation",
                               "operator": "-",
                               "rightExpression": {
-                                "id": 9517,
+                                "id": 9536,
                                 "name": "rewardAmount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9497,
+                                "referencedDeclaration": 9516,
                                 "src": "1626:12:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -1632,32 +1632,32 @@
                             ],
                             "expression": {
                               "expression": {
-                                "id": 9507,
+                                "id": 9526,
                                 "name": "supplier",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9492,
+                                "referencedDeclaration": 9511,
                                 "src": "1537:8:50",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                                   "typeString": "struct Refillable.RefillableSupplier memory"
                                 }
                               },
-                              "id": 9510,
+                              "id": 9529,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "agreement",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 9396,
+                              "referencedDeclaration": 9415,
                               "src": "1537:18:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
                                 "typeString": "contract IBankAccountSupplier"
                               }
                             },
-                            "id": 9511,
+                            "id": 9530,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1671,7 +1671,7 @@
                               "typeString": "function (address,uint256) external returns (bool)"
                             }
                           },
-                          "id": 9519,
+                          "id": 9538,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1686,7 +1686,7 @@
                             "typeString": "bool"
                           }
                         },
-                        "id": 9520,
+                        "id": 9539,
                         "nodeType": "ExpressionStatement",
                         "src": "1537:115:50"
                       },
@@ -1694,11 +1694,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 9526,
+                              "id": 9545,
                               "name": "sender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9487,
+                              "referencedDeclaration": 9506,
                               "src": "1699:6:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -1706,11 +1706,11 @@
                               }
                             },
                             {
-                              "id": 9527,
+                              "id": 9546,
                               "name": "rewardAmount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9497,
+                              "referencedDeclaration": 9516,
                               "src": "1707:12:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1731,32 +1731,32 @@
                             ],
                             "expression": {
                               "expression": {
-                                "id": 9521,
+                                "id": 9540,
                                 "name": "supplier",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9492,
+                                "referencedDeclaration": 9511,
                                 "src": "1667:8:50",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                                   "typeString": "struct Refillable.RefillableSupplier memory"
                                 }
                               },
-                              "id": 9524,
+                              "id": 9543,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
                               "memberName": "agreement",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 9396,
+                              "referencedDeclaration": 9415,
                               "src": "1667:18:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
                                 "typeString": "contract IBankAccountSupplier"
                               }
                             },
-                            "id": 9525,
+                            "id": 9544,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1770,7 +1770,7 @@
                               "typeString": "function (address,uint256) external returns (bool)"
                             }
                           },
-                          "id": 9528,
+                          "id": 9547,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1785,7 +1785,7 @@
                             "typeString": "bool"
                           }
                         },
-                        "id": 9529,
+                        "id": 9548,
                         "nodeType": "ExpressionStatement",
                         "src": "1667:53:50"
                       },
@@ -1793,11 +1793,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 9531,
+                              "id": 9550,
                               "name": "date",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9483,
+                              "referencedDeclaration": 9502,
                               "src": "1761:4:50",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1809,17 +1809,17 @@
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               },
-                              "id": 9534,
+                              "id": 9553,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
-                                "id": 9532,
+                                "id": 9551,
                                 "name": "amount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9485,
+                                "referencedDeclaration": 9504,
                                 "src": "1767:6:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -1829,11 +1829,11 @@
                               "nodeType": "BinaryOperation",
                               "operator": "-",
                               "rightExpression": {
-                                "id": 9533,
+                                "id": 9552,
                                 "name": "rewardAmount",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9497,
+                                "referencedDeclaration": 9516,
                                 "src": "1776:12:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -1858,18 +1858,18 @@
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 9530,
+                            "id": 9549,
                             "name": "_postTransferFromSupplier",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9619,
+                            "referencedDeclaration": 9638,
                             "src": "1735:25:50",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                               "typeString": "function (uint256,uint256)"
                             }
                           },
-                          "id": 9535,
+                          "id": 9554,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1884,7 +1884,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9536,
+                        "id": 9555,
                         "nodeType": "ExpressionStatement",
                         "src": "1735:54:50"
                       }
@@ -1894,7 +1894,7 @@
               ]
             },
             "functionSelector": "a0c855e4",
-            "id": 9540,
+            "id": 9559,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -1902,17 +1902,17 @@
             "nameLocation": "1181:20:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9488,
+              "id": 9507,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9483,
+                  "id": 9502,
                   "mutability": "mutable",
                   "name": "date",
                   "nameLocation": "1219:4:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9540,
+                  "scope": 9559,
                   "src": "1211:12:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1921,7 +1921,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9482,
+                    "id": 9501,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1211:7:50",
@@ -1934,12 +1934,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 9485,
+                  "id": 9504,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "1241:6:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9540,
+                  "scope": 9559,
                   "src": "1233:14:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1948,7 +1948,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9484,
+                    "id": 9503,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1233:7:50",
@@ -1961,12 +1961,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 9487,
+                  "id": 9506,
                   "mutability": "mutable",
                   "name": "sender",
                   "nameLocation": "1265:6:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9540,
+                  "scope": 9559,
                   "src": "1257:14:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1975,7 +1975,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9486,
+                    "id": 9505,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1257:7:50",
@@ -1991,12 +1991,12 @@
               "src": "1201:76:50"
             },
             "returnParameters": {
-              "id": 9489,
+              "id": 9508,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1287:0:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "1172:634:50",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2004,14 +2004,14 @@
           },
           {
             "body": {
-              "id": 9547,
+              "id": 9566,
               "nodeType": "Block",
               "src": "1884:25:50",
               "statements": [
                 {
                   "expression": {
                     "hexValue": "34",
-                    "id": 9545,
+                    "id": 9564,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -2025,14 +2025,14 @@
                     },
                     "value": "4"
                   },
-                  "functionReturnParameters": 9544,
-                  "id": 9546,
+                  "functionReturnParameters": 9563,
+                  "id": 9565,
                   "nodeType": "Return",
                   "src": "1894:8:50"
                 }
               ]
             },
-            "id": 9548,
+            "id": 9567,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2040,23 +2040,23 @@
             "nameLocation": "1821:22:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9541,
+              "id": 9560,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1843:2:50"
             },
             "returnParameters": {
-              "id": 9544,
+              "id": 9563,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9543,
+                  "id": 9562,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9548,
+                  "scope": 9567,
                   "src": "1877:5:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2065,7 +2065,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 9542,
+                    "id": 9561,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "1877:5:50",
@@ -2079,7 +2079,7 @@
               ],
               "src": "1876:7:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "1812:97:50",
             "stateMutability": "pure",
             "virtual": true,
@@ -2087,7 +2087,7 @@
           },
           {
             "body": {
-              "id": 9567,
+              "id": 9586,
               "nodeType": "Block",
               "src": "2042:72:50",
               "statements": [
@@ -2097,7 +2097,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9565,
+                    "id": 9584,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2109,17 +2109,17 @@
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 9559,
+                          "id": 9578,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 9557,
+                            "id": 9576,
                             "name": "amount",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9552,
+                            "referencedDeclaration": 9571,
                             "src": "2060:6:50",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2129,11 +2129,11 @@
                           "nodeType": "BinaryOperation",
                           "operator": "*",
                           "rightExpression": {
-                            "id": 9558,
+                            "id": 9577,
                             "name": "reward",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9550,
+                            "referencedDeclaration": 9569,
                             "src": "2069:6:50",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -2147,7 +2147,7 @@
                           }
                         }
                       ],
-                      "id": 9560,
+                      "id": 9579,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
@@ -2167,14 +2167,14 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 9564,
+                      "id": 9583,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "hexValue": "3130",
-                        "id": 9561,
+                        "id": 9580,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -2194,18 +2194,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 9562,
+                          "id": 9581,
                           "name": "_getRefillableDecimals",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9548,
+                          "referencedDeclaration": 9567,
                           "src": "2083:22:50",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$__$returns$_t_uint8_$",
                             "typeString": "function () pure returns (uint8)"
                           }
                         },
-                        "id": 9563,
+                        "id": 9582,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2232,14 +2232,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 9556,
-                  "id": 9566,
+                  "functionReturnParameters": 9575,
+                  "id": 9585,
                   "nodeType": "Return",
                   "src": "2052:55:50"
                 }
               ]
             },
-            "id": 9568,
+            "id": 9587,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2247,17 +2247,17 @@
             "nameLocation": "1924:26:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9553,
+              "id": 9572,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9550,
+                  "id": 9569,
                   "mutability": "mutable",
                   "name": "reward",
                   "nameLocation": "1959:6:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9568,
+                  "scope": 9587,
                   "src": "1951:14:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2266,7 +2266,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9549,
+                    "id": 9568,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1951:7:50",
@@ -2279,12 +2279,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 9552,
+                  "id": 9571,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "1975:6:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9568,
+                  "scope": 9587,
                   "src": "1967:14:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2293,7 +2293,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9551,
+                    "id": 9570,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1967:7:50",
@@ -2308,17 +2308,17 @@
               "src": "1950:32:50"
             },
             "returnParameters": {
-              "id": 9556,
+              "id": 9575,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9555,
+                  "id": 9574,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9568,
+                  "scope": 9587,
                   "src": "2029:7:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2327,7 +2327,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9554,
+                    "id": 9573,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2029:7:50",
@@ -2341,7 +2341,7 @@
               ],
               "src": "2028:9:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "1915:199:50",
             "stateMutability": "pure",
             "virtual": false,
@@ -2349,23 +2349,23 @@
           },
           {
             "body": {
-              "id": 9611,
+              "id": 9630,
               "nodeType": "Block",
               "src": "2239:318:50",
               "statements": [
                 {
                   "assignments": [
-                    9575
+                    9594
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9575,
+                      "id": 9594,
                       "mutability": "mutable",
                       "name": "supplier",
                       "nameLocation": "2257:8:50",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9611,
+                      "scope": 9630,
                       "src": "2249:16:50",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2374,7 +2374,7 @@
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 9574,
+                        "id": 9593,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
                         "src": "2249:7:50",
@@ -2387,12 +2387,12 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9578,
+                  "id": 9597,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 9576,
+                      "id": 9595,
                       "name": "_msgSender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -2403,7 +2403,7 @@
                         "typeString": "function () view returns (address)"
                       }
                     },
-                    "id": 9577,
+                    "id": 9596,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2423,7 +2423,7 @@
                 },
                 {
                   "body": {
-                    "id": 9605,
+                    "id": 9624,
                     "nodeType": "Block",
                     "src": "2349:147:50",
                     "statements": [
@@ -2433,17 +2433,17 @@
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           },
-                          "id": 9598,
+                          "id": 9617,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 9590,
+                            "id": 9609,
                             "name": "supplier",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9575,
+                            "referencedDeclaration": 9594,
                             "src": "2367:8:50",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
@@ -2457,24 +2457,24 @@
                               {
                                 "expression": {
                                   "baseExpression": {
-                                    "id": 9593,
+                                    "id": 9612,
                                     "name": "_refillableSuppliers",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9403,
+                                    "referencedDeclaration": 9422,
                                     "src": "2387:20:50",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                                       "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                                     }
                                   },
-                                  "id": 9595,
+                                  "id": 9614,
                                   "indexExpression": {
-                                    "id": 9594,
+                                    "id": 9613,
                                     "name": "i",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9580,
+                                    "referencedDeclaration": 9599,
                                     "src": "2408:1:50",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
@@ -2488,18 +2488,18 @@
                                   "nodeType": "IndexAccess",
                                   "src": "2387:23:50",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage",
+                                    "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage",
                                     "typeString": "struct Refillable.RefillableSupplier storage ref"
                                   }
                                 },
-                                "id": 9596,
+                                "id": 9615,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "memberName": "agreement",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 9396,
+                                "referencedDeclaration": 9415,
                                 "src": "2387:33:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_contract$_IBankAccountSupplier_$6351",
@@ -2514,7 +2514,7 @@
                                   "typeString": "contract IBankAccountSupplier"
                                 }
                               ],
-                              "id": 9592,
+                              "id": 9611,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -2526,14 +2526,14 @@
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 9591,
+                                "id": 9610,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
                                 "src": "2379:7:50",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 9597,
+                            "id": 9616,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -2554,35 +2554,35 @@
                             "typeString": "bool"
                           }
                         },
-                        "id": 9604,
+                        "id": 9623,
                         "nodeType": "IfStatement",
                         "src": "2363:123:50",
                         "trueBody": {
-                          "id": 9603,
+                          "id": 9622,
                           "nodeType": "Block",
                           "src": "2423:63:50",
                           "statements": [
                             {
                               "expression": {
                                 "baseExpression": {
-                                  "id": 9599,
+                                  "id": 9618,
                                   "name": "_refillableSuppliers",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9403,
+                                  "referencedDeclaration": 9422,
                                   "src": "2448:20:50",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                                     "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                                   }
                                 },
-                                "id": 9601,
+                                "id": 9620,
                                 "indexExpression": {
-                                  "id": 9600,
+                                  "id": 9619,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9580,
+                                  "referencedDeclaration": 9599,
                                   "src": "2469:1:50",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -2596,12 +2596,12 @@
                                 "nodeType": "IndexAccess",
                                 "src": "2448:23:50",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage",
+                                  "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage",
                                   "typeString": "struct Refillable.RefillableSupplier storage ref"
                                 }
                               },
-                              "functionReturnParameters": 9573,
-                              "id": 9602,
+                              "functionReturnParameters": 9592,
+                              "id": 9621,
                               "nodeType": "Return",
                               "src": "2441:30:50"
                             }
@@ -2615,17 +2615,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9586,
+                    "id": 9605,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 9583,
+                      "id": 9602,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9580,
+                      "referencedDeclaration": 9599,
                       "src": "2311:1:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2636,18 +2636,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 9584,
+                        "id": 9603,
                         "name": "_refillableSuppliers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9403,
+                        "referencedDeclaration": 9422,
                         "src": "2315:20:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                           "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                         }
                       },
-                      "id": 9585,
+                      "id": 9604,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2666,20 +2666,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 9606,
+                  "id": 9625,
                   "initializationExpression": {
                     "assignments": [
-                      9580
+                      9599
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 9580,
+                        "id": 9599,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "2304:1:50",
                         "nodeType": "VariableDeclaration",
-                        "scope": 9606,
+                        "scope": 9625,
                         "src": "2296:9:50",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -2688,7 +2688,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 9579,
+                          "id": 9598,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "2296:7:50",
@@ -2700,10 +2700,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 9582,
+                    "id": 9601,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 9581,
+                      "id": 9600,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2722,7 +2722,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 9588,
+                      "id": 9607,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2732,11 +2732,11 @@
                       "prefix": false,
                       "src": "2344:3:50",
                       "subExpression": {
-                        "id": 9587,
+                        "id": 9606,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9580,
+                        "referencedDeclaration": 9599,
                         "src": "2344:1:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2748,7 +2748,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 9589,
+                    "id": 9608,
                     "nodeType": "ExpressionStatement",
                     "src": "2344:3:50"
                   },
@@ -2759,11 +2759,11 @@
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 9608,
+                        "id": 9627,
                         "name": "supplier",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9575,
+                        "referencedDeclaration": 9594,
                         "src": "2541:8:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2778,18 +2778,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9607,
+                      "id": 9626,
                       "name": "RefillableSupplierNotExists",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9407,
+                      "referencedDeclaration": 9426,
                       "src": "2513:27:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_address_$returns$__$",
                         "typeString": "function (address) pure"
                       }
                     },
-                    "id": 9609,
+                    "id": 9628,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2804,13 +2804,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9610,
+                  "id": 9629,
                   "nodeType": "RevertStatement",
                   "src": "2506:44:50"
                 }
               ]
             },
-            "id": 9612,
+            "id": 9631,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -2818,44 +2818,44 @@
             "nameLocation": "2129:30:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9569,
+              "id": 9588,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2159:2:50"
             },
             "returnParameters": {
-              "id": 9573,
+              "id": 9592,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9572,
+                  "id": 9591,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9612,
+                  "scope": 9631,
                   "src": "2208:25:50",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                    "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                     "typeString": "struct Refillable.RefillableSupplier"
                   },
                   "typeName": {
-                    "id": 9571,
+                    "id": 9590,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 9570,
+                      "id": 9589,
                       "name": "RefillableSupplier",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 9399,
+                      "referencedDeclaration": 9418,
                       "src": "2208:18:50"
                     },
-                    "referencedDeclaration": 9399,
+                    "referencedDeclaration": 9418,
                     "src": "2208:18:50",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                      "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                       "typeString": "struct Refillable.RefillableSupplier"
                     }
                   },
@@ -2864,14 +2864,14 @@
               ],
               "src": "2207:27:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "2120:437:50",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "private"
           },
           {
-            "id": 9619,
+            "id": 9638,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -2879,17 +2879,17 @@
             "nameLocation": "2572:25:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9617,
+              "id": 9636,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9614,
+                  "id": 9633,
                   "mutability": "mutable",
                   "name": "date",
                   "nameLocation": "2606:4:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9619,
+                  "scope": 9638,
                   "src": "2598:12:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2898,7 +2898,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9613,
+                    "id": 9632,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2598:7:50",
@@ -2911,12 +2911,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 9616,
+                  "id": 9635,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "2620:6:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9619,
+                  "scope": 9638,
                   "src": "2612:14:50",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2925,7 +2925,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9615,
+                    "id": 9634,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2612:7:50",
@@ -2940,12 +2940,12 @@
               "src": "2597:30:50"
             },
             "returnParameters": {
-              "id": 9618,
+              "id": 9637,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2660:0:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "2563:98:50",
             "stateMutability": "nonpayable",
             "virtual": true,
@@ -2953,7 +2953,7 @@
           },
           {
             "body": {
-              "id": 9668,
+              "id": 9687,
               "nodeType": "Block",
               "src": "2761:302:50",
               "statements": [
@@ -2963,7 +2963,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9633,
+                    "id": 9652,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2972,7 +2972,7 @@
                       "expression": {
                         "arguments": [
                           {
-                            "id": 9628,
+                            "id": 9647,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2984,7 +2984,7 @@
                               "typeString": "type(uint8)"
                             },
                             "typeName": {
-                              "id": 9627,
+                              "id": 9646,
                               "name": "uint8",
                               "nodeType": "ElementaryTypeName",
                               "src": "2780:5:50",
@@ -2999,7 +2999,7 @@
                               "typeString": "type(uint8)"
                             }
                           ],
-                          "id": 9626,
+                          "id": 9645,
                           "name": "type",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
@@ -3010,7 +3010,7 @@
                             "typeString": "function () pure"
                           }
                         },
-                        "id": 9629,
+                        "id": 9648,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3025,7 +3025,7 @@
                           "typeString": "type(uint8)"
                         }
                       },
-                      "id": 9630,
+                      "id": 9649,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3042,18 +3042,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 9631,
+                        "id": 9650,
                         "name": "suppliers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9623,
+                        "referencedDeclaration": 9642,
                         "src": "2793:9:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct Refillable.RefillableSupplier memory[] memory"
                         }
                       },
-                      "id": 9632,
+                      "id": 9651,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3072,11 +3072,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 9643,
+                  "id": 9662,
                   "nodeType": "IfStatement",
                   "src": "2771:129:50",
                   "trueBody": {
-                    "id": 9642,
+                    "id": 9661,
                     "nodeType": "Block",
                     "src": "2811:89:50",
                     "statements": [
@@ -3087,7 +3087,7 @@
                               "expression": {
                                 "arguments": [
                                   {
-                                    "id": 9637,
+                                    "id": 9656,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
@@ -3099,7 +3099,7 @@
                                       "typeString": "type(uint8)"
                                     },
                                     "typeName": {
-                                      "id": 9636,
+                                      "id": 9655,
                                       "name": "uint8",
                                       "nodeType": "ElementaryTypeName",
                                       "src": "2877:5:50",
@@ -3114,7 +3114,7 @@
                                       "typeString": "type(uint8)"
                                     }
                                   ],
-                                  "id": 9635,
+                                  "id": 9654,
                                   "name": "type",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
@@ -3125,7 +3125,7 @@
                                     "typeString": "function () pure"
                                   }
                                 },
-                                "id": 9638,
+                                "id": 9657,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3140,7 +3140,7 @@
                                   "typeString": "type(uint8)"
                                 }
                               },
-                              "id": 9639,
+                              "id": 9658,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3161,18 +3161,18 @@
                                 "typeString": "uint8"
                               }
                             ],
-                            "id": 9634,
+                            "id": 9653,
                             "name": "RefillableTooMuchAgreements",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9411,
+                            "referencedDeclaration": 9430,
                             "src": "2832:27:50",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_uint8_$returns$__$",
                               "typeString": "function (uint8) pure"
                             }
                           },
-                          "id": 9640,
+                          "id": 9659,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3189,7 +3189,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9641,
+                        "id": 9660,
                         "nodeType": "RevertStatement",
                         "src": "2825:64:50"
                       }
@@ -3198,7 +3198,7 @@
                 },
                 {
                   "expression": {
-                    "id": 9645,
+                    "id": 9664,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3208,14 +3208,14 @@
                     "prefix": true,
                     "src": "2910:27:50",
                     "subExpression": {
-                      "id": 9644,
+                      "id": 9663,
                       "name": "_refillableSuppliers",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9403,
+                      "referencedDeclaration": 9422,
                       "src": "2917:20:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                        "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                         "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                       }
                     },
@@ -3224,13 +3224,13 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9646,
+                  "id": 9665,
                   "nodeType": "ExpressionStatement",
                   "src": "2910:27:50"
                 },
                 {
                   "body": {
-                    "id": 9666,
+                    "id": 9685,
                     "nodeType": "Block",
                     "src": "2993:64:50",
                     "statements": [
@@ -3239,24 +3239,24 @@
                           "arguments": [
                             {
                               "baseExpression": {
-                                "id": 9661,
+                                "id": 9680,
                                 "name": "suppliers",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9623,
+                                "referencedDeclaration": 9642,
                                 "src": "3033:9:50",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct Refillable.RefillableSupplier memory[] memory"
                                 }
                               },
-                              "id": 9663,
+                              "id": 9682,
                               "indexExpression": {
-                                "id": 9662,
+                                "id": 9681,
                                 "name": "i",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9648,
+                                "referencedDeclaration": 9667,
                                 "src": "3043:1:50",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint8",
@@ -3270,7 +3270,7 @@
                               "nodeType": "IndexAccess",
                               "src": "3033:12:50",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                                "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                                 "typeString": "struct Refillable.RefillableSupplier memory"
                               }
                             }
@@ -3278,23 +3278,23 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_RefillableSupplier_$9399_memory_ptr",
+                                "typeIdentifier": "t_struct$_RefillableSupplier_$9418_memory_ptr",
                                 "typeString": "struct Refillable.RefillableSupplier memory"
                               }
                             ],
                             "expression": {
-                              "id": 9658,
+                              "id": 9677,
                               "name": "_refillableSuppliers",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9403,
+                              "referencedDeclaration": 9422,
                               "src": "3007:20:50",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage",
                                 "typeString": "struct Refillable.RefillableSupplier storage ref[] storage ref"
                               }
                             },
-                            "id": 9660,
+                            "id": 9679,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3303,11 +3303,11 @@
                             "nodeType": "MemberAccess",
                             "src": "3007:25:50",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr_$_t_struct$_RefillableSupplier_$9399_storage_$returns$__$bound_to$_t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr_$",
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr_$_t_struct$_RefillableSupplier_$9418_storage_$returns$__$bound_to$_t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr_$",
                               "typeString": "function (struct Refillable.RefillableSupplier storage ref[] storage pointer,struct Refillable.RefillableSupplier storage ref)"
                             }
                           },
-                          "id": 9664,
+                          "id": 9683,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3322,7 +3322,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 9665,
+                        "id": 9684,
                         "nodeType": "ExpressionStatement",
                         "src": "3007:39:50"
                       }
@@ -3333,17 +3333,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 9654,
+                    "id": 9673,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 9651,
+                      "id": 9670,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9648,
+                      "referencedDeclaration": 9667,
                       "src": "2966:1:50",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint8",
@@ -3354,18 +3354,18 @@
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 9652,
+                        "id": 9671,
                         "name": "suppliers",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9623,
+                        "referencedDeclaration": 9642,
                         "src": "2970:9:50",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct Refillable.RefillableSupplier memory[] memory"
                         }
                       },
-                      "id": 9653,
+                      "id": 9672,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3384,20 +3384,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 9667,
+                  "id": 9686,
                   "initializationExpression": {
                     "assignments": [
-                      9648
+                      9667
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 9648,
+                        "id": 9667,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "2959:1:50",
                         "nodeType": "VariableDeclaration",
-                        "scope": 9667,
+                        "scope": 9686,
                         "src": "2953:7:50",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -3406,7 +3406,7 @@
                           "typeString": "uint8"
                         },
                         "typeName": {
-                          "id": 9647,
+                          "id": 9666,
                           "name": "uint8",
                           "nodeType": "ElementaryTypeName",
                           "src": "2953:5:50",
@@ -3418,10 +3418,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 9650,
+                    "id": 9669,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 9649,
+                      "id": 9668,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3440,7 +3440,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 9656,
+                      "id": 9675,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3450,11 +3450,11 @@
                       "prefix": false,
                       "src": "2988:3:50",
                       "subExpression": {
-                        "id": 9655,
+                        "id": 9674,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9648,
+                        "referencedDeclaration": 9667,
                         "src": "2988:1:50",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint8",
@@ -3466,7 +3466,7 @@
                         "typeString": "uint8"
                       }
                     },
-                    "id": 9657,
+                    "id": 9676,
                     "nodeType": "ExpressionStatement",
                     "src": "2988:3:50"
                   },
@@ -3475,7 +3475,7 @@
                 }
               ]
             },
-            "id": 9669,
+            "id": 9688,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -3483,47 +3483,47 @@
             "nameLocation": "2676:24:50",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9624,
+              "id": 9643,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9623,
+                  "id": 9642,
                   "mutability": "mutable",
                   "name": "suppliers",
                   "nameLocation": "2729:9:50",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9669,
+                  "scope": 9688,
                   "src": "2701:37:50",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct Refillable.RefillableSupplier[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 9621,
+                      "id": 9640,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 9620,
+                        "id": 9639,
                         "name": "RefillableSupplier",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 9399,
+                        "referencedDeclaration": 9418,
                         "src": "2701:18:50"
                       },
-                      "referencedDeclaration": 9399,
+                      "referencedDeclaration": 9418,
                       "src": "2701:18:50",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RefillableSupplier_$9399_storage_ptr",
+                        "typeIdentifier": "t_struct$_RefillableSupplier_$9418_storage_ptr",
                         "typeString": "struct Refillable.RefillableSupplier"
                       }
                     },
-                    "id": 9622,
+                    "id": 9641,
                     "nodeType": "ArrayTypeName",
                     "src": "2701:20:50",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9399_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RefillableSupplier_$9418_storage_$dyn_storage_ptr",
                       "typeString": "struct Refillable.RefillableSupplier[]"
                     }
                   },
@@ -3533,23 +3533,23 @@
               "src": "2700:39:50"
             },
             "returnParameters": {
-              "id": 9625,
+              "id": 9644,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2761:0:50"
             },
-            "scope": 9670,
+            "scope": 9689,
             "src": "2667:396:50",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           }
         ],
-        "scope": 9671,
+        "scope": 9690,
         "src": "176:2889:50",
         "usedErrors": [
-          9407,
-          9411
+          9426,
+          9430
         ]
       }
     ],
@@ -3561,7 +3561,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-14T14:21:17.170Z",
+  "updatedAt": "2022-06-14T21:54:05.212Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -7810,18 +7810,18 @@
         6326
       ],
       "Refillable": [
-        9670
+        9689
       ],
       "Treasury": [
-        11447
+        11466
       ]
     },
-    "id": 11448,
+    "id": 11467,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11433,
+        "id": 11452,
         "literals": [
           "solidity",
           "0.8",
@@ -7833,10 +7833,10 @@
       {
         "absolutePath": "project:/contracts/BankAccountSupplier.sol",
         "file": "./BankAccountSupplier.sol",
-        "id": 11434,
+        "id": 11453,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 11448,
+        "scope": 11467,
         "sourceUnit": 6005,
         "src": "56:35:58",
         "symbolAliases": [],
@@ -7847,13 +7847,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 11435,
+              "id": 11454,
               "name": "BankAccountSupplier",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 6004,
               "src": "114:19:58"
             },
-            "id": 11436,
+            "id": 11455,
             "nodeType": "InheritanceSpecifier",
             "src": "114:19:58"
           }
@@ -7861,9 +7861,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 11447,
+        "id": 11466,
         "linearizedBaseContracts": [
-          11447,
+          11466,
           6004,
           6351,
           789,
@@ -7877,23 +7877,23 @@
         "nodes": [
           {
             "body": {
-              "id": 11445,
+              "id": 11464,
               "nodeType": "Block",
               "src": "193:2:58",
               "statements": []
             },
-            "id": 11446,
+            "id": 11465,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
               {
                 "arguments": [
                   {
-                    "id": 11442,
+                    "id": 11461,
                     "name": "token",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11439,
+                    "referencedDeclaration": 11458,
                     "src": "186:5:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_IERC20_$1585",
@@ -7901,10 +7901,10 @@
                     }
                   }
                 ],
-                "id": 11443,
+                "id": 11462,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 11441,
+                  "id": 11460,
                   "name": "BankAccountSupplier",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 6004,
@@ -7918,17 +7918,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11440,
+              "id": 11459,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11439,
+                  "id": 11458,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "159:5:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11446,
+                  "scope": 11465,
                   "src": "152:12:58",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -7937,10 +7937,10 @@
                     "typeString": "contract IERC20"
                   },
                   "typeName": {
-                    "id": 11438,
+                    "id": 11457,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 11437,
+                      "id": 11456,
                       "name": "IERC20",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 1585,
@@ -7959,19 +7959,19 @@
               "src": "151:14:58"
             },
             "returnParameters": {
-              "id": 11444,
+              "id": 11463,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "193:0:58"
             },
-            "scope": 11447,
+            "scope": 11466,
             "src": "140:55:58",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 11448,
+        "scope": 11467,
         "src": "93:104:58",
         "usedErrors": [
           5644,
@@ -7989,12 +7989,18 @@
     "97": {
       "events": {},
       "links": {},
-      "address": "0x535722b12E68eaF7E0ada1E97199D323d82d165C",
-      "transactionHash": "0xbf2fd331cac1e88c202a94edda99732dcc5f886af7bab8d95a51eba251ab610b"
+      "address": "0x54C5C3851abaC633671ac4415A02b8C7d0b4A49d",
+      "transactionHash": "0x33d8fb6d3c11bbc6c70fdbb9972c65851aa8ccecfa693dade1453ffc174aa9be"
+    },
+    "1655243331420": {
+      "events": {},
+      "links": {},
+      "address": "0xe1db64052ec2520031FfA1a3F12399f05826f312",
+      "transactionHash": "0xbc7a1779672bfe9b568e00dd6486cb1a2515c0727be842573f91439ec7d99d4c"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-14T15:58:42.397Z",
+  "updatedAt": "2022-06-14T22:06:54.159Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

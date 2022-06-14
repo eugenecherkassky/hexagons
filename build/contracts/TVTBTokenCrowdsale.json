@@ -3660,15 +3660,15 @@
         4296
       ],
       "TVTBTokenCrowdsale": [
-        11431
+        11450
       ]
     },
-    "id": 11432,
+    "id": 11451,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11247,
+        "id": 11266,
         "literals": [
           "solidity",
           "0.8",
@@ -3680,10 +3680,10 @@
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
         "file": "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
-        "id": 11248,
+        "id": 11267,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 11432,
+        "scope": 11451,
         "sourceUnit": 3703,
         "src": "56:89:57",
         "symbolAliases": [],
@@ -3692,10 +3692,10 @@
       {
         "absolutePath": "project:/contracts/Crowdsale.sol",
         "file": "../Crowdsale.sol",
-        "id": 11249,
+        "id": 11268,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 11432,
+        "scope": 11451,
         "sourceUnit": 6256,
         "src": "147:26:57",
         "symbolAliases": [],
@@ -3706,13 +3706,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 11251,
+              "id": 11270,
               "name": "Crowdsale",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 6255,
               "src": "401:9:57"
             },
-            "id": 11252,
+            "id": 11271,
             "nodeType": "InheritanceSpecifier",
             "src": "401:9:57"
           }
@@ -3720,15 +3720,15 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 11250,
+          "id": 11269,
           "nodeType": "StructuredDocumentation",
           "src": "175:194:57",
           "text": " @title TVTBTokenCrowdsale\n @dev Extension of Crowdsale contract whose tokens are minted in each purchase.\n Token ownership should be transferred to TVTBTokenCrowdsale for minting."
         },
         "fullyImplemented": true,
-        "id": 11431,
+        "id": 11450,
         "linearizedBaseContracts": [
-          11431,
+          11450,
           6255,
           921,
           647,
@@ -3740,12 +3740,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 11255,
+            "id": 11274,
             "mutability": "mutable",
             "name": "_token",
             "nameLocation": "484:6:57",
             "nodeType": "VariableDeclaration",
-            "scope": 11431,
+            "scope": 11450,
             "src": "445:45:57",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3754,10 +3754,10 @@
               "typeString": "contract ERC721PresetMinterPauserAutoId"
             },
             "typeName": {
-              "id": 11254,
+              "id": 11273,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 11253,
+                "id": 11272,
                 "name": "ERC721PresetMinterPauserAutoId",
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 3702,
@@ -3773,12 +3773,12 @@
             "visibility": "private"
           },
           {
-            "id": 11257,
+            "id": 11276,
             "name": "TVTTokenAlreadyBought",
             "nameLocation": "503:21:57",
             "nodeType": "ErrorDefinition",
             "parameters": {
-              "id": 11256,
+              "id": 11275,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "524:2:57"
@@ -3786,12 +3786,12 @@
             "src": "497:30:57"
           },
           {
-            "id": 11259,
+            "id": 11278,
             "name": "TVTTokenOnlyOne",
             "nameLocation": "538:15:57",
             "nodeType": "ErrorDefinition",
             "parameters": {
-              "id": 11258,
+              "id": 11277,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "553:2:57"
@@ -3800,7 +3800,7 @@
           },
           {
             "body": {
-              "id": 11287,
+              "id": 11306,
               "nodeType": "Block",
               "src": "654:153:57",
               "statements": [
@@ -3812,7 +3812,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 11279,
+                        "id": 11298,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3820,11 +3820,11 @@
                         "leftExpression": {
                           "arguments": [
                             {
-                              "id": 11273,
+                              "id": 11292,
                               "name": "token",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11264,
+                              "referencedDeclaration": 11283,
                               "src": "693:5:57",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$3702",
@@ -3839,7 +3839,7 @@
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             ],
-                            "id": 11272,
+                            "id": 11291,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -3851,14 +3851,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 11271,
+                              "id": 11290,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "685:7:57",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 11274,
+                          "id": 11293,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3879,7 +3879,7 @@
                           "arguments": [
                             {
                               "hexValue": "30",
-                              "id": 11277,
+                              "id": 11296,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3901,7 +3901,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 11276,
+                            "id": 11295,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -3913,14 +3913,14 @@
                               "typeString": "type(address)"
                             },
                             "typeName": {
-                              "id": 11275,
+                              "id": 11294,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
                               "src": "703:7:57",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 11278,
+                          "id": 11297,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3943,7 +3943,7 @@
                       },
                       {
                         "hexValue": "43726f776473616c653a20746f6b656e20697320746865207a65726f2061646472657373",
-                        "id": 11280,
+                        "id": 11299,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3969,7 +3969,7 @@
                           "typeString": "literal_string \"Crowdsale: token is the zero address\""
                         }
                       ],
-                      "id": 11270,
+                      "id": 11289,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
@@ -3983,7 +3983,7 @@
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 11281,
+                    "id": 11300,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3998,23 +3998,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11282,
+                  "id": 11301,
                   "nodeType": "ExpressionStatement",
                   "src": "664:111:57"
                 },
                 {
                   "expression": {
-                    "id": 11285,
+                    "id": 11304,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 11283,
+                      "id": 11302,
                       "name": "_token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11255,
+                      "referencedDeclaration": 11274,
                       "src": "786:6:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$3702",
@@ -4024,11 +4024,11 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 11284,
+                      "id": 11303,
                       "name": "token",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11264,
+                      "referencedDeclaration": 11283,
                       "src": "795:5:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$3702",
@@ -4041,24 +4041,24 @@
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
-                  "id": 11286,
+                  "id": 11305,
                   "nodeType": "ExpressionStatement",
                   "src": "786:14:57"
                 }
               ]
             },
-            "id": 11288,
+            "id": 11307,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [
               {
                 "arguments": [
                   {
-                    "id": 11267,
+                    "id": 11286,
                     "name": "rate",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 11261,
+                    "referencedDeclaration": 11280,
                     "src": "644:4:57",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -4066,10 +4066,10 @@
                     }
                   }
                 ],
-                "id": 11268,
+                "id": 11287,
                 "kind": "baseConstructorSpecifier",
                 "modifierName": {
-                  "id": 11266,
+                  "id": 11285,
                   "name": "Crowdsale",
                   "nodeType": "IdentifierPath",
                   "referencedDeclaration": 6255,
@@ -4083,17 +4083,17 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11265,
+              "id": 11284,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11261,
+                  "id": 11280,
                   "mutability": "mutable",
                   "name": "rate",
                   "nameLocation": "582:4:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11288,
+                  "scope": 11307,
                   "src": "574:12:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4102,7 +4102,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11260,
+                    "id": 11279,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "574:7:57",
@@ -4115,12 +4115,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11264,
+                  "id": 11283,
                   "mutability": "mutable",
                   "name": "token",
                   "nameLocation": "619:5:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11288,
+                  "scope": 11307,
                   "src": "588:36:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4129,10 +4129,10 @@
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
-                    "id": 11263,
+                    "id": 11282,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 11262,
+                      "id": 11281,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 3702,
@@ -4151,12 +4151,12 @@
               "src": "573:52:57"
             },
             "returnParameters": {
-              "id": 11269,
+              "id": 11288,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "654:0:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "562:245:57",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -4164,7 +4164,7 @@
           },
           {
             "body": {
-              "id": 11302,
+              "id": 11321,
               "nodeType": "Block",
               "src": "939:71:57",
               "statements": [
@@ -4174,11 +4174,11 @@
                       {
                         "arguments": [
                           {
-                            "id": 11298,
+                            "id": 11317,
                             "name": "_token",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11255,
+                            "referencedDeclaration": 11274,
                             "src": "995:6:57",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$3702",
@@ -4193,7 +4193,7 @@
                               "typeString": "contract ERC721PresetMinterPauserAutoId"
                             }
                           ],
-                          "id": 11297,
+                          "id": 11316,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4205,14 +4205,14 @@
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 11296,
+                            "id": 11315,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
                             "src": "987:7:57",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 11299,
+                        "id": 11318,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4235,7 +4235,7 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 11295,
+                      "id": 11314,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -4246,7 +4246,7 @@
                         "typeString": "type(contract ERC721PresetMinterPauserAutoId)"
                       }
                     },
-                    "id": 11300,
+                    "id": 11319,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4261,21 +4261,21 @@
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
-                  "functionReturnParameters": 11294,
-                  "id": 11301,
+                  "functionReturnParameters": 11313,
+                  "id": 11320,
                   "nodeType": "Return",
                   "src": "949:54:57"
                 }
               ]
             },
             "documentation": {
-              "id": 11289,
+              "id": 11308,
               "nodeType": "StructuredDocumentation",
               "src": "813:48:57",
               "text": " @return the token being sold."
             },
             "functionSelector": "21df0da7",
-            "id": 11303,
+            "id": 11322,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4283,23 +4283,23 @@
             "nameLocation": "875:8:57",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11290,
+              "id": 11309,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "883:2:57"
             },
             "returnParameters": {
-              "id": 11294,
+              "id": 11313,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11293,
+                  "id": 11312,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11303,
+                  "scope": 11322,
                   "src": "907:30:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4308,10 +4308,10 @@
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
-                    "id": 11292,
+                    "id": 11311,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 11291,
+                      "id": 11310,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
                       "referencedDeclaration": 3702,
@@ -4329,7 +4329,7 @@
               ],
               "src": "906:32:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "866:144:57",
             "stateMutability": "view",
             "virtual": false,
@@ -4337,7 +4337,7 @@
           },
           {
             "body": {
-              "id": 11316,
+              "id": 11335,
               "nodeType": "Block",
               "src": "1089:57:57",
               "statements": [
@@ -4345,11 +4345,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 11313,
+                        "id": 11332,
                         "name": "beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11305,
+                        "referencedDeclaration": 11324,
                         "src": "1127:11:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4368,18 +4368,18 @@
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 11310,
+                          "id": 11329,
                           "name": "getToken",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 11303,
+                          "referencedDeclaration": 11322,
                           "src": "1106:8:57",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$3702_$",
                             "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                           }
                         },
-                        "id": 11311,
+                        "id": 11330,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4394,7 +4394,7 @@
                           "typeString": "contract ERC721PresetMinterPauserAutoId"
                         }
                       },
-                      "id": 11312,
+                      "id": 11331,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4408,7 +4408,7 @@
                         "typeString": "function (address) view external returns (uint256)"
                       }
                     },
-                    "id": 11314,
+                    "id": 11333,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4423,14 +4423,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 11309,
-                  "id": 11315,
+                  "functionReturnParameters": 11328,
+                  "id": 11334,
                   "nodeType": "Return",
                   "src": "1099:40:57"
                 }
               ]
             },
-            "id": 11317,
+            "id": 11336,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4438,17 +4438,17 @@
             "nameLocation": "1025:10:57",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 11306,
+              "id": 11325,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11305,
+                  "id": 11324,
                   "mutability": "mutable",
                   "name": "beneficiary",
                   "nameLocation": "1044:11:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11317,
+                  "scope": 11336,
                   "src": "1036:19:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4457,7 +4457,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11304,
+                    "id": 11323,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1036:7:57",
@@ -4473,17 +4473,17 @@
               "src": "1035:21:57"
             },
             "returnParameters": {
-              "id": 11309,
+              "id": 11328,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11308,
+                  "id": 11327,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11317,
+                  "scope": 11336,
                   "src": "1080:7:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4492,7 +4492,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11307,
+                    "id": 11326,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1080:7:57",
@@ -4506,7 +4506,7 @@
               ],
               "src": "1079:9:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "1016:130:57",
             "stateMutability": "view",
             "virtual": false,
@@ -4517,13 +4517,13 @@
               6164
             ],
             "body": {
-              "id": 11344,
+              "id": 11363,
               "nodeType": "Block",
               "src": "1434:111:57",
               "statements": [
                 {
                   "body": {
-                    "id": 11342,
+                    "id": 11361,
                     "nodeType": "Block",
                     "src": "1486:53:57",
                     "statements": [
@@ -4531,11 +4531,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 11339,
+                              "id": 11358,
                               "name": "beneficiary",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11320,
+                              "referencedDeclaration": 11339,
                               "src": "1516:11:57",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -4554,18 +4554,18 @@
                               "arguments": [],
                               "expression": {
                                 "argumentTypes": [],
-                                "id": 11336,
+                                "id": 11355,
                                 "name": "getToken",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 11303,
+                                "referencedDeclaration": 11322,
                                 "src": "1500:8:57",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$3702_$",
                                   "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                                 }
                               },
-                              "id": 11337,
+                              "id": 11356,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -4580,7 +4580,7 @@
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             },
-                            "id": 11338,
+                            "id": 11357,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -4594,7 +4594,7 @@
                               "typeString": "function (address) external"
                             }
                           },
-                          "id": 11340,
+                          "id": 11359,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4609,7 +4609,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11341,
+                        "id": 11360,
                         "nodeType": "ExpressionStatement",
                         "src": "1500:28:57"
                       }
@@ -4620,17 +4620,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11332,
+                    "id": 11351,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 11330,
+                      "id": 11349,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11327,
+                      "referencedDeclaration": 11346,
                       "src": "1464:1:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4640,11 +4640,11 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 11331,
+                      "id": 11350,
                       "name": "tokenAmount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11322,
+                      "referencedDeclaration": 11341,
                       "src": "1468:11:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4657,20 +4657,20 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 11343,
+                  "id": 11362,
                   "initializationExpression": {
                     "assignments": [
-                      11327
+                      11346
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 11327,
+                        "id": 11346,
                         "mutability": "mutable",
                         "name": "i",
                         "nameLocation": "1457:1:57",
                         "nodeType": "VariableDeclaration",
-                        "scope": 11343,
+                        "scope": 11362,
                         "src": "1449:9:57",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -4679,7 +4679,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 11326,
+                          "id": 11345,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
                           "src": "1449:7:57",
@@ -4691,10 +4691,10 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 11329,
+                    "id": 11348,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 11328,
+                      "id": 11347,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4713,7 +4713,7 @@
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 11334,
+                      "id": 11353,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4723,11 +4723,11 @@
                       "prefix": false,
                       "src": "1481:3:57",
                       "subExpression": {
-                        "id": 11333,
+                        "id": 11352,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11327,
+                        "referencedDeclaration": 11346,
                         "src": "1481:1:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4739,7 +4739,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 11335,
+                    "id": 11354,
                     "nodeType": "ExpressionStatement",
                     "src": "1481:3:57"
                   },
@@ -4749,12 +4749,12 @@
               ]
             },
             "documentation": {
-              "id": 11318,
+              "id": 11337,
               "nodeType": "StructuredDocumentation",
               "src": "1152:173:57",
               "text": " @dev Overrides delivery by minting tokens upon purchase.\n @param beneficiary Token purchaser\n @param tokenAmount Number of tokens to be minted"
             },
-            "id": 11345,
+            "id": 11364,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4762,23 +4762,23 @@
             "nameLocation": "1339:14:57",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 11324,
+              "id": 11343,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1421:8:57"
             },
             "parameters": {
-              "id": 11323,
+              "id": 11342,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11320,
+                  "id": 11339,
                   "mutability": "mutable",
                   "name": "beneficiary",
                   "nameLocation": "1362:11:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11345,
+                  "scope": 11364,
                   "src": "1354:19:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4787,7 +4787,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11319,
+                    "id": 11338,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1354:7:57",
@@ -4801,12 +4801,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11322,
+                  "id": 11341,
                   "mutability": "mutable",
                   "name": "tokenAmount",
                   "nameLocation": "1383:11:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11345,
+                  "scope": 11364,
                   "src": "1375:19:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4815,7 +4815,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11321,
+                    "id": 11340,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1375:7:57",
@@ -4830,12 +4830,12 @@
               "src": "1353:42:57"
             },
             "returnParameters": {
-              "id": 11325,
+              "id": 11344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1434:0:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "1330:215:57",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -4846,7 +4846,7 @@
               6182
             ],
             "body": {
-              "id": 11363,
+              "id": 11382,
               "nodeType": "Block",
               "src": "1692:87:57",
               "statements": [
@@ -4856,13 +4856,13 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11354,
+                    "id": 11373,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 11352,
+                      "id": 11371,
                       "name": "_rate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -4877,7 +4877,7 @@
                     "operator": "!=",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 11353,
+                      "id": 11372,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -4897,11 +4897,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 11362,
+                  "id": 11381,
                   "nodeType": "IfStatement",
                   "src": "1702:71:57",
                   "trueBody": {
-                    "id": 11361,
+                    "id": 11380,
                     "nodeType": "Block",
                     "src": "1718:55:57",
                     "statements": [
@@ -4909,11 +4909,11 @@
                         "expression": {
                           "arguments": [
                             {
-                              "id": 11358,
+                              "id": 11377,
                               "name": "weiAmount",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 11348,
+                              "referencedDeclaration": 11367,
                               "src": "1752:9:57",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -4929,18 +4929,18 @@
                               }
                             ],
                             "expression": {
-                              "id": 11355,
+                              "id": 11374,
                               "name": "super",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 4294967271,
                               "src": "1732:5:57",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11431_$",
+                                "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11450_$",
                                 "typeString": "type(contract super TVTBTokenCrowdsale)"
                               }
                             },
-                            "id": 11357,
+                            "id": 11376,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -4954,7 +4954,7 @@
                               "typeString": "function (uint256)"
                             }
                           },
-                          "id": 11359,
+                          "id": 11378,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4969,7 +4969,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11360,
+                        "id": 11379,
                         "nodeType": "ExpressionStatement",
                         "src": "1732:30:57"
                       }
@@ -4979,12 +4979,12 @@
               ]
             },
             "documentation": {
-              "id": 11346,
+              "id": 11365,
               "nodeType": "StructuredDocumentation",
               "src": "1551:76:57",
               "text": " @dev Determines how ETH is stored/forwarded on purchases."
             },
-            "id": 11364,
+            "id": 11383,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -4992,23 +4992,23 @@
             "nameLocation": "1641:13:57",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 11350,
+              "id": 11369,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "1683:8:57"
             },
             "parameters": {
-              "id": 11349,
+              "id": 11368,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11348,
+                  "id": 11367,
                   "mutability": "mutable",
                   "name": "weiAmount",
                   "nameLocation": "1663:9:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11364,
+                  "scope": 11383,
                   "src": "1655:17:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5017,7 +5017,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11347,
+                    "id": 11366,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1655:7:57",
@@ -5032,12 +5032,12 @@
               "src": "1654:19:57"
             },
             "returnParameters": {
-              "id": 11351,
+              "id": 11370,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1692:0:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "1632:147:57",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -5048,7 +5048,7 @@
               6196
             ],
             "body": {
-              "id": 11385,
+              "id": 11404,
               "nodeType": "Block",
               "src": "2149:115:57",
               "statements": [
@@ -5058,13 +5058,13 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11375,
+                    "id": 11394,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 11373,
+                      "id": 11392,
                       "name": "_rate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -5079,7 +5079,7 @@
                     "operator": "==",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 11374,
+                      "id": 11393,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5099,18 +5099,18 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 11379,
+                  "id": 11398,
                   "nodeType": "IfStatement",
                   "src": "2159:49:57",
                   "trueBody": {
-                    "id": 11378,
+                    "id": 11397,
                     "nodeType": "Block",
                     "src": "2175:33:57",
                     "statements": [
                       {
                         "expression": {
                           "hexValue": "31",
-                          "id": 11376,
+                          "id": 11395,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -5124,8 +5124,8 @@
                           },
                           "value": "1"
                         },
-                        "functionReturnParameters": 11372,
-                        "id": 11377,
+                        "functionReturnParameters": 11391,
+                        "id": 11396,
                         "nodeType": "Return",
                         "src": "2189:8:57"
                       }
@@ -5136,11 +5136,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 11382,
+                        "id": 11401,
                         "name": "weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11367,
+                        "referencedDeclaration": 11386,
                         "src": "2247:9:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5156,18 +5156,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 11380,
+                        "id": 11399,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967271,
                         "src": "2225:5:57",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11431_$",
+                          "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11450_$",
                           "typeString": "type(contract super TVTBTokenCrowdsale)"
                         }
                       },
-                      "id": 11381,
+                      "id": 11400,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5181,7 +5181,7 @@
                         "typeString": "function (uint256) view returns (uint256)"
                       }
                     },
-                    "id": 11383,
+                    "id": 11402,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5196,20 +5196,20 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 11372,
-                  "id": 11384,
+                  "functionReturnParameters": 11391,
+                  "id": 11403,
                   "nodeType": "Return",
                   "src": "2218:39:57"
                 }
               ]
             },
             "documentation": {
-              "id": 11365,
+              "id": 11384,
               "nodeType": "StructuredDocumentation",
               "src": "1785:238:57",
               "text": " @dev Override to extend the way in which ether is converted to tokens.\n @param weiAmount Value in wei to be converted into tokens\n @return Number of tokens that can be purchased with the specified _weiAmount"
             },
-            "id": 11386,
+            "id": 11405,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5217,23 +5217,23 @@
             "nameLocation": "2037:15:57",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 11369,
+              "id": 11388,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "2110:8:57"
             },
             "parameters": {
-              "id": 11368,
+              "id": 11387,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11367,
+                  "id": 11386,
                   "mutability": "mutable",
                   "name": "weiAmount",
                   "nameLocation": "2061:9:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11386,
+                  "scope": 11405,
                   "src": "2053:17:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5242,7 +5242,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11366,
+                    "id": 11385,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2053:7:57",
@@ -5257,17 +5257,17 @@
               "src": "2052:19:57"
             },
             "returnParameters": {
-              "id": 11372,
+              "id": 11391,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11371,
+                  "id": 11390,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11386,
+                  "scope": 11405,
                   "src": "2136:7:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5276,7 +5276,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11370,
+                    "id": 11389,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2136:7:57",
@@ -5290,7 +5290,7 @@
               ],
               "src": "2135:9:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "2028:236:57",
             "stateMutability": "view",
             "virtual": false,
@@ -5301,7 +5301,7 @@
               6222
             ],
             "body": {
-              "id": 11429,
+              "id": 11448,
               "nodeType": "Block",
               "src": "2391:342:57",
               "statements": [
@@ -5309,11 +5309,11 @@
                   "expression": {
                     "arguments": [
                       {
-                        "id": 11397,
+                        "id": 11416,
                         "name": "beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11388,
+                        "referencedDeclaration": 11407,
                         "src": "2428:11:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5321,11 +5321,11 @@
                         }
                       },
                       {
-                        "id": 11398,
+                        "id": 11417,
                         "name": "weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11390,
+                        "referencedDeclaration": 11409,
                         "src": "2441:9:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5345,18 +5345,18 @@
                         }
                       ],
                       "expression": {
-                        "id": 11394,
+                        "id": 11413,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967271,
                         "src": "2401:5:57",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11431_$",
+                          "typeIdentifier": "t_type$_t_super$_TVTBTokenCrowdsale_$11450_$",
                           "typeString": "type(contract super TVTBTokenCrowdsale)"
                         }
                       },
-                      "id": 11396,
+                      "id": 11415,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5370,7 +5370,7 @@
                         "typeString": "function (address,uint256) view"
                       }
                     },
-                    "id": 11399,
+                    "id": 11418,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5385,23 +5385,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 11400,
+                  "id": 11419,
                   "nodeType": "ExpressionStatement",
                   "src": "2401:50:57"
                 },
                 {
                   "assignments": [
-                    11402
+                    11421
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 11402,
+                      "id": 11421,
                       "mutability": "mutable",
                       "name": "tokenAmount",
                       "nameLocation": "2470:11:57",
                       "nodeType": "VariableDeclaration",
-                      "scope": 11429,
+                      "scope": 11448,
                       "src": "2462:19:57",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5410,7 +5410,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 11401,
+                        "id": 11420,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "2462:7:57",
@@ -5422,15 +5422,15 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 11406,
+                  "id": 11425,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 11404,
+                        "id": 11423,
                         "name": "weiAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11390,
+                        "referencedDeclaration": 11409,
                         "src": "2500:9:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5445,20 +5445,20 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 11403,
+                      "id": 11422,
                       "name": "_getTokenAmount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        11386
+                        11405
                       ],
-                      "referencedDeclaration": 11386,
+                      "referencedDeclaration": 11405,
                       "src": "2484:15:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_uint256_$",
                         "typeString": "function (uint256) view returns (uint256)"
                       }
                     },
-                    "id": 11405,
+                    "id": 11424,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5482,17 +5482,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11409,
+                    "id": 11428,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 11407,
+                      "id": 11426,
                       "name": "tokenAmount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11402,
+                      "referencedDeclaration": 11421,
                       "src": "2525:11:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5503,7 +5503,7 @@
                     "operator": "!=",
                     "rightExpression": {
                       "hexValue": "31",
-                      "id": 11408,
+                      "id": 11427,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5523,11 +5523,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 11414,
+                  "id": 11433,
                   "nodeType": "IfStatement",
                   "src": "2521:71:57",
                   "trueBody": {
-                    "id": 11413,
+                    "id": 11432,
                     "nodeType": "Block",
                     "src": "2543:49:57",
                     "statements": [
@@ -5536,18 +5536,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11410,
+                            "id": 11429,
                             "name": "TVTTokenOnlyOne",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11259,
+                            "referencedDeclaration": 11278,
                             "src": "2564:15:57",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
                               "typeString": "function () pure"
                             }
                           },
-                          "id": 11411,
+                          "id": 11430,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5562,7 +5562,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11412,
+                        "id": 11431,
                         "nodeType": "RevertStatement",
                         "src": "2557:24:57"
                       }
@@ -5571,17 +5571,17 @@
                 },
                 {
                   "assignments": [
-                    11416
+                    11435
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 11416,
+                      "id": 11435,
                       "mutability": "mutable",
                       "name": "balance",
                       "nameLocation": "2610:7:57",
                       "nodeType": "VariableDeclaration",
-                      "scope": 11429,
+                      "scope": 11448,
                       "src": "2602:15:57",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -5590,7 +5590,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 11415,
+                        "id": 11434,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
                         "src": "2602:7:57",
@@ -5602,15 +5602,15 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 11420,
+                  "id": 11439,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 11418,
+                        "id": 11437,
                         "name": "beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 11388,
+                        "referencedDeclaration": 11407,
                         "src": "2631:11:57",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5625,18 +5625,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 11417,
+                      "id": 11436,
                       "name": "_balanceOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11317,
+                      "referencedDeclaration": 11336,
                       "src": "2620:10:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) view returns (uint256)"
                       }
                     },
-                    "id": 11419,
+                    "id": 11438,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5660,17 +5660,17 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 11423,
+                    "id": 11442,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 11421,
+                      "id": 11440,
                       "name": "balance",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 11416,
+                      "referencedDeclaration": 11435,
                       "src": "2658:7:57",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5681,7 +5681,7 @@
                     "operator": "!=",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 11422,
+                      "id": 11441,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5701,11 +5701,11 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 11428,
+                  "id": 11447,
                   "nodeType": "IfStatement",
                   "src": "2654:73:57",
                   "trueBody": {
-                    "id": 11427,
+                    "id": 11446,
                     "nodeType": "Block",
                     "src": "2672:55:57",
                     "statements": [
@@ -5714,18 +5714,18 @@
                           "arguments": [],
                           "expression": {
                             "argumentTypes": [],
-                            "id": 11424,
+                            "id": 11443,
                             "name": "TVTTokenAlreadyBought",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 11257,
+                            "referencedDeclaration": 11276,
                             "src": "2693:21:57",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$__$returns$__$",
                               "typeString": "function () pure"
                             }
                           },
-                          "id": 11425,
+                          "id": 11444,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5740,7 +5740,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 11426,
+                        "id": 11445,
                         "nodeType": "RevertStatement",
                         "src": "2686:30:57"
                       }
@@ -5749,7 +5749,7 @@
                 }
               ]
             },
-            "id": 11430,
+            "id": 11449,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -5757,23 +5757,23 @@
             "nameLocation": "2279:20:57",
             "nodeType": "FunctionDefinition",
             "overrides": {
-              "id": 11392,
+              "id": 11411,
               "nodeType": "OverrideSpecifier",
               "overrides": [],
               "src": "2378:8:57"
             },
             "parameters": {
-              "id": 11391,
+              "id": 11410,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 11388,
+                  "id": 11407,
                   "mutability": "mutable",
                   "name": "beneficiary",
                   "nameLocation": "2308:11:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11430,
+                  "scope": 11449,
                   "src": "2300:19:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5782,7 +5782,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 11387,
+                    "id": 11406,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2300:7:57",
@@ -5796,12 +5796,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 11390,
+                  "id": 11409,
                   "mutability": "mutable",
                   "name": "weiAmount",
                   "nameLocation": "2329:9:57",
                   "nodeType": "VariableDeclaration",
-                  "scope": 11430,
+                  "scope": 11449,
                   "src": "2321:17:57",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5810,7 +5810,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 11389,
+                    "id": 11408,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2321:7:57",
@@ -5825,23 +5825,23 @@
               "src": "2299:40:57"
             },
             "returnParameters": {
-              "id": 11393,
+              "id": 11412,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2391:0:57"
             },
-            "scope": 11431,
+            "scope": 11450,
             "src": "2270:463:57",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
           }
         ],
-        "scope": 11432,
+        "scope": 11451,
         "src": "370:2365:57",
         "usedErrors": [
-          11257,
-          11259
+          11276,
+          11278
         ]
       }
     ],
@@ -5855,12 +5855,82 @@
     "97": {
       "events": {},
       "links": {},
-      "address": "0xCdAfCfaA5D30A80f97a2331f0de658BD86daE722",
-      "transactionHash": "0x08f9bab15fc3afe04ed9e537479511ee6f811664e855928e5f70225dc9d8b71b"
+      "address": "0x4257D73556Fa8Ca699112BB10063152Ba7809316",
+      "transactionHash": "0x3ccce014221368262983157abc5845479ee41e702e42adc9793b77cf7e154a7d"
+    },
+    "1655243331420": {
+      "events": {
+        "0x85bec9fa7bf00761dd3badd9aebcb5ca4147d2abf1b17864efcb6627e33ad2c4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "beneficiary",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "AfterCrowdsaleBuyTokens",
+          "type": "event"
+        },
+        "0x087f280cda785760f07a7708d1eca30d6ced75d7319a3404b02c5d98b6500f23": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "oldRate",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "newRate",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeforeCrowdsaleSetRate",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xb1929F2D303A4fc5BEa96B6184400800bFA10741",
+      "transactionHash": "0xc43c675293dd359f9d22b6913592d041791122d90b777e84cd75e6397525bfa4"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-14T15:53:30.514Z",
+  "updatedAt": "2022-06-14T22:01:45.641Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Extension of Crowdsale contract whose tokens are minted in each purchase. Token ownership should be transferred to TVTBTokenCrowdsale for minting.",

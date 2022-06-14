@@ -90,7 +90,7 @@ contract("Launchpool", async function ([ownerAccount]) {
       const depositContract = await Deposit.at(deposit.agreement);
 
       await this.token.approve(depositContract.address, 1);
-      await depositContract.deposit(1).should.be.fulfilled;
+      await depositContract.send(1).should.be.fulfilled;
 
       (await depositContract.getBalance()).toString().should.be.equal("1");
       (await depositContract.getTransactions()).length.should.be.equal(1);
@@ -114,7 +114,7 @@ contract("Launchpool", async function ([ownerAccount]) {
         .should.be.equal(options.periodMaximum);
 
       await this.token.approve(depositContract.address, 1);
-      await depositContract.deposit(1).should.be.fulfilled;
+      await depositContract.send(1).should.be.fulfilled;
 
       (await depositContract.getBalance()).toString().should.be.equal("2");
       (await depositContract.getTransactions()).length.should.be.equal(2);
@@ -127,7 +127,7 @@ contract("Launchpool", async function ([ownerAccount]) {
       const depositContract = await Deposit.at(deposit.agreement);
 
       await this.token.approve(depositContract.address, 1);
-      await depositContract.deposit(1).should.be.fulfilled;
+      await depositContract.send(1).should.be.fulfilled;
 
       await this.mint.distribute();
 
@@ -174,9 +174,9 @@ contract("Launchpool", async function ([ownerAccount]) {
 
       await this.token.approve(depositContract.address, 2);
 
-      await depositContract.deposit(1).should.be.fulfilled;
+      await depositContract.send(1).should.be.fulfilled;
 
-      await depositContract.deposit(1).should.be.rejected;
+      await depositContract.send(1).should.be.rejected;
 
       (await depositContract.getBalance()).toString().should.be.equal("1");
       (await depositContract.getTransactions()).length.should.be.equal(1);
@@ -190,7 +190,7 @@ contract("Launchpool", async function ([ownerAccount]) {
       const depositContract = await Deposit.at(deposit.agreement);
 
       await this.token.approve(depositContract.address, 5);
-      await depositContract.deposit(5).should.be.fulfilled;
+      await depositContract.send(5).should.be.fulfilled;
 
       await depositContract.withdraw().should.be.rejected;
 

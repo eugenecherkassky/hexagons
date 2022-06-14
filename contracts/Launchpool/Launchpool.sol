@@ -134,7 +134,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
 
     function transferDailyRewards() external override {
         // TODO can be runned not only by deposit
-        address deposit = _msgSender();
+        address payable deposit = payable(_msgSender());
 
         uint256 amount = _getDepositRewards(deposit);
 
@@ -194,7 +194,7 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
             keccak256(abi.encodePacked(program2)));
     }
 
-    function _getDepositRewards(address deposit)
+    function _getDepositRewards(address payable deposit)
         private
         view
         returns (uint256)

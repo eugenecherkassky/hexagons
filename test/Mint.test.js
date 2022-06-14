@@ -69,7 +69,7 @@ contract("Mint", async function () {
       const depositContract = await Deposit.at(deposit.agreement);
 
       await this.token.approve(depositContract.address, 1);
-      await depositContract.deposit(1).should.be.fulfilled;
+      await depositContract.send(1).should.be.fulfilled;
 
       await this.mint.distribute().should.be.fulfilled;
 
