@@ -10899,16 +10899,30 @@
   },
   "networks": {
     "97": {
-      "events": {},
-      "links": {
-        "Date": "0x9Bcc5DDb37c399c99831341eDff8980521a60689"
+      "events": {
+        "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            }
+          ],
+          "name": "Initialized",
+          "type": "event"
+        }
       },
-      "address": "0xAcd1a48B4870bF89a29180Fb5d776121367A9a9C",
-      "transactionHash": "0x468abc48ec55a06edf7213b54130ab42d5742b1fd584f85b6090539d7c8eb504"
+      "links": {
+        "Date": "0x297fAA3Ae698C3c2B3152cAC55a468853B68C737"
+      },
+      "address": "0xC1add1889DD52A78E9A6e4FFF89f714E96232d5D",
+      "transactionHash": "0xf5e41745b9097169e934dc24d2dcc1715f7cdb44139c4a67accce970d1c71479"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-06-13T07:52:39.943Z",
+  "updatedAt": "2022-06-14T15:58:42.392Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

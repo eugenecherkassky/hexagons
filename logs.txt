@@ -1,2101 +1,19 @@
-Get version for required apps: node,npm,git,python,truffle,ganache
-[Truffle: Execute command] v16.14.0
-[Truffle: Execute command] 8.3.1
-[Truffle: Execute command] git version 2.32.0 (Apple Git-132)
-[Truffle: Execute command] tivan@1.0.0 /Users/ievgencherkaskyi/Projects/tivan/launchpool
-`-- truffle@5.5.16
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % 
 
-[Truffle: Execute command] tivan@1.0.0 /Users/ievgencherkaskyi/Projects/tivan/launchpool
-`-- (empty)
+ Session contents restored from 14/06/2022 at 11:05:48 
 
-[Truffle: Execute command] ganache v7.2.0 (@ganache/cli: 0.3.0, @ganache/core: 0.3.0)
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle for VSCode] Contracts build directory "Zxz7mNphEIQwOUSQSrN2h34iaETfL7+tZUyyupQtiPc=" does not exist.
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts
-Running command
-npx truffle compile
-[Truffle: Execute command] 
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet~ 
+^C
 Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-> Compiling ./contracts/Crowdsale.sol
-> Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-> Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-> Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-> Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-> Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-> Compiling ./contracts/Launchpool/Deposit.sol
-> Compiling ./contracts/Launchpool/ILaunchpool.sol
-> Compiling ./contracts/Launchpool/Launchpool.sol
-> Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-> Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-> Compiling ./contracts/TVT/TVTToken.sol
-> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-> Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-> Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-   - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] Finished running command
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts
-Running command
-npx truffle compile
-[Truffle: Execute command] 
+===========================
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % 
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet 
+
 Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Everything is up to date, there is nothing to compile.
-[Truffle: Execute command] Finished running command
-[Truffle: Execute command] 2944
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network development
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Crowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-> Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/ILaunchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Launchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-> Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Treasury.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
-Starting migrations...
-======================
-> Network name:    'development'
-> Network id:      1655102216493
-> Block gas limit: 30000000 (0x1c9c380)
+===========================
+> Everything is up to date, there is nothing to compile.
 
 
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Deploying 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0xdf98bbc665ec9e4a707c5c13a9f07d4bde5a31cc51215ed62413e49f1c0ca229
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xc48A613d69F9289c8be01585eAD633C1725C73B6
-   > block number:        1
-   > block timestamp:     1655102238
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.99947612575
-   > gas used:            155222 (0x25e56)
-   > gas price:           3.375 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00052387425 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:       0.00052387425 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Deploying 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0x3959abd37043669a484dafc495cfcedbdb82536f694f2fe05bae561126e65a42
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x51b8261737d62BBD3370DDef501B3cFA0aC2D94f
-   > block number:        3
-   > block timestamp:     1655102239
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.993318913513310968
-   > gas used:            1894534 (0x1ce886)
-   > gas price:           3.171204168 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006007954117217712 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006007954117217712 ETH
-
-[Truffle: Execute command] 
-3_deploy_presale.js
-===================
-[Truffle: Execute command] 
-   Deploying 'Presale'
-   -------------------
-[Truffle: Execute command]    > transaction hash:    0x872b5041e34971a9341a52a915b03c7d78d228ac88f2230bed733b1d41892b08
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xF046B0eFD430caD62C940e16E59B33D803234B95
-   > block number:        5
-   > block timestamp:     1655102239
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.987088439225714618
-   > gas used:            2031520 (0x1effa0)
-   > gas price:           3.023305364 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00614190531307328 ETH
-
-[Truffle: Execute command] Deployed 0xF046B0eFD430caD62C940e16E59B33D803234B95
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00614190531307328 ETH
-
-[Truffle: Execute command] 
-4_deploy_tvt_token.js
-=====================
-[Truffle: Execute command] 
-   Deploying 'TVTToken'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x46ca05c0fed620f1dc4fb0294aaf22e6ab74b2c7f64a366d43a51f5e374f7ebd
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x29379f5b07B40C7bFe0dFfE8B2758817FeeC5866
-   > block number:        7
-   > block timestamp:     1655102239
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.981680972442782008
-   > gas used:            1830020 (0x1bec84)
-   > gas price:           2.908518683 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00532264736026366 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00532264736026366 ETH
-
-[Truffle: Execute command] 
-5_deploy_tvt_token_crowdsale.js
-===============================
-[Truffle: Execute command] 
-   Deploying 'TVTTokenCrowdsale'
-   -----------------------------
-[Truffle: Execute command]    > transaction hash:    0x742d5074b60239dc48bfc1d3cdbe1c2e09d3071fe6ee8e60a1daebf112ab54c8
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xb17344a8b222A6c6d4D8221C174A97d331714C60
-   > block number:        9
-   > block timestamp:     1655102240
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.980159904357949304
-   > gas used:            510659 (0x7cac3)
-   > gas price:           2.818309996 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001439195364247364 ETH
-
-[Truffle: Execute command] Deployed 0xb17344a8b222A6c6d4D8221C174A97d331714C60
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001439195364247364 ETH
-
-[Truffle: Execute command] 
-6_deploy_tvtb_token.js
-======================
-[Truffle: Execute command] 
-   Deploying 'TVTBToken'
-   ---------------------
-[Truffle: Execute command]    > transaction hash:    0xf3c764280ec2e4d141ba640776ac35959df3e2f48da08f71e2ca194d250f11c9
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x58e2afECEc8722ad3Dc87e1103Dd289De4433a4C
-   > block number:        11
-   > block timestamp:     1655102240
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.973097866638845425
-   > gas used:            2543777 (0x26d0a1)
-   > gas price:           2.744958017 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006982561069610209 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006982561069610209 ETH
-
-[Truffle: Execute command] 
-7_deploy_tvtb_token_crowdsale.js
-================================
-[Truffle: Execute command] 
-   Deploying 'TVTBTokenCrowdsale'
-   ------------------------------
-[Truffle: Execute command]    > transaction hash:    0x8753ddd01bb00d2773cb5e6e99c3db2b413a469e86ee04912a1751f821573d97
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xc7ee50189723258E9A2410AFb2A61fe1Bd21A77f
-   > block number:        13
-   > block timestamp:     1655102240
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.971429264013954909
-   > gas used:            590924 (0x9044c)
-   > gas price:           2.692141859 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001590851235887716 ETH
-
-[Truffle: Execute command] Deployed 0xc7ee50189723258E9A2410AFb2A61fe1Bd21A77f
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001590851235887716 ETH
-
-[Truffle: Execute command] 
-8_deploy_ballot.js
-==================
-[Truffle: Execute command] 
-   Deploying 'Ballot'
-   ------------------
-[Truffle: Execute command]    > transaction hash:    0xa701b61b666319892fd74112b9adbe8fd468a5119ce5b9060b9caddd520147b9
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x6F535E8190C6B88775f53fdc3126c6d4aECD4260
-   > block number:        15
-   > block timestamp:     1655102241
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.969382066163956449
-   > gas used:            744300 (0xb5b6c)
-   > gas price:           2.647976797 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0019708891300071 ETH
-
-[Truffle: Execute command] Deployed 0x6F535E8190C6B88775f53fdc3126c6d4aECD4260
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.0019708891300071 ETH
-
-[Truffle: Execute command] 
-9_deploy_mint.js
-================
-[Truffle: Execute command] 
-   Deploying 'Date'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0xe54008f2b35aad7cf4574933237f7bb98e80f9a24e9fb0f13bbeabcd82d6e961
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xBd2c9E5fb3F7A8B5518AC2982F48044668840474
-   > block number:        17
-   > block timestamp:     1655102241
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.969018299865879503
-   > gas used:            110386 (0x1af32)
-   > gas price:           2.614128901 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000288563232865786 ETH
-
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Mint <--> Library: Date (at address: 0xBd2c9E5fb3F7A8B5518AC2982F48044668840474)
-[Truffle: Execute command] 
-   Deploying 'Mint'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0x34445cb16e854d1d3a5dcd2c0591bf160add41b3d1895286f207bc15e75233c8
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xB687196A4C81E097209e388Bf3c3E1df2DB727ef
-   > block number:        18
-   > block timestamp:     1655102241
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.966118072213531339
-   > gas used:            1115486 (0x11055e)
-   > gas price:           2.599967774 gwei
-   > value sent:          0 ETH
-   > total cost:          0.002900227652348164 ETH
-
-[Truffle: Execute command] 
-Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
-
-[Truffle: Execute command] 
-[Truffle: Execute command] StatusError: Transaction: 0x8fef91c3eba27690645723377661a5e309d3bd5784d3f7ef92f1037fdab44b3f exited with an error (status 0). Reason given: caller is not the minter.
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/9_deploy_mint.js:15:13)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at Migration._deploy (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:72:1)
-    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:54:1)
-    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
-    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
-    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
-    at Object.runAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:121:1)
-    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:86:1)
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
-    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
-    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
-[Truffle: Execute command] Truffle v5.5.16 (core: 5.5.16)
-Node v16.14.0
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy failed
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts
-Running command
-npx truffle compile
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Everything is up to date, there is nothing to compile.
-[Truffle: Execute command] Finished running command
-[Truffle: Execute command] 2944
-[Truffle: Execute command] 2944
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network development
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Crowdsale.sol
-> Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-> Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-> Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/ILaunchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Launchpool.sol
-> Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-[Truffle: Execute command] > Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
-Starting migrations...
-======================
-> Network name:    'development'
-> Network id:      1655102216493
-> Block gas limit: 30000000 (0x1c9c380)
-
-
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Replacing 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0x76826aec4890390e2441e756272a2197de17e56c69c2decaea5f6331dd528aff
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xB6186e9BE112f2980372F0c5c1345155973f3AC1
-   > block number:        20
-   > block timestamp:     1655102479
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.965654736974807583
-   > gas used:            155222 (0x25e56)
-   > gas price:           2.577368948 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000400064362846456 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.000400064362846456 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Replacing 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0x039d3d0358312456addaa1ed0006ad9a30fcd7405617bf48e8b936605d57d0c8
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xbf3c98E1BC88d5D0166cfA7aA9D01fd58b9417Cc
-   > block number:        22
-   > block timestamp:     1655102479
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.960688640620337607
-   > gas used:            1894534 (0x1ce886)
-   > gas price:           2.559348984 gwei
-   > value sent:          0 ETH
-   > total cost:          0.004848773668053456 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.004848773668053456 ETH
-
-[Truffle: Execute command] 
-3_deploy_presale.js
-===================
-[Truffle: Execute command] 
-   Replacing 'Presale'
-   -------------------
-[Truffle: Execute command]    > transaction hash:    0x339a5c2d2cffb5b9477885f04f8556f1e2cf9c2709d4d7938a5abdca14ea96f5
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x1D1cc99664F901F31b88Af7515335d943aBfDaeF
-   > block number:        24
-   > block timestamp:     1655102479
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.955442852610270067
-   > gas used:            2031520 (0x1effa0)
-   > gas price:           2.546271527 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00517280153253104 ETH
-
-[Truffle: Execute command] Deployed 0x1D1cc99664F901F31b88Af7515335d943aBfDaeF
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00517280153253104 ETH
-
-[Truffle: Execute command] 
-4_deploy_tvt_token.js
-=====================
-[Truffle: Execute command] 
-   Replacing 'TVTToken'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x97e4d90b3ad1fc4988a7e7d69097da8f5f44e978d4dabf81f395c958adb3936b
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x5319BA9BF6546d26eC4cFC2872F2bD7eB4aeea8F
-   > block number:        26
-   > block timestamp:     1655102480
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.950729043874857597
-   > gas used:            1830020 (0x1bec84)
-   > gas price:           2.5361219 gwei
-   > value sent:          0 ETH
-   > total cost:          0.004641153799438 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.004641153799438 ETH
-
-[Truffle: Execute command] 
-5_deploy_tvt_token_crowdsale.js
-===============================
-[Truffle: Execute command] 
-   Replacing 'TVTTokenCrowdsale'
-   -----------------------------
-[Truffle: Execute command]    > transaction hash:    0x0e87a2398a90932e0a9b4f770ee399cefb2b7eb03f6198a9c8ecf75ca4c4998d
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x8C1565bECc8aEae46506eD3364875Ee704ED63F5
-   > block number:        28
-   > block timestamp:     1655102480
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.949365629238758236
-   > gas used:            510659 (0x7cac3)
-   > gas price:           2.528145499 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001291020252373841 ETH
-
-[Truffle: Execute command] Deployed 0x8C1565bECc8aEae46506eD3364875Ee704ED63F5
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001291020252373841 ETH
-
-[Truffle: Execute command] 
-6_deploy_tvtb_token.js
-======================
-[Truffle: Execute command] 
-   Replacing 'TVTBToken'
-   ---------------------
-[Truffle: Execute command]    > transaction hash:    0xe4a40697ee11634f047a13329fd0244317ee56de3324c29b661fbacb1097a417
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x9d91a12a0C64f291148E2b217a2DbAE019758eB7
-   > block number:        30
-   > block timestamp:     1655102480
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.942878907037463994
-   > gas used:            2543777 (0x26d0a1)
-   > gas price:           2.521659596 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006414539682134092 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006414539682134092 ETH
-
-[Truffle: Execute command] 
-7_deploy_tvtb_token_crowdsale.js
-================================
-[Truffle: Execute command] 
-   Replacing 'TVTBTokenCrowdsale'
-   ------------------------------
-[Truffle: Execute command]    > transaction hash:    0xe9996407dc01d50e663e8b7918341f87f93a727b6bb10664fef9fca774087d3e
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x88fF45c5E059a7E6e5CB1Bd26B967174Ad3F88C0
-   > block number:        32
-   > block timestamp:     1655102481
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.941319527563021198
-   > gas used:            590924 (0x9044c)
-   > gas price:           2.516989504 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001487349505661696 ETH
-
-[Truffle: Execute command] Deployed 0x88fF45c5E059a7E6e5CB1Bd26B967174Ad3F88C0
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001487349505661696 ETH
-
-[Truffle: Execute command] 
-8_deploy_ballot.js
-==================
-[Truffle: Execute command] 
-   Replacing 'Ballot'
-   ------------------
-[Truffle: Execute command]    > transaction hash:    0xb8caccbdcc234b99937cf50fbe678ffdb94303262061fa19c15caef3f9aa2a7b
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x5Ba8E0A9C146A9FA3bc7cE4F0108bB7173f09410
-   > block number:        34
-   > block timestamp:     1655102481
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.939377136471245788
-   > gas used:            744300 (0xb5b6c)
-   > gas price:           2.513084356 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0018704886861708 ETH
-
-[Truffle: Execute command] Deployed 0x5Ba8E0A9C146A9FA3bc7cE4F0108bB7173f09410
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.0018704886861708 ETH
-
-[Truffle: Execute command] 
-9_deploy_mint.js
-================
-[Truffle: Execute command] 
-   Deploying 'Date'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0xb879278360f0fffdbfebe21deb755c7abe1091587aa19f85eaddd657b5b1025b
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xD4Aed2Cfa3919ee8D54f76FD60F34e5e18F36f57
-   > block number:        36
-   > block timestamp:     1655102481
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.939028252872453248
-   > gas used:            110386 (0x1af32)
-   > gas price:           2.51009147 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00027707895700742 ETH
-
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Mint <--> Library: Date (at address: 0xD4Aed2Cfa3919ee8D54f76FD60F34e5e18F36f57)
-[Truffle: Execute command] 
-   Deploying 'Mint'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0x2aca2106ed4e1541c1b8dbf2e20c1f15729b9e09985b62f0d57297f9e99b46c7
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x00Ed60fc50b593799Bca50Eb9aEdE465bA64deC1
-   > block number:        37
-   > block timestamp:     1655102481
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.936229677734743728
-   > gas used:            1115486 (0x11055e)
-   > gas price:           2.50883932 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00279857513770952 ETH
-
-[Truffle: Execute command] 
-Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
-
-[Truffle: Execute command] 
-[Truffle: Execute command] StatusError: Transaction: 0x6751891acef91118a4641d55461f51385b3f9506f137bb401ee704456e101dd3 exited with an error (status 0). Reason given: caller is not the minter.
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/9_deploy_mint.js:16:13)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at Migration._deploy (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:72:1)
-    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:54:1)
-    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
-    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
-    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
-    at Object.runAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:121:1)
-    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:86:1)
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
-    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
-    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
-[Truffle: Execute command] Truffle v5.5.16 (core: 5.5.16)
-[Truffle: Execute command] Node v16.14.0
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy failed
-[Truffle: Execute command] 2944
-[Truffle: Execute command] 2944
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network development
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Crowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-> Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-> Compiling ./contracts/Launchpool/ILaunchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Launchpool.sol
-> Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-[Truffle: Execute command] > Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-> Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
-Starting migrations...
-======================
-> Network name:    'development'
-> Network id:      1655102216493
-> Block gas limit: 30000000 (0x1c9c380)
-
-
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Replacing 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0xd3992f57ca71d8d78866fa89ab8219c334e537dd0ef10639dbd0ac170d0bf6d9
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xe2F51D1CD7A8F82E998FF85ed6C5e868864fA61b
-   > block number:        40
-   > block timestamp:     1655102531
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.935551670583474884
-   > gas used:            155222 (0x25e56)
-   > gas price:           2.505991135 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00038898495595697 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00038898495595697 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Replacing 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0x3849e4ebd048dba4b09c0b358bee6282c7fe8ffeac24eea0bf0de01c3c0d612b
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x7Da564654E3c49781dfCc778Ea4e507f062446dd
-   > block number:        42
-   > block timestamp:     1655102531
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.930692163919925952
-   > gas used:            1894534 (0x1ce886)
-   > gas price:           2.504595743 gwei
-   > value sent:          0 ETH
-   > total cost:          0.004745041791368762 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.004745041791368762 ETH
-
-[Truffle: Execute command] 
-3_deploy_presale.js
-===================
-[Truffle: Execute command] 
-   Replacing 'Presale'
-   -------------------
-[Truffle: Execute command]    > transaction hash:    0x939a82de4c77deb5c16fc8c6ef0311105d41a6a00964ab1a0518a86d10b52676
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xDfB7AE3699f66bF966E34cf7997ce1726038a968
-   > block number:        44
-   > block timestamp:     1655102531
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.925534492780618992
-   > gas used:            2031520 (0x1effa0)
-   > gas price:           2.503583079 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00508607909665008 ETH
-
-[Truffle: Execute command] Deployed 0xDfB7AE3699f66bF966E34cf7997ce1726038a968
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00508607909665008 ETH
-
-[Truffle: Execute command] 
-4_deploy_tvt_token.js
-=====================
-[Truffle: Execute command] 
-   Replacing 'TVTToken'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0xf0e4d53beb1b4d338d13ae15c0dd8ff28d5f8ae96acb3ac4a5b346e79d5e761c
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x1D49b46e01FeEb9f8cDa205dE6C85CE65A712d33
-   > block number:        46
-   > block timestamp:     1655102531
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.920882757599990452
-   > gas used:            1830020 (0x1bec84)
-   > gas price:           2.502797134 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00458016881116268 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00458016881116268 ETH
-
-[Truffle: Execute command] 
-5_deploy_tvt_token_crowdsale.js
-===============================
-[Truffle: Execute command] 
-   Replacing 'TVTTokenCrowdsale'
-   -----------------------------
-[Truffle: Execute command]    > transaction hash:    0x6d0b96207ee90366cd43ed83677573dade2fc710f32e509b61efdc716ba6dbe7
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xCCF74E93Fb3E350246c539D96c06745943AC5a1B
-   > block number:        48
-   > block timestamp:     1655102532
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.919533450938077927
-   > gas used:            510659 (0x7cac3)
-   > gas price:           2.502179475 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001277760468524025 ETH
-
-[Truffle: Execute command] Deployed 0xCCF74E93Fb3E350246c539D96c06745943AC5a1B
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001277760468524025 ETH
-
-[Truffle: Execute command] 
-6_deploy_tvtb_token.js
-======================
-[Truffle: Execute command] 
-   Replacing 'TVTBToken'
-   ---------------------
-[Truffle: Execute command]    > transaction hash:    0x458b15400ef6225caea2591182798176b5dc78a932dbb8b1d6f77bba4f3acf3a
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xdeC1AAd50Df1cc97058f26D78533aE455794A6aD
-   > block number:        50
-   > block timestamp:     1655102532
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.913098212141330669
-   > gas used:            2543777 (0x26d0a1)
-   > gas price:           2.501677234 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006363709009272818 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006363709009272818 ETH
-
-[Truffle: Execute command] 
-7_deploy_tvtb_token_crowdsale.js
-================================
-[Truffle: Execute command] 
-   Replacing 'TVTBTokenCrowdsale'
-   ------------------------------
-[Truffle: Execute command]    > transaction hash:    0xc9f4741571b533b3c62ef428e3f67ccba7eecb5ac0aa78316c0957cfdcd88680
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x93793a376023b33Ecb79c781C51639EC561E135E
-   > block number:        52
-   > block timestamp:     1655102532
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.911548606746524285
-   > gas used:            590924 (0x9044c)
-   > gas price:           2.501315601 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001478087420205324 ETH
-
-[Truffle: Execute command] Deployed 0x93793a376023b33Ecb79c781C51639EC561E135E
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001478087420205324 ETH
-
-[Truffle: Execute command] 
-8_deploy_ballot.js
-==================
-[Truffle: Execute command] 
-   Replacing 'Ballot'
-   ------------------
-[Truffle: Execute command]    > transaction hash:    0x19b6bbea57a972f6150a56ff1b133553387bf7a00e1968e72a0227e3d5aa4d10
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xd0722B1c40d1ca8fead8082BbB1f51b178A6aDF7
-   > block number:        54
-   > block timestamp:     1655102532
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.909615594522889685
-   > gas used:            744300 (0xb5b6c)
-   > gas price:           2.501013203 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0018615041269929 ETH
-
-Deployed 0xd0722B1c40d1ca8fead8082BbB1f51b178A6aDF7
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.0018615041269929 ETH
-
-[Truffle: Execute command] 
-9_deploy_mint.js
-================
-[Truffle: Execute command] 
-   Deploying 'Date'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0x9d7f7d993daa6821f08b8b318899fb5aca14f0cb82477356ce996c0787ed1160
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xD105792f3A2182fd9FCca4163818E85340eeEA79
-   > block number:        56
-   > block timestamp:     1655102533
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.909268042735953109
-   > gas used:            110386 (0x1af32)
-   > gas price:           2.500781446 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000276051260698156 ETH
-
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Mint <--> Library: Date (at address: 0xD105792f3A2182fd9FCca4163818E85340eeEA79)
-[Truffle: Execute command] 
-   Deploying 'Mint'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0xbed48264bffd155c9d32902ee419691a658a0c32b4e4ad249ec2dd070113e72a
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xBF61C0b607c62B1C1aFf7dce014c55244320b973
-   > block number:        57
-   > block timestamp:     1655102533
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.906478564202518399
-   > gas used:            1115486 (0x11055e)
-   > gas price:           2.500684485 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00278947853343471 ETH
-
-[Truffle: Execute command] 
-Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
-
-[Truffle: Execute command] 
-[Truffle: Execute command] StatusError: Transaction: 0x701fbe7b9d32708947b1ea22d028933aebbc29dfb56218efd9940e8f4ad2bb79 exited with an error (status 0). Reason given: caller is not the minter.
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/9_deploy_mint.js:16:13)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at Migration._deploy (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:72:1)
-    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:54:1)
-    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
-    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
-    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
-    at Object.runAll (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:121:1)
-    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:86:1)
-    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
-    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
-    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
-[Truffle: Execute command] Truffle v5.5.16 (core: 5.5.16)
-[Truffle: Execute command] Node v16.14.0
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy failed
-[Truffle: Execute command] 2944
-[Truffle: Execute command] 2944
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network development
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Crowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-> Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-> Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-> Compiling ./contracts/Launchpool/ILaunchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Launchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-> Compiling ./contracts/Refillable.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControl.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
-Starting migrations...
-======================
-> Network name:    'development'
-> Network id:      1655102216493
-> Block gas limit: 30000000 (0x1c9c380)
-
-
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Replacing 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0xa2538a06088ca7553c04d5aa4b56a0811b7861e506d5bf218dd6bfc5f7a3357e
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x66E42Ff5b7074d26FAAF8589377128311d32C746
-   > block number:        60
-   > block timestamp:     1655102599
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.905802164249181523
-   > gas used:            155222 (0x25e56)
-   > gas price:           2.500463934 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000388127012763348 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.000388127012763348 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Replacing 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0xd4b6faa8526c5108a2312231301a9b26712b130f524fdb05afd24b5bc07b0a06
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xFdcbfa9b6175Dcb9760A44dF50c27f9A4998b529
-   > block number:        62
-   > block timestamp:     1655102599
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.900950911447471933
-   > gas used:            1894534 (0x1ce886)
-   > gas price:           2.50035588 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00473700922675992 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00473700922675992 ETH
-
-[Truffle: Execute command] 
-3_deploy_presale.js
-===================
-[Truffle: Execute command] 
-   Replacing 'Presale'
-   -------------------
-[Truffle: Execute command]    > transaction hash:    0x7745c77b06181db6e3a2632de8b9de4885ee0c218d3576c0d42444be62dbe383
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x894D65fcb7C7289B6E746781aF80A190637d7023
-   > block number:        64
-   > block timestamp:     1655102599
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.895800063712407913
-   > gas used:            2031520 (0x1effa0)
-   > gas price:           2.500277463 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00507936367163376 ETH
-
-[Truffle: Execute command] Deployed 0x894D65fcb7C7289B6E746781aF80A190637d7023
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00507936367163376 ETH
-
-[Truffle: Execute command] 
-4_deploy_tvt_token.js
-=====================
-[Truffle: Execute command] 
-   Replacing 'TVTToken'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x7e58bfde59bcb204eff521f6766e6acb7f08d56fa629a6f566285de970da1bd3
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xAf43735424E44cA65CA1e8A9E8BE555a0F95fa97
-   > block number:        66
-   > block timestamp:     1655102600
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.891153135249189833
-   > gas used:            1830020 (0x1bec84)
-   > gas price:           2.500216603 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00457544638782206 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00457544638782206 ETH
-
-[Truffle: Execute command] 
-5_deploy_tvt_token_crowdsale.js
-===============================
-[Truffle: Execute command] 
-   Replacing 'TVTTokenCrowdsale'
-   -----------------------------
-[Truffle: Execute command]    > transaction hash:    0xe07c985b82cee744246cba8a48e15bab86c051ab3113f5f85558ddec5ff6bcde
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x485731AB0f770646755FfC6FE7c8F897dd304996
-   > block number:        68
-   > block timestamp:     1655102600
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.889804921050189477
-   > gas used:            510659 (0x7cac3)
-   > gas price:           2.500168774 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001276733685962066 ETH
-
-[Truffle: Execute command] Deployed 0x485731AB0f770646755FfC6FE7c8F897dd304996
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001276733685962066 ETH
-
-[Truffle: Execute command] 
-6_deploy_tvtb_token.js
-======================
-[Truffle: Execute command] 
-   Replacing 'TVTBToken'
-   ---------------------
-[Truffle: Execute command]    > transaction hash:    0x4ee788d8e36d3904a17622d9b17635244a545351c244a67f17528aef8e68dce3
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x362ad3176b75b9BC41A9088bdE6A464c8ad17BA4
-   > block number:        70
-   > block timestamp:     1655102600
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.883373668916703523
-   > gas used:            2543777 (0x26d0a1)
-   > gas price:           2.500129882 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006359772890844314 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006359772890844314 ETH
-
-[Truffle: Execute command] 
-7_deploy_tvtb_token_crowdsale.js
-================================
-[Truffle: Execute command] 
-   Replacing 'TVTBTokenCrowdsale'
-   ------------------------------
-[Truffle: Execute command]    > transaction hash:    0xe3512f6dfd2538b21de8554f27c131754a813a312432b8fd1607cac3fdc6d52a
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xB677619280875B1272166Cd8BA7E0d5D43C62361
-   > block number:        72
-   > block timestamp:     1655102600
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.881824820386052737
-   > gas used:            590924 (0x9044c)
-   > gas price:           2.500101879 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001477370202746196 ETH
-
-[Truffle: Execute command] Deployed 0xB677619280875B1272166Cd8BA7E0d5D43C62361
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001477370202746196 ETH
-
-[Truffle: Execute command] 
-8_deploy_ballot.js
-==================
-[Truffle: Execute command] 
-   Replacing 'Ballot'
-   ------------------
-[Truffle: Execute command]    > transaction hash:    0x888700b30b54584504d57d6b96491e514522d25472157917737a4467e645fdcc
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x946185B1e7f34236d916beED14222B19C574c2d2
-   > block number:        74
-   > block timestamp:     1655102601
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.879892534423806997
-   > gas used:            744300 (0xb5b6c)
-   > gas price:           2.500078462 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0018608083992666 ETH
-
-[Truffle: Execute command] Deployed 0x946185B1e7f34236d916beED14222B19C574c2d2
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.0018608083992666 ETH
-
-[Truffle: Execute command] 
-9_deploy_mint.js
-================
-[Truffle: Execute command] 
-   Deploying 'Date'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0x5ef57ed3ceb4f6ae95c0bc21d6203f4f1ea9c3f62cdb2d51c4f080d9ae412b76
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xE476F2fE967552f86A461937412C21867f6704cF
-   > block number:        76
-   > block timestamp:     1655102601
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.879545085767057017
-   > gas used:            110386 (0x1af32)
-   > gas price:           2.500060515 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00027597168000879 ETH
-
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Mint <--> Library: Date (at address: 0xE476F2fE967552f86A461937412C21867f6704cF)
-[Truffle: Execute command] 
-   Deploying 'Mint'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0xb87f5fe9a03311e2c6c02427565bc0c6fbc4c6f97b61c00c4a38b8c97765b36f
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x34c4FCc6A422F57fEb4fA8A97f4D7f0f61FcE64C
-   > block number:        77
-   > block timestamp:     1655102601
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.876756311638490615
-   > gas used:            1115486 (0x11055e)
-   > gas price:           2.500053007 gwei
-   > value sent:          0 ETH
-   > total cost:          0.002788774128566402 ETH
-
-[Truffle: Execute command] Deployed 0x34c4FCc6A422F57fEb4fA8A97f4D7f0f61FcE64C
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.003064745808575192 ETH
-
-[Truffle: Execute command] 
-10_deploy_treasury.js
-=====================
-[Truffle: Execute command] 
-   Deploying 'Treasury'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x9517cddbe871160844f0d8a7dd6eb5caf7fc77eb47e91ef0d15c33f7174bc470
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xF5a5a720e0EaC4E8E13704C0eC001E74fF52e68D
-   > block number:        80
-   > block timestamp:     1655102601
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.874526155946629583
-   > gas used:            772621 (0xbca0d)
-   > gas price:           2.50003593 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00193158026027253 ETH
-
-[Truffle: Execute command] Deployed 0xF5a5a720e0EaC4E8E13704C0eC001E74fF52e68D
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00193158026027253 ETH
-
-[Truffle: Execute command] 
-11_deploy_launchpool.js
-=======================
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Launchpool <--> Library: Date (at address: 0xE476F2fE967552f86A461937412C21867f6704cF)
-[Truffle: Execute command] 
-   Deploying 'Launchpool'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0x93b1c5f0de1e4aea6f27863b01d36c7a0c7d2ec500c93e490bdf63a9616552ce
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x4A4eFA95b5274bb43a10cb02964ADBd172942895
-   > block number:        82
-   > block timestamp:     1655102602
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.860252320067134373
-   > gas used:            5680881 (0x56aef1)
-   > gas price:           2.50002772 gwei
-   > value sent:          0 ETH
-   > total cost:          0.01420235997402132 ETH
-
-[Truffle: Execute command] Deployed 0x4A4eFA95b5274bb43a10cb02964ADBd172942895
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.01420235997402132 ETH
-
-Summary
-=======
-> Total deployments:   12
-> Final cost:          0.044953317520667306 ETH
-
-[Truffle: Execute command] 
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy succeeded
-[Truffle: Execute command] 2944
-[Truffle: Execute command] 2944
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network development
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Crowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/IBankAccountSupplier.sol
-> Compiling ./contracts/Launchpool/BaseDeposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/ILaunchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Launchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-[Truffle: Execute command] > Compiling ./contracts/Presale.sol
-> Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
-Starting migrations...
-======================
-> Network name:    'development'
-> Network id:      1655102216493
-> Block gas limit: 30000000 (0x1c9c380)
-
-
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Replacing 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0x2edcfd3b76b91545a64fb6b1bf883de2add4708b835360eabb46c8a08be4ce80
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x6BaA29d9EB477b1F1eb6A7Fc3FCb812a92Cdeede
-   > block number:        84
-   > block timestamp:     1655103142
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.859792785862432115
-   > gas used:            155222 (0x25e56)
-   > gas price:           2.500022379 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000388058473713138 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.000388058473713138 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Replacing 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0x101cab86f86529fe572626f859f08917f13060fbb20e2a69d1be98970aae33c7
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x411Ffd14EF83da63dD029DEe95D0a41B7fCfCEdF
-   > block number:        86
-   > block timestamp:     1655103142
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.854942192441045813
-   > gas used:            1894534 (0x1ce886)
-   > gas price:           2.500017168 gwei
-   > value sent:          0 ETH
-   > total cost:          0.004736367525359712 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.004736367525359712 ETH
-
-[Truffle: Execute command] 
-3_deploy_presale.js
-===================
-[Truffle: Execute command] 
-   Replacing 'Presale'
-   -------------------
-[Truffle: Execute command]    > transaction hash:    0x1699803c66e87269138aa89db891834da90ba99c9d31d3e3c10496ed74e15500
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x4F6ee84DF3037296728Ea58A7D9434CEdD7387D1
-   > block number:        88
-   > block timestamp:     1655103143
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.849791889809863633
-   > gas used:            2031520 (0x1effa0)
-   > gas price:           2.500013386 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00507882719392672 ETH
-
-[Truffle: Execute command] Deployed 0x4F6ee84DF3037296728Ea58A7D9434CEdD7387D1
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00507882719392672 ETH
-
-[Truffle: Execute command] 
-4_deploy_tvt_token.js
-=====================
-[Truffle: Execute command] 
-   Replacing 'TVTToken'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x8829ffae32e36744e57cbe56329885eaf0dbc47f820e67055b613a10cb952f13
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xF6f429A41584d5CBC5662ef0537050aC4A9db805
-   > block number:        90
-   > block timestamp:     1655103143
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.845145345342960013
-   > gas used:            1830020 (0x1bec84)
-   > gas price:           2.500010451 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00457506912553902 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.00457506912553902 ETH
-
-[Truffle: Execute command] 
-5_deploy_tvt_token_crowdsale.js
-===============================
-[Truffle: Execute command] 
-   Replacing 'TVTTokenCrowdsale'
-   -----------------------------
-[Truffle: Execute command]    > transaction hash:    0x34de0e0e74e889e876bfa64f5ece5b6142330787ad0c91b0e273c422ae6ddc80
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x7fE84a4982846DCa1a6AA8dc8F49dE8a317Dd693
-   > block number:        92
-   > block timestamp:     1655103143
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.843797218417612508
-   > gas used:            510659 (0x7cac3)
-   > gas price:           2.500008145 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001276651659317555 ETH
-
-[Truffle: Execute command] Deployed 0x7fE84a4982846DCa1a6AA8dc8F49dE8a317Dd693
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001276651659317555 ETH
-
-[Truffle: Execute command] 
-6_deploy_tvtb_token.js
-======================
-[Truffle: Execute command] 
-   Replacing 'TVTBToken'
-   ---------------------
-[Truffle: Execute command]    > transaction hash:    0x348e22c0ba821c210137c9b48706b9e48a2e18d426a74fe6f00333623531f06c
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xf3620204377aCeFCb4d64dEF3021f07143eCDbd7
-   > block number:        94
-   > block timestamp:     1655103144
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.837366284765912915
-   > gas used:            2543777 (0x26d0a1)
-   > gas price:           2.500006269 gwei
-   > value sent:          0 ETH
-   > total cost:          0.006359458446938013 ETH
-
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.006359458446938013 ETH
-
-[Truffle: Execute command] 
-7_deploy_tvtb_token_crowdsale.js
-================================
-[Truffle: Execute command] 
-   Replacing 'TVTBTokenCrowdsale'
-   ------------------------------
-[Truffle: Execute command]    > transaction hash:    0xbb2e778fb950808995232627b691d9c8edf595a84f4c04e762fb153faae7017d
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x2d2F330f1D205ba1d12C4c19EAb57d05738455DE
-   > block number:        96
-   > block timestamp:     1655103144
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.835817496699101473
-   > gas used:            590924 (0x9044c)
-   > gas price:           2.500004918 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001477312906164232 ETH
-
-[Truffle: Execute command] Deployed 0x2d2F330f1D205ba1d12C4c19EAb57d05738455DE
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001477312906164232 ETH
-
-[Truffle: Execute command] 
-8_deploy_ballot.js
-==================
-[Truffle: Execute command] 
-   Replacing 'Ballot'
-   ------------------
-[Truffle: Execute command]    > transaction hash:    0x262fa47a9bdce789df4a315559717a57114046377087cbe6dac4a7a4c04edab3
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x177884b46e15905129Ed1448D15435A4aFbBeE5d
-   > block number:        98
-   > block timestamp:     1655103144
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.833885268755211253
-   > gas used:            744300 (0xb5b6c)
-   > gas price:           2.500003789 gwei
-   > value sent:          0 ETH
-   > total cost:          0.0018607528201527 ETH
-
-[Truffle: Execute command] Deployed 0x177884b46e15905129Ed1448D15435A4aFbBeE5d
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.0018607528201527 ETH
-
-[Truffle: Execute command] 
-9_deploy_mint.js
-================
-[Truffle: Execute command] 
-   Replacing 'Date'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0x4269249df39027188a602037733734deb2ef1a773d7745e7a60660ceb3a6288d
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0x49257B0e6c854c5bfAa26a5d813a30758ca41801
-   > block number:        100
-   > block timestamp:     1655103145
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.833537828337090965
-   > gas used:            110386 (0x1af32)
-   > gas price:           2.500002923 gwei
-   > value sent:          0 ETH
-   > total cost:          0.000275965322658278 ETH
-
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Mint <--> Library: Date (at address: 0x49257B0e6c854c5bfAa26a5d813a30758ca41801)
-[Truffle: Execute command] 
-   Replacing 'Mint'
-   ----------------
-[Truffle: Execute command]    > transaction hash:    0xfef27c4438ab99eda95d7e36ba7b8f5f9ed767ce350d639cafb1a67f88bbb162
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xAF744C3E1cB447726C62A01FD3886e38c79Ca72D
-   > block number:        101
-   > block timestamp:     1655103145
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.830749110480331319
-   > gas used:            1115486 (0x11055e)
-   > gas price:           2.500002561 gwei
-   > value sent:          0 ETH
-   > total cost:          0.002788717856759646 ETH
-
-[Truffle: Execute command] Deployed 0xAF744C3E1cB447726C62A01FD3886e38c79Ca72D
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.003064683179417924 ETH
-
-[Truffle: Execute command] 
-10_deploy_treasury.js
-=====================
-[Truffle: Execute command] 
-   Replacing 'Treasury'
-   --------------------
-[Truffle: Execute command]    > transaction hash:    0x65d972560fbff6e051679feafa759004b8ad1cd833bf1a27d95291dace2fe1c4
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xA641d7996172C964c3641d1fA29de1041CBE29f7
-   > block number:        103
-   > block timestamp:     1655103145
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.828746081383467526
-   > gas used:            772621 (0xbca0d)
-   > gas price:           2.500001983 gwei
-   > value sent:          0 ETH
-   > total cost:          0.001931554032107443 ETH
-
-[Truffle: Execute command] Deployed 0xA641d7996172C964c3641d1fA29de1041CBE29f7
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.001931554032107443 ETH
-
-[Truffle: Execute command] 
-11_deploy_launchpool.js
-=======================
-[Truffle: Execute command] 
-   Linking
-   -------
-   * Contract: Launchpool <--> Library: Date (at address: 0x49257B0e6c854c5bfAa26a5d813a30758ca41801)
-[Truffle: Execute command] 
-   Replacing 'Launchpool'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0x62872c2a0d80b6028afb363be41f99a38a52a879f2c5e5f263d15bef05ed40f4
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command]    > Blocks: 0            Seconds: 0
-   > contract address:    0xf31058fB2d78047E9c461dCc03eD83D61388D4a4
-   > block number:        105
-   > block timestamp:     1655103145
-   > account:             0x9111ac422140D8E8c51dE1ADF693393a1E8ee559
-   > balance:             999.814472335141707556
-   > gas used:            5680905 (0x56af09)
-   > gas price:           2.50000153 gwei
-   > value sent:          0 ETH
-   > total cost:          0.01420227119178465 ETH
-
-[Truffle: Execute command] Deployed 0xf31058fB2d78047E9c461dCc03eD83D61388D4a4
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:     0.01420227119178465 ETH
-
-Summary
-=======
-> Total deployments:   12
-> Final cost:          0.044951006554421107 ETH
-
-[Truffle: Execute command] 
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy succeeded
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts
-Running command
-npx truffle compile
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-> Compiling ./contracts/BankAccountSupplier.sol
-> Compiling ./contracts/Crowdsale.sol
-> Compiling ./contracts/Date.sol
-> Compiling ./contracts/IBankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/IBankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/BaseDeposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-> Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Deposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/ILaunchpool.sol
-> Compiling ./contracts/Launchpool/Launchpool.sol
-[Truffle: Execute command] > Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/Mint.sol
-> Compiling ./contracts/Presale.sol
-[Truffle: Execute command] > Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/IBEP20.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVT.sol
-> Compiling ./contracts/TVT/TVTToken.sol
-> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-[Truffle: Execute command] > Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-> Compiling ./contracts/Treasury.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-> Compiled successfully using:
-[Truffle: Execute command]    - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] Finished running command
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network testnet
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy failed
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network testnet
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy failed
-Get version for required apps: truffle
-[checkApps] Current state for versions: [{"app":"node","isValid":true,"requiredVersion":{"max":"17.0.0","min":"14.0.0"},"version":"16.14.0"},{"app":"npm","isValid":true,"requiredVersion":{"max":"9.0.0","min":"6.14.15"},"version":"8.3.1"},{"app":"git","isValid":true,"requiredVersion":"2.10.0","version":"2.32.0"},{"app":"truffle","isValid":true,"requiredVersion":{"max":"6.0.0","min":"5.0.0"},"version":"5.5.16"},{"app":"ganache","isValid":true,"requiredVersion":{"max":"8.0.0","min":"6.0.0"},"version":"7.2.0"}] Invalid: false
-[Truffle: Execute command] 
-Working dir: /Users/ievgencherkaskyi/Projects/tivan/launchpool
-Running command
-npx truffle migrate --reset --compile-all --network testnet
-[Truffle: Execute command] 
-Compiling your contracts...
-[Truffle: Execute command] ===========================
-[Truffle: Execute command] > Compiling ./contracts/Ballot.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccount.sol
-[Truffle: Execute command] > Compiling ./contracts/BankAccountSupplier.sol
-> Compiling ./contracts/Crowdsale.sol
-> Compiling ./contracts/Date.sol
-[Truffle: Execute command] > Compiling ./contracts/IBankAccount.sol
-> Compiling ./contracts/IBankAccountSupplier.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/BaseDeposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/AmountCondition.sol
-> Compiling ./contracts/Launchpool/Condition/DepositCondition.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/Condition/PeriodCondition.sol
-> Compiling ./contracts/Launchpool/Condition/TerminationCondition.sol
-> Compiling ./contracts/Launchpool/Deposit.sol
-[Truffle: Execute command] > Compiling ./contracts/Launchpool/ILaunchpool.sol
-> Compiling ./contracts/Launchpool/Launchpool.sol
-> Compiling ./contracts/Migrations.sol
-[Truffle: Execute command] > Compiling ./contracts/Mint.sol
-[Truffle: Execute command] > Compiling ./contracts/Presale.sol
-> Compiling ./contracts/Refillable.sol
-> Compiling ./contracts/TVT/BEP20.sol
-> Compiling ./contracts/TVT/IBEP20.sol
-> Compiling ./contracts/TVT/TVT.sol
-[Truffle: Execute command] > Compiling ./contracts/TVT/TVTToken.sol
-> Compiling ./contracts/TVT/TVTTokenCrowdsale.sol
-> Compiling ./contracts/TVTB/TVTBToken.sol
-> Compiling ./contracts/TVTB/TVTBTokenCrowdsale.sol
-[Truffle: Execute command] > Compiling ./contracts/Treasury.sol
-> Compiling @openzeppelin/contracts/access/AccessControl.sol
-> Compiling @openzeppelin/contracts/access/AccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/IAccessControl.sol
-> Compiling @openzeppelin/contracts/access/IAccessControlEnumerable.sol
-> Compiling @openzeppelin/contracts/access/Ownable.sol
-> Compiling @openzeppelin/contracts/proxy/utils/Initializable.sol
-> Compiling @openzeppelin/contracts/security/Pausable.sol
-> Compiling @openzeppelin/contracts/security/ReentrancyGuard.sol
-> Compiling @openzeppelin/contracts/token/ERC20/ERC20.sol
-> Compiling @openzeppelin/contracts/token/ERC20/IERC20.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol
-> Compiling @openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/ERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721.sol
-> Compiling @openzeppelin/contracts/token/ERC721/IERC721Receiver.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol
-> Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol
-> Compiling @openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol
-> Compiling @openzeppelin/contracts/utils/Address.sol
-> Compiling @openzeppelin/contracts/utils/Context.sol
-> Compiling @openzeppelin/contracts/utils/Counters.sol
-> Compiling @openzeppelin/contracts/utils/Strings.sol
-> Compiling @openzeppelin/contracts/utils/introspection/ERC165.sol
-> Compiling @openzeppelin/contracts/utils/introspection/IERC165.sol
-[Truffle: Execute command] > Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
-> Compiling @openzeppelin/contracts/utils/structs/EnumerableSet.sol
-[Truffle: Execute command] > Artifacts written to /Users/ievgencherkaskyi/Projects/tivan/launchpool/build/contracts
-[Truffle: Execute command] > Compiled successfully using:
-   - solc: 0.8.7+commit.e28d00a7.Emscripten.clang
-[Truffle: Execute command] 
-[Truffle: Execute command] 
 Starting migrations...
 ======================
 > Network name:    'testnet'
@@ -2103,99 +21,75 @@ Starting migrations...
 > Block gas limit: 30000000 (0x1c9c380)
 
 
-1_initial_migration.js
-======================
-[Truffle: Execute command] 
-   Deploying 'Migrations'
-   ----------------------
-[Truffle: Execute command]    > transaction hash:    0x7791e6b7cb1f35c4e248c0d6bdbcaa775060b43522c583041c5619a0c9c85e4a
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0xE54156Aac5Aa0124b7B4Dc01061D13F40f0F6d59
-   > block number:        20154507
-   > block timestamp:     1655106019
-   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.01503746
-   > gas used:            153922 (0x25942)
-   > gas price:           10 gwei
-   > value sent:          0 ETH
-   > total cost:          0.00153922 ETH
-
-   Pausing for 10 confirmations...
-
-   --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154510)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154512)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154513)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154514)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154516)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154517)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154518)
-[Truffle: Execute command]    > confirmation number: 11 (block: 20154520)
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:          0.00153922 ETH
-
-[Truffle: Execute command] 
-2_deploy_tvt.js
-===============
-[Truffle: Execute command] 
-   Deploying 'TVT'
-   ---------------
-[Truffle: Execute command]    > transaction hash:    0x8061870f1ae16909138ae9ce6dcc11a79bf10af6c4a4d971ac47da06065ee119
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 2            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command] - Blocks: 5            Seconds: 13
-[Truffle: Execute command]    > Blocks: 5            Seconds: 13
-   > contract address:    0x1F2b238cff40FFe033F8EdC0338220939176287C
-   > block number:        20154529
-   > block timestamp:     1655106085
-   > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.19574022
-   > gas used:            1887434 (0x1cccca)
-   > gas price:           10 gwei
-   > value sent:          0 ETH
-   > total cost:          0.01887434 ETH
-
-   Pausing for 10 confirmations...
-
-   --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154532)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154534)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154535)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154536)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154538)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154539)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154540)
-[Truffle: Execute command]    > confirmation number: 11 (block: 20154542)
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
-   -------------------------------------
-   > Total cost:          0.01887434 ETH
-
-[Truffle: Execute command] 
 3_deploy_presale.js
 ===================
-[Truffle: Execute command] 
+
    Deploying 'Presale'
    -------------------
-[Truffle: Execute command]    > transaction hash:    0xbc99418b9e3a80fc9a1777fa96907d01ec7ccad6cc9ff11dbbc1ea12db662f79
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command] - Blocks: 4            Seconds: 13
-[Truffle: Execute command]    > Blocks: 4            Seconds: 13
-   > contract address:    0x71995Ad84e74c24bf06675Ce6C075Bc2E3bb896E
-   > block number:        20154551
-   > block timestamp:     1655106151
+ *** Deployment Failed ***
+
+"Presale" could not deploy due to insufficient funds
+   * Account:  0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   * Balance:  12339600000000000 wei
+   * Message:  insufficient funds for gas * price + value
+   * Try:
+      + Using an adequately funded account
+      + If you are using a local Geth node, verify that your node is synced.
+
+
+Exiting: Review successful transactions manually by checking the transaction hashes above on Etherscan.
+
+
+Error:  *** Deployment Failed ***
+
+"Presale" could not deploy due to insufficient funds
+   * Account:  0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
+   * Balance:  12339600000000000 wei
+   * Message:  insufficient funds for gas * price + value
+   * Try:
+      + Using an adequately funded account
+      + If you are using a local Geth node, verify that your node is synced.
+
+    at /Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/deployer/src/deployment.js:379:1
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/migrations/3_deploy_presale.js:9:19)
+    at Migration._deploy (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:72:1)
+    at Migration._load (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:54:1)
+    at Migration.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/Migration.js:202:1)
+    at Object.runMigrations (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:152:1)
+    at Object.runFrom (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:117:1)
+    at Object.run (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/migrate/index.js:94:1)
+    at module.exports (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/runMigrations.js:10:1)
+    at Object.module.exports [as run] (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/commands/migrate/run.js:41:1)
+    at runCommand (/Users/ievgencherkaskyi/Projects/tivan/launchpool/node_modules/truffle/build/webpack:/packages/core/lib/command-utils.js:184:1)
+Truffle v5.5.16 (core: 5.5.16)
+Node v16.14.0
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % npx truffle migrate --network testnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'testnet'
+> Network id:      97
+> Block gas limit: 29999542 (0x1c9c1b6)
+
+
+3_deploy_presale.js
+===================
+
+   Deploying 'Presale'
+   -------------------
+   > transaction hash:    0xfe8ef1ca4fc7416f5f1a0153ec24cf426c895ae4953935eb3406c005d081400d
+   > Blocks: 4            Seconds: 13
+   > contract address:    0xAf6d12F411D009da935f8CB192334668a7fa8A02
+   > block number:        20193008
+   > block timestamp:     1655221696
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.17526012
+   > balance:             0.1921324
    > gas used:            2020720 (0x1ed570)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2204,37 +98,33 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154554)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154556)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154557)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154558)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154560)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154561)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154562)
-[Truffle: Execute command]    > confirmation number: 11 (block: 20154564)
-[Truffle: Execute command] Deployed 0x71995Ad84e74c24bf06675Ce6C075Bc2E3bb896E
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193011)
+   > confirmation number: 3 (block: 20193013)
+   > confirmation number: 4 (block: 20193014)
+   > confirmation number: 5 (block: 20193015)
+   > confirmation number: 7 (block: 20193017)
+   > confirmation number: 8 (block: 20193018)
+   > confirmation number: 9 (block: 20193019)
+   > confirmation number: 11 (block: 20193021)
+Deployed 0xAf6d12F411D009da935f8CB192334668a7fa8A02
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:           0.0202072 ETH
 
-[Truffle: Execute command] 
+
 4_deploy_tvt_token.js
 =====================
-[Truffle: Execute command] 
+
    Deploying 'TVTToken'
    --------------------
-[Truffle: Execute command]    > transaction hash:    0x17666388f2dfaa3251f4d99501010420cb382bfb0f1e192aca48f48037db6654
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 2            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0xC58405F763Ab4C401972A1063427aE7638852e58
-   > block number:        20154573
-   > block timestamp:     1655106217
+   > transaction hash:    0x30153c67c34333bf7a2eb36484f72a1b36be76cba012a82b18fd64221dbbb2d9
+   > Blocks: 5            Seconds: 13
+   > contract address:    0x26A3d85d620e7670d142e57C536920741a37520C
+   > block number:        20193030
+   > block timestamp:     1655221762
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.15687602
+   > balance:             0.1737483
    > gas used:            1811120 (0x1ba2b0)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2243,36 +133,32 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154576)
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154577)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154579)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154580)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154582)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154583)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154584)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154585)
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193033)
+   > confirmation number: 3 (block: 20193035)
+   > confirmation number: 4 (block: 20193036)
+   > confirmation number: 5 (block: 20193037)
+   > confirmation number: 7 (block: 20193039)
+   > confirmation number: 8 (block: 20193040)
+   > confirmation number: 9 (block: 20193041)
+   > confirmation number: 11 (block: 20193043)
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:           0.0181112 ETH
 
-[Truffle: Execute command] 
+
 5_deploy_tvt_token_crowdsale.js
 ===============================
-[Truffle: Execute command] 
+
    Deploying 'TVTTokenCrowdsale'
    -----------------------------
-[Truffle: Execute command]    > transaction hash:    0xf0b2b0031c26a15a2e4d0a4f92049ec66a642b8b23df7d4cf63ccf6356d03b40
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0x73cfa562847df74aCDe03783fa802942c9d865D4
-   > block number:        20154595
-   > block timestamp:     1655106283
+   > transaction hash:    0x42c9f3cc352c12acff54264c8d72eec77442d09b56e83ecf455f080ccd19e482
+   > Blocks: 4            Seconds: 13
+   > contract address:    0x19bA134736dEB126b7Bb3327fEc8c5f4B7d5deF6
+   > block number:        20193052
+   > block timestamp:     1655221828
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.15156453
+   > balance:             0.16843681
    > gas used:            503859 (0x7b033)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2281,37 +167,33 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154598)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154599)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154601)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154602)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154603)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154605)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154606)
-[Truffle: Execute command] Deployed 0x73cfa562847df74aCDe03783fa802942c9d865D4
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193055)
+   > confirmation number: 3 (block: 20193057)
+   > confirmation number: 4 (block: 20193058)
+   > confirmation number: 5 (block: 20193059)
+   > confirmation number: 7 (block: 20193061)
+   > confirmation number: 8 (block: 20193062)
+   > confirmation number: 9 (block: 20193063)
+   > confirmation number: 11 (block: 20193065)
+Deployed 0x19bA134736dEB126b7Bb3327fEc8c5f4B7d5deF6
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.00503859 ETH
 
-[Truffle: Execute command] 
+
 6_deploy_tvtb_token.js
 ======================
-[Truffle: Execute command] 
+
    Deploying 'TVTBToken'
    ---------------------
-[Truffle: Execute command]    > transaction hash:    0x7d7ce8f60c58d80cbe151b293a8aba940cff5eadfe09e95b73131f42916e988a
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 2            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command] - Blocks: 5            Seconds: 13
-[Truffle: Execute command]    > Blocks: 5            Seconds: 13
-   > contract address:    0x3dadAFd6db8216A7f3Df32f55229ccEF03800A07
-   > block number:        20154616
-   > block timestamp:     1655106346
+   > transaction hash:    0x8ce8be4c1f0c8097bf9b42c13a0669ef41b407f6d4413d85b606e666e6f0cdb2
+   > Blocks: 4            Seconds: 13
+   > contract address:    0xb3b95e8B14b10d4ddd2EEffdD64578Ec49Aa13D7
+   > block number:        20193074
+   > block timestamp:     1655221894
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.12603686
+   > balance:             0.33290914
    > gas used:            2525477 (0x268925)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2320,36 +202,32 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154619)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154621)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154622)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154624)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154625)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154626)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154627)
-[Truffle: Execute command]    > confirmation number: 11 (block: 20154629)
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193077)
+   > confirmation number: 3 (block: 20193079)
+   > confirmation number: 4 (block: 20193080)
+   > confirmation number: 5 (block: 20193081)
+   > confirmation number: 7 (block: 20193083)
+   > confirmation number: 8 (block: 20193084)
+   > confirmation number: 9 (block: 20193085)
+   > confirmation number: 11 (block: 20193087)
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.02525477 ETH
 
-[Truffle: Execute command] 
+
 7_deploy_tvtb_token_crowdsale.js
 ================================
-[Truffle: Execute command] 
+
    Deploying 'TVTBTokenCrowdsale'
    ------------------------------
-[Truffle: Execute command]    > transaction hash:    0xb6d33aaffb0ba162b5f6697f030a20540d6b81f7aeb8c0a07dc8b25d3449558e
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0x84D1Ca84d634Cb9C329B64327E920FE6ab6f1ED3
-   > block number:        20154638
-   > block timestamp:     1655106412
+   > transaction hash:    0x08f9bab15fc3afe04ed9e537479511ee6f811664e855928e5f70225dc9d8b71b
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xCdAfCfaA5D30A80f97a2331f0de658BD86daE722
+   > block number:        20193096
+   > block timestamp:     1655221960
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.11992272
+   > balance:             0.326795
    > gas used:            584124 (0x8e9bc)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2358,37 +236,33 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154641)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154642)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154644)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154645)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154646)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154648)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154649)
-[Truffle: Execute command] Deployed 0x84D1Ca84d634Cb9C329B64327E920FE6ab6f1ED3
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193099)
+   > confirmation number: 2 (block: 20193100)
+   > confirmation number: 4 (block: 20193102)
+   > confirmation number: 5 (block: 20193103)
+   > confirmation number: 6 (block: 20193104)
+   > confirmation number: 8 (block: 20193106)
+   > confirmation number: 9 (block: 20193107)
+   > confirmation number: 10 (block: 20193108)
+Deployed 0xCdAfCfaA5D30A80f97a2331f0de658BD86daE722
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.00584124 ETH
 
-[Truffle: Execute command] 
+
 8_deploy_ballot.js
 ==================
-[Truffle: Execute command] 
+
    Deploying 'Ballot'
    ------------------
-[Truffle: Execute command]    > transaction hash:    0xd47bca3ea21f0d090aec1005f92d411af45b373c0fc8667100042ce60bbc6b42
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 2            Seconds: 9
-[Truffle: Execute command] - Blocks: 4            Seconds: 13
-[Truffle: Execute command]    > Blocks: 4            Seconds: 13
-   > contract address:    0x4260d08272Ef2894bC8fb6DC53A25f67e67A4d0F
-   > block number:        20154659
-   > block timestamp:     1655106475
+   > transaction hash:    0x2023dcba50ee3baf5c5b740bd7afe2bbbcf4b31ff08c2ce13845a83dae1c005b
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x1cE72Eb772dDa6670539188D78b141547d69d195
+   > block number:        20193118
+   > block timestamp:     1655222026
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.11221982
+   > balance:             0.3190921
    > gas used:            743000 (0xb5658)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2397,37 +271,33 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154662)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154664)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154665)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154666)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154668)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154669)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154670)
-[Truffle: Execute command]    > confirmation number: 11 (block: 20154672)
-[Truffle: Execute command] Deployed 0x4260d08272Ef2894bC8fb6DC53A25f67e67A4d0F
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193121)
+   > confirmation number: 3 (block: 20193123)
+   > confirmation number: 4 (block: 20193124)
+   > confirmation number: 5 (block: 20193125)
+   > confirmation number: 7 (block: 20193127)
+   > confirmation number: 8 (block: 20193128)
+   > confirmation number: 9 (block: 20193129)
+   > confirmation number: 10 (block: 20193130)
+Deployed 0x1cE72Eb772dDa6670539188D78b141547d69d195
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:             0.00743 ETH
 
-[Truffle: Execute command] 
+
 9_deploy_mint.js
 ================
-[Truffle: Execute command] 
+
    Deploying 'Date'
    ----------------
-[Truffle: Execute command]    > transaction hash:    0xe9943c0d94f31f39711f21188c84b1ad9df5139e0191bc5c128f7cf4a281ab31
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 2            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0x9Bcc5DDb37c399c99831341eDff8980521a60689
-   > block number:        20154681
-   > block timestamp:     1655106541
+   > transaction hash:    0x51d8fdb93208fe02f0baa67ce5c7f8d87f1d7e1bbf536763ee7efa97fbb0a020
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x297fAA3Ae698C3c2B3152cAC55a468853B68C737
+   > block number:        20193140
+   > block timestamp:     1655222092
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.11084306
+   > balance:             0.31771534
    > gas used:            110386 (0x1af32)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2436,31 +306,28 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 1 (block: 20154684)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154686)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154687)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154688)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154690)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154691)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154692)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154693)
-[Truffle: Execute command] 
+   > confirmation number: 1 (block: 20193143)
+   > confirmation number: 3 (block: 20193145)
+   > confirmation number: 4 (block: 20193146)
+   > confirmation number: 5 (block: 20193147)
+   > confirmation number: 7 (block: 20193149)
+   > confirmation number: 8 (block: 20193150)
+   > confirmation number: 9 (block: 20193151)
+   > confirmation number: 10 (block: 20193152)
+
    Linking
    -------
-   * Contract: Mint <--> Library: Date (at address: 0x9Bcc5DDb37c399c99831341eDff8980521a60689)
-[Truffle: Execute command] 
+   * Contract: Mint <--> Library: Date (at address: 0x297fAA3Ae698C3c2B3152cAC55a468853B68C737)
+
    Deploying 'Mint'
    ----------------
-[Truffle: Execute command]    > transaction hash:    0x468abc48ec55a06edf7213b54130ab42d5742b1fd584f85b6090539d7c8eb504
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 2            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0xAcd1a48B4870bF89a29180Fb5d776121367A9a9C
-   > block number:        20154698
-   > block timestamp:     1655106592
+   > transaction hash:    0xf5e41745b9097169e934dc24d2dcc1715f7cdb44139c4a67accce970d1c71479
+   > Blocks: 3            Seconds: 9
+   > contract address:    0xC1add1889DD52A78E9A6e4FFF89f714E96232d5D
+   > block number:        20193157
+   > block timestamp:     1655222143
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.0997012
+   > balance:             0.30657348
    > gas used:            1114186 (0x11004a)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2469,36 +336,33 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154701)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154702)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154704)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154705)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154706)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154708)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154709)
-[Truffle: Execute command] Deployed 0xAcd1a48B4870bF89a29180Fb5d776121367A9a9C
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193160)
+   > confirmation number: 3 (block: 20193162)
+   > confirmation number: 4 (block: 20193163)
+   > confirmation number: 5 (block: 20193164)
+   > confirmation number: 7 (block: 20193166)
+   > confirmation number: 8 (block: 20193167)
+   > confirmation number: 9 (block: 20193168)
+   > confirmation number: 11 (block: 20193170)
+Deployed 0xC1add1889DD52A78E9A6e4FFF89f714E96232d5D
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.01224572 ETH
 
-[Truffle: Execute command] 
+
 10_deploy_treasury.js
 =====================
-[Truffle: Execute command] 
+
    Deploying 'Treasury'
    --------------------
-[Truffle: Execute command]    > transaction hash:    0xacab20adbda2eb6c872f172dae830a1f7b31558db907867fde3c6d013c2c7753
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 3            Seconds: 9
-[Truffle: Execute command]    > Blocks: 3            Seconds: 9
-   > contract address:    0xD4C93541c1eAE4972fddaF9331DC8F12fdc97e72
-   > block number:        20154718
-   > block timestamp:     1655106652
+   > transaction hash:    0xbf2fd331cac1e88c202a94edda99732dcc5f886af7bab8d95a51eba251ab610b
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x535722b12E68eaF7E0ada1E97199D323d82d165C
+   > block number:        20193179
+   > block timestamp:     1655222209
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.09120291
+   > balance:             0.29807519
    > gas used:            771321 (0xbc4f9)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2507,41 +371,37 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154721)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154722)
-[Truffle: Execute command]    > confirmation number: 5 (block: 20154724)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154725)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154726)
-[Truffle: Execute command]    > confirmation number: 9 (block: 20154728)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154729)
-[Truffle: Execute command] Deployed 0xD4C93541c1eAE4972fddaF9331DC8F12fdc97e72
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 1 (block: 20193182)
+   > confirmation number: 3 (block: 20193184)
+   > confirmation number: 4 (block: 20193185)
+   > confirmation number: 5 (block: 20193186)
+   > confirmation number: 7 (block: 20193188)
+   > confirmation number: 8 (block: 20193189)
+   > confirmation number: 9 (block: 20193190)
+   > confirmation number: 11 (block: 20193192)
+Deployed 0x535722b12E68eaF7E0ada1E97199D323d82d165C
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.00771321 ETH
 
-[Truffle: Execute command] 
+
 11_deploy_launchpool.js
 =======================
-[Truffle: Execute command] 
+
    Linking
    -------
-   * Contract: Launchpool <--> Library: Date (at address: 0x9Bcc5DDb37c399c99831341eDff8980521a60689)
-[Truffle: Execute command] 
+   * Contract: Launchpool <--> Library: Date (at address: 0x297fAA3Ae698C3c2B3152cAC55a468853B68C737)
+
    Deploying 'Launchpool'
    ----------------------
-[Truffle: Execute command]    > transaction hash:    0xb942c92637155c3a9d6986dc818e92f2a7592372755982e24ca5f24639f58d52
-[Truffle: Execute command] - Blocks: 0            Seconds: 0
-[Truffle: Execute command] - Blocks: 1            Seconds: 5
-[Truffle: Execute command] - Blocks: 2            Seconds: 9
-[Truffle: Execute command] - Blocks: 4            Seconds: 13
-[Truffle: Execute command]    > Blocks: 4            Seconds: 13
-   > contract address:    0x0b68A66DBBa8239BB9BAD5F5B58bE516337c7E42
-   > block number:        20154738
-   > block timestamp:     1655106712
+   > transaction hash:    0x8c84312648de73ec198b75aecdb7bf8a8ff352b051044b3bccd776bba7522e63
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x7C7272143e52a6b255887f2fA2d34bc9933Ca08c
+   > block number:        20193201
+   > block timestamp:     1655222275
    > account:             0xE91abFe9042f0BB3115eF073Df2706Ce68F07AC5
-   > balance:             0.03451296
+   > balance:             0.24138524
    > gas used:            5641705 (0x5615e9)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -2550,26 +410,23 @@ Starting migrations...
    Pausing for 10 confirmations...
 
    --------------------------------
-[Truffle: Execute command]    > confirmation number: 2 (block: 20154742)
-[Truffle: Execute command]    > confirmation number: 3 (block: 20154743)
-[Truffle: Execute command]    > confirmation number: 4 (block: 20154744)
-[Truffle: Execute command]    > confirmation number: 6 (block: 20154746)
-[Truffle: Execute command]    > confirmation number: 7 (block: 20154747)
-[Truffle: Execute command]    > confirmation number: 8 (block: 20154748)
-[Truffle: Execute command]    > confirmation number: 10 (block: 20154750)
-[Truffle: Execute command] Deployed 0x0b68A66DBBa8239BB9BAD5F5B58bE516337c7E42
-[Truffle: Execute command] - Saving migration to chain.
-[Truffle: Execute command]    > Saving migration to chain.
-[Truffle: Execute command]    > Saving artifacts
+   > confirmation number: 2 (block: 20193205)
+   > confirmation number: 3 (block: 20193206)
+   > confirmation number: 4 (block: 20193207)
+   > confirmation number: 6 (block: 20193209)
+   > confirmation number: 7 (block: 20193210)
+   > confirmation number: 8 (block: 20193211)
+   > confirmation number: 10 (block: 20193213)
+Deployed 0x7C7272143e52a6b255887f2fA2d34bc9933Ca08c
+   > Saving migration to chain.
+   > Saving artifacts
    -------------------------------------
    > Total cost:          0.05641705 ETH
 
 Summary
 =======
-> Total deployments:   12
-> Final cost:          0.17867254 ETH
+> Total deployments:   10
+> Final cost:          0.15825898 ETH
 
-[Truffle: Execute command] 
-[Truffle: Execute command] Finished running command
-[Truffle for VSCode] Deploy succeeded
- 
+
+ievgencherkaskyi@MacBook-Pro-MAC launchpool % 
