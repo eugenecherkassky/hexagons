@@ -1,6 +1,8 @@
-const TVT = artifacts.require("TVT/TVT");
+const { deployProxy } = require("@openzeppelin/truffle-upgrades");
+
 const Date = artifacts.require("Date");
 const Mint = artifacts.require("Mint");
+const TVT = artifacts.require("TVT/TVT");
 
 module.exports = async function (deployer) {
   require("dotenv").config();
@@ -10,9 +12,9 @@ module.exports = async function (deployer) {
   await deployer.deploy(Date);
   await deployer.link(Date, Mint);
 
-  const mint = await deployer.deploy(Mint, tvt.address);
+  const mint = await deployProxy(Mint, [tvt.address], {
+    deployer,
+  });
 
   tvt.transfer(mint.address, process.env.MINT_INITIAL_SUPPLY);
-
-  console.log("Deployed", mint.address);
 };

@@ -3,6 +3,7 @@ require("dotenv").config();
 require("chai").use(require("chai-as-promised")).should();
 
 const ContractFactory = require("./ContractFactory");
+const depositPrograms = require("./DepositPrograms");
 
 const Deposit = artifacts.require("Deposit");
 
@@ -12,23 +13,35 @@ function getAmountOnDay(day) {
 
 contract("Mint", async function () {
   beforeEach(async function () {
-    this.token = await ContractFactory.createTVTToken();
-    this.mint = await ContractFactory.createMint(this.token.address);
-    this.treasury = await ContractFactory.createTreasury(this.token.address);
+    this.tvt = await ContractFactory.createTVTToken();
+    this.mint = await ContractFactory.createMint(this.tvt.address);
+    this.treasury = await ContractFactory.createTreasury(this.tvt.address);
 
     this.launchpool = await ContractFactory.createLaunchpool(
-      this.mint.address,
       this.treasury.address
     );
 
-    await this.mint.initialize([
+    this.launchpool.setDepositPrograms(depositPrograms);
+
+    this.launchpool.setRefillableSuppliers([
+      {
+        agreement: this.mint.address,
+        reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,
+      },
+      {
+        agreement: this.treasury.address,
+        reward: process.env.LAUNCHPOOL_TREASURY_REFIL_REWARD,
+      },
+    ]);
+
+    await this.mint.setRecipients([
       {
         agreement: this.launchpool.address,
         share: 100,
       },
     ]);
 
-    await this.token.mint(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
+    await this.tvt.mint(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
   });
 
   describe("Settings", function () {
@@ -46,9 +59,9 @@ contract("Mint", async function () {
     });
 
     it("tracks the token", async function () {
-      const token = await this.mint.getToken();
+      const tvt = await this.mint.getToken();
 
-      token.toString().should.equal(this.token.address);
+      tvt.toString().should.equal(this.tvt.address);
     });
   });
 
@@ -68,7 +81,7 @@ contract("Mint", async function () {
 
       const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(depositContract.address, 1);
+      await this.tvt.approve(depositContract.address, 1);
       await depositContract.send(1).should.be.fulfilled;
 
       await this.mint.distribute().should.be.fulfilled;

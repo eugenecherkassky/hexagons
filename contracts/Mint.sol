@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+
 import "./BankAccountSupplier.sol";
 
-contract Mint is BankAccountSupplier {
-    constructor(IERC20 token) BankAccountSupplier(token) {}
-
+contract Mint is Initializable, BankAccountSupplier {
     function distribute() external override {
         uint256 date = _getLastPaymentDate();
 
@@ -24,6 +24,10 @@ contract Mint is BankAccountSupplier {
 
             date += 1 days;
         }
+    }
+
+    function initialize(IERC20 token) public initializer {
+        __BankAccountSupplier_init(token);
     }
 
     function getDistributionAmounts(uint256 numberOfDays)

@@ -1,3 +1,5 @@
+const { deployProxy } = require("@openzeppelin/truffle-upgrades");
+
 const Date = artifacts.require("Date");
 const Launchpool = artifacts.require("Launchpool/Launchpool");
 const Mint = artifacts.require("Mint");
@@ -13,28 +15,27 @@ module.exports = async function (deployer) {
 
   await deployer.link(Date, Launchpool);
 
-  const launchpool = await deployer.deploy(
-    Launchpool,
-    treasury.address,
-    depositPrograms,
-    [
-      {
-        agreement: mint.address,
-        reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,
-      },
-      {
-        agreement: treasury.address,
-        reward: process.env.LAUNCHPOOL_TREASURY_REFIL_REWARD,
-      },
-    ]
-  );
+  const launchpool = await deployProxy(Launchpool, [treasury.address], {
+    deployer,
+  });
 
-  mint.initialize([
+  launchpool.setDepositPrograms(depositPrograms);
+
+  launchpool.setRefillableSuppliers([
+    {
+      agreement: mint.address,
+      reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,
+    },
+    {
+      agreement: treasury.address,
+      reward: process.env.LAUNCHPOOL_TREASURY_REFIL_REWARD,
+    },
+  ]);
+
+  mint.setRecipients([
     {
       agreement: launchpool.address,
       share: 100,
     },
   ]);
-
-  console.log("Deployed", launchpool.address);
 };

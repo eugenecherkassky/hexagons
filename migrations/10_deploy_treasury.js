@@ -1,10 +1,12 @@
-const TVT = artifacts.require("TVT/TVT");
+const { deployProxy } = require("@openzeppelin/truffle-upgrades");
+
 const Treasury = artifacts.require("Treasury");
+const TVT = artifacts.require("TVT/TVT");
 
 module.exports = async function (deployer) {
   const tvt = await TVT.deployed();
 
-  const treasury = await deployer.deploy(Treasury, tvt.address);
-
-  console.log("Deployed", treasury.address);
+  await deployProxy(Treasury, [tvt.address], {
+    deployer,
+  });
 };

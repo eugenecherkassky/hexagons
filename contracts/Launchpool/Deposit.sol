@@ -57,6 +57,10 @@ contract Deposit is
             !_isWithdrawed();
     }
 
+    function deposit(uint256 amount) external payable {
+        _deposit(_msgSender(), amount);
+    }
+
     function getBaseToCalculateReward(uint256 date)
         external
         view

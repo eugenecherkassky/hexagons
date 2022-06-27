@@ -1,3 +1,5 @@
+const { deployProxy } = require("@openzeppelin/truffle-upgrades");
+
 require("dotenv").config();
 
 const Launchpool = artifacts.require("Launchpool");
@@ -6,35 +8,24 @@ const Treasury = artifacts.require("Treasury");
 const TVTToken = artifacts.require("TVT/TVTToken");
 const TVTBToken = artifacts.require("TVTB/TVTBToken");
 
-const depositPrograms = require("./DepositPrograms");
-
 module.exports = {
-  createLaunchpool: function (mint, treasury) {
-    return Launchpool.new(treasury, depositPrograms, [
-      {
-        agreement: mint,
-        reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,
-      },
-      {
-        agreement: treasury,
-        reward: process.env.LAUNCHPOOL_TREASURY_REFIL_REWARD,
-      },
-    ]);
+  createLaunchpool: (treasury) => {
+    return deployProxy(Launchpool, [treasury]);
   },
-  createMint: function (token) {
-    return Mint.new(token);
+  createMint: (tvt) => {
+    return deployProxy(Mint, [tvt]);
   },
-  createTreasury: function (token) {
-    return Treasury.new(token);
+  createTreasury: (tvt) => {
+    return deployProxy(Treasury, [tvt]);
   },
-  createTVTToken: function () {
+  createTVTToken: () => {
     return TVTToken.new(
       process.env.TVT_TOKEN_NAME,
       process.env.TVT_TOKEN_SYMBOL,
       process.env.TVT_TOKEN_INITIAL_SUPPLY
     );
   },
-  createTVTBToken: function () {
+  createTVTBToken: () => {
     return TVTBToken.new(
       process.env.TVTB_TOKEN_NAME,
       process.env.TVTB_TOKEN_SYMBOL,

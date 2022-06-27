@@ -1,8 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+
 import "./BankAccountSupplier.sol";
 
-contract Treasury is BankAccountSupplier {
-    constructor(IERC20 token) BankAccountSupplier(token) {}
+contract Treasury is Initializable, BankAccountSupplier {
+    function initialize(IERC20 token) public initializer {
+        __BankAccountSupplier_init(token);
+    }
 }

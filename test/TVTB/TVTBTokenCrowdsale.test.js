@@ -8,7 +8,7 @@ const getBalance = require("../utils/getBalance");
 
 const TVTBTokenCrowdsale = artifacts.require("TVTB/TVTBTokenCrowdsale");
 
-contract("TVTBTokenCrowdsale", async function ([owner_wallet]) {
+contract("TVTBTokenCrowdsale", async function ([account]) {
   beforeEach(async function () {
     this.token = await ContractFactory.createTVTBToken();
 
@@ -63,14 +63,14 @@ contract("TVTBTokenCrowdsale", async function ([owner_wallet]) {
 
       const prevBalance = {
         crowdsale: await getBalance(this.crowdsale.address),
-        tvtb: await this.token.balanceOf(owner_wallet),
+        tvtb: await this.token.balanceOf(account),
       };
 
       await this.crowdsale.buyTokens({ value }).should.be.fulfilled;
 
       const currentBalance = {
         crowdsale: await getBalance(this.crowdsale.address),
-        tvtb: await this.token.balanceOf(owner_wallet),
+        tvtb: await this.token.balanceOf(account),
       };
 
       const rate = await this.crowdsale.getRate();
@@ -96,7 +96,7 @@ contract("TVTBTokenCrowdsale", async function ([owner_wallet]) {
 
       const prevBalance = {
         crowdsale: await getBalance(this.crowdsale.address),
-        tvtb: await this.token.balanceOf(owner_wallet),
+        tvtb: await this.token.balanceOf(account),
       };
 
       await this.crowdsale.setRate(0);
@@ -107,7 +107,7 @@ contract("TVTBTokenCrowdsale", async function ([owner_wallet]) {
 
       const currentBalance = {
         crowdsale: await getBalance(this.crowdsale.address),
-        tvtb: await this.token.balanceOf(owner_wallet),
+        tvtb: await this.token.balanceOf(account),
       };
 
       currentBalance.tvtb

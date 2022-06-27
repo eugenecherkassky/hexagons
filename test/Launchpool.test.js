@@ -8,25 +8,37 @@ const timeout = require("./utils/timeout");
 
 const Deposit = artifacts.require("Deposit");
 
-contract("Launchpool", async function ([ownerAccount]) {
+contract("Launchpool", async function ([account]) {
   beforeEach(async function () {
-    this.token = await ContractFactory.createTVTToken();
-    this.mint = await ContractFactory.createMint(this.token.address);
-    this.treasury = await ContractFactory.createTreasury(this.token.address);
+    this.tvt = await ContractFactory.createTVTToken();
+    this.mint = await ContractFactory.createMint(this.tvt.address);
+    this.treasury = await ContractFactory.createTreasury(this.tvt.address);
 
     this.launchpool = await ContractFactory.createLaunchpool(
-      this.mint.address,
       this.treasury.address
     );
 
-    await this.mint.initialize([
+    this.launchpool.setDepositPrograms(depositPrograms);
+
+    this.launchpool.setRefillableSuppliers([
+      {
+        agreement: this.mint.address,
+        reward: process.env.LAUNCHPOOL_MINT_REFIL_REWARD,
+      },
+      {
+        agreement: this.treasury.address,
+        reward: process.env.LAUNCHPOOL_TREASURY_REFIL_REWARD,
+      },
+    ]);
+
+    await this.mint.setRecipients([
       {
         agreement: this.launchpool.address,
         share: 100,
       },
     ]);
 
-    await this.token.mint(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
+    await this.tvt.mint(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
   });
 
   describe("Settings", function () {
@@ -75,12 +87,12 @@ contract("Launchpool", async function ([ownerAccount]) {
 
   describe("Deposit", function () {
     it("tracks creation", async function () {
-      const transaction = await this.launchpool.createDeposit("terminatable")
+      const { logs } = await this.launchpool.createDeposit("terminatable")
         .should.be.fulfilled;
 
       const [deposit] = await this.launchpool.getDeposits();
 
-      deposit.agreement.should.be.equal(transaction.logs[0].args.deposit);
+      deposit.agreement.should.be.equal(logs[logs.length - 1].args.deposit);
     });
 
     it("tracks deposit", async function () {
@@ -89,8 +101,8 @@ contract("Launchpool", async function ([ownerAccount]) {
       const [deposit] = await this.launchpool.getDeposits();
       const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(depositContract.address, 1);
-      await depositContract.send(1).should.be.fulfilled;
+      await this.tvt.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
       (await depositContract.getBalance()).toString().should.be.equal("1");
       (await depositContract.getTransactions()).length.should.be.equal(1);
@@ -113,8 +125,8 @@ contract("Launchpool", async function ([ownerAccount]) {
         .toString()
         .should.be.equal(options.periodMaximum);
 
-      await this.token.approve(depositContract.address, 1);
-      await depositContract.send(1).should.be.fulfilled;
+      await this.tvt.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
       (await depositContract.getBalance()).toString().should.be.equal("2");
       (await depositContract.getTransactions()).length.should.be.equal(2);
@@ -126,25 +138,25 @@ contract("Launchpool", async function ([ownerAccount]) {
       const [deposit] = await this.launchpool.getDeposits();
       const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(depositContract.address, 1);
-      await depositContract.send(1).should.be.fulfilled;
+      await this.tvt.approve(depositContract.address, 1);
+      await depositContract.deposit(1).should.be.fulfilled;
 
       await this.mint.distribute();
 
       const prevBalance = {
-        deposit: await this.token.balanceOf(depositContract.address),
-        launchpool: await this.token.balanceOf(this.launchpool.address),
-        mint: await this.token.balanceOf(this.mint.address),
-        owner: await this.token.balanceOf(ownerAccount),
+        deposit: await this.tvt.balanceOf(depositContract.address),
+        launchpool: await this.tvt.balanceOf(this.launchpool.address),
+        mint: await this.tvt.balanceOf(this.mint.address),
+        owner: await this.tvt.balanceOf(account),
       };
 
       await this.launchpool.refill();
 
       const nextBalance = {
-        deposit: await this.token.balanceOf(depositContract.address),
-        launchpool: await this.token.balanceOf(this.launchpool.address),
-        mint: await this.token.balanceOf(this.mint.address),
-        owner: await this.token.balanceOf(ownerAccount),
+        deposit: await this.tvt.balanceOf(depositContract.address),
+        launchpool: await this.tvt.balanceOf(this.launchpool.address),
+        mint: await this.tvt.balanceOf(this.mint.address),
+        owner: await this.tvt.balanceOf(account),
       };
 
       prevBalance.mint
@@ -172,11 +184,11 @@ contract("Launchpool", async function ([ownerAccount]) {
       const [deposit] = await this.launchpool.getDeposits();
       const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(depositContract.address, 2);
+      await this.tvt.approve(depositContract.address, 2);
 
-      await depositContract.send(1).should.be.fulfilled;
+      await depositContract.deposit(1).should.be.fulfilled;
 
-      await depositContract.send(1).should.be.rejected;
+      await depositContract.deposit(1).should.be.rejected;
 
       (await depositContract.getBalance()).toString().should.be.equal("1");
       (await depositContract.getTransactions()).length.should.be.equal(1);
@@ -189,57 +201,46 @@ contract("Launchpool", async function ([ownerAccount]) {
 
       const depositContract = await Deposit.at(deposit.agreement);
 
-      await this.token.approve(depositContract.address, 5);
-      await depositContract.send(5).should.be.fulfilled;
+      await this.tvt.approve(depositContract.address, 5);
+      await depositContract.deposit(5).should.be.fulfilled;
 
       await depositContract.withdraw().should.be.rejected;
 
       await timeout(15 * 1000);
 
-      // TODO
-      // await deposit.close().should.be.fulfilled;
+      const prevBalance = {
+        deposit: await depositContract.getBalance(),
+        client: await this.tvt.balanceOf(account),
+        treasury: await this.treasury.getBalance(),
+      };
 
-      // (await deposit.isClosed()).should.be.true;
+      await depositContract.withdraw().should.be.fulfilled;
 
-      // (await deposit.getTransactions()).length.should.be.equal(3);
+      (await depositContract.getTransactions()).length.should.be.equal(3);
 
-      // const prevBalance = {
-      //   deposit: await deposit.getBalance(),
-      //   client: await this.token.balanceOf(ownerAccount),
-      //   treasury: await this.treasury.getBalance(),
-      // };
+      const currentBalance = {
+        deposit: await depositContract.getBalance(),
+        client: await this.tvt.balanceOf(account),
+        treasury: await this.treasury.getBalance(),
+      };
 
-      // await deposit.withdraw().should.be.fulfilled;
+      currentBalance.deposit.toString().should.be.equal("0");
 
-      // await this.token.transferFrom(
-      //   deposit.address,
-      //   ownerAccount,
-      //   (await deposit.getBalance()).toString()
-      // );
+      const transactions = await depositContract.getTransactions();
 
-      // const currentBalance = {
-      //   deposit: await deposit.getBalance(),
-      //   client: await this.token.balanceOf(ownerAccount),
-      //   treasury: await this.treasury.getBalance(),
-      // };
+      const penaltyAmount = transactions
+        .filter((transaction) => {
+          return transaction.kind === "1";
+        })
+        .reduce(
+          (previousValue, transaction) => previousValue + transaction.amount,
+          0
+        );
 
-      // currentBalance.deposit.toString().should.be.equal("0");
-
-      // const transactions = await deposit.getTransactions();
-
-      // const penaltyAmount = transactions
-      //   .filter((transaction) => {
-      //     return transaction.kind === "1";
-      //   })
-      //   .reduce(
-      //     (previousValue, transaction) => previousValue + transaction.amount,
-      //     0
-      //   );
-
-      // currentBalance.treasury
-      //   .sub(prevBalance.treasury)
-      //   .toString()
-      //   .should.be.equal(penaltyAmount.toString());
+      currentBalance.treasury
+        .sub(prevBalance.treasury)
+        .toString()
+        .should.be.equal(penaltyAmount.toString());
     });
   });
 });

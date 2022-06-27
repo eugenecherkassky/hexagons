@@ -1,12 +1,19 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
-import "@openzeppelin/contracts/utils/Context.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 import "./IBankAccount.sol";
 import "./IBankAccountSupplier.sol";
 
-abstract contract Refillable is Context, IBankAccount {
+abstract contract Refillable is
+    Initializable,
+    ContextUpgradeable,
+    OwnableUpgradeable,
+    IBankAccount
+{
     struct RefillableSupplier {
         IBankAccountSupplier agreement;
         uint256 reward;
@@ -15,10 +22,11 @@ abstract contract Refillable is Context, IBankAccount {
     RefillableSupplier[] private _refillableSuppliers;
 
     error RefillableSupplierNotExists(address supplier);
-    error RefillableTooMuchAgreements(uint8 maxNumber);
+    error RefillableTooMuchSuppliers(uint8 maxNumber);
 
-    constructor(RefillableSupplier[] memory suppliers) {
-        _setRefillableAgreements(suppliers);
+    function __Refillable_init() internal onlyInitializing {
+        __Context_init();
+        __Ownable_init();
     }
 
     function isReadyToRefill(uint256 date) external view virtual returns (bool);
@@ -40,6 +48,21 @@ abstract contract Refillable is Context, IBankAccount {
             supplier.distribute();
 
             supplier.pay(sender);
+        }
+    }
+
+    function setRefillableSuppliers(RefillableSupplier[] memory suppliers)
+        external
+        onlyOwner
+    {
+        if (type(uint8).max < suppliers.length) {
+            revert RefillableTooMuchSuppliers({maxNumber: type(uint8).max});
+        }
+
+        delete _refillableSuppliers;
+
+        for (uint8 i = 0; i < suppliers.length; i++) {
+            _refillableSuppliers.push(suppliers[i]);
         }
     }
 
@@ -98,18 +121,4 @@ abstract contract Refillable is Context, IBankAccount {
     function _postTransferFromSupplier(uint256 date, uint256 amount)
         internal
         virtual;
-
-    function _setRefillableAgreements(RefillableSupplier[] memory suppliers)
-        internal
-    {
-        if (type(uint8).max < suppliers.length) {
-            revert RefillableTooMuchAgreements({maxNumber: type(uint8).max});
-        }
-
-        delete _refillableSuppliers;
-
-        for (uint8 i = 0; i < suppliers.length; i++) {
-            _refillableSuppliers.push(suppliers[i]);
-        }
-    }
 }

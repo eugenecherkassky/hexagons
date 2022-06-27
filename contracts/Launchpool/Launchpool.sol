@@ -1,17 +1,28 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
-import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
+import "../BankAccountUpgradeable.sol";
 import "../Date.sol";
+import "../IUpgradeable.sol";
 import "../Refillable.sol";
-import "./ILaunchpool.sol";
+
 import "./Deposit.sol";
+import "./ILaunchpool.sol";
 
 /**
  * @dev Launchpool
  */
-contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
+contract Launchpool is
+    Initializable,
+    OwnableUpgradeable,
+    BankAccountUpgradeable,
+    Refillable,
+    ILaunchpool,
+    IUpgradeable
+{
     struct DepositListItems {
         address agreement;
         Deposit.DepositParameters parameters;
@@ -30,18 +41,9 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
     IBankAccount private _treasury;
 
     error LaunchpoolDepositProgramNotExists(string program);
+    error LaunchpoolTooMuchDepositPrograms(uint8 maxNumber);
 
     event LaunchpoolDepositCreated(Deposit deposit);
-
-    constructor(
-        IBankAccount treasury,
-        Deposit.ProgramParameters[] memory depositPrograms,
-        Refillable.RefillableSupplier[] memory refillableAgreements
-    ) BankAccount(treasury.getToken()) Refillable(refillableAgreements) {
-        initialize(depositPrograms, refillableAgreements);
-
-        _treasury = treasury;
-    }
 
     function createDeposit(string memory program) external {
         address owner = _msgSender();
@@ -61,17 +63,12 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         emit LaunchpoolDepositCreated(deposit);
     }
 
-    function initialize(
-        Deposit.ProgramParameters[] memory depositPrograms,
-        Refillable.RefillableSupplier[] memory refillableAgreements
-    ) public initializer {
-        delete _depositPrograms;
+    function initialize(IBankAccount treasury) public initializer {
+        __Ownable_init();
+        __BankAccount_init(treasury.getToken());
+        __Refillable_init();
 
-        for (uint8 i = 0; i < depositPrograms.length; i++) {
-            _depositPrograms.push(depositPrograms[i]);
-        }
-
-        _setRefillableAgreements(refillableAgreements);
+        _treasury = treasury;
     }
 
     function isReadyToRefill(uint256 date)
@@ -128,8 +125,28 @@ contract Launchpool is BankAccount, Refillable, Initializable, ILaunchpool {
         return _depositPrograms;
     }
 
+    function getName() external pure override returns (string memory) {
+        return "Launchpool";
+    }
+
     function getTransfersAmount(uint256 date) external view returns (uint256) {
         return _transfers[_getKey(date)];
+    }
+
+    function setDepositPrograms(
+        Deposit.ProgramParameters[] memory depositPrograms
+    ) external onlyOwner {
+        if (type(uint8).max < depositPrograms.length) {
+            revert LaunchpoolTooMuchDepositPrograms({
+                maxNumber: type(uint8).max
+            });
+        }
+
+        delete _depositPrograms;
+
+        for (uint8 i = 0; i < depositPrograms.length; i++) {
+            _depositPrograms.push(depositPrograms[i]);
+        }
     }
 
     function transferDailyRewards() external override {

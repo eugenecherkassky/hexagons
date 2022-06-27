@@ -1,49 +1,35 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
-import "@openzeppelin/contracts/utils/Context.sol";
-import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-import "./BankAccount.sol";
+import "./BankAccountUpgradeable.sol";
 import "./Date.sol";
 import "./IBankAccountSupplier.sol";
 
 abstract contract BankAccountSupplier is
-    BankAccount,
     Initializable,
+    OwnableUpgradeable,
+    BankAccountUpgradeable,
     IBankAccountSupplier
 {
     BankAccountRecipient[] internal _recipients;
 
     Payment[] internal _payments;
 
-    error BankAccountSupplierTooMuchAgreements(uint8 maxNumber);
+    error BankAccountSupplierTooMuchRecipients(uint8 maxNumber);
     error BankAccountSuppliertTotalSharesIsNotValid();
 
-    constructor(IERC20 token) BankAccount(token) {}
+    function __BankAccountSupplier_init(IERC20 token)
+        internal
+        onlyInitializing
+    {
+        __Ownable_init();
+        __BankAccount_init(token);
+    }
 
     function distribute() external virtual override {}
-
-    function initialize(BankAccountRecipient[] memory recipients)
-        external
-        initializer
-    {
-        if (type(uint8).max < recipients.length) {
-            revert BankAccountSupplierTooMuchAgreements({
-                maxNumber: type(uint8).max
-            });
-        }
-
-        if (_getTotalShares(recipients) != 100) {
-            revert BankAccountSuppliertTotalSharesIsNotValid();
-        }
-
-        delete _recipients;
-
-        for (uint8 i = 0; i < recipients.length; i++) {
-            _recipients.push(recipients[i]);
-        }
-    }
 
     function getRecipients()
         external
@@ -79,6 +65,27 @@ abstract contract BankAccountSupplier is
                     sender
                 );
             }
+        }
+    }
+
+    function setRecipients(BankAccountRecipient[] memory recipients)
+        external
+        onlyOwner
+    {
+        if (type(uint8).max < recipients.length) {
+            revert BankAccountSupplierTooMuchRecipients({
+                maxNumber: type(uint8).max
+            });
+        }
+
+        if (_getTotalShares(recipients) != 100) {
+            revert BankAccountSuppliertTotalSharesIsNotValid();
+        }
+
+        delete _recipients;
+
+        for (uint8 i = 0; i < recipients.length; i++) {
+            _recipients.push(recipients[i]);
         }
     }
 
