@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
-import "./IBankAccount.sol";
+import "../IBankAccount.sol";
 
 /**
  * @title Crowdsale
@@ -90,7 +90,6 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
         // calculate token amount to be created
         uint256 tokens = _getTokenAmount(weiAmount);
 
-        // update state
         _weiRaised = _weiRaised.add(weiAmount);
 
         _processPurchase(beneficiary, tokens);
@@ -98,7 +97,7 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
 
         _updatePurchasingState(beneficiary, weiAmount);
 
-        _forwardFunds(weiAmount);
+        _forwardFunds(beneficiary, weiAmount);
 
         _postValidatePurchase(beneficiary, weiAmount);
     }
@@ -147,8 +146,8 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
     /**
      * @dev Determines how ETH is stored/forwarded on purchases.
      */
-    function _forwardFunds(uint256 weiAmount) internal virtual {
-        _wallet.transferTo(weiAmount);
+    function _forwardFunds(address from, uint256 amount) internal virtual {
+        _wallet.getToken().transferFrom(from, address(_wallet), amount);
     }
 
     /**

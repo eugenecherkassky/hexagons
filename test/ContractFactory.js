@@ -5,7 +5,7 @@ require("dotenv").config();
 const Launchpool = artifacts.require("Launchpool");
 const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
-const TVTToken = artifacts.require("TVT/TVTToken");
+const TVT = artifacts.require("TVT/TVT");
 const TVTBToken = artifacts.require("TVTB/TVTBToken");
 
 module.exports = {
@@ -18,12 +18,8 @@ module.exports = {
   createTreasury: (tvt) => {
     return deployProxy(Treasury, [tvt]);
   },
-  createTVTToken: () => {
-    return TVTToken.new(
-      process.env.TVT_TOKEN_NAME,
-      process.env.TVT_TOKEN_SYMBOL,
-      process.env.TVT_TOKEN_INITIAL_SUPPLY
-    );
+  createTVT: () => {
+    return TVT.new(process.env.TVT_TOKEN_NAME, process.env.TVT_TOKEN_SYMBOL);
   },
   createTVTBToken: () => {
     return TVTBToken.new(

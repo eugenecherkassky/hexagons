@@ -17,10 +17,13 @@ const params = {
 
 contract("PollManager", async function ([account]) {
   beforeEach(async function () {
+    this.tvt = await ContractFactory.createTVT();
+    this.treasury = await ContractFactory.createTreasury(this.tvt.address);
     this.tvtb = await ContractFactory.createTVTBToken();
 
     this.crowdsale = await TVTBTokenCrowdsale.new(
       process.env.TVTB_TOKEN_RATE,
+      this.treasury.address,
       this.tvtb.address
     );
 
@@ -75,8 +78,15 @@ contract("PollManager", async function ([account]) {
         params.endDateTime
       ).should.be.fulfilled;
 
-      await this.crowdsale.buyTokens(account, {
-        value: 1,
+      const value = 1;
+      await this.tvt.approve(
+        this.crowdsale.address,
+        process.env.TVTB_TOKEN_RATE * value
+      );
+
+      await this.crowdsale.sendTransaction({
+        from: account,
+        value,
       }).should.be.fulfilled;
 
       await this.pollManager.vote(0, true).should.be.fulfilled;
@@ -97,8 +107,15 @@ contract("PollManager", async function ([account]) {
         params.endDateTime
       );
 
-      await this.crowdsale.buyTokens(account, {
-        value: 1,
+      const value = 1;
+      await this.tvt.approve(
+        this.crowdsale.address,
+        process.env.TVTB_TOKEN_RATE * value
+      );
+
+      await this.crowdsale.sendTransaction({
+        from: account,
+        value,
       }).should.be.fulfilled;
 
       await this.pollManager.vote(0, false).should.be.fulfilled;

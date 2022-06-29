@@ -13,7 +13,7 @@ function getAmountOnDay(day) {
 
 contract("Mint", async function () {
   beforeEach(async function () {
-    this.tvt = await ContractFactory.createTVTToken();
+    this.tvt = await ContractFactory.createTVT();
     this.mint = await ContractFactory.createMint(this.tvt.address);
     this.treasury = await ContractFactory.createTreasury(this.tvt.address);
 
@@ -41,7 +41,8 @@ contract("Mint", async function () {
       },
     ]);
 
-    await this.tvt.mint(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
+    await this.tvt.mint(process.env.MINT_INITIAL_SUPPLY);
+    await this.tvt.transfer(this.mint.address, process.env.MINT_INITIAL_SUPPLY);
   });
 
   describe("Settings", function () {

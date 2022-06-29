@@ -3,8 +3,9 @@ pragma solidity 0.8.7;
 
 import "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol";
 
-import "../Crowdsale.sol";
 import "../IBankAccount.sol";
+
+import "./Crowdsale.sol";
 
 /**
  * @title TVTBTokenCrowdsale
@@ -54,33 +55,6 @@ contract TVTBTokenCrowdsale is Crowdsale {
         for (uint256 i = 0; i < tokenAmount; i++) {
             getToken().mint(beneficiary);
         }
-    }
-
-    /**
-     * @dev Determines how ETH is stored/forwarded on purchases.
-     */
-    function _forwardFunds(uint256 weiAmount) internal override {
-        if (_rate != 0) {
-            super._forwardFunds(weiAmount);
-        }
-    }
-
-    /**
-     * @dev Override to extend the way in which ether is converted to tokens.
-     * @param weiAmount Value in wei to be converted into tokens
-     * @return Number of tokens that can be purchased with the specified _weiAmount
-     */
-    function _getTokenAmount(uint256 weiAmount)
-        internal
-        view
-        override
-        returns (uint256)
-    {
-        if (_rate == 0) {
-            return 1;
-        }
-
-        return super._getTokenAmount(weiAmount);
     }
 
     function _preValidatePurchase(address beneficiary, uint256 weiAmount)
