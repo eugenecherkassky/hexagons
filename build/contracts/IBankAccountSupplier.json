@@ -1,0 +1,1306 @@
+{
+  "contractName": "IBankAccountSupplier",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferTo",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRecipients",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract Refillable",
+              "name": "agreement",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "share",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct BankAccountRecipient[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "distribute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPayments",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract Refillable",
+              "name": "agreement",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "date",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "payed",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "share",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Payment[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "pay",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"distribute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPayments\",\"outputs\":[{\"components\":[{\"internalType\":\"contract Refillable\",\"name\":\"agreement\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"payed\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"share\",\"type\":\"uint8\"}],\"internalType\":\"struct Payment[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecipients\",\"outputs\":[{\"components\":[{\"internalType\":\"contract Refillable\",\"name\":\"agreement\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"share\",\"type\":\"uint8\"}],\"internalType\":\"struct BankAccountRecipient[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"pay\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferTo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccountSupplier.sol\":\"IBankAccountSupplier\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccount.sol\":{\"keccak256\":\"0xb12391ffbd0354ed991b85bf3621acd0de8235f9c58ba636bddd8ab5e9b15dbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8160593e5f1614665a67fe5865fd7033c10afd35959f2326b5c78a5c2e311646\",\"dweb:/ipfs/QmURHSFVR8m1JMwHiok6v9VHWNtqng77MPjC69kjkBhSoA\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccountSupplier.sol\":{\"keccak256\":\"0xd701058e2dec5903f11846a451965c04bc272651fdefc3b2971a2bbd82157ff9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7bad47b7b9e2602a5353b9393d379b49a59d5e66794f95d6270255e13bb13441\",\"dweb:/ipfs/QmRUCGEPg3LJiVCXLJ8wZiZ64FwhqRaX4SzpES9n81SNot\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Refillable.sol\":{\"keccak256\":\"0xcf714cc84180678e62cd5070b890db33443a8343f4e4a46f04a0e45ef046b5ef\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f9a7551bef250171e5ed14e9c5716ae837408329911c146ea1491b5c1f9a9b43\",\"dweb:/ipfs/Qmf8FhKs1u23xyT2nZSghrAiBsEZ1MfU9x6bqGt91PyxJy\"]},\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"./IBankAccount.sol\";\nimport \"./Refillable.sol\";\n\nstruct BankAccountRecipient {\n    Refillable agreement;\n    uint8 share;\n}\n\nstruct Payment {\n    Refillable agreement;\n    uint256 amount;\n    uint256 date;\n    uint256 payed;\n    uint8 share;\n}\n\ninterface IBankAccountSupplier is IBankAccount {\n    function getRecipients()\n        external\n        view\n        returns (BankAccountRecipient[] memory);\n\n    function distribute() external;\n\n    function getPayments() external view returns (Payment[] memory);\n\n    function pay(address sender) external;\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccountSupplier.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccountSupplier.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        6995
+      ],
+      "BankAccountRecipient": [
+        859
+      ],
+      "ContextUpgradeable": [
+        7037
+      ],
+      "IBankAccount": [
+        849
+      ],
+      "IBankAccountSupplier": [
+        896
+      ],
+      "IERC20": [
+        8481
+      ],
+      "Initializable": [
+        6752
+      ],
+      "OwnableUpgradeable": [
+        6610
+      ],
+      "Payment": [
+        871
+      ],
+      "Refillable": [
+        4703
+      ]
+    },
+    "id": 897,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 851,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:7"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccount.sol",
+        "file": "./IBankAccount.sol",
+        "id": 852,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 897,
+        "sourceUnit": 850,
+        "src": "56:28:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Refillable.sol",
+        "file": "./Refillable.sol",
+        "id": 853,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 897,
+        "sourceUnit": 4704,
+        "src": "85:26:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "canonicalName": "BankAccountRecipient",
+        "id": 859,
+        "members": [
+          {
+            "constant": false,
+            "id": 856,
+            "mutability": "mutable",
+            "name": "agreement",
+            "nameLocation": "158:9:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 859,
+            "src": "147:20:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Refillable_$4703",
+              "typeString": "contract Refillable"
+            },
+            "typeName": {
+              "id": 855,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 854,
+                "name": "Refillable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4703,
+                "src": "147:10:7"
+              },
+              "referencedDeclaration": 4703,
+              "src": "147:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Refillable_$4703",
+                "typeString": "contract Refillable"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 858,
+            "mutability": "mutable",
+            "name": "share",
+            "nameLocation": "179:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 859,
+            "src": "173:11:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 857,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "BankAccountRecipient",
+        "nameLocation": "120:20:7",
+        "nodeType": "StructDefinition",
+        "scope": 897,
+        "src": "113:74:7",
+        "visibility": "public"
+      },
+      {
+        "canonicalName": "Payment",
+        "id": 871,
+        "members": [
+          {
+            "constant": false,
+            "id": 862,
+            "mutability": "mutable",
+            "name": "agreement",
+            "nameLocation": "221:9:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "210:20:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Refillable_$4703",
+              "typeString": "contract Refillable"
+            },
+            "typeName": {
+              "id": 861,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 860,
+                "name": "Refillable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4703,
+                "src": "210:10:7"
+              },
+              "referencedDeclaration": 4703,
+              "src": "210:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Refillable_$4703",
+                "typeString": "contract Refillable"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 864,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "244:6:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "236:14:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 863,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "236:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 866,
+            "mutability": "mutable",
+            "name": "date",
+            "nameLocation": "264:4:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "256:12:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 865,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "256:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 868,
+            "mutability": "mutable",
+            "name": "payed",
+            "nameLocation": "282:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "274:13:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 867,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "274:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 870,
+            "mutability": "mutable",
+            "name": "share",
+            "nameLocation": "299:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "293:11:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 869,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "293:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "Payment",
+        "nameLocation": "196:7:7",
+        "nodeType": "StructDefinition",
+        "scope": 897,
+        "src": "189:118:7",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 872,
+              "name": "IBankAccount",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 849,
+              "src": "343:12:7"
+            },
+            "id": 873,
+            "nodeType": "InheritanceSpecifier",
+            "src": "343:12:7"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 896,
+        "linearizedBaseContracts": [
+          896,
+          849
+        ],
+        "name": "IBankAccountSupplier",
+        "nameLocation": "319:20:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "d78d610b",
+            "id": 880,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRecipients",
+            "nameLocation": "371:13:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 874,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:7"
+            },
+            "returnParameters": {
+              "id": 879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 878,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 880,
+                  "src": "434:29:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_BankAccountRecipient_$859_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BankAccountRecipient[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 876,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 875,
+                        "name": "BankAccountRecipient",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 859,
+                        "src": "434:20:7"
+                      },
+                      "referencedDeclaration": 859,
+                      "src": "434:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_BankAccountRecipient_$859_storage_ptr",
+                        "typeString": "struct BankAccountRecipient"
+                      }
+                    },
+                    "id": 877,
+                    "nodeType": "ArrayTypeName",
+                    "src": "434:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_BankAccountRecipient_$859_storage_$dyn_storage_ptr",
+                      "typeString": "struct BankAccountRecipient[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "433:31:7"
+            },
+            "scope": 896,
+            "src": "362:103:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e4fc6b6d",
+            "id": 883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distribute",
+            "nameLocation": "480:10:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:2:7"
+            },
+            "returnParameters": {
+              "id": 882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "501:0:7"
+            },
+            "scope": 896,
+            "src": "471:31:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d56bd142",
+            "id": 890,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPayments",
+            "nameLocation": "517:11:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "528:2:7"
+            },
+            "returnParameters": {
+              "id": 889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 890,
+                  "src": "554:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Payment_$871_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Payment[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 886,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 885,
+                        "name": "Payment",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 871,
+                        "src": "554:7:7"
+                      },
+                      "referencedDeclaration": 871,
+                      "src": "554:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Payment_$871_storage_ptr",
+                        "typeString": "struct Payment"
+                      }
+                    },
+                    "id": 887,
+                    "nodeType": "ArrayTypeName",
+                    "src": "554:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Payment_$871_storage_$dyn_storage_ptr",
+                      "typeString": "struct Payment[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:18:7"
+            },
+            "scope": 896,
+            "src": "508:64:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "0c11dedd",
+            "id": 895,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pay",
+            "nameLocation": "587:3:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 892,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "599:6:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "591:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "590:16:7"
+            },
+            "returnParameters": {
+              "id": 894,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "615:0:7"
+            },
+            "scope": 896,
+            "src": "578:38:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 897,
+        "src": "309:309:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:587:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccountSupplier.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        6995
+      ],
+      "BankAccountRecipient": [
+        859
+      ],
+      "ContextUpgradeable": [
+        7037
+      ],
+      "IBankAccount": [
+        849
+      ],
+      "IBankAccountSupplier": [
+        896
+      ],
+      "IERC20": [
+        8481
+      ],
+      "Initializable": [
+        6752
+      ],
+      "OwnableUpgradeable": [
+        6610
+      ],
+      "Payment": [
+        871
+      ],
+      "Refillable": [
+        4703
+      ]
+    },
+    "id": 897,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 851,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:7"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccount.sol",
+        "file": "./IBankAccount.sol",
+        "id": 852,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 897,
+        "sourceUnit": 850,
+        "src": "56:28:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Refillable.sol",
+        "file": "./Refillable.sol",
+        "id": 853,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 897,
+        "sourceUnit": 4704,
+        "src": "85:26:7",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "canonicalName": "BankAccountRecipient",
+        "id": 859,
+        "members": [
+          {
+            "constant": false,
+            "id": 856,
+            "mutability": "mutable",
+            "name": "agreement",
+            "nameLocation": "158:9:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 859,
+            "src": "147:20:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Refillable_$4703",
+              "typeString": "contract Refillable"
+            },
+            "typeName": {
+              "id": 855,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 854,
+                "name": "Refillable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4703,
+                "src": "147:10:7"
+              },
+              "referencedDeclaration": 4703,
+              "src": "147:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Refillable_$4703",
+                "typeString": "contract Refillable"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 858,
+            "mutability": "mutable",
+            "name": "share",
+            "nameLocation": "179:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 859,
+            "src": "173:11:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 857,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "BankAccountRecipient",
+        "nameLocation": "120:20:7",
+        "nodeType": "StructDefinition",
+        "scope": 897,
+        "src": "113:74:7",
+        "visibility": "public"
+      },
+      {
+        "canonicalName": "Payment",
+        "id": 871,
+        "members": [
+          {
+            "constant": false,
+            "id": 862,
+            "mutability": "mutable",
+            "name": "agreement",
+            "nameLocation": "221:9:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "210:20:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Refillable_$4703",
+              "typeString": "contract Refillable"
+            },
+            "typeName": {
+              "id": 861,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 860,
+                "name": "Refillable",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 4703,
+                "src": "210:10:7"
+              },
+              "referencedDeclaration": 4703,
+              "src": "210:10:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Refillable_$4703",
+                "typeString": "contract Refillable"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 864,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "244:6:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "236:14:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 863,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "236:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 866,
+            "mutability": "mutable",
+            "name": "date",
+            "nameLocation": "264:4:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "256:12:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 865,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "256:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 868,
+            "mutability": "mutable",
+            "name": "payed",
+            "nameLocation": "282:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "274:13:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 867,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "274:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 870,
+            "mutability": "mutable",
+            "name": "share",
+            "nameLocation": "299:5:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 871,
+            "src": "293:11:7",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 869,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "293:5:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "Payment",
+        "nameLocation": "196:7:7",
+        "nodeType": "StructDefinition",
+        "scope": 897,
+        "src": "189:118:7",
+        "visibility": "public"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 872,
+              "name": "IBankAccount",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 849,
+              "src": "343:12:7"
+            },
+            "id": 873,
+            "nodeType": "InheritanceSpecifier",
+            "src": "343:12:7"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 896,
+        "linearizedBaseContracts": [
+          896,
+          849
+        ],
+        "name": "IBankAccountSupplier",
+        "nameLocation": "319:20:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "d78d610b",
+            "id": 880,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRecipients",
+            "nameLocation": "371:13:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 874,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "384:2:7"
+            },
+            "returnParameters": {
+              "id": 879,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 878,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 880,
+                  "src": "434:29:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_BankAccountRecipient_$859_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BankAccountRecipient[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 876,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 875,
+                        "name": "BankAccountRecipient",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 859,
+                        "src": "434:20:7"
+                      },
+                      "referencedDeclaration": 859,
+                      "src": "434:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_BankAccountRecipient_$859_storage_ptr",
+                        "typeString": "struct BankAccountRecipient"
+                      }
+                    },
+                    "id": 877,
+                    "nodeType": "ArrayTypeName",
+                    "src": "434:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_BankAccountRecipient_$859_storage_$dyn_storage_ptr",
+                      "typeString": "struct BankAccountRecipient[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "433:31:7"
+            },
+            "scope": 896,
+            "src": "362:103:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e4fc6b6d",
+            "id": 883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distribute",
+            "nameLocation": "480:10:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 881,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:2:7"
+            },
+            "returnParameters": {
+              "id": 882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "501:0:7"
+            },
+            "scope": 896,
+            "src": "471:31:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d56bd142",
+            "id": 890,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPayments",
+            "nameLocation": "517:11:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "528:2:7"
+            },
+            "returnParameters": {
+              "id": 889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 888,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 890,
+                  "src": "554:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Payment_$871_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Payment[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 886,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 885,
+                        "name": "Payment",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 871,
+                        "src": "554:7:7"
+                      },
+                      "referencedDeclaration": 871,
+                      "src": "554:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Payment_$871_storage_ptr",
+                        "typeString": "struct Payment"
+                      }
+                    },
+                    "id": 887,
+                    "nodeType": "ArrayTypeName",
+                    "src": "554:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Payment_$871_storage_$dyn_storage_ptr",
+                      "typeString": "struct Payment[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:18:7"
+            },
+            "scope": 896,
+            "src": "508:64:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "0c11dedd",
+            "id": 895,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pay",
+            "nameLocation": "587:3:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 892,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "599:6:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "591:14:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "591:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "590:16:7"
+            },
+            "returnParameters": {
+              "id": 894,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "615:0:7"
+            },
+            "scope": 896,
+            "src": "578:38:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 897,
+        "src": "309:309:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:587:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-06-29T07:06:02.199Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

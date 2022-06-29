@@ -4,11 +4,13 @@ const TVTToken = artifacts.require("TVT/TVTToken");
 module.exports = async function (deployer) {
   require("dotenv").config();
 
-  const token = await TVTToken.deployed();
+  const tvtb = await TVTToken.deployed();
 
-  await deployer.deploy(
+  const crowdsale = await deployer.deploy(
     TVTTokenCrowdsale,
     process.env.TVT_TOKEN_RATE,
-    token.address
+    tvtb.address
   );
+
+  await tvtb.grantRole(await tvtb.MINTER_ROLE(), crowdsale.address);
 };

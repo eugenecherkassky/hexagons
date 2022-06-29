@@ -1,0 +1,2500 @@
+{
+  "contractName": "PeriodCondition",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "periodMinimumDateTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "PeriodMinimumConstraint",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum BaseDeposit.TransactionKind",
+              "name": "kind",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "created",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "payed",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct BaseDeposit.Transaction[]",
+          "name": "transactions",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "getBeginDateTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"periodMinimumDateTime\",\"type\":\"uint256\"}],\"name\":\"PeriodMinimumConstraint\",\"type\":\"error\"},{\"inputs\":[{\"components\":[{\"internalType\":\"enum BaseDeposit.TransactionKind\",\"name\":\"kind\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"created\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"payed\",\"type\":\"uint256\"}],\"internalType\":\"struct BaseDeposit.Transaction[]\",\"name\":\"transactions\",\"type\":\"tuple[]\"}],\"name\":\"getBeginDateTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Period condition.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/Condition/PeriodCondition.sol\":\"PeriodCondition\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/BankAccount.sol\":{\"keccak256\":\"0xb1cf0c9cec14fe2aa18dfed87cf0b669706983cc773eaf081a6bda1585a3ff59\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://825dcf025b9ce5009746eca03af357c8ccb72c8417e0cf44936d801af8088be8\",\"dweb:/ipfs/QmTeiuSbtLnEuGv5kuNjkJhBdttQZ71AQe9KprbifsjghA\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/BankAccountBase.sol\":{\"keccak256\":\"0x1b3b2cb4cec4878bccde4c0e3275c0baeeb25213cdd4197ac2bf6b17eea09980\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://08ab96e8d259909ed07d3ffbc3167e7f89510359a35247683f23adeb9edf9011\",\"dweb:/ipfs/QmaqGN8GVc2Eha4nUdDrcgMkphC3pg6Bh7Va7Fo71eTSWP\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/IBankAccount.sol\":{\"keccak256\":\"0xb12391ffbd0354ed991b85bf3621acd0de8235f9c58ba636bddd8ab5e9b15dbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8160593e5f1614665a67fe5865fd7033c10afd35959f2326b5c78a5c2e311646\",\"dweb:/ipfs/QmURHSFVR8m1JMwHiok6v9VHWNtqng77MPjC69kjkBhSoA\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/BaseDeposit.sol\":{\"keccak256\":\"0x5d642af02a677b0d66936f4d05391bcc8078d0443a3a8ead9354d2c949327ee5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://78c12dade561857f8c093b9902303b819a1780902c9a86bfcde381a255dda2fe\",\"dweb:/ipfs/QmUmYqALrCyhHYzGkmRLCfVZiK5jgUKQq79NmmwmHUFeSh\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/Condition/PeriodCondition.sol\":{\"keccak256\":\"0x6e2c64d74553338e8ceab1e7a1384df803076dec514b786d2a4f65f802b07494\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0589074431ba5dbd3d2454f63889b56129dee720edaa92c204bc7872dafa78b\",\"dweb:/ipfs/QmSF6D9Rtk6ryoUvqkuHJ4uXZBkYUFcThicV2FpdjmhbEY\"]},\"/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/ILaunchpool.sol\":{\"keccak256\":\"0x138a6a0e523df88d98a7509e2e8b689cdba8b1fd24f01a66012f6be1e2abc975\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ef29e87e6ef81b3ed66af0e14996e1e01cb3ab3a117c4707b99106efbe59e2b1\",\"dweb:/ipfs/QmbGLqMAFbSYymX5mR9a6Njuc8ejr312WgKKVD7wm5Hp3C\"]},\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xb4d87ee2ead4bd192b41c128f287d4b7f24b9e0cd740cc9b476881c461286007\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://861c3abaa2b388a0228469080470d2254e8e91fd09aa0abda8b9ef3babf03ee5\",\"dweb:/ipfs/QmZFg88WPesuMo6GMtf3fi9NHQ5tENYLDZsFQSWgoq13TN\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30\",\"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"../BaseDeposit.sol\";\n\n/**\n * @dev Period condition.\n */\nabstract contract PeriodCondition {\n    uint256 internal _periodMaximum;\n    uint256 internal _periodMinimum;\n\n    error PeriodMinimumConstraint(uint256 periodMinimumDateTime);\n\n    constructor(uint256 maximum, uint256 minimum) {\n        _periodMaximum = maximum;\n        _periodMinimum = minimum;\n    }\n\n    function getBeginDateTime(BaseDeposit.Transaction[] memory transactions)\n        public\n        pure\n        returns (uint256)\n    {\n        if (transactions.length > 0) {\n            return transactions[0].payed;\n        }\n\n        return 0;\n    }\n\n    function _getPeriodDateTime(\n        BaseDeposit.Transaction[] memory transactions,\n        uint256 period\n    ) internal pure returns (uint256) {\n        uint256 beginDateTime = getBeginDateTime(transactions);\n\n        if (beginDateTime == 0) {\n            return 0;\n        }\n\n        return beginDateTime + period;\n    }\n\n    function _preValidateWithdraw(\n        BaseDeposit.Transaction[] memory,\n        uint256 periodMinimumDateTime\n    ) internal view virtual {\n        if (periodMinimumDateTime > block.timestamp) {\n            revert PeriodMinimumConstraint({\n                periodMinimumDateTime: periodMinimumDateTime\n            });\n        }\n    }\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/Condition/PeriodCondition.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/Condition/PeriodCondition.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        7357
+      ],
+      "BankAccount": [
+        38
+      ],
+      "BankAccountBase": [
+        109
+      ],
+      "BaseDeposit": [
+        1306
+      ],
+      "Context": [
+        10915
+      ],
+      "ERC165": [
+        11216
+      ],
+      "IAccessControl": [
+        7555
+      ],
+      "IBankAccount": [
+        849
+      ],
+      "IERC165": [
+        11228
+      ],
+      "IERC20": [
+        8481
+      ],
+      "ILaunchpool": [
+        2144
+      ],
+      "Ownable": [
+        7685
+      ],
+      "PeriodCondition": [
+        1564
+      ],
+      "Strings": [
+        11192
+      ]
+    },
+    "id": 1565,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1465,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:12"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/BaseDeposit.sol",
+        "file": "../BaseDeposit.sol",
+        "id": 1466,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1565,
+        "sourceUnit": 1307,
+        "src": "56:28:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1467,
+          "nodeType": "StructuredDocumentation",
+          "src": "86:33:12",
+          "text": " @dev Period condition."
+        },
+        "fullyImplemented": true,
+        "id": 1564,
+        "linearizedBaseContracts": [
+          1564
+        ],
+        "name": "PeriodCondition",
+        "nameLocation": "138:15:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1469,
+            "mutability": "mutable",
+            "name": "_periodMaximum",
+            "nameLocation": "177:14:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 1564,
+            "src": "160:31:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1468,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "160:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1471,
+            "mutability": "mutable",
+            "name": "_periodMinimum",
+            "nameLocation": "214:14:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 1564,
+            "src": "197:31:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1470,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "197:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 1475,
+            "name": "PeriodMinimumConstraint",
+            "nameLocation": "241:23:12",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 1474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1473,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "273:21:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1475,
+                  "src": "265:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1472,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:31:12"
+            },
+            "src": "235:61:12"
+          },
+          {
+            "body": {
+              "id": 1490,
+              "nodeType": "Block",
+              "src": "348:75:12",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1484,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1482,
+                      "name": "_periodMaximum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1469,
+                      "src": "358:14:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1483,
+                      "name": "maximum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1477,
+                      "src": "375:7:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "358:24:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1485,
+                  "nodeType": "ExpressionStatement",
+                  "src": "358:24:12"
+                },
+                {
+                  "expression": {
+                    "id": 1488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1486,
+                      "name": "_periodMinimum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1471,
+                      "src": "392:14:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1487,
+                      "name": "minimum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1479,
+                      "src": "409:7:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "392:24:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1489,
+                  "nodeType": "ExpressionStatement",
+                  "src": "392:24:12"
+                }
+              ]
+            },
+            "id": 1491,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1477,
+                  "mutability": "mutable",
+                  "name": "maximum",
+                  "nameLocation": "322:7:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1491,
+                  "src": "314:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1476,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1479,
+                  "mutability": "mutable",
+                  "name": "minimum",
+                  "nameLocation": "339:7:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1491,
+                  "src": "331:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1478,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:34:12"
+            },
+            "returnParameters": {
+              "id": 1481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:0:12"
+            },
+            "scope": 1564,
+            "src": "302:121:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1513,
+              "nodeType": "Block",
+              "src": "560:117:12",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1503,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 1500,
+                        "name": "transactions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1495,
+                        "src": "574:12:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      },
+                      "id": 1501,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "574:19:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 1502,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "596:1:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "574:23:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1510,
+                  "nodeType": "IfStatement",
+                  "src": "570:82:12",
+                  "trueBody": {
+                    "id": 1509,
+                    "nodeType": "Block",
+                    "src": "599:53:12",
+                    "statements": [
+                      {
+                        "expression": {
+                          "expression": {
+                            "baseExpression": {
+                              "id": 1504,
+                              "name": "transactions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1495,
+                              "src": "620:12:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                                "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                              }
+                            },
+                            "id": 1506,
+                            "indexExpression": {
+                              "hexValue": "30",
+                              "id": 1505,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "633:1:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "620:15:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Transaction_$986_memory_ptr",
+                              "typeString": "struct BaseDeposit.Transaction memory"
+                            }
+                          },
+                          "id": 1507,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "payed",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 985,
+                          "src": "620:21:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "functionReturnParameters": 1499,
+                        "id": 1508,
+                        "nodeType": "Return",
+                        "src": "613:28:12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "hexValue": "30",
+                    "id": 1511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "669:1:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 1499,
+                  "id": 1512,
+                  "nodeType": "Return",
+                  "src": "662:8:12"
+                }
+              ]
+            },
+            "functionSelector": "6aca845e",
+            "id": 1514,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBeginDateTime",
+            "nameLocation": "438:16:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1495,
+                  "mutability": "mutable",
+                  "name": "transactions",
+                  "nameLocation": "488:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1514,
+                  "src": "455:45:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1493,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1492,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "455:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "455:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1494,
+                    "nodeType": "ArrayTypeName",
+                    "src": "455:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "454:47:12"
+            },
+            "returnParameters": {
+              "id": 1499,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1498,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1514,
+                  "src": "547:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1497,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:9:12"
+            },
+            "scope": 1564,
+            "src": "429:248:12",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1542,
+              "nodeType": "Block",
+              "src": "828:178:12",
+              "statements": [
+                {
+                  "assignments": [
+                    1526
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1526,
+                      "mutability": "mutable",
+                      "name": "beginDateTime",
+                      "nameLocation": "846:13:12",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1542,
+                      "src": "838:21:12",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1525,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "838:7:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1530,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 1528,
+                        "name": "transactions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1518,
+                        "src": "879:12:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      ],
+                      "id": 1527,
+                      "name": "getBeginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1514,
+                      "src": "862:16:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (struct BaseDeposit.Transaction memory[] memory) pure returns (uint256)"
+                      }
+                    },
+                    "id": 1529,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "862:30:12",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "838:54:12"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1533,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1531,
+                      "name": "beginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1526,
+                      "src": "907:13:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 1532,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "924:1:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "907:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1537,
+                  "nodeType": "IfStatement",
+                  "src": "903:57:12",
+                  "trueBody": {
+                    "id": 1536,
+                    "nodeType": "Block",
+                    "src": "927:33:12",
+                    "statements": [
+                      {
+                        "expression": {
+                          "hexValue": "30",
+                          "id": 1534,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "948:1:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "functionReturnParameters": 1524,
+                        "id": 1535,
+                        "nodeType": "Return",
+                        "src": "941:8:12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1538,
+                      "name": "beginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1526,
+                      "src": "977:13:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "+",
+                    "rightExpression": {
+                      "id": 1539,
+                      "name": "period",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1520,
+                      "src": "993:6:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "977:22:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1524,
+                  "id": 1541,
+                  "nodeType": "Return",
+                  "src": "970:29:12"
+                }
+              ]
+            },
+            "id": 1543,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getPeriodDateTime",
+            "nameLocation": "692:18:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1518,
+                  "mutability": "mutable",
+                  "name": "transactions",
+                  "nameLocation": "753:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "720:45:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1516,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1515,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "720:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "720:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1517,
+                    "nodeType": "ArrayTypeName",
+                    "src": "720:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1520,
+                  "mutability": "mutable",
+                  "name": "period",
+                  "nameLocation": "783:6:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "775:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1519,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "775:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:85:12"
+            },
+            "returnParameters": {
+              "id": 1524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1523,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "819:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "819:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "818:9:12"
+            },
+            "scope": 1564,
+            "src": "683:323:12",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1562,
+              "nodeType": "Block",
+              "src": "1151:194:12",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1555,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1552,
+                      "name": "periodMinimumDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1549,
+                      "src": "1165:21:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 1553,
+                        "name": "block",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967292,
+                        "src": "1189:5:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_block",
+                          "typeString": "block"
+                        }
+                      },
+                      "id": 1554,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "src": "1189:15:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1165:39:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1561,
+                  "nodeType": "IfStatement",
+                  "src": "1161:178:12",
+                  "trueBody": {
+                    "id": 1560,
+                    "nodeType": "Block",
+                    "src": "1206:133:12",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [
+                            {
+                              "id": 1557,
+                              "name": "periodMinimumDateTime",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1549,
+                              "src": "1292:21:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 1556,
+                            "name": "PeriodMinimumConstraint",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1475,
+                            "src": "1227:23:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256) pure"
+                            }
+                          },
+                          "id": 1558,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "periodMinimumDateTime"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "1227:101:12",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 1559,
+                        "nodeType": "RevertStatement",
+                        "src": "1220:108:12"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "id": 1563,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_preValidateWithdraw",
+            "nameLocation": "1021:20:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1550,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1547,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1563,
+                  "src": "1051:32:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1545,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1544,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "1051:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "1051:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1546,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1051:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1549,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "1101:21:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1563,
+                  "src": "1093:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1548,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1093:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:87:12"
+            },
+            "returnParameters": {
+              "id": 1551,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1151:0:12"
+            },
+            "scope": 1564,
+            "src": "1012:333:12",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1565,
+        "src": "120:1227:12",
+        "usedErrors": [
+          1475
+        ]
+      }
+    ],
+    "src": "32:1316:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/Condition/PeriodCondition.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        7357
+      ],
+      "BankAccount": [
+        38
+      ],
+      "BankAccountBase": [
+        109
+      ],
+      "BaseDeposit": [
+        1306
+      ],
+      "Context": [
+        10915
+      ],
+      "ERC165": [
+        11216
+      ],
+      "IAccessControl": [
+        7555
+      ],
+      "IBankAccount": [
+        849
+      ],
+      "IERC165": [
+        11228
+      ],
+      "IERC20": [
+        8481
+      ],
+      "ILaunchpool": [
+        2144
+      ],
+      "Ownable": [
+        7685
+      ],
+      "PeriodCondition": [
+        1564
+      ],
+      "Strings": [
+        11192
+      ]
+    },
+    "id": 1565,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1465,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:12"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/Launchpool/BaseDeposit.sol",
+        "file": "../BaseDeposit.sol",
+        "id": 1466,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1565,
+        "sourceUnit": 1307,
+        "src": "56:28:12",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1467,
+          "nodeType": "StructuredDocumentation",
+          "src": "86:33:12",
+          "text": " @dev Period condition."
+        },
+        "fullyImplemented": true,
+        "id": 1564,
+        "linearizedBaseContracts": [
+          1564
+        ],
+        "name": "PeriodCondition",
+        "nameLocation": "138:15:12",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1469,
+            "mutability": "mutable",
+            "name": "_periodMaximum",
+            "nameLocation": "177:14:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 1564,
+            "src": "160:31:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1468,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "160:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1471,
+            "mutability": "mutable",
+            "name": "_periodMinimum",
+            "nameLocation": "214:14:12",
+            "nodeType": "VariableDeclaration",
+            "scope": 1564,
+            "src": "197:31:12",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1470,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "197:7:12",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 1475,
+            "name": "PeriodMinimumConstraint",
+            "nameLocation": "241:23:12",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 1474,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1473,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "273:21:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1475,
+                  "src": "265:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1472,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "265:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "264:31:12"
+            },
+            "src": "235:61:12"
+          },
+          {
+            "body": {
+              "id": 1490,
+              "nodeType": "Block",
+              "src": "348:75:12",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1484,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1482,
+                      "name": "_periodMaximum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1469,
+                      "src": "358:14:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1483,
+                      "name": "maximum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1477,
+                      "src": "375:7:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "358:24:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1485,
+                  "nodeType": "ExpressionStatement",
+                  "src": "358:24:12"
+                },
+                {
+                  "expression": {
+                    "id": 1488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1486,
+                      "name": "_periodMinimum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1471,
+                      "src": "392:14:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1487,
+                      "name": "minimum",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1479,
+                      "src": "409:7:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "392:24:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1489,
+                  "nodeType": "ExpressionStatement",
+                  "src": "392:24:12"
+                }
+              ]
+            },
+            "id": 1491,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1477,
+                  "mutability": "mutable",
+                  "name": "maximum",
+                  "nameLocation": "322:7:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1491,
+                  "src": "314:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1476,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1479,
+                  "mutability": "mutable",
+                  "name": "minimum",
+                  "nameLocation": "339:7:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1491,
+                  "src": "331:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1478,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "331:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "313:34:12"
+            },
+            "returnParameters": {
+              "id": 1481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:0:12"
+            },
+            "scope": 1564,
+            "src": "302:121:12",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1513,
+              "nodeType": "Block",
+              "src": "560:117:12",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1503,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "expression": {
+                        "id": 1500,
+                        "name": "transactions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1495,
+                        "src": "574:12:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      },
+                      "id": 1501,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "574:19:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 1502,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "596:1:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "574:23:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1510,
+                  "nodeType": "IfStatement",
+                  "src": "570:82:12",
+                  "trueBody": {
+                    "id": 1509,
+                    "nodeType": "Block",
+                    "src": "599:53:12",
+                    "statements": [
+                      {
+                        "expression": {
+                          "expression": {
+                            "baseExpression": {
+                              "id": 1504,
+                              "name": "transactions",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1495,
+                              "src": "620:12:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                                "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                              }
+                            },
+                            "id": 1506,
+                            "indexExpression": {
+                              "hexValue": "30",
+                              "id": 1505,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "633:1:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "620:15:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Transaction_$986_memory_ptr",
+                              "typeString": "struct BaseDeposit.Transaction memory"
+                            }
+                          },
+                          "id": 1507,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "payed",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 985,
+                          "src": "620:21:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "functionReturnParameters": 1499,
+                        "id": 1508,
+                        "nodeType": "Return",
+                        "src": "613:28:12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "hexValue": "30",
+                    "id": 1511,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "669:1:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 1499,
+                  "id": 1512,
+                  "nodeType": "Return",
+                  "src": "662:8:12"
+                }
+              ]
+            },
+            "functionSelector": "6aca845e",
+            "id": 1514,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBeginDateTime",
+            "nameLocation": "438:16:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1495,
+                  "mutability": "mutable",
+                  "name": "transactions",
+                  "nameLocation": "488:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1514,
+                  "src": "455:45:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1493,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1492,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "455:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "455:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1494,
+                    "nodeType": "ArrayTypeName",
+                    "src": "455:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "454:47:12"
+            },
+            "returnParameters": {
+              "id": 1499,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1498,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1514,
+                  "src": "547:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1497,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:9:12"
+            },
+            "scope": 1564,
+            "src": "429:248:12",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1542,
+              "nodeType": "Block",
+              "src": "828:178:12",
+              "statements": [
+                {
+                  "assignments": [
+                    1526
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1526,
+                      "mutability": "mutable",
+                      "name": "beginDateTime",
+                      "nameLocation": "846:13:12",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1542,
+                      "src": "838:21:12",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1525,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "838:7:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1530,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 1528,
+                        "name": "transactions",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1518,
+                        "src": "879:12:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct BaseDeposit.Transaction memory[] memory"
+                        }
+                      ],
+                      "id": 1527,
+                      "name": "getBeginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1514,
+                      "src": "862:16:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (struct BaseDeposit.Transaction memory[] memory) pure returns (uint256)"
+                      }
+                    },
+                    "id": 1529,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "862:30:12",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "838:54:12"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1533,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1531,
+                      "name": "beginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1526,
+                      "src": "907:13:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 1532,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "924:1:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "907:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1537,
+                  "nodeType": "IfStatement",
+                  "src": "903:57:12",
+                  "trueBody": {
+                    "id": 1536,
+                    "nodeType": "Block",
+                    "src": "927:33:12",
+                    "statements": [
+                      {
+                        "expression": {
+                          "hexValue": "30",
+                          "id": 1534,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "948:1:12",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "functionReturnParameters": 1524,
+                        "id": 1535,
+                        "nodeType": "Return",
+                        "src": "941:8:12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1538,
+                      "name": "beginDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1526,
+                      "src": "977:13:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "+",
+                    "rightExpression": {
+                      "id": 1539,
+                      "name": "period",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1520,
+                      "src": "993:6:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "977:22:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1524,
+                  "id": 1541,
+                  "nodeType": "Return",
+                  "src": "970:29:12"
+                }
+              ]
+            },
+            "id": 1543,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getPeriodDateTime",
+            "nameLocation": "692:18:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1518,
+                  "mutability": "mutable",
+                  "name": "transactions",
+                  "nameLocation": "753:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "720:45:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1516,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1515,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "720:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "720:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1517,
+                    "nodeType": "ArrayTypeName",
+                    "src": "720:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1520,
+                  "mutability": "mutable",
+                  "name": "period",
+                  "nameLocation": "783:6:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "775:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1519,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "775:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "710:85:12"
+            },
+            "returnParameters": {
+              "id": 1524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1523,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1543,
+                  "src": "819:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "819:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "818:9:12"
+            },
+            "scope": 1564,
+            "src": "683:323:12",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1562,
+              "nodeType": "Block",
+              "src": "1151:194:12",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1555,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1552,
+                      "name": "periodMinimumDateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1549,
+                      "src": "1165:21:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 1553,
+                        "name": "block",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967292,
+                        "src": "1189:5:12",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_block",
+                          "typeString": "block"
+                        }
+                      },
+                      "id": 1554,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "src": "1189:15:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1165:39:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1561,
+                  "nodeType": "IfStatement",
+                  "src": "1161:178:12",
+                  "trueBody": {
+                    "id": 1560,
+                    "nodeType": "Block",
+                    "src": "1206:133:12",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [
+                            {
+                              "id": 1557,
+                              "name": "periodMinimumDateTime",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1549,
+                              "src": "1292:21:12",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 1556,
+                            "name": "PeriodMinimumConstraint",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1475,
+                            "src": "1227:23:12",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256) pure"
+                            }
+                          },
+                          "id": 1558,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [
+                            "periodMinimumDateTime"
+                          ],
+                          "nodeType": "FunctionCall",
+                          "src": "1227:101:12",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 1559,
+                        "nodeType": "RevertStatement",
+                        "src": "1220:108:12"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "id": 1563,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_preValidateWithdraw",
+            "nameLocation": "1021:20:12",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1550,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1547,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1563,
+                  "src": "1051:32:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$986_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1545,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1544,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 986,
+                        "src": "1051:23:12"
+                      },
+                      "referencedDeclaration": 986,
+                      "src": "1051:23:12",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$986_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1546,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1051:25:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$986_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1549,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "1101:21:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1563,
+                  "src": "1093:29:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1548,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1093:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1041:87:12"
+            },
+            "returnParameters": {
+              "id": 1551,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1151:0:12"
+            },
+            "scope": 1564,
+            "src": "1012:333:12",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1565,
+        "src": "120:1227:12",
+        "usedErrors": [
+          1475
+        ]
+      }
+    ],
+    "src": "32:1316:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-06-29T07:06:02.207Z",
+  "devdoc": {
+    "details": "Period condition.",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
