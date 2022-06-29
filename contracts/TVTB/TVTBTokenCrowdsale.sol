@@ -4,6 +4,7 @@ pragma solidity 0.8.7;
 import "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol";
 
 import "../Crowdsale.sol";
+import "../IBankAccount.sol";
 
 /**
  * @title TVTBTokenCrowdsale
@@ -17,9 +18,11 @@ contract TVTBTokenCrowdsale is Crowdsale {
     error TVTTokenAlreadyBought();
     error TVTTokenOnlyOne();
 
-    constructor(uint256 rate, ERC721PresetMinterPauserAutoId token)
-        Crowdsale(rate)
-    {
+    constructor(
+        uint256 rate,
+        IBankAccount wallet,
+        ERC721PresetMinterPauserAutoId token
+    ) Crowdsale(rate, wallet) {
         require(
             address(token) != address(0),
             "Crowdsale: token is the zero address"

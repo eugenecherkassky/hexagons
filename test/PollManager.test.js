@@ -15,7 +15,7 @@ const params = {
   endDateTime: Math.floor(new Date().getTime() / 1000) + 10000,
 };
 
-contract("PollManager", async function () {
+contract("PollManager", async function ([account]) {
   beforeEach(async function () {
     this.tvtb = await ContractFactory.createTVTBToken();
 
@@ -75,7 +75,7 @@ contract("PollManager", async function () {
         params.endDateTime
       ).should.be.fulfilled;
 
-      await this.crowdsale.buyTokens({
+      await this.crowdsale.buyTokens(account, {
         value: 1,
       }).should.be.fulfilled;
 
@@ -97,7 +97,7 @@ contract("PollManager", async function () {
         params.endDateTime
       );
 
-      await this.crowdsale.buyTokens({
+      await this.crowdsale.buyTokens(account, {
         value: 1,
       }).should.be.fulfilled;
 

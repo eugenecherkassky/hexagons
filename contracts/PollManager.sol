@@ -42,22 +42,6 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
     error PollHasNotStarted(uint256 index, uint256 startDateTime);
     error PollNotAuthorize();
 
-    // function approve(uint256 index) external view returns (bool) {
-    //     if (!_isExists(index)) {
-    //         revert PollDoesNotExist(index);
-    //     }
-
-    //     Poll storage poll = _get(index);
-
-    //     if (poll.endDateTime < block.timestamp) {
-    //         revert PollHasNotFinished(index, poll.endDateTime);
-    //     }
-
-    //     // TODO
-
-    //     return true;
-    // }
-
     function create(
         address proxy,
         IUpgradeable implementation,

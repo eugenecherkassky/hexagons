@@ -4,6 +4,7 @@ pragma solidity 0.8.7;
 import "@openzeppelin/contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol";
 
 import "../Crowdsale.sol";
+import "../IBankAccount.sol";
 
 /**
  * @title TVTTokenCrowdsale
@@ -16,7 +17,11 @@ contract TVTTokenCrowdsale is Crowdsale {
     // The token being sold
     ERC20PresetMinterPauser private _token;
 
-    constructor(uint256 rate, ERC20PresetMinterPauser token) Crowdsale(rate) {
+    constructor(
+        uint256 rate,
+        IBankAccount wallet,
+        ERC20PresetMinterPauser token
+    ) Crowdsale(rate, wallet) {
         require(
             address(token) != address(0),
             "Crowdsale: token is the zero address"

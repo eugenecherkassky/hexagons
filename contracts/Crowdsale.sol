@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
+import "./IBankAccount.sol";
+
 /**
  * @title Crowdsale
  * @dev Crowdsale is a base contract for managing a token crowdsale,
@@ -26,6 +28,9 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
     // So, if you are using a rate of 1 with a ERC20Detailed token with 3 decimals called TOK
     // 1 wei will give you 1 unit, or 0.001 TOK.
     uint256 internal _rate;
+
+    // Address where funds are collected
+    IBankAccount private _wallet;
 
     // Amount of wei raised
     uint256 private _weiRaised;
@@ -50,10 +55,11 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
      * token unit. So, if you are using a rate of 1 with a ERC20Detailed token
      * with 3 decimals called TOK, 1 wei will give you 1 unit, or 0.001 TOK.
      */
-    constructor(uint256 rate) {
+    constructor(uint256 rate, IBankAccount wallet) {
         require(rate > 0, "Crowdsale: rate is 0");
 
         _rate = rate;
+        _wallet = wallet;
     }
 
     /**
@@ -63,7 +69,7 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
      * buyTokens directly when purchasing tokens from a contract.
      */
     receive() external payable {
-        // buyTokens();
+        buyTokens(_msgSender());
     }
 
     /**
@@ -71,8 +77,12 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
      * This function has a non-reentrancy guard, so it shouldn't be called by
      * another `nonReentrant` function.
      */
-    function buyTokens() external payable virtual nonReentrant {
-        address beneficiary = _msgSender();
+    function buyTokens(address beneficiary)
+        public
+        payable
+        virtual
+        nonReentrant
+    {
         uint256 weiAmount = msg.value;
 
         _preValidatePurchase(beneficiary, weiAmount);
@@ -98,6 +108,13 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
      */
     function getRate() external view returns (uint256) {
         return _rate;
+    }
+
+    /**
+     * @return the address where funds are collected.
+     */
+    function getWallet() public view returns (IBankAccount) {
+        return _wallet;
     }
 
     /**
@@ -131,7 +148,7 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
      * @dev Determines how ETH is stored/forwarded on purchases.
      */
     function _forwardFunds(uint256 weiAmount) internal virtual {
-        payable(address(this)).transfer(weiAmount);
+        _wallet.transferTo(weiAmount);
     }
 
     /**

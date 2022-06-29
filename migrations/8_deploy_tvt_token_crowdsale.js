@@ -1,16 +1,19 @@
+const Treasury = artifacts.require("Treasury");
 const TVTTokenCrowdsale = artifacts.require("TVT/TVTTokenCrowdsale");
 const TVTToken = artifacts.require("TVT/TVTToken");
 
 module.exports = async function (deployer) {
   require("dotenv").config();
 
-  const tvtb = await TVTToken.deployed();
+  const tvt = await TVTToken.deployed();
+  const treasury = await Treasury.deployed();
 
   const crowdsale = await deployer.deploy(
     TVTTokenCrowdsale,
     process.env.TVT_TOKEN_RATE,
-    tvtb.address
+    treasury.address,
+    tvt.address
   );
 
-  await tvtb.grantRole(await tvtb.MINTER_ROLE(), crowdsale.address);
+  await tvt.grantRole(await tvt.MINTER_ROLE(), crowdsale.address);
 };
