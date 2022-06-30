@@ -62,7 +62,9 @@ contract("PollManager", async function ([account]) {
       polls[0].endDateTime.should.equal(params.endDateTime.toString());
 
       polls[0].agreeNumber.should.equal("0");
+      polls[0].isAgree.should.be.false;
       polls[0].disagreeNumber.should.equal("0");
+      polls[0].isDisagree.should.be.false;
     });
   });
 
@@ -98,7 +100,9 @@ contract("PollManager", async function ([account]) {
       const [poll] = await this.pollManager.getResult();
 
       poll.agreeNumber.should.equal("1");
+      poll.isAgree.should.be.true;
       poll.disagreeNumber.should.equal("0");
+      poll.isDisagree.should.be.false;
 
       await this.pollManager.vote(0, true).should.be.rejected;
     });
@@ -130,7 +134,9 @@ contract("PollManager", async function ([account]) {
       const [poll] = await this.pollManager.getResult();
 
       poll.agreeNumber.should.equal("0");
+      poll.isAgree.should.be.false;
       poll.disagreeNumber.should.equal("1");
+      poll.isDisagree.should.be.true;
 
       await this.pollManager.vote(0, true).should.be.rejected;
     });

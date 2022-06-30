@@ -28,7 +28,9 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
         uint256 startDateTime;
         uint256 endDateTime;
         uint256 agreeNumber;
+        bool isAgree;
         uint256 disagreeNumber;
+        bool isDisagree;
     }
 
     Poll[] internal _polls;
@@ -70,6 +72,8 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
     }
 
     function getResult() external view returns (PollResult[] memory) {
+        address voter = _msgSender();
+
         PollResult[] memory pollsResult = new PollResult[](_polls.length);
 
         for (uint256 i = 0; i < _polls.length; i++) {
@@ -81,7 +85,9 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
                 startDateTime: poll.startDateTime,
                 endDateTime: poll.endDateTime,
                 agreeNumber: poll.agree.length,
-                disagreeNumber: poll.disagree.length
+                isAgree: _isAgree(poll, voter),
+                disagreeNumber: poll.disagree.length,
+                isDisagree: _isDisagree(poll, voter)
             });
         }
 
@@ -120,7 +126,7 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
         }
     }
 
-    function _isVoted(Poll memory poll, address voter)
+    function _isAgree(Poll memory poll, address voter)
         internal
         pure
         returns (bool)
@@ -131,6 +137,14 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
             }
         }
 
+        return false;
+    }
+
+    function _isDisagree(Poll memory poll, address voter)
+        internal
+        pure
+        returns (bool)
+    {
         for (uint256 i = 0; i < poll.disagree.length; i++) {
             if (poll.disagree[i] == voter) {
                 return true;
@@ -142,6 +156,14 @@ contract PollManager is Initializable, ContextUpgradeable, OwnableUpgradeable {
 
     function _isExists(uint256 index) internal view returns (bool) {
         return 0 <= index && index <= _polls.length - 1;
+    }
+
+    function _isVoted(Poll memory poll, address voter)
+        internal
+        pure
+        returns (bool)
+    {
+        return _isAgree(poll, voter) || _isDisagree(poll, voter);
     }
 
     function _get(uint256 index) internal view returns (Poll storage) {
