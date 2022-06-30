@@ -1,5 +1,6 @@
 const { deployProxy } = require("@openzeppelin/truffle-upgrades");
 require("dotenv").config();
+const Web3 = require("web3");
 
 require("chai").use(require("chai-as-promised")).should();
 
@@ -81,12 +82,15 @@ contract("PollManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.fulfilled;
 
       await this.pollManager.vote(0, true).should.be.fulfilled;
@@ -110,12 +114,15 @@ contract("PollManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.fulfilled;
 
       await this.pollManager.vote(0, false).should.be.fulfilled;

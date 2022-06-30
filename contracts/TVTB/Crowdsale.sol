@@ -83,7 +83,7 @@ abstract contract Crowdsale is Ownable, ReentrancyGuard {
         virtual
         nonReentrant
     {
-        uint256 weiAmount = msg.value;
+        uint256 weiAmount = msg.value / 10**18;
 
         _preValidatePurchase(beneficiary, weiAmount);
 

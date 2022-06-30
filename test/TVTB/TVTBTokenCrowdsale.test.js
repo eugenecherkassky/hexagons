@@ -1,4 +1,5 @@
 require("dotenv").config();
+const Web3 = require("web3");
 
 require("chai").use(require("chai-as-promised")).should();
 
@@ -56,12 +57,15 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
 
       await this.tvt.approve(
         this.crowdsale.address,
-        process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.rejected;
     });
 
@@ -70,12 +74,15 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
 
       await this.tvt.approve(
         this.crowdsale.address,
-        process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.rejected;
     });
 
@@ -88,12 +95,15 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
       };
       await this.tvt.approve(
         this.crowdsale.address,
-        process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.fulfilled;
 
       const currentBalance = {
@@ -118,17 +128,20 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
 
       await this.tvt.approve(
         this.crowdsale.address,
-        2 * process.env.TVTB_TOKEN_RATE * value
+        Web3.utils.toWei(
+          (2 * process.env.TVTB_TOKEN_RATE * value).toString(),
+          "ether"
+        )
       );
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.fulfilled;
 
       await this.crowdsale.sendTransaction({
         from: account,
-        value,
+        value: Web3.utils.toWei(value.toString(), "ether"),
       }).should.be.rejected;
     });
   });

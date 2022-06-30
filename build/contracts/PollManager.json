@@ -967,7 +967,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_contract$_TVTBToken_$6196",
+            "name": "abi_decode_tuple_t_contract$_TVTBToken_$6200",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2685,7 +2685,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_contract$_TVTBToken_$6196__to_t_address__fromStack_reversed",
+            "name": "abi_encode_tuple_t_contract$_TVTBToken_$6200__to_t_address__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -4631,7 +4631,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_addresst_contract$_IUpgradeable_$653t_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n        let value_1 := calldataload(add(headStart, 32))\n        validator_revert_address(value_1)\n        value1 := value_1\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n    }\n    function abi_decode_tuple_t_contract$_TVTBToken_$6196(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_decode_tuple_t_uint256t_bool(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        let value := calldataload(add(headStart, 32))\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value1 := value\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_array$_t_struct$_PollResult_$2796_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_PollResult_$2796_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        let _1 := 32\n        let tail_1 := add(headStart, _1)\n        mstore(headStart, _1)\n        let pos := tail_1\n        let length := mload(value0)\n        mstore(tail_1, length)\n        let _2 := 64\n        pos := add(headStart, _2)\n        let srcPtr := add(value0, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            let _3 := mload(srcPtr)\n            let _4 := sub(shl(160, 1), 1)\n            mstore(pos, and(mload(_3), _4))\n            mstore(add(pos, _1), and(mload(add(_3, _1)), _4))\n            mstore(add(pos, _2), mload(add(_3, _2)))\n            let _5 := 0x60\n            mstore(add(pos, _5), mload(add(_3, _5)))\n            let _6 := 0x80\n            mstore(add(pos, _6), mload(add(_3, _6)))\n            let _7 := 0xa0\n            mstore(add(pos, _7), mload(add(_3, _7)))\n            pos := add(pos, 0xc0)\n            srcPtr := add(srcPtr, _1)\n        }\n        tail := pos\n    }\n    function abi_encode_tuple_t_contract$_TVTBToken_$6196__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_rational_1_by_1__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Ownable: new owner is the zero a\")\n        mstore(add(headStart, 96), \"ddress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"Initializable: contract is alrea\")\n        mstore(add(headStart, 96), \"dy initialized\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Ownable: caller is not the owner\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_d688db918bb9dd50354922faa108595679886fe9ff08046ad1ffe30aaea55f8b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 43)\n        mstore(add(headStart, 64), \"Initializable: contract is not i\")\n        mstore(add(headStart, 96), \"nitializing\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function validator_revert_address(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_addresst_contract$_IUpgradeable_$653t_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n        let value_1 := calldataload(add(headStart, 32))\n        validator_revert_address(value_1)\n        value1 := value_1\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n    }\n    function abi_decode_tuple_t_contract$_TVTBToken_$6200(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_decode_tuple_t_uint256t_bool(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        let value := calldataload(add(headStart, 32))\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value1 := value\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_array$_t_struct$_PollResult_$2796_memory_ptr_$dyn_memory_ptr__to_t_array$_t_struct$_PollResult_$2796_memory_ptr_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        let _1 := 32\n        let tail_1 := add(headStart, _1)\n        mstore(headStart, _1)\n        let pos := tail_1\n        let length := mload(value0)\n        mstore(tail_1, length)\n        let _2 := 64\n        pos := add(headStart, _2)\n        let srcPtr := add(value0, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            let _3 := mload(srcPtr)\n            let _4 := sub(shl(160, 1), 1)\n            mstore(pos, and(mload(_3), _4))\n            mstore(add(pos, _1), and(mload(add(_3, _1)), _4))\n            mstore(add(pos, _2), mload(add(_3, _2)))\n            let _5 := 0x60\n            mstore(add(pos, _5), mload(add(_3, _5)))\n            let _6 := 0x80\n            mstore(add(pos, _6), mload(add(_3, _6)))\n            let _7 := 0xa0\n            mstore(add(pos, _7), mload(add(_3, _7)))\n            pos := add(pos, 0xc0)\n            srcPtr := add(srcPtr, _1)\n        }\n        tail := pos\n    }\n    function abi_encode_tuple_t_contract$_TVTBToken_$6200__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_rational_1_by_1__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Ownable: new owner is the zero a\")\n        mstore(add(headStart, 96), \"ddress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"Initializable: contract is alrea\")\n        mstore(add(headStart, 96), \"dy initialized\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Ownable: caller is not the owner\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_d688db918bb9dd50354922faa108595679886fe9ff08046ad1ffe30aaea55f8b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 43)\n        mstore(add(headStart, 64), \"Initializable: contract is not i\")\n        mstore(add(headStart, 96), \"nitializing\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function validator_revert_address(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
       "id": 58,
       "language": "Yul",
       "name": "#utility.yul"
@@ -4645,88 +4645,88 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/PollManager.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7239
+        7243
       ],
       "AccessControlEnumerable": [
-        7364
+        7368
       ],
       "Address": [
-        9947
+        9951
       ],
       "AddressUpgradeable": [
-        6877
+        6881
       ],
       "Context": [
-        9969
+        9973
       ],
       "ContextUpgradeable": [
-        6919
+        6923
       ],
       "Counters": [
-        10043
+        10047
       ],
       "ERC165": [
-        10270
+        10274
       ],
       "ERC721": [
-        8867
+        8871
       ],
       "ERC721Burnable": [
-        9031
+        9035
       ],
       "ERC721Enumerable": [
-        9369
+        9373
       ],
       "ERC721Pausable": [
-        9406
+        9410
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9652
+        9656
       ],
       "EnumerableSet": [
-        11193
+        11197
       ],
       "IAccessControl": [
-        7437
+        7441
       ],
       "IAccessControlEnumerable": [
-        7462
+        7466
       ],
       "IERC165": [
-        10282
+        10286
       ],
       "IERC721": [
-        8983
+        8987
       ],
       "IERC721Enumerable": [
-        9437
+        9441
       ],
       "IERC721Metadata": [
-        9464
+        9468
       ],
       "IERC721Receiver": [
-        9001
+        9005
       ],
       "IUpgradeable": [
         653
       ],
       "Initializable": [
-        6634
+        6638
       ],
       "OwnableUpgradeable": [
-        6492
+        6496
       ],
       "Pausable": [
-        7659
+        7663
       ],
       "PollManager": [
         3164
       ],
       "Strings": [
-        10246
+        10250
       ],
       "TVTBToken": [
-        6196
+        6200
       ]
     },
     "id": 3165,
@@ -4750,7 +4750,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6493,
+        "sourceUnit": 6497,
         "src": "56:75:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4762,7 +4762,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6635,
+        "sourceUnit": 6639,
         "src": "132:75:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4774,7 +4774,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6920,
+        "sourceUnit": 6924,
         "src": "208:74:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4786,7 +4786,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6197,
+        "sourceUnit": 6201,
         "src": "284:30:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4811,7 +4811,7 @@
               "id": 2761,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6634,
+              "referencedDeclaration": 6638,
               "src": "401:13:18"
             },
             "id": 2762,
@@ -4823,7 +4823,7 @@
               "id": 2763,
               "name": "ContextUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6919,
+              "referencedDeclaration": 6923,
               "src": "416:18:18"
             },
             "id": 2764,
@@ -4835,7 +4835,7 @@
               "id": 2765,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6492,
+              "referencedDeclaration": 6496,
               "src": "436:18:18"
             },
             "id": 2766,
@@ -4855,9 +4855,9 @@
         "id": 3164,
         "linearizedBaseContracts": [
           3164,
-          6492,
-          6919,
-          6634
+          6496,
+          6923,
+          6638
         ],
         "name": "PollManager",
         "nameLocation": "386:11:18",
@@ -5302,7 +5302,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_TVTBToken_$6196",
+              "typeIdentifier": "t_contract$_TVTBToken_$6200",
               "typeString": "contract TVTBToken"
             },
             "typeName": {
@@ -5312,13 +5312,13 @@
                 "id": 2801,
                 "name": "TVTBToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 6196,
+                "referencedDeclaration": 6200,
                 "src": "900:9:18"
               },
-              "referencedDeclaration": 6196,
+              "referencedDeclaration": 6200,
               "src": "900:9:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                "typeIdentifier": "t_contract$_TVTBToken_$6200",
                 "typeString": "contract TVTBToken"
               }
             },
@@ -6081,7 +6081,7 @@
                       "name": "__Context_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6889,
+                      "referencedDeclaration": 6893,
                       "src": "1793:14:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -6116,7 +6116,7 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6395,
+                      "referencedDeclaration": 6399,
                       "src": "1819:14:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -6157,7 +6157,7 @@
                       "referencedDeclaration": 2803,
                       "src": "1846:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                        "typeIdentifier": "t_contract$_TVTBToken_$6200",
                         "typeString": "contract TVTBToken"
                       }
                     },
@@ -6171,13 +6171,13 @@
                       "referencedDeclaration": 2871,
                       "src": "1855:5:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                        "typeIdentifier": "t_contract$_TVTBToken_$6200",
                         "typeString": "contract TVTBToken"
                       }
                     },
                     "src": "1846:14:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -6199,7 +6199,7 @@
                   "id": 2873,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6536,
+                  "referencedDeclaration": 6540,
                   "src": "1771:11:18"
                 },
                 "nodeType": "ModifierInvocation",
@@ -6225,7 +6225,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                    "typeIdentifier": "t_contract$_TVTBToken_$6200",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -6235,13 +6235,13 @@
                       "id": 2869,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 6196,
+                      "referencedDeclaration": 6200,
                       "src": "1747:9:18"
                     },
-                    "referencedDeclaration": 6196,
+                    "referencedDeclaration": 6200,
                     "src": "1747:9:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -7058,7 +7058,7 @@
                     "referencedDeclaration": 2803,
                     "src": "2585:6:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -7099,7 +7099,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                    "typeIdentifier": "t_contract$_TVTBToken_$6200",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -7109,13 +7109,13 @@
                       "id": 2953,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 6196,
+                      "referencedDeclaration": 6200,
                       "src": "2551:9:18"
                     },
-                    "referencedDeclaration": 6196,
+                    "referencedDeclaration": 6200,
                     "src": "2551:9:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -7179,7 +7179,7 @@
                       "name": "_msgSender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6904,
+                      "referencedDeclaration": 6908,
                       "src": "2681:10:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -9424,7 +9424,7 @@
                           "referencedDeclaration": 2803,
                           "src": "4169:6:18",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                            "typeIdentifier": "t_contract$_TVTBToken_$6200",
                             "typeString": "contract TVTBToken"
                           }
                         },
@@ -9435,7 +9435,7 @@
                         "lValueRequested": false,
                         "memberName": "balanceOf",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8119,
+                        "referencedDeclaration": 8123,
                         "src": "4169:16:18",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -9589,88 +9589,88 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/PollManager.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7239
+        7243
       ],
       "AccessControlEnumerable": [
-        7364
+        7368
       ],
       "Address": [
-        9947
+        9951
       ],
       "AddressUpgradeable": [
-        6877
+        6881
       ],
       "Context": [
-        9969
+        9973
       ],
       "ContextUpgradeable": [
-        6919
+        6923
       ],
       "Counters": [
-        10043
+        10047
       ],
       "ERC165": [
-        10270
+        10274
       ],
       "ERC721": [
-        8867
+        8871
       ],
       "ERC721Burnable": [
-        9031
+        9035
       ],
       "ERC721Enumerable": [
-        9369
+        9373
       ],
       "ERC721Pausable": [
-        9406
+        9410
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9652
+        9656
       ],
       "EnumerableSet": [
-        11193
+        11197
       ],
       "IAccessControl": [
-        7437
+        7441
       ],
       "IAccessControlEnumerable": [
-        7462
+        7466
       ],
       "IERC165": [
-        10282
+        10286
       ],
       "IERC721": [
-        8983
+        8987
       ],
       "IERC721Enumerable": [
-        9437
+        9441
       ],
       "IERC721Metadata": [
-        9464
+        9468
       ],
       "IERC721Receiver": [
-        9001
+        9005
       ],
       "IUpgradeable": [
         653
       ],
       "Initializable": [
-        6634
+        6638
       ],
       "OwnableUpgradeable": [
-        6492
+        6496
       ],
       "Pausable": [
-        7659
+        7663
       ],
       "PollManager": [
         3164
       ],
       "Strings": [
-        10246
+        10250
       ],
       "TVTBToken": [
-        6196
+        6200
       ]
     },
     "id": 3165,
@@ -9694,7 +9694,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6493,
+        "sourceUnit": 6497,
         "src": "56:75:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9706,7 +9706,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6635,
+        "sourceUnit": 6639,
         "src": "132:75:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9718,7 +9718,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6920,
+        "sourceUnit": 6924,
         "src": "208:74:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9730,7 +9730,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 3165,
-        "sourceUnit": 6197,
+        "sourceUnit": 6201,
         "src": "284:30:18",
         "symbolAliases": [],
         "unitAlias": ""
@@ -9755,7 +9755,7 @@
               "id": 2761,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6634,
+              "referencedDeclaration": 6638,
               "src": "401:13:18"
             },
             "id": 2762,
@@ -9767,7 +9767,7 @@
               "id": 2763,
               "name": "ContextUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6919,
+              "referencedDeclaration": 6923,
               "src": "416:18:18"
             },
             "id": 2764,
@@ -9779,7 +9779,7 @@
               "id": 2765,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6492,
+              "referencedDeclaration": 6496,
               "src": "436:18:18"
             },
             "id": 2766,
@@ -9799,9 +9799,9 @@
         "id": 3164,
         "linearizedBaseContracts": [
           3164,
-          6492,
-          6919,
-          6634
+          6496,
+          6923,
+          6638
         ],
         "name": "PollManager",
         "nameLocation": "386:11:18",
@@ -10246,7 +10246,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_TVTBToken_$6196",
+              "typeIdentifier": "t_contract$_TVTBToken_$6200",
               "typeString": "contract TVTBToken"
             },
             "typeName": {
@@ -10256,13 +10256,13 @@
                 "id": 2801,
                 "name": "TVTBToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 6196,
+                "referencedDeclaration": 6200,
                 "src": "900:9:18"
               },
-              "referencedDeclaration": 6196,
+              "referencedDeclaration": 6200,
               "src": "900:9:18",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                "typeIdentifier": "t_contract$_TVTBToken_$6200",
                 "typeString": "contract TVTBToken"
               }
             },
@@ -11025,7 +11025,7 @@
                       "name": "__Context_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6889,
+                      "referencedDeclaration": 6893,
                       "src": "1793:14:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -11060,7 +11060,7 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6395,
+                      "referencedDeclaration": 6399,
                       "src": "1819:14:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -11101,7 +11101,7 @@
                       "referencedDeclaration": 2803,
                       "src": "1846:6:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                        "typeIdentifier": "t_contract$_TVTBToken_$6200",
                         "typeString": "contract TVTBToken"
                       }
                     },
@@ -11115,13 +11115,13 @@
                       "referencedDeclaration": 2871,
                       "src": "1855:5:18",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                        "typeIdentifier": "t_contract$_TVTBToken_$6200",
                         "typeString": "contract TVTBToken"
                       }
                     },
                     "src": "1846:14:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -11143,7 +11143,7 @@
                   "id": 2873,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6536,
+                  "referencedDeclaration": 6540,
                   "src": "1771:11:18"
                 },
                 "nodeType": "ModifierInvocation",
@@ -11169,7 +11169,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                    "typeIdentifier": "t_contract$_TVTBToken_$6200",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -11179,13 +11179,13 @@
                       "id": 2869,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 6196,
+                      "referencedDeclaration": 6200,
                       "src": "1747:9:18"
                     },
-                    "referencedDeclaration": 6196,
+                    "referencedDeclaration": 6200,
                     "src": "1747:9:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -12002,7 +12002,7 @@
                     "referencedDeclaration": 2803,
                     "src": "2585:6:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -12043,7 +12043,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                    "typeIdentifier": "t_contract$_TVTBToken_$6200",
                     "typeString": "contract TVTBToken"
                   },
                   "typeName": {
@@ -12053,13 +12053,13 @@
                       "id": 2953,
                       "name": "TVTBToken",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 6196,
+                      "referencedDeclaration": 6200,
                       "src": "2551:9:18"
                     },
-                    "referencedDeclaration": 6196,
+                    "referencedDeclaration": 6200,
                     "src": "2551:9:18",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                      "typeIdentifier": "t_contract$_TVTBToken_$6200",
                       "typeString": "contract TVTBToken"
                     }
                   },
@@ -12123,7 +12123,7 @@
                       "name": "_msgSender",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6904,
+                      "referencedDeclaration": 6908,
                       "src": "2681:10:18",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -14368,7 +14368,7 @@
                           "referencedDeclaration": 2803,
                           "src": "4169:6:18",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_TVTBToken_$6196",
+                            "typeIdentifier": "t_contract$_TVTBToken_$6200",
                             "typeString": "contract TVTBToken"
                           }
                         },
@@ -14379,7 +14379,7 @@
                         "lValueRequested": false,
                         "memberName": "balanceOf",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8119,
+                        "referencedDeclaration": 8123,
                         "src": "4169:16:18",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -14572,10 +14572,88 @@
       "links": {},
       "address": "0xD939d7495dc1b4Cd123458071D06861F17e452b1",
       "transactionHash": "0xd245b9ca84402d83535db23b9de83281dce720807d24441560279d2cade280a0"
+    },
+    "1656563155041": {
+      "events": {
+        "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            }
+          ],
+          "name": "Initialized",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xF15f6A706FFFDA857700DE5E01a77e1f867A8b3A",
+      "transactionHash": "0xe8bd13190baa09cbc7e9ae92b7d4b6d7f121b238027e655ed0ed45edcbaf40d8"
+    },
+    "1656566451654": {
+      "events": {
+        "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            }
+          ],
+          "name": "Initialized",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xd4D47c6eBb235415d8480bf6Bc5F2183baD961A0",
+      "transactionHash": "0xf40e0ec4537411a9b403f9937bde83f2290c979de07f178c34a8ad2dc14ae792"
     }
   },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-06-29T21:43:59.535Z",
+  "updatedAt": "2022-06-30T05:21:32.696Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
