@@ -8,11 +8,11 @@ import "../IBankAccount.sol";
 import "./Crowdsale.sol";
 
 /**
- * @title TVTBTokenCrowdsale
+ * @title TVTVTokenCrowdsale
  * @dev Extension of Crowdsale contract whose tokens are minted in each purchase.
- * Token ownership should be transferred to TVTBTokenCrowdsale for minting.
+ * Token ownership should be transferred to TVTVTokenCrowdsale for minting.
  */
-contract TVTBTokenCrowdsale is Crowdsale {
+contract TVTVTokenCrowdsale is Crowdsale {
     // The token being sold
     ERC721PresetMinterPauserAutoId private _token;
 

@@ -6,7 +6,7 @@ const Launchpool = artifacts.require("Launchpool");
 const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
 const TVT = artifacts.require("TVT/TVT");
-const TVTBToken = artifacts.require("TVTB/TVTBToken");
+const TVTVToken = artifacts.require("TVTV/TVTVToken");
 
 module.exports = {
   createLaunchpool: (treasury) => {
@@ -21,11 +21,11 @@ module.exports = {
   createTVT: () => {
     return TVT.new(process.env.TVT_TOKEN_NAME, process.env.TVT_TOKEN_SYMBOL);
   },
-  createTVTBToken: () => {
-    return TVTBToken.new(
-      process.env.TVTB_TOKEN_NAME,
-      process.env.TVTB_TOKEN_SYMBOL,
-      process.env.TVTB_TOKEN_URI
+  createTVTVToken: () => {
+    return TVTVToken.new(
+      process.env.TVTV_TOKEN_NAME,
+      process.env.TVTV_TOKEN_SYMBOL,
+      process.env.TVTV_TOKEN_URI
     );
   },
 };

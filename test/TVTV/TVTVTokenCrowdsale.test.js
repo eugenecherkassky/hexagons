@@ -5,22 +5,22 @@ require("chai").use(require("chai-as-promised")).should();
 
 const ContractFactory = require("../ContractFactory");
 
-const TVTBTokenCrowdsale = artifacts.require("TVTB/TVTBTokenCrowdsale");
+const TVTVTokenCrowdsale = artifacts.require("TVTV/TVTVTokenCrowdsale");
 
-contract("TVTBTokenCrowdsale", async function ([account]) {
+contract("TVTVTokenCrowdsale", async function ([account]) {
   beforeEach(async function () {
     this.tvt = await ContractFactory.createTVT();
     this.treasury = await ContractFactory.createTreasury(this.tvt.address);
-    this.tvtb = await ContractFactory.createTVTBToken();
+    this.tvtv = await ContractFactory.createTVTVToken();
 
-    this.crowdsale = await TVTBTokenCrowdsale.new(
-      process.env.TVTB_TOKEN_RATE,
+    this.crowdsale = await TVTVTokenCrowdsale.new(
+      process.env.TVTV_TOKEN_RATE,
       this.treasury.address,
-      this.tvtb.address
+      this.tvtv.address
     );
 
-    await this.tvtb.grantRole(
-      await this.tvtb.MINTER_ROLE(),
+    await this.tvtv.grantRole(
+      await this.tvtv.MINTER_ROLE(),
       this.crowdsale.address
     );
   });
@@ -29,19 +29,19 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
     it("tracks the rate", async function () {
       const rate = await this.crowdsale.getRate();
 
-      rate.toString().should.be.equal(process.env.TVTB_TOKEN_RATE);
+      rate.toString().should.be.equal(process.env.TVTV_TOKEN_RATE);
     });
 
     it("tracks the token", async function () {
-      const tvtb = await this.crowdsale.getToken();
+      const tvtv = await this.crowdsale.getToken();
 
-      tvtb.toString().should.equal(this.tvtb.address);
+      tvtv.toString().should.equal(this.tvtv.address);
     });
   });
 
   describe("Settings", function () {
     it("rate updating", async function () {
-      const rateValue = process.env.TVTB_TOKEN_RATE * 2;
+      const rateValue = process.env.TVTV_TOKEN_RATE * 2;
 
       await this.crowdsale.setRate(rateValue);
 
@@ -58,7 +58,7 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei(
-          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          (process.env.TVTV_TOKEN_RATE * value).toString(),
           "ether"
         )
       );
@@ -75,7 +75,7 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei(
-          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          (process.env.TVTV_TOKEN_RATE * value).toString(),
           "ether"
         )
       );
@@ -91,12 +91,12 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
 
       const prevBalance = {
         treasury: await this.treasury.getBalance(),
-        tvtb: await this.tvtb.balanceOf(account),
+        tvtv: await this.tvtv.balanceOf(account),
       };
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei(
-          (process.env.TVTB_TOKEN_RATE * value).toString(),
+          (process.env.TVTV_TOKEN_RATE * value).toString(),
           "ether"
         )
       );
@@ -108,13 +108,13 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
 
       const currentBalance = {
         treasury: await this.treasury.getBalance(),
-        tvtb: await this.tvtb.balanceOf(account),
+        tvtv: await this.tvtv.balanceOf(account),
       };
 
       const rate = await this.crowdsale.getRate();
 
-      currentBalance.tvtb
-        .sub(prevBalance.tvtb)
+      currentBalance.tvtv
+        .sub(prevBalance.tvtv)
         .eq(rate.mul(new web3.utils.BN(value))).should.be.true;
 
       currentBalance.treasury
@@ -129,7 +129,7 @@ contract("TVTBTokenCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei(
-          (2 * process.env.TVTB_TOKEN_RATE * value).toString(),
+          (2 * process.env.TVTV_TOKEN_RATE * value).toString(),
           "ether"
         )
       );

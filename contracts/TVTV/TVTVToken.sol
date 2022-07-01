@@ -4,7 +4,7 @@ pragma solidity 0.8.7;
 import "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract TVTBToken is ERC721PresetMinterPauserAutoId {
+contract TVTVToken is ERC721PresetMinterPauserAutoId {
     using Counters for Counters.Counter;
 
     Counters.Counter private _counterTracker;
