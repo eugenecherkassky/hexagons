@@ -18,15 +18,18 @@ contract VotingManager is
     OwnableUpgradeable
 {
     struct Voting {
+        bytes32 id;
         address proxy;
         IUpgradeable implementation;
         uint256 startDateTime;
         uint256 endDateTime;
         address[] agree;
         address[] disagree;
+        uint256 approvedDateTime;
     }
 
     struct VotingResult {
+        bytes32 id;
         address proxy;
         IUpgradeable implementation;
         uint256 startDateTime;
@@ -35,18 +38,24 @@ contract VotingManager is
         bool isAgree;
         uint256 disagreeNumber;
         bool isDisagree;
+        uint256 approvedDateTime;
     }
 
     Voting[] internal _votings;
 
     TVTVToken internal _token;
 
-    error VotingAlreadyFinished(uint256 index, uint256 endDateTime);
-    error VotingAlreadyVoted(uint256 index);
-    error VotingDoesNotExist(uint256 index);
-    error VotingHasNotFinished(uint256 index, uint256 endDateTime);
-    error VotingHasNotStarted(uint256 index, uint256 startDateTime);
+    error VotingAlreadyApproved(bytes32 id);
+    error VotingAlreadyEnded(bytes32 id, uint256 endDateTime);
+    error VotingAlreadyVoted(bytes32 id);
+    error VotingDoesNotExist(bytes32 id);
+    error VotingHasNotFinished(bytes32 id, uint256 endDateTime);
+    error VotingHasNotStarted(bytes32 id, uint256 startDateTime);
     error VotingNotAuthorize();
+    error VotingNotEnded(bytes32 id, uint256 endDateTime);
+    error VotintApprovedIsNotPossible(bytes32 id);
+
+    event VotingManagerAdded(bytes32 id);
 
     function add(
         address proxy,
@@ -57,15 +66,37 @@ contract VotingManager is
         address[] memory result;
 
         Voting memory voting = Voting({
+            id: keccak256(abi.encodePacked(proxy, implementation)),
             proxy: proxy,
             implementation: implementation,
             startDateTime: startDateTime,
             endDateTime: endDateTime,
             agree: result,
-            disagree: result
+            disagree: result,
+            approvedDateTime: 0
         });
 
         _votings.push(voting);
+
+        emit VotingManagerAdded(voting.id);
+    }
+
+    function approve(bytes32 id) external {
+        Voting storage voting = _get(id);
+
+        if (voting.approvedDateTime != 0) {
+            revert VotingAlreadyApproved(id);
+        }
+
+        if (voting.agree.length <= voting.disagree.length) {
+            revert VotintApprovedIsNotPossible(id);
+        }
+
+        if (voting.endDateTime > block.timestamp) {
+            revert VotingNotEnded(id, voting.endDateTime);
+        }
+
+        voting.approvedDateTime = block.timestamp;
     }
 
     function initialize(TVTVToken token) public initializer {
@@ -86,6 +117,7 @@ contract VotingManager is
             Voting memory voting = _votings[i];
 
             votingsResult[i] = VotingResult({
+                id: voting.id,
                 proxy: voting.proxy,
                 implementation: voting.implementation,
                 startDateTime: voting.startDateTime,
@@ -93,7 +125,8 @@ contract VotingManager is
                 agreeNumber: voting.agree.length,
                 isAgree: _isInVoters(voting.agree, voter),
                 disagreeNumber: voting.disagree.length,
-                isDisagree: _isInVoters(voting.disagree, voter)
+                isDisagree: _isInVoters(voting.disagree, voter),
+                approvedDateTime: voting.approvedDateTime
             });
         }
 
@@ -104,37 +137,41 @@ contract VotingManager is
         return _token;
     }
 
-    function remove(uint256 index) external onlyOwner {
-        if (!_isExists(index)) {
-            revert VotingDoesNotExist(index);
-        }
+    function remove(bytes32 id) external onlyOwner {
+        bool found = false;
 
-        for (uint256 i = index; i < _votings.length - 1; i++) {
-            _votings[i] = _votings[i + 1];
+        for (uint256 i = 0; i < _votings.length - 1; i++) {
+            if (!found && _votings[i].id == id) {
+                found = true;
+            }
+
+            if (found) {
+                _votings[i] = _votings[i + 1];
+            }
         }
 
         _votings.pop();
     }
 
-    function vote(uint256 index, bool answer) external {
+    function vote(bytes32 id, bool answer) external {
         address voter = _msgSender();
 
         if (!_hasToken(voter)) {
             revert VotingNotAuthorize();
         }
 
-        Voting storage voting = _get(index);
+        Voting storage voting = _get(id);
 
         if (voting.startDateTime > block.timestamp) {
-            revert VotingHasNotStarted(index, voting.startDateTime);
+            revert VotingHasNotStarted(id, voting.startDateTime);
         }
 
         if (voting.endDateTime < block.timestamp) {
-            revert VotingAlreadyFinished(index, voting.endDateTime);
+            revert VotingAlreadyEnded(id, voting.endDateTime);
         }
 
         if (_isVoted(voting, voter)) {
-            revert VotingAlreadyVoted(index);
+            revert VotingAlreadyVoted(id);
         }
 
         if (answer) {
@@ -142,10 +179,6 @@ contract VotingManager is
         } else {
             voting.disagree.push(voter);
         }
-    }
-
-    function _isExists(uint256 index) internal view returns (bool) {
-        return 0 <= index && index <= _votings.length - 1;
     }
 
     function _isInVoters(address[] memory voters, address voter)
@@ -172,12 +205,14 @@ contract VotingManager is
             _isInVoters(voting.disagree, voter);
     }
 
-    function _get(uint256 index) internal view returns (Voting storage) {
-        if (!_isExists(index)) {
-            revert VotingDoesNotExist(index);
+    function _get(bytes32 id) internal view returns (Voting storage) {
+        for (uint256 i = 0; i < _votings.length; i++) {
+            if (_votings[i].id == id) {
+                return _votings[i];
+            }
         }
 
-        return _votings[index];
+        revert VotingDoesNotExist(id);
     }
 
     function _hasToken(address voter) internal view returns (bool) {
