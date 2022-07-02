@@ -15582,67 +15582,67 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/TVTVToken.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7416
+        7388
       ],
       "AccessControlEnumerable": [
-        7541
+        7513
       ],
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Counters": [
-        10220
+        10192
       ],
       "ERC165": [
-        10447
+        10419
       ],
       "ERC721": [
-        9044
+        9016
       ],
       "ERC721Burnable": [
-        9208
+        9180
       ],
       "ERC721Enumerable": [
-        9546
+        9518
       ],
       "ERC721Pausable": [
-        9583
+        9555
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9829
+        9801
       ],
       "EnumerableSet": [
-        11370
+        11342
       ],
       "IAccessControl": [
-        7614
+        7586
       ],
       "IAccessControlEnumerable": [
-        7639
+        7611
       ],
       "IERC165": [
-        10459
+        10431
       ],
       "IERC721": [
-        9160
+        9132
       ],
       "IERC721Enumerable": [
-        9614
+        9586
       ],
       "IERC721Metadata": [
-        9641
+        9613
       ],
       "IERC721Receiver": [
-        9178
+        9150
       ],
       "Pausable": [
-        7836
+        7808
       ],
       "Strings": [
-        10423
+        10395
       ],
       "TVTVToken": [
         5788
@@ -15669,7 +15669,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5789,
-        "sourceUnit": 9830,
+        "sourceUnit": 9802,
         "src": "56:89:24",
         "symbolAliases": [],
         "unitAlias": ""
@@ -15681,7 +15681,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5789,
-        "sourceUnit": 10221,
+        "sourceUnit": 10193,
         "src": "146:52:24",
         "symbolAliases": [],
         "unitAlias": ""
@@ -15694,7 +15694,7 @@
               "id": 5718,
               "name": "ERC721PresetMinterPauserAutoId",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9829,
+              "referencedDeclaration": 9801,
               "src": "222:30:24"
             },
             "id": 5719,
@@ -15708,22 +15708,22 @@
         "id": 5788,
         "linearizedBaseContracts": [
           5788,
-          9829,
-          9583,
-          7836,
-          9208,
-          9546,
-          9614,
-          9044,
-          9641,
-          9160,
-          7541,
-          7416,
-          10447,
-          10459,
-          7639,
-          7614,
-          10146
+          9801,
+          9555,
+          7808,
+          9180,
+          9518,
+          9586,
+          9016,
+          9613,
+          9132,
+          7513,
+          7388,
+          10419,
+          10431,
+          7611,
+          7586,
+          10118
         ],
         "name": "TVTVToken",
         "nameLocation": "209:9:24",
@@ -15735,7 +15735,7 @@
               "id": 5720,
               "name": "Counters",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10220,
+              "referencedDeclaration": 10192,
               "src": "265:8:24"
             },
             "nodeType": "UsingForDirective",
@@ -15747,13 +15747,13 @@
                 "id": 5721,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10152,
+                "referencedDeclaration": 10124,
                 "src": "278:16:24"
               },
-              "referencedDeclaration": 10152,
+              "referencedDeclaration": 10124,
               "src": "278:16:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$10152_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$10124_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -15770,7 +15770,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$10152_storage",
+              "typeIdentifier": "t_struct$_Counter_$10124_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -15780,13 +15780,13 @@
                 "id": 5724,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10152,
+                "referencedDeclaration": 10124,
                 "src": "301:16:24"
               },
-              "referencedDeclaration": 10152,
+              "referencedDeclaration": 10124,
               "src": "301:16:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$10152_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$10124_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -15848,7 +15848,7 @@
                   "id": 5734,
                   "name": "ERC721PresetMinterPauserAutoId",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 9829,
+                  "referencedDeclaration": 9801,
                   "src": "460:30:24"
                 },
                 "nodeType": "ModifierInvocation",
@@ -15960,7 +15960,7 @@
           },
           {
             "baseFunctions": [
-              9207
+              9179
             ],
             "body": {
               "id": 5758,
@@ -16009,7 +16009,7 @@
                       "lValueRequested": false,
                       "memberName": "burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9207,
+                      "referencedDeclaration": 9179,
                       "src": "584:10:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -16048,7 +16048,7 @@
                         "referencedDeclaration": 5726,
                         "src": "614:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -16059,10 +16059,10 @@
                       "lValueRequested": false,
                       "memberName": "decrement",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10206,
+                      "referencedDeclaration": 10178,
                       "src": "614:25:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10152_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10124_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -16166,7 +16166,7 @@
                         "referencedDeclaration": 5726,
                         "src": "724:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -16177,10 +16177,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10164,
+                      "referencedDeclaration": 10136,
                       "src": "724:23:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$10152_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$10124_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -16262,7 +16262,7 @@
           },
           {
             "baseFunctions": [
-              9754
+              9726
             ],
             "body": {
               "id": 5786,
@@ -16311,7 +16311,7 @@
                       "lValueRequested": false,
                       "memberName": "mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9754,
+                      "referencedDeclaration": 9726,
                       "src": "814:10:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -16350,7 +16350,7 @@
                         "referencedDeclaration": 5726,
                         "src": "839:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -16361,10 +16361,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10178,
+                      "referencedDeclaration": 10150,
                       "src": "839:25:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10152_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10124_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -16462,67 +16462,67 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/TVTVToken.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7416
+        7388
       ],
       "AccessControlEnumerable": [
-        7541
+        7513
       ],
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Counters": [
-        10220
+        10192
       ],
       "ERC165": [
-        10447
+        10419
       ],
       "ERC721": [
-        9044
+        9016
       ],
       "ERC721Burnable": [
-        9208
+        9180
       ],
       "ERC721Enumerable": [
-        9546
+        9518
       ],
       "ERC721Pausable": [
-        9583
+        9555
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9829
+        9801
       ],
       "EnumerableSet": [
-        11370
+        11342
       ],
       "IAccessControl": [
-        7614
+        7586
       ],
       "IAccessControlEnumerable": [
-        7639
+        7611
       ],
       "IERC165": [
-        10459
+        10431
       ],
       "IERC721": [
-        9160
+        9132
       ],
       "IERC721Enumerable": [
-        9614
+        9586
       ],
       "IERC721Metadata": [
-        9641
+        9613
       ],
       "IERC721Receiver": [
-        9178
+        9150
       ],
       "Pausable": [
-        7836
+        7808
       ],
       "Strings": [
-        10423
+        10395
       ],
       "TVTVToken": [
         5788
@@ -16549,7 +16549,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5789,
-        "sourceUnit": 9830,
+        "sourceUnit": 9802,
         "src": "56:89:24",
         "symbolAliases": [],
         "unitAlias": ""
@@ -16561,7 +16561,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5789,
-        "sourceUnit": 10221,
+        "sourceUnit": 10193,
         "src": "146:52:24",
         "symbolAliases": [],
         "unitAlias": ""
@@ -16574,7 +16574,7 @@
               "id": 5718,
               "name": "ERC721PresetMinterPauserAutoId",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 9829,
+              "referencedDeclaration": 9801,
               "src": "222:30:24"
             },
             "id": 5719,
@@ -16588,22 +16588,22 @@
         "id": 5788,
         "linearizedBaseContracts": [
           5788,
-          9829,
-          9583,
-          7836,
-          9208,
-          9546,
-          9614,
-          9044,
-          9641,
-          9160,
-          7541,
-          7416,
-          10447,
-          10459,
-          7639,
-          7614,
-          10146
+          9801,
+          9555,
+          7808,
+          9180,
+          9518,
+          9586,
+          9016,
+          9613,
+          9132,
+          7513,
+          7388,
+          10419,
+          10431,
+          7611,
+          7586,
+          10118
         ],
         "name": "TVTVToken",
         "nameLocation": "209:9:24",
@@ -16615,7 +16615,7 @@
               "id": 5720,
               "name": "Counters",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10220,
+              "referencedDeclaration": 10192,
               "src": "265:8:24"
             },
             "nodeType": "UsingForDirective",
@@ -16627,13 +16627,13 @@
                 "id": 5721,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10152,
+                "referencedDeclaration": 10124,
                 "src": "278:16:24"
               },
-              "referencedDeclaration": 10152,
+              "referencedDeclaration": 10124,
               "src": "278:16:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$10152_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$10124_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             }
@@ -16650,7 +16650,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Counter_$10152_storage",
+              "typeIdentifier": "t_struct$_Counter_$10124_storage",
               "typeString": "struct Counters.Counter"
             },
             "typeName": {
@@ -16660,13 +16660,13 @@
                 "id": 5724,
                 "name": "Counters.Counter",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 10152,
+                "referencedDeclaration": 10124,
                 "src": "301:16:24"
               },
-              "referencedDeclaration": 10152,
+              "referencedDeclaration": 10124,
               "src": "301:16:24",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Counter_$10152_storage_ptr",
+                "typeIdentifier": "t_struct$_Counter_$10124_storage_ptr",
                 "typeString": "struct Counters.Counter"
               }
             },
@@ -16728,7 +16728,7 @@
                   "id": 5734,
                   "name": "ERC721PresetMinterPauserAutoId",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 9829,
+                  "referencedDeclaration": 9801,
                   "src": "460:30:24"
                 },
                 "nodeType": "ModifierInvocation",
@@ -16840,7 +16840,7 @@
           },
           {
             "baseFunctions": [
-              9207
+              9179
             ],
             "body": {
               "id": 5758,
@@ -16889,7 +16889,7 @@
                       "lValueRequested": false,
                       "memberName": "burn",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9207,
+                      "referencedDeclaration": 9179,
                       "src": "584:10:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
@@ -16928,7 +16928,7 @@
                         "referencedDeclaration": 5726,
                         "src": "614:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -16939,10 +16939,10 @@
                       "lValueRequested": false,
                       "memberName": "decrement",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10206,
+                      "referencedDeclaration": 10178,
                       "src": "614:25:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10152_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10124_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -17046,7 +17046,7 @@
                         "referencedDeclaration": 5726,
                         "src": "724:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -17057,10 +17057,10 @@
                       "lValueRequested": false,
                       "memberName": "current",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10164,
+                      "referencedDeclaration": 10136,
                       "src": "724:23:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$10152_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$10124_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
                       }
                     },
@@ -17142,7 +17142,7 @@
           },
           {
             "baseFunctions": [
-              9754
+              9726
             ],
             "body": {
               "id": 5786,
@@ -17191,7 +17191,7 @@
                       "lValueRequested": false,
                       "memberName": "mint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9754,
+                      "referencedDeclaration": 9726,
                       "src": "814:10:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -17230,7 +17230,7 @@
                         "referencedDeclaration": 5726,
                         "src": "839:15:24",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Counter_$10152_storage",
+                          "typeIdentifier": "t_struct$_Counter_$10124_storage",
                           "typeString": "struct Counters.Counter storage ref"
                         }
                       },
@@ -17241,10 +17241,10 @@
                       "lValueRequested": false,
                       "memberName": "increment",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10178,
+                      "referencedDeclaration": 10150,
                       "src": "839:25:24",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10152_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10152_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$10124_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$10124_storage_ptr_$",
                         "typeString": "function (struct Counters.Counter storage pointer)"
                       }
                     },
@@ -17344,7 +17344,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-07-01T16:27:34.540Z",
+  "updatedAt": "2022-07-02T07:41:52.280Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

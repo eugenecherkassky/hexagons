@@ -21,7 +21,6 @@ contract VotingManager is
         bytes32 id;
         address proxy;
         IUpgradeable implementation;
-        uint256 startDateTime;
         uint256 endDateTime;
         address[] agree;
         address[] disagree;
@@ -32,7 +31,6 @@ contract VotingManager is
         bytes32 id;
         address proxy;
         IUpgradeable implementation;
-        uint256 startDateTime;
         uint256 endDateTime;
         uint256 agreeNumber;
         bool isAgree;
@@ -50,7 +48,6 @@ contract VotingManager is
     error VotingAlreadyVoted(bytes32 id);
     error VotingDoesNotExist(bytes32 id);
     error VotingHasNotFinished(bytes32 id, uint256 endDateTime);
-    error VotingHasNotStarted(bytes32 id, uint256 startDateTime);
     error VotingNotAuthorize();
     error VotingNotEnded(bytes32 id, uint256 endDateTime);
     error VotintApprovedIsNotPossible(bytes32 id);
@@ -60,7 +57,6 @@ contract VotingManager is
     function add(
         address proxy,
         IUpgradeable implementation,
-        uint256 startDateTime,
         uint256 endDateTime
     ) external onlyOwner {
         address[] memory result;
@@ -69,7 +65,6 @@ contract VotingManager is
             id: keccak256(abi.encodePacked(proxy, implementation)),
             proxy: proxy,
             implementation: implementation,
-            startDateTime: startDateTime,
             endDateTime: endDateTime,
             agree: result,
             disagree: result,
@@ -120,7 +115,6 @@ contract VotingManager is
                 id: voting.id,
                 proxy: voting.proxy,
                 implementation: voting.implementation,
-                startDateTime: voting.startDateTime,
                 endDateTime: voting.endDateTime,
                 agreeNumber: voting.agree.length,
                 isAgree: _isInVoters(voting.agree, voter),
@@ -161,10 +155,6 @@ contract VotingManager is
         }
 
         Voting storage voting = _get(id);
-
-        if (voting.startDateTime > block.timestamp) {
-            revert VotingHasNotStarted(id, voting.startDateTime);
-        }
 
         if (voting.endDateTime < block.timestamp) {
             revert VotingAlreadyEnded(id, voting.endDateTime);

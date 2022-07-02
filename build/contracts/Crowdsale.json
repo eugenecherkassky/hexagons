@@ -181,10 +181,10 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/Crowdsale.sol",
     "exportedSymbols": {
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Crowdsale": [
         5713
@@ -193,19 +193,19 @@
         598
       ],
       "IERC20": [
-        7954
+        7926
       ],
       "Ownable": [
-        7744
+        7716
       ],
       "ReentrancyGuard": [
-        7876
+        7848
       ],
       "SafeERC20": [
-        8178
+        8150
       ],
       "SafeMath": [
-        10771
+        10743
       ]
     },
     "id": 5714,
@@ -229,7 +229,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 7745,
+        "sourceUnit": 7717,
         "src": "56:52:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -241,7 +241,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 7877,
+        "sourceUnit": 7849,
         "src": "109:62:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -253,7 +253,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 8179,
+        "sourceUnit": 8151,
         "src": "172:65:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -265,7 +265,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 10772,
+        "sourceUnit": 10744,
         "src": "238:57:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -290,7 +290,7 @@
               "id": 5439,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7744,
+              "referencedDeclaration": 7716,
               "src": "1055:7:23"
             },
             "id": 5440,
@@ -302,7 +302,7 @@
               "id": 5441,
               "name": "ReentrancyGuard",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7876,
+              "referencedDeclaration": 7848,
               "src": "1064:15:23"
             },
             "id": 5442,
@@ -322,9 +322,9 @@
         "id": 5713,
         "linearizedBaseContracts": [
           5713,
-          7876,
-          7744,
-          10146
+          7848,
+          7716,
+          10118
         ],
         "name": "Crowdsale",
         "nameLocation": "1042:9:23",
@@ -336,7 +336,7 @@
               "id": 5443,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10771,
+              "referencedDeclaration": 10743,
               "src": "1092:8:23"
             },
             "nodeType": "UsingForDirective",
@@ -931,7 +931,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 10136,
+                          "referencedDeclaration": 10108,
                           "src": "2764:10:23",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -1377,7 +1377,7 @@
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 10635,
+                        "referencedDeclaration": 10607,
                         "src": "3324:14:23",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -1790,7 +1790,7 @@
                   "id": 5507,
                   "name": "nonReentrant",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 7875,
+                  "referencedDeclaration": 7847,
                   "src": "3078:12:23"
                 },
                 "nodeType": "ModifierInvocation",
@@ -2250,7 +2250,7 @@
                   "id": 5597,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 7686,
+                  "referencedDeclaration": 7658,
                   "src": "4291:9:23"
                 },
                 "nodeType": "ModifierInvocation",
@@ -2525,7 +2525,7 @@
                           "referencedDeclaration": 581,
                           "src": "4927:16:23",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IERC20_$7954_$",
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IERC20_$7926_$",
                             "typeString": "function () view external returns (contract IERC20)"
                           }
                         },
@@ -2540,7 +2540,7 @@
                         "src": "4927:18:23",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$7954",
+                          "typeIdentifier": "t_contract$_IERC20_$7926",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -2551,7 +2551,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7953,
+                      "referencedDeclaration": 7925,
                       "src": "4927:31:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -2714,7 +2714,7 @@
                       "lValueRequested": false,
                       "memberName": "mul",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10665,
+                      "referencedDeclaration": 10637,
                       "src": "5383:13:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -3553,10 +3553,10 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/Crowdsale.sol",
     "exportedSymbols": {
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Crowdsale": [
         5713
@@ -3565,19 +3565,19 @@
         598
       ],
       "IERC20": [
-        7954
+        7926
       ],
       "Ownable": [
-        7744
+        7716
       ],
       "ReentrancyGuard": [
-        7876
+        7848
       ],
       "SafeERC20": [
-        8178
+        8150
       ],
       "SafeMath": [
-        10771
+        10743
       ]
     },
     "id": 5714,
@@ -3601,7 +3601,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 7745,
+        "sourceUnit": 7717,
         "src": "56:52:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3613,7 +3613,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 7877,
+        "sourceUnit": 7849,
         "src": "109:62:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3625,7 +3625,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 8179,
+        "sourceUnit": 8151,
         "src": "172:65:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3637,7 +3637,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5714,
-        "sourceUnit": 10772,
+        "sourceUnit": 10744,
         "src": "238:57:23",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3662,7 +3662,7 @@
               "id": 5439,
               "name": "Ownable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7744,
+              "referencedDeclaration": 7716,
               "src": "1055:7:23"
             },
             "id": 5440,
@@ -3674,7 +3674,7 @@
               "id": 5441,
               "name": "ReentrancyGuard",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 7876,
+              "referencedDeclaration": 7848,
               "src": "1064:15:23"
             },
             "id": 5442,
@@ -3694,9 +3694,9 @@
         "id": 5713,
         "linearizedBaseContracts": [
           5713,
-          7876,
-          7744,
-          10146
+          7848,
+          7716,
+          10118
         ],
         "name": "Crowdsale",
         "nameLocation": "1042:9:23",
@@ -3708,7 +3708,7 @@
               "id": 5443,
               "name": "SafeMath",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 10771,
+              "referencedDeclaration": 10743,
               "src": "1092:8:23"
             },
             "nodeType": "UsingForDirective",
@@ -4303,7 +4303,7 @@
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 10136,
+                          "referencedDeclaration": 10108,
                           "src": "2764:10:23",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -4749,7 +4749,7 @@
                         "lValueRequested": false,
                         "memberName": "add",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 10635,
+                        "referencedDeclaration": 10607,
                         "src": "3324:14:23",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -5162,7 +5162,7 @@
                   "id": 5507,
                   "name": "nonReentrant",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 7875,
+                  "referencedDeclaration": 7847,
                   "src": "3078:12:23"
                 },
                 "nodeType": "ModifierInvocation",
@@ -5622,7 +5622,7 @@
                   "id": 5597,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 7686,
+                  "referencedDeclaration": 7658,
                   "src": "4291:9:23"
                 },
                 "nodeType": "ModifierInvocation",
@@ -5897,7 +5897,7 @@
                           "referencedDeclaration": 581,
                           "src": "4927:16:23",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IERC20_$7954_$",
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_contract$_IERC20_$7926_$",
                             "typeString": "function () view external returns (contract IERC20)"
                           }
                         },
@@ -5912,7 +5912,7 @@
                         "src": "4927:18:23",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IERC20_$7954",
+                          "typeIdentifier": "t_contract$_IERC20_$7926",
                           "typeString": "contract IERC20"
                         }
                       },
@@ -5923,7 +5923,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 7953,
+                      "referencedDeclaration": 7925,
                       "src": "4927:31:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -6086,7 +6086,7 @@
                       "lValueRequested": false,
                       "memberName": "mul",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 10665,
+                      "referencedDeclaration": 10637,
                       "src": "5383:13:23",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
@@ -6927,7 +6927,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-07-01T16:27:34.538Z",
+  "updatedAt": "2022-07-02T07:41:52.278Z",
   "devdoc": {
     "details": "Crowdsale is a base contract for managing a token crowdsale, allowing investors to purchase tokens with ether. This contract implements such functionality in its most fundamental form and can be extended to provide additional functionality and/or custom behavior. The external interface represents the basic interface for purchasing tokens, and conforms the base architecture for crowdsales. It is *not* intended to be modified / overridden. The internal interface conforms the extensible and modifiable surface of crowdsales. Override the methods to add functionality. Consider using 'super' where appropriate to concatenate behavior.",
     "events": {

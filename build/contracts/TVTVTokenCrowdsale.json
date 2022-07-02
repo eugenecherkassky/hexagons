@@ -502,7 +502,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_uint256t_contract$_IBankAccount_$598t_contract$_ERC721PresetMinterPauserAutoId_$9829_fromMemory",
+            "name": "abi_decode_tuple_t_uint256t_contract$_IBankAccount_$598t_contract$_ERC721PresetMinterPauserAutoId_$9801_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -1090,7 +1090,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_tuple_t_uint256t_contract$_IBankAccount_$598t_contract$_ERC721PresetMinterPauserAutoId_$9829_fromMemory(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        value0 := mload(headStart)\n        let value := mload(add(headStart, 32))\n        validator_revert_contract_ERC721PresetMinterPauserAutoId(value)\n        value1 := value\n        let value_1 := mload(add(headStart, 64))\n        validator_revert_contract_ERC721PresetMinterPauserAutoId(value_1)\n        value2 := value_1\n    }\n    function abi_encode_tuple_t_stringliteral_64ba396754921ac5cdc6388a09272386edd92a5c198850f31a7c165ba7c79b82__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 36)\n        mstore(add(headStart, 64), \"Crowdsale: token is the zero add\")\n        mstore(add(headStart, 96), \"ress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_8b72f2adcfe62a5614b704f585faa49282940ab878a00620f85b716aa41f6d78__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 20)\n        mstore(add(headStart, 64), \"Crowdsale: rate is 0\")\n        tail := add(headStart, 96)\n    }\n    function validator_revert_contract_ERC721PresetMinterPauserAutoId(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_tuple_t_uint256t_contract$_IBankAccount_$598t_contract$_ERC721PresetMinterPauserAutoId_$9801_fromMemory(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        value0 := mload(headStart)\n        let value := mload(add(headStart, 32))\n        validator_revert_contract_ERC721PresetMinterPauserAutoId(value)\n        value1 := value\n        let value_1 := mload(add(headStart, 64))\n        validator_revert_contract_ERC721PresetMinterPauserAutoId(value_1)\n        value2 := value_1\n    }\n    function abi_encode_tuple_t_stringliteral_64ba396754921ac5cdc6388a09272386edd92a5c198850f31a7c165ba7c79b82__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 36)\n        mstore(add(headStart, 64), \"Crowdsale: token is the zero add\")\n        mstore(add(headStart, 96), \"ress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_8b72f2adcfe62a5614b704f585faa49282940ab878a00620f85b716aa41f6d78__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 20)\n        mstore(add(headStart, 64), \"Crowdsale: rate is 0\")\n        tail := add(headStart, 96)\n    }\n    function validator_revert_contract_ERC721PresetMinterPauserAutoId(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
       "id": 58,
       "language": "Yul",
       "name": "#utility.yul"
@@ -1679,7 +1679,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_contract$_IERC20_$7954_fromMemory",
+            "name": "abi_decode_tuple_t_contract$_IERC20_$7926_fromMemory",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -2524,7 +2524,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_contract$_ERC721PresetMinterPauserAutoId_$9829__to_t_address__fromStack_reversed",
+            "name": "abi_encode_tuple_t_contract$_ERC721PresetMinterPauserAutoId_$9801__to_t_address__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -4791,7 +4791,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_bool_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value0 := value\n    }\n    function abi_decode_tuple_t_contract$_IERC20_$7954_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_address_t_address_t_uint256__to_t_address_t_address_t_uint256__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 96)\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), value2)\n    }\n    function abi_encode_tuple_t_contract$_ERC721PresetMinterPauserAutoId_$9829__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_contract$_IBankAccount_$598__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Ownable: new owner is the zero a\")\n        mstore(add(headStart, 96), \"ddress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Ownable: caller is not the owner\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_b9d4bce01fb5c20cfa41c5b334ad79fcf3774809b1388b0603f3dcd505be7d6e__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"Crowdsale: beneficiary is the ze\")\n        mstore(add(headStart, 96), \"ro address\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_ebf73bba305590e4764d5cb53b69bffd6d4d092d1a67551cb346f8cfcdab8619__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 31)\n        mstore(add(headStart, 64), \"ReentrancyGuard: reentrant call\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_f45555b4c8de1305c23871b4baf5a92b123c8c91d4898c309ec2af8faef1a26c__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 25)\n        mstore(add(headStart, 64), \"Crowdsale: weiAmount is 0\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function checked_add_t_uint256(x, y) -> sum\n    {\n        if gt(x, not(y)) { panic_error_0x11() }\n        sum := add(x, y)\n    }\n    function checked_div_t_uint256(x, y) -> r\n    {\n        if iszero(y)\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x12)\n            revert(0, 0x24)\n        }\n        r := div(x, y)\n    }\n    function checked_mul_t_uint256(x, y) -> product\n    {\n        if and(iszero(iszero(x)), gt(y, div(not(0), x))) { panic_error_0x11() }\n        product := mul(x, y)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function validator_revert_address(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_bool_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value0 := value\n    }\n    function abi_decode_tuple_t_contract$_IERC20_$7926_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        validator_revert_address(value)\n        value0 := value\n    }\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function abi_decode_tuple_t_uint256_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_address_t_address_t_uint256__to_t_address_t_address_t_uint256__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 96)\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), value2)\n    }\n    function abi_encode_tuple_t_contract$_ERC721PresetMinterPauserAutoId_$9801__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_contract$_IBankAccount_$598__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_stringliteral_245f15ff17f551913a7a18385165551503906a406f905ac1c2437281a7cd0cfe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Ownable: new owner is the zero a\")\n        mstore(add(headStart, 96), \"ddress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_9924ebdf1add33d25d4ef888e16131f0a5687b0580a36c21b5c301a6c462effe__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Ownable: caller is not the owner\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_b9d4bce01fb5c20cfa41c5b334ad79fcf3774809b1388b0603f3dcd505be7d6e__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"Crowdsale: beneficiary is the ze\")\n        mstore(add(headStart, 96), \"ro address\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_ebf73bba305590e4764d5cb53b69bffd6d4d092d1a67551cb346f8cfcdab8619__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 31)\n        mstore(add(headStart, 64), \"ReentrancyGuard: reentrant call\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_f45555b4c8de1305c23871b4baf5a92b123c8c91d4898c309ec2af8faef1a26c__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 25)\n        mstore(add(headStart, 64), \"Crowdsale: weiAmount is 0\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function checked_add_t_uint256(x, y) -> sum\n    {\n        if gt(x, not(y)) { panic_error_0x11() }\n        sum := add(x, y)\n    }\n    function checked_div_t_uint256(x, y) -> r\n    {\n        if iszero(y)\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x12)\n            revert(0, 0x24)\n        }\n        r := div(x, y)\n    }\n    function checked_mul_t_uint256(x, y) -> product\n    {\n        if and(iszero(iszero(x)), gt(y, div(not(0), x))) { panic_error_0x11() }\n        product := mul(x, y)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function validator_revert_address(value)\n    {\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n}",
       "id": 58,
       "language": "Yul",
       "name": "#utility.yul"
@@ -4805,88 +4805,88 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/TVTVTokenCrowdsale.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7416
+        7388
       ],
       "AccessControlEnumerable": [
-        7541
+        7513
       ],
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Counters": [
-        10220
+        10192
       ],
       "Crowdsale": [
         5713
       ],
       "ERC165": [
-        10447
+        10419
       ],
       "ERC721": [
-        9044
+        9016
       ],
       "ERC721Burnable": [
-        9208
+        9180
       ],
       "ERC721Enumerable": [
-        9546
+        9518
       ],
       "ERC721Pausable": [
-        9583
+        9555
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9829
+        9801
       ],
       "EnumerableSet": [
-        11370
+        11342
       ],
       "IAccessControl": [
-        7614
+        7586
       ],
       "IAccessControlEnumerable": [
-        7639
+        7611
       ],
       "IBankAccount": [
         598
       ],
       "IERC165": [
-        10459
+        10431
       ],
       "IERC20": [
-        7954
+        7926
       ],
       "IERC721": [
-        9160
+        9132
       ],
       "IERC721Enumerable": [
-        9614
+        9586
       ],
       "IERC721Metadata": [
-        9641
+        9613
       ],
       "IERC721Receiver": [
-        9178
+        9150
       ],
       "Ownable": [
-        7744
+        7716
       ],
       "Pausable": [
-        7836
+        7808
       ],
       "ReentrancyGuard": [
-        7876
+        7848
       ],
       "SafeERC20": [
-        8178
+        8150
       ],
       "SafeMath": [
-        10771
+        10743
       ],
       "Strings": [
-        10423
+        10395
       ],
       "TVTVTokenCrowdsale": [
         5938
@@ -4913,7 +4913,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5939,
-        "sourceUnit": 9830,
+        "sourceUnit": 9802,
         "src": "56:89:25",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4971,9 +4971,9 @@
         "linearizedBaseContracts": [
           5938,
           5713,
-          7876,
-          7744,
-          10146
+          7848,
+          7716,
+          10118
         ],
         "name": "TVTVTokenCrowdsale",
         "nameLocation": "409:18:25",
@@ -4991,7 +4991,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
               "typeString": "contract ERC721PresetMinterPauserAutoId"
             },
             "typeName": {
@@ -5001,13 +5001,13 @@
                 "id": 5797,
                 "name": "ERC721PresetMinterPauserAutoId",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 9829,
+                "referencedDeclaration": 9801,
                 "src": "475:30:25"
               },
-              "referencedDeclaration": 9829,
+              "referencedDeclaration": 9801,
               "src": "475:30:25",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                 "typeString": "contract ERC721PresetMinterPauserAutoId"
               }
             },
@@ -5068,7 +5068,7 @@
                               "referencedDeclaration": 5811,
                               "src": "770:5:25",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             }
@@ -5076,7 +5076,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             ],
@@ -5258,7 +5258,7 @@
                       "referencedDeclaration": 5799,
                       "src": "863:6:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                         "typeString": "contract ERC721PresetMinterPauserAutoId"
                       }
                     },
@@ -5272,13 +5272,13 @@
                       "referencedDeclaration": 5811,
                       "src": "872:5:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                         "typeString": "contract ERC721PresetMinterPauserAutoId"
                       }
                     },
                     "src": "863:14:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -5412,7 +5412,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
@@ -5422,13 +5422,13 @@
                       "id": 5809,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "664:30:25"
                     },
-                    "referencedDeclaration": 9829,
+                    "referencedDeclaration": 9801,
                     "src": "664:30:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -5468,7 +5468,7 @@
                             "referencedDeclaration": 5799,
                             "src": "1072:6:25",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                               "typeString": "contract ERC721PresetMinterPauserAutoId"
                             }
                           }
@@ -5476,7 +5476,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                               "typeString": "contract ERC721PresetMinterPauserAutoId"
                             }
                           ],
@@ -5526,10 +5526,10 @@
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "1033:30:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                         "typeString": "type(contract ERC721PresetMinterPauserAutoId)"
                       }
                     },
@@ -5544,7 +5544,7 @@
                     "src": "1033:47:25",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -5591,7 +5591,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
@@ -5601,13 +5601,13 @@
                       "id": 5839,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "984:30:25"
                     },
-                    "referencedDeclaration": 9829,
+                    "referencedDeclaration": 9801,
                     "src": "984:30:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -5662,7 +5662,7 @@
                           "referencedDeclaration": 5851,
                           "src": "1183:8:25",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                             "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                           }
                         },
@@ -5677,7 +5677,7 @@
                         "src": "1183:10:25",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                          "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                           "typeString": "contract ERC721PresetMinterPauserAutoId"
                         }
                       },
@@ -5688,7 +5688,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8296,
+                      "referencedDeclaration": 8268,
                       "src": "1183:20:25",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -5848,7 +5848,7 @@
                                 "referencedDeclaration": 5851,
                                 "src": "1577:8:25",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                                   "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                                 }
                               },
@@ -5863,7 +5863,7 @@
                               "src": "1577:10:25",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             },
@@ -5874,7 +5874,7 @@
                             "lValueRequested": false,
                             "memberName": "mint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 9754,
+                            "referencedDeclaration": 9726,
                             "src": "1577:15:25",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
@@ -6681,88 +6681,88 @@
     "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/launchpool/contracts/TVTV/TVTVTokenCrowdsale.sol",
     "exportedSymbols": {
       "AccessControl": [
-        7416
+        7388
       ],
       "AccessControlEnumerable": [
-        7541
+        7513
       ],
       "Address": [
-        10124
+        10096
       ],
       "Context": [
-        10146
+        10118
       ],
       "Counters": [
-        10220
+        10192
       ],
       "Crowdsale": [
         5713
       ],
       "ERC165": [
-        10447
+        10419
       ],
       "ERC721": [
-        9044
+        9016
       ],
       "ERC721Burnable": [
-        9208
+        9180
       ],
       "ERC721Enumerable": [
-        9546
+        9518
       ],
       "ERC721Pausable": [
-        9583
+        9555
       ],
       "ERC721PresetMinterPauserAutoId": [
-        9829
+        9801
       ],
       "EnumerableSet": [
-        11370
+        11342
       ],
       "IAccessControl": [
-        7614
+        7586
       ],
       "IAccessControlEnumerable": [
-        7639
+        7611
       ],
       "IBankAccount": [
         598
       ],
       "IERC165": [
-        10459
+        10431
       ],
       "IERC20": [
-        7954
+        7926
       ],
       "IERC721": [
-        9160
+        9132
       ],
       "IERC721Enumerable": [
-        9614
+        9586
       ],
       "IERC721Metadata": [
-        9641
+        9613
       ],
       "IERC721Receiver": [
-        9178
+        9150
       ],
       "Ownable": [
-        7744
+        7716
       ],
       "Pausable": [
-        7836
+        7808
       ],
       "ReentrancyGuard": [
-        7876
+        7848
       ],
       "SafeERC20": [
-        8178
+        8150
       ],
       "SafeMath": [
-        10771
+        10743
       ],
       "Strings": [
-        10423
+        10395
       ],
       "TVTVTokenCrowdsale": [
         5938
@@ -6789,7 +6789,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 5939,
-        "sourceUnit": 9830,
+        "sourceUnit": 9802,
         "src": "56:89:25",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6847,9 +6847,9 @@
         "linearizedBaseContracts": [
           5938,
           5713,
-          7876,
-          7744,
-          10146
+          7848,
+          7716,
+          10118
         ],
         "name": "TVTVTokenCrowdsale",
         "nameLocation": "409:18:25",
@@ -6867,7 +6867,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
               "typeString": "contract ERC721PresetMinterPauserAutoId"
             },
             "typeName": {
@@ -6877,13 +6877,13 @@
                 "id": 5797,
                 "name": "ERC721PresetMinterPauserAutoId",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 9829,
+                "referencedDeclaration": 9801,
                 "src": "475:30:25"
               },
-              "referencedDeclaration": 9829,
+              "referencedDeclaration": 9801,
               "src": "475:30:25",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                 "typeString": "contract ERC721PresetMinterPauserAutoId"
               }
             },
@@ -6944,7 +6944,7 @@
                               "referencedDeclaration": 5811,
                               "src": "770:5:25",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             }
@@ -6952,7 +6952,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             ],
@@ -7134,7 +7134,7 @@
                       "referencedDeclaration": 5799,
                       "src": "863:6:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                         "typeString": "contract ERC721PresetMinterPauserAutoId"
                       }
                     },
@@ -7148,13 +7148,13 @@
                       "referencedDeclaration": 5811,
                       "src": "872:5:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                        "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                         "typeString": "contract ERC721PresetMinterPauserAutoId"
                       }
                     },
                     "src": "863:14:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -7288,7 +7288,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
@@ -7298,13 +7298,13 @@
                       "id": 5809,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "664:30:25"
                     },
-                    "referencedDeclaration": 9829,
+                    "referencedDeclaration": 9801,
                     "src": "664:30:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -7344,7 +7344,7 @@
                             "referencedDeclaration": 5799,
                             "src": "1072:6:25",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                               "typeString": "contract ERC721PresetMinterPauserAutoId"
                             }
                           }
@@ -7352,7 +7352,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                              "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                               "typeString": "contract ERC721PresetMinterPauserAutoId"
                             }
                           ],
@@ -7402,10 +7402,10 @@
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "1033:30:25",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                        "typeIdentifier": "t_type$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                         "typeString": "type(contract ERC721PresetMinterPauserAutoId)"
                       }
                     },
@@ -7420,7 +7420,7 @@
                     "src": "1033:47:25",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -7467,7 +7467,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                    "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                     "typeString": "contract ERC721PresetMinterPauserAutoId"
                   },
                   "typeName": {
@@ -7477,13 +7477,13 @@
                       "id": 5839,
                       "name": "ERC721PresetMinterPauserAutoId",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 9829,
+                      "referencedDeclaration": 9801,
                       "src": "984:30:25"
                     },
-                    "referencedDeclaration": 9829,
+                    "referencedDeclaration": 9801,
                     "src": "984:30:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                      "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                       "typeString": "contract ERC721PresetMinterPauserAutoId"
                     }
                   },
@@ -7538,7 +7538,7 @@
                           "referencedDeclaration": 5851,
                           "src": "1183:8:25",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                             "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                           }
                         },
@@ -7553,7 +7553,7 @@
                         "src": "1183:10:25",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                          "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                           "typeString": "contract ERC721PresetMinterPauserAutoId"
                         }
                       },
@@ -7564,7 +7564,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8296,
+                      "referencedDeclaration": 8268,
                       "src": "1183:20:25",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -7724,7 +7724,7 @@
                                 "referencedDeclaration": 5851,
                                 "src": "1577:8:25",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9829_$",
+                                  "typeIdentifier": "t_function_internal_view$__$returns$_t_contract$_ERC721PresetMinterPauserAutoId_$9801_$",
                                   "typeString": "function () view returns (contract ERC721PresetMinterPauserAutoId)"
                                 }
                               },
@@ -7739,7 +7739,7 @@
                               "src": "1577:10:25",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9829",
+                                "typeIdentifier": "t_contract$_ERC721PresetMinterPauserAutoId_$9801",
                                 "typeString": "contract ERC721PresetMinterPauserAutoId"
                               }
                             },
@@ -7750,7 +7750,7 @@
                             "lValueRequested": false,
                             "memberName": "mint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 9754,
+                            "referencedDeclaration": 9726,
                             "src": "1577:15:25",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
@@ -8559,7 +8559,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-07-01T16:27:34.546Z",
+  "updatedAt": "2022-07-02T07:41:52.286Z",
   "devdoc": {
     "details": "Extension of Crowdsale contract whose tokens are minted in each purchase. Token ownership should be transferred to TVTVTokenCrowdsale for minting.",
     "kind": "dev",

@@ -15,7 +15,6 @@ contract("VotingManager", async function ([account]) {
     this.params = {
       proxy: "0xD433a665e2E699413709812a748c4f3d98a00f8D",
       implementation: "0xcfc1D33F825c35F525fD087dE24Cf64c1Ee9a9C3",
-      startDateTime: Math.floor(new Date().getTime() / 1000),
       endDateTime: Math.floor(new Date().getTime() / 1000) + 5,
     };
 
@@ -48,7 +47,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
 
@@ -57,7 +55,6 @@ contract("VotingManager", async function ([account]) {
       await this.votingManager.add(
         this.params.implementation,
         this.params.proxy,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
 
@@ -68,12 +65,7 @@ contract("VotingManager", async function ([account]) {
       votings[0].id.should.equal(votingId);
       votings[0].proxy.should.equal(this.params.proxy);
       votings[0].implementation.should.equal(this.params.implementation);
-
-      votings[0].startDateTime.should.equal(
-        this.params.startDateTime.toString()
-      );
       votings[0].endDateTime.should.equal(this.params.endDateTime.toString());
-
       votings[0].agreeNumber.should.equal("0");
       votings[0].isAgree.should.be.false;
       votings[0].disagreeNumber.should.equal("0");
@@ -95,7 +87,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
@@ -105,7 +96,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
@@ -133,7 +123,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
@@ -164,7 +153,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
 
@@ -199,7 +187,6 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.startDateTime,
         this.params.endDateTime
       ).should.be.fulfilled;
 
