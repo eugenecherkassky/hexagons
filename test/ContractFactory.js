@@ -10,13 +10,19 @@ const TVTVToken = artifacts.require("TVTV/TVTVToken");
 
 module.exports = {
   createLaunchpool: (treasury) => {
-    return deployProxy(Launchpool, [treasury]);
+    return deployProxy(Launchpool, [treasury], {
+      initializer: "__Launchpool_init",
+    });
   },
   createMint: (tvt) => {
-    return deployProxy(Mint, [tvt]);
+    return deployProxy(Mint, [tvt], {
+      initializer: "__Mint_init",
+    });
   },
   createTreasury: (tvt) => {
-    return deployProxy(Treasury, [tvt]);
+    return deployProxy(Treasury, [tvt], {
+      initializer: "__Treasury_init",
+    });
   },
   createTVT: () => {
     return TVT.new(process.env.TVT_TOKEN_NAME, process.env.TVT_TOKEN_SYMBOL);

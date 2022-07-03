@@ -16,6 +16,7 @@ contract("VotingManager", async function ([account]) {
       proxy: "0xD433a665e2E699413709812a748c4f3d98a00f8D",
       implementation: "0xcfc1D33F825c35F525fD087dE24Cf64c1Ee9a9C3",
       endDateTime: Math.floor(new Date().getTime() / 1000) + 5,
+      git: "http://git.com",
     };
 
     this.tvt = await ContractFactory.createTVT();
@@ -33,7 +34,9 @@ contract("VotingManager", async function ([account]) {
       this.crowdsale.address
     ).should.be.fulfilled;
 
-    this.votingManager = await deployProxy(VotingManager, [this.tvtv.address]);
+    this.votingManager = await deployProxy(VotingManager, [this.tvtv.address], {
+      initializer: "__VotingManager_init",
+    });
   });
 
   describe("Config validation", function () {
@@ -47,7 +50,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
 
       const votingId = logs[logs.length - 1].args.id;
@@ -55,7 +59,8 @@ contract("VotingManager", async function ([account]) {
       await this.votingManager.add(
         this.params.implementation,
         this.params.proxy,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
 
       let votings = await this.votingManager.getResult().should.be.fulfilled;
@@ -66,6 +71,7 @@ contract("VotingManager", async function ([account]) {
       votings[0].proxy.should.equal(this.params.proxy);
       votings[0].implementation.should.equal(this.params.implementation);
       votings[0].endDateTime.should.equal(this.params.endDateTime.toString());
+      votings[0].git.should.equal(this.params.git);
       votings[0].agreeNumber.should.equal("0");
       votings[0].isAgree.should.be.false;
       votings[0].disagreeNumber.should.equal("0");
@@ -87,7 +93,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
       await this.votingManager.vote(votingId, true).should.be.rejected;
@@ -96,7 +103,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
       const value = 1;
@@ -123,7 +131,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
       const votingId = logs[logs.length - 1].args.id;
       const value = 1;
@@ -153,7 +162,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
 
       const votingId = logs[logs.length - 1].args.id;
@@ -187,7 +197,8 @@ contract("VotingManager", async function ([account]) {
       const { logs } = await this.votingManager.add(
         this.params.proxy,
         this.params.implementation,
-        this.params.endDateTime
+        this.params.endDateTime,
+        this.params.git
       ).should.be.fulfilled;
 
       const votingId = logs[logs.length - 1].args.id;

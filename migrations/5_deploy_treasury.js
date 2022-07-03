@@ -8,5 +8,6 @@ module.exports = async function (deployer) {
 
   await deployProxy(Treasury, [tvt.address], {
     deployer,
+    initializer: "__Treasury_init",
   });
 };

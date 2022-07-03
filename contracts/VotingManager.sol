@@ -22,6 +22,7 @@ contract VotingManager is
         address proxy;
         IUpgradeable implementation;
         uint256 endDateTime;
+        string git;
         address[] agree;
         address[] disagree;
         uint256 approvedDateTime;
@@ -32,6 +33,7 @@ contract VotingManager is
         address proxy;
         IUpgradeable implementation;
         uint256 endDateTime;
+        string git;
         uint256 agreeNumber;
         bool isAgree;
         uint256 disagreeNumber;
@@ -57,7 +59,8 @@ contract VotingManager is
     function add(
         address proxy,
         IUpgradeable implementation,
-        uint256 endDateTime
+        uint256 endDateTime,
+        string memory git
     ) external onlyOwner {
         address[] memory result;
 
@@ -66,6 +69,7 @@ contract VotingManager is
             proxy: proxy,
             implementation: implementation,
             endDateTime: endDateTime,
+            git: git,
             agree: result,
             disagree: result,
             approvedDateTime: 0
@@ -94,7 +98,7 @@ contract VotingManager is
         voting.approvedDateTime = block.timestamp;
     }
 
-    function initialize(TVTVToken token) public initializer {
+    function __VotingManager_init(TVTVToken token) public initializer {
         __Context_init();
         __Ownable_init();
 
@@ -116,6 +120,7 @@ contract VotingManager is
                 proxy: voting.proxy,
                 implementation: voting.implementation,
                 endDateTime: voting.endDateTime,
+                git: voting.git,
                 agreeNumber: voting.agree.length,
                 isAgree: _isInVoters(voting.agree, voter),
                 disagreeNumber: voting.disagree.length,

@@ -14,6 +14,7 @@ module.exports = async function (deployer) {
 
   const mint = await deployProxy(Mint, [tvt.address], {
     deployer,
+    initializer: "__Mint_init",
   });
 
   tvt.transfer(mint.address, process.env.MINT_INITIAL_SUPPLY);

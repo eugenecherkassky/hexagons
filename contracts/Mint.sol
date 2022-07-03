@@ -26,7 +26,7 @@ contract Mint is Initializable, BankAccountSupplier {
         }
     }
 
-    function initialize(IERC20 token) public initializer {
+    function __Mint_init(IERC20 token) public initializer {
         __BankAccountSupplier_init(token);
     }
 

@@ -17,6 +17,7 @@ module.exports = async function (deployer) {
 
   const launchpool = await deployProxy(Launchpool, [treasury.address], {
     deployer,
+    initializer: "__Launchpool_init",
   });
 
   launchpool.setDepositPrograms(depositPrograms);

@@ -63,7 +63,7 @@ contract Launchpool is
         emit LaunchpoolDepositCreated(deposit);
     }
 
-    function initialize(IBankAccount treasury) public initializer {
+    function __Launchpool_init(IBankAccount treasury) public initializer {
         __Ownable_init();
         __BankAccount_init(treasury.getToken());
         __Refillable_init();

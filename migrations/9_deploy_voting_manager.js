@@ -10,5 +10,6 @@ module.exports = async function (deployer) {
 
   await deployProxy(VotingManager, [tvtv.address], {
     deployer,
+    initializer: "__VotingManager_init",
   });
 };
