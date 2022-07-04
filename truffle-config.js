@@ -51,6 +51,7 @@ module.exports = {
           process.env.MNEMONIC,
           `https://data-seed-prebsc-2-s1.binance.org:8545`
         ),
+      from: "0xec473a6f28ba1ef107a74ce333e901980d18431d",
       network_id: 97,
       confirmations: 10,
       timeoutBlocks: 200,
