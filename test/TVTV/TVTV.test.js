@@ -23,11 +23,11 @@ contract("TVTV", function ([account]) {
     it("tracks minting", async function () {
       const prevBalance = await this.tvtv.balanceOf(account);
 
-      (await this.tvtv.getNumber()).toString().should.be.equal("0");
+      (await this.tvtv.totalSupply()).toString().should.be.equal("0");
 
       await this.tvtv.mint(account).should.be.fulfilled;
 
-      (await this.tvtv.getNumber()).toString().should.be.equal("1");
+      (await this.tvtv.totalSupply()).toString().should.be.equal("1");
 
       const currentBalance = await this.tvtv.balanceOf(account);
 
@@ -35,15 +35,15 @@ contract("TVTV", function ([account]) {
     });
 
     it("tracks burning", async function () {
-      (await this.tvtv.getNumber()).toString().should.be.equal("0");
+      (await this.tvtv.totalSupply()).toString().should.be.equal("0");
 
       const { receipt } = await this.tvtv.mint(account);
 
-      (await this.tvtv.getNumber()).toString().should.be.equal("1");
+      (await this.tvtv.totalSupply()).toString().should.be.equal("1");
 
       await this.tvtv.burn(receipt.logs[0].args.tokenId.toString());
 
-      (await this.tvtv.getNumber()).toString().should.be.equal("0");
+      (await this.tvtv.totalSupply()).toString().should.be.equal("0");
     });
   });
 });
