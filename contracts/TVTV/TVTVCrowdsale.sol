@@ -8,16 +8,16 @@ import "../IBankAccount.sol";
 import "./Crowdsale.sol";
 
 /**
- * @title TVTVTokenCrowdsale
+ * @title TVTVCrowdsale
  * @dev Extension of Crowdsale contract whose tokens are minted in each purchase.
- * Token ownership should be transferred to TVTVTokenCrowdsale for minting.
+ * Token ownership should be transferred to TVTVCrowdsale for minting.
  */
-contract TVTVTokenCrowdsale is Crowdsale {
+contract TVTVCrowdsale is Crowdsale {
     // The token being sold
     ERC721PresetMinterPauserAutoId private _token;
 
-    error TVTTokenAlreadyBought();
-    error TVTTokenOnlyOne();
+    error TVTVAlreadyBought();
+    error TVTVOnlyOne();
 
     constructor(
         uint256 rate,
@@ -67,13 +67,13 @@ contract TVTVTokenCrowdsale is Crowdsale {
         uint256 tokenAmount = _getTokenAmount(weiAmount);
 
         if (tokenAmount != 1) {
-            revert TVTTokenOnlyOne();
+            revert TVTVOnlyOne();
         }
 
         uint256 balance = _balanceOf(beneficiary);
 
         if (balance != 0) {
-            revert TVTTokenAlreadyBought();
+            revert TVTVAlreadyBought();
         }
     }
 }

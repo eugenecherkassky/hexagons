@@ -4,20 +4,20 @@ require("chai").use(require("chai-as-promised")).should();
 
 const ContractFactory = require("../ContractFactory");
 
-contract("TVTVToken", function ([account]) {
+contract("TVTV", function ([account]) {
   beforeEach(async function () {
-    this.tvtv = await ContractFactory.createTVTVToken();
+    this.tvtv = await ContractFactory.createTVTV();
   });
 
   describe("Settings", function () {
     it("tracks the name", async function () {
       const name = await this.tvtv.name();
-      name.should.be.equal(process.env.TVTV_TOKEN_NAME);
+      name.should.be.equal(process.env.TVTV_NAME);
     });
 
     it("tracks the symbol", async function () {
       const symbol = await this.tvtv.symbol();
-      symbol.should.be.equal(process.env.TVTV_TOKEN_SYMBOL);
+      symbol.should.be.equal(process.env.TVTV_SYMBOL);
     });
 
     it("tracks minting", async function () {

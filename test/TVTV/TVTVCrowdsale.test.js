@@ -5,16 +5,16 @@ require("chai").use(require("chai-as-promised")).should();
 
 const ContractFactory = require("../ContractFactory");
 
-const TVTVTokenCrowdsale = artifacts.require("TVTV/TVTVTokenCrowdsale");
+const TVTVCrowdsale = artifacts.require("TVTV/TVTVCrowdsale");
 
-contract("TVTVTokenCrowdsale", async function ([account]) {
+contract("TVTVCrowdsale", async function ([account]) {
   beforeEach(async function () {
     this.tvt = await ContractFactory.createTVT();
     this.treasury = await ContractFactory.createTreasury(this.tvt.address);
-    this.tvtv = await ContractFactory.createTVTVToken();
+    this.tvtv = await ContractFactory.createTVTV();
 
-    this.crowdsale = await TVTVTokenCrowdsale.new(
-      process.env.TVTV_TOKEN_RATE,
+    this.crowdsale = await TVTVCrowdsale.new(
+      process.env.TVTV_RATE,
       this.treasury.address,
       this.tvtv.address
     );
@@ -29,7 +29,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
     it("tracks the rate", async function () {
       const rate = await this.crowdsale.getRate();
 
-      rate.toString().should.be.equal(process.env.TVTV_TOKEN_RATE);
+      rate.toString().should.be.equal(process.env.TVTV_RATE);
     });
 
     it("tracks the token", async function () {
@@ -41,7 +41,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
 
   describe("Settings", function () {
     it("rate updating", async function () {
-      const rateValue = process.env.TVTV_TOKEN_RATE * 2;
+      const rateValue = process.env.TVTV_RATE * 2;
 
       await this.crowdsale.setRate(rateValue);
 
@@ -57,10 +57,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
 
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       );
 
       await this.crowdsale.sendTransaction({
@@ -74,10 +71,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
 
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       );
 
       await this.crowdsale.sendTransaction({
@@ -95,10 +89,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
       };
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       );
 
       await this.crowdsale.sendTransaction({
@@ -129,7 +120,7 @@ contract("TVTVTokenCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei(
-          (2 * process.env.TVTV_TOKEN_RATE * value).toString(),
+          (2 * process.env.TVTV_RATE * value).toString(),
           "ether"
         )
       );

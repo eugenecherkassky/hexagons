@@ -5,7 +5,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
 
-import "./TVTV/TVTVToken.sol";
+import "./TVTV/TVTV.sol";
 
 import "./IUpgradeable.sol";
 
@@ -43,7 +43,7 @@ contract VotingManager is
 
     Voting[] internal _votings;
 
-    TVTVToken internal _token;
+    TVTV internal _token;
 
     error VotingAlreadyApproved(bytes32 id);
     error VotingAlreadyEnded(bytes32 id, uint256 endDateTime);
@@ -98,7 +98,7 @@ contract VotingManager is
         voting.approvedDateTime = block.timestamp;
     }
 
-    function __VotingManager_init(TVTVToken token) public initializer {
+    function __VotingManager_init(TVTV token) public initializer {
         __Context_init();
         __Ownable_init();
 
@@ -132,7 +132,7 @@ contract VotingManager is
         return votingsResult;
     }
 
-    function getToken() external view returns (TVTVToken token) {
+    function getToken() external view returns (TVTV token) {
         return _token;
     }
 

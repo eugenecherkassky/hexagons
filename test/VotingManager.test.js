@@ -8,7 +8,7 @@ const ContractFactory = require("./ContractFactory");
 const timeout = require("./utils/timeout");
 
 const VotingManager = artifacts.require("VotingManager");
-const TVTVTokenCrowdsale = artifacts.require("TVTV/TVTVTokenCrowdsale");
+const TVTVCrowdsale = artifacts.require("TVTV/TVTVCrowdsale");
 
 contract("VotingManager", async function ([account]) {
   beforeEach(async function () {
@@ -21,10 +21,10 @@ contract("VotingManager", async function ([account]) {
 
     this.tvt = await ContractFactory.createTVT();
     this.treasury = await ContractFactory.createTreasury(this.tvt.address);
-    this.tvtv = await ContractFactory.createTVTVToken();
+    this.tvtv = await ContractFactory.createTVTV();
 
-    this.crowdsale = await TVTVTokenCrowdsale.new(
-      process.env.TVTV_TOKEN_RATE,
+    this.crowdsale = await TVTVCrowdsale.new(
+      process.env.TVTV_RATE,
       this.treasury.address,
       this.tvtv.address
     ).should.be.fulfilled;
@@ -110,10 +110,7 @@ contract("VotingManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       ).should.be.fulfilled;
       await this.crowdsale.sendTransaction({
         from: account,
@@ -138,10 +135,7 @@ contract("VotingManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       ).should.be.fulfilled;
       await this.crowdsale.sendTransaction({
         from: account,
@@ -171,10 +165,7 @@ contract("VotingManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       ).should.be.fulfilled;
 
       await this.crowdsale.sendTransaction({
@@ -206,10 +197,7 @@ contract("VotingManager", async function ([account]) {
       const value = 1;
       await this.tvt.approve(
         this.crowdsale.address,
-        Web3.utils.toWei(
-          (process.env.TVTV_TOKEN_RATE * value).toString(),
-          "ether"
-        )
+        Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
       ).should.be.fulfilled;
 
       await this.crowdsale.sendTransaction({

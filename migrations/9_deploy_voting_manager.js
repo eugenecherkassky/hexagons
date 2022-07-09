@@ -1,12 +1,12 @@
 const { deployProxy } = require("@openzeppelin/truffle-upgrades");
 
-const TVTVToken = artifacts.require("TVTV/TVTVToken");
+const TVTV = artifacts.require("TVTV/TVTV");
 const VotingManager = artifacts.require("VotingManager");
 
 module.exports = async function (deployer) {
   require("dotenv").config();
 
-  const tvtv = await TVTVToken.deployed();
+  const tvtv = await TVTV.deployed();
 
   await deployProxy(VotingManager, [tvtv.address], {
     deployer,

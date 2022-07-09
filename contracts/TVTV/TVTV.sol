@@ -1,19 +1,21 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
-import "@openzeppelin/contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC721/presets/ERC721PresetMinterPauserAutoIdUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol";
 
-contract TVTVToken is ERC721PresetMinterPauserAutoId {
-    using Counters for Counters.Counter;
+contract TVTV is ERC721PresetMinterPauserAutoIdUpgradeable {
+    using CountersUpgradeable for CountersUpgradeable.Counter;
 
-    Counters.Counter private _counterTracker;
+    CountersUpgradeable.Counter private _counterTracker;
 
-    constructor(
+    function __TVTV_init(
         string memory name,
         string memory symbol,
         string memory baseTokenURI
-    ) ERC721PresetMinterPauserAutoId(name, symbol, baseTokenURI) {}
+    ) public initializer {
+        __ERC721PresetMinterPauserAutoId_init(name, symbol, baseTokenURI);
+    }
 
     function burn(uint256 tokenId) public override {
         super.burn(tokenId);
