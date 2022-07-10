@@ -7,6 +7,8 @@ const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
 const TVT = artifacts.require("TVT/TVT");
 const TVTV = artifacts.require("TVTV/TVTV");
+const User = artifacts.require("User");
+const Wallet = artifacts.require("Wallet");
 
 module.exports = {
   createLaunchpool: (treasury) => {
@@ -35,5 +37,15 @@ module.exports = {
         initializer: "__TVTV_init",
       }
     );
+  },
+  createUser: (wallet) => {
+    return deployProxy(User, [wallet], {
+      initializer: "__User_init",
+    });
+  },
+  createWallet: (tvt) => {
+    return deployProxy(Wallet, [tvt], {
+      initializer: "__Wallet_init",
+    });
   },
 };

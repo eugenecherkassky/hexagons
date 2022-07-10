@@ -6,6 +6,10 @@ import "./IBankAccount.sol";
 abstract contract BankAccountBase is IBankAccount {
     IERC20 internal _token;
 
+    function __BankAccountBase_init(IERC20 token) internal {
+        _token = token;
+    }
+
     function getBalance() public view override returns (uint256) {
         return _token.balanceOf(address(this));
     }
@@ -23,9 +27,10 @@ abstract contract BankAccountBase is IBankAccount {
         return _token.transfer(to, amount);
     }
 
-    function _transferTo(address from, uint256 amount)
-        internal
+    function transferTo(address from, uint256 amount)
+        public
         virtual
+        override
         returns (bool)
     {
         return _token.transferFrom(from, address(this), amount);

@@ -10,5 +10,5 @@ interface IBankAccount {
 
     function transferFrom(address to, uint256 amount) external returns (bool);
 
-    function transferTo(uint256 amount) external returns (bool);
+    function transferTo(address from, uint256 amount) external returns (bool);
 }

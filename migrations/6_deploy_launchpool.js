@@ -5,7 +5,7 @@ const Launchpool = artifacts.require("Launchpool/Launchpool");
 const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
 
-const depositPrograms = require("../test/DepositPrograms");
+const depositPrograms = require("../data/depositPrograms.json");
 
 module.exports = async function (deployer) {
   require("dotenv").config();

@@ -108,7 +108,7 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
         return false;
     }
 
-    function transferTo(uint256) public pure override returns (bool) {
+    function transferTo(address, uint256) public pure override returns (bool) {
         return false;
     }
 
@@ -174,7 +174,7 @@ abstract contract BaseDeposit is Ownable, AccessControl, BankAccount {
         transaction.payed = block.timestamp;
 
         if (transaction.kind == TransactionKind.DEPOSIT) {
-            return super.transferTo(transaction.amount);
+            return super.transferTo(_msgSender(), transaction.amount);
         }
 
         return super.transferFrom(transaction.account, transaction.amount);

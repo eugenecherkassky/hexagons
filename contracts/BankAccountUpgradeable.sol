@@ -14,12 +14,6 @@ abstract contract BankAccountUpgradeable is
     function __BankAccount_init(IERC20 token) internal onlyInitializing {
         __Context_init();
 
-        _token = token;
-    }
-
-    function transferTo(uint256 amount) public virtual override returns (bool) {
-        address from = _msgSender();
-
-        return _transferTo(from, amount);
+        __BankAccountBase_init(token);
     }
 }

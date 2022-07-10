@@ -10,6 +10,7 @@
     "analyze": "myth analyze --solc-json mythril.json contracts/**/*.sol",
     "check": "npm-check --skip-unused",
     "compile": "truffle compile -all",
+    "lands": "cp ../universum/public/data/lands.json ./data",
     "test": "truffle test"
   },
   "repository": {
@@ -28,7 +29,7 @@
     "chai": "4.3.6",
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",
-    "npm-check": "^4.1.4",
+    "npm-check": "4.1.4",
     "web3-utils": "1.7.3"
   },
   "dependencies": {
@@ -36,8 +37,8 @@
     "@openzeppelin/contracts-upgradeable": "4.6.0",
     "@truffle/hdwallet-provider": "2.0.8",
     "dotenv": "16.0.1",
-    "truffle": "^5.1.65",
-    "truffle-hdwallet-provider": "^1.0.17",
-    "web3": "^1.7.4"
+    "truffle": "5.1.65",
+    "truffle-hdwallet-provider": "1.0.17",
+    "web3": "1.7.4"
   }
 }

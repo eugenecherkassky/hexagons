@@ -1,0 +1,46 @@
+[
+  {
+    "amountMaximum": 1000,
+    "amountMinimum": 1,
+    "isDepositable": false,
+    "isTerminatable": false,
+    "periodMaximum": 30,
+    "periodMinimum": 10,
+    "program": "base",
+    "rate": 90,
+    "terminationPenalty": 1
+  },
+  {
+    "amountMaximum": 1000,
+    "amountMinimum": 1,
+    "isDepositable": false,
+    "isTerminatable": true,
+    "periodMaximum": 30,
+    "periodMinimum": 10,
+    "program": "not depositable",
+    "rate": 90,
+    "terminationPenalty": 1
+  },
+  {
+    "amountMaximum": 1000,
+    "amountMinimum": 1,
+    "isDepositable": true,
+    "isTerminatable": false,
+    "periodMaximum": 30,
+    "periodMinimum": 10,
+    "program": "depositable",
+    "rate": 90,
+    "terminationPenalty": 1
+  },
+  {
+    "amountMaximum": 1000,
+    "amountMinimum": 1,
+    "isDepositable": true,
+    "isTerminatable": true,
+    "periodMaximum": 30,
+    "periodMinimum": 10,
+    "program": "terminatable",
+    "rate": 90,
+    "terminationPenalty": 1
+  }
+]

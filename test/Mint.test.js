@@ -3,7 +3,8 @@ require("dotenv").config();
 require("chai").use(require("chai-as-promised")).should();
 
 const ContractFactory = require("./ContractFactory");
-const depositPrograms = require("./DepositPrograms");
+
+const depositPrograms = require("../data/depositPrograms");
 
 const Deposit = artifacts.require("Deposit");
 
