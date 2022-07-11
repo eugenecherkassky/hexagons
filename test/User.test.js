@@ -1,10 +1,11 @@
 require("dotenv").config();
 
 require("chai").use(require("chai-as-promised")).should();
+const Web3 = require("web3");
 
 const ContractFactory = require("./ContractFactory");
 
-contract("User", async function () {
+contract("User", async function ([account]) {
   beforeEach(async function () {
     this.tvt = await ContractFactory.createTVT();
     this.wallet = await ContractFactory.createWallet(this.tvt.address);
@@ -12,10 +13,33 @@ contract("User", async function () {
   });
 
   describe("Settings", function () {
-    it("username", async function () {
+    it("Wallet price validation", async function () {
+      const name = await this.tvt.name();
+
+      name.toString().should.be.equal(process.env.TVT_NAME);
+    });
+
+    it("Wallet price validation", async function () {
+      const price = await this.wallet.getUserUsernameChangingFee();
+
+      price.toString().should.be.equal("1");
+    });
+
+    it("Username changing", async function () {
       const username = "test_account";
 
-      await this.user.setUsername(username);
+      const price = await this.wallet.getUserUsernameChangingFee().should.be
+        .fulfilled;
+
+      await this.tvt.approve(
+        this.wallet.address,
+        Web3.utils.toWei(price.toString(), "ether")
+      ).should.be.fulfilled;
+
+      await this.user.setUsername(username, {
+        from: account,
+        value: Web3.utils.toWei(price.toString(), "ether"),
+      }).should.be.fulfilled;
 
       const profile = await this.user.getProfile();
 

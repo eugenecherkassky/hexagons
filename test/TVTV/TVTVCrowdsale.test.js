@@ -58,7 +58,7 @@ contract("TVTVCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
-      );
+      ).should.be.fulfilled;
 
       await this.crowdsale.sendTransaction({
         from: account,
@@ -72,7 +72,7 @@ contract("TVTVCrowdsale", async function ([account]) {
       await this.tvt.approve(
         this.crowdsale.address,
         Web3.utils.toWei((process.env.TVTV_RATE * value).toString(), "ether")
-      );
+      ).should.be.fulfilled;
 
       await this.crowdsale.sendTransaction({
         from: account,

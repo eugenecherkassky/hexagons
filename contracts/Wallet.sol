@@ -11,11 +11,11 @@ contract Wallet is Initializable, BankAccountUpgradeable {
         __BankAccount_init(token);
     }
 
-    function getUserUsernameChangingFee() public pure returns (uint256) {
-        return 10;
+    function getTVTLLicencePrice(uint8) public pure returns (uint256) {
+        return 1;
     }
 
-    function getTVTLLicencePrice(uint8) public pure returns (uint256) {
-        return 10;
+    function getUserUsernameChangingFee() public pure returns (uint256) {
+        return 1;
     }
 }
