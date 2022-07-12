@@ -2,12 +2,12 @@
 pragma solidity 0.8.7;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
 
-import "./Wallet.sol";
+import "./Wallet/Wallet.sol";
 
-contract User is ContextUpgradeable {
+contract User is OwnableUpgradeable {
     struct Profile {
         string username;
     }
@@ -19,13 +19,15 @@ contract User is ContextUpgradeable {
     Wallet private _wallet;
 
     function __User_init(Wallet wallet) public initializer {
-        __Context_init();
+        __Ownable_init();
 
-        _wallet = wallet;
+        setWallet(wallet);
     }
 
     function getProfile() public view returns (Profile memory profile) {
-        return _profiles[_msgSender()];
+        address sender = _msgSender();
+
+        return _profiles[sender];
     }
 
     function getWallet() public view returns (Wallet) {
@@ -33,14 +35,18 @@ contract User is ContextUpgradeable {
     }
 
     function setUsername(string memory username) external payable {
-        address user = _msgSender();
+        address sender = _msgSender();
 
-        _profiles[user].username = username;
+        _profiles[sender].username = username;
 
-        uint256 price = _wallet.getUserUsernameChangingFee();
+        uint256 price = _wallet.getUserSetUsernamePrice();
 
         require(msg.value / 10**18 == price, "Amount is not equal");
 
-        _wallet.transferTo(user, msg.value);
+        _wallet.transferTo(sender, msg.value);
+    }
+
+    function setWallet(Wallet wallet) public onlyOwner {
+        _wallet = wallet;
     }
 }

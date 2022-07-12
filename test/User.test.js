@@ -20,7 +20,7 @@ contract("User", async function ([account]) {
     });
 
     it("Wallet price validation", async function () {
-      const price = await this.wallet.getUserUsernameChangingFee();
+      const price = await this.wallet.getUserSetUsernamePrice();
 
       price.toString().should.be.equal("1");
     });
@@ -28,7 +28,7 @@ contract("User", async function ([account]) {
     it("Username changing", async function () {
       const username = "test_account";
 
-      const price = await this.wallet.getUserUsernameChangingFee().should.be
+      const price = await this.wallet.getUserSetUsernamePrice().should.be
         .fulfilled;
 
       await this.tvt.approve(

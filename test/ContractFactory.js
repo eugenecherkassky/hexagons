@@ -2,6 +2,9 @@ const { deployProxy } = require("@openzeppelin/truffle-upgrades");
 
 require("dotenv").config();
 
+const licences = require("../data/licences.json");
+const rents = require("../data/rents.json");
+
 const Launchpool = artifacts.require("Launchpool");
 const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
@@ -44,7 +47,7 @@ module.exports = {
     });
   },
   createWallet: (tvt) => {
-    return deployProxy(Wallet, [tvt], {
+    return deployProxy(Wallet, [tvt, licences, rents], {
       initializer: "__Wallet_init",
     });
   },
