@@ -3,28 +3,23 @@ require("dotenv").config();
 require("chai").use(require("chai-as-promised")).should();
 const Web3 = require("web3");
 
+const licenses = require("../data/licenses");
+const rents = require("../data/rents");
+
 const ContractFactory = require("./ContractFactory");
 
 contract("User", async function ([account]) {
   beforeEach(async function () {
     this.tvt = await ContractFactory.createTVT();
-    this.wallet = await ContractFactory.createWallet(this.tvt.address);
+    this.wallet = await ContractFactory.createWallet(
+      this.tvt.address,
+      licenses,
+      rents
+    );
     this.user = await ContractFactory.createUser(this.wallet.address);
   });
 
-  describe("Settings", function () {
-    it("Wallet price validation", async function () {
-      const name = await this.tvt.name();
-
-      name.toString().should.be.equal(process.env.TVT_NAME);
-    });
-
-    it("Wallet price validation", async function () {
-      const price = await this.wallet.getUserSetUsernamePrice();
-
-      price.toString().should.be.equal("1");
-    });
-
+  describe("API", function () {
     it("Username changing", async function () {
       const username = "test_account";
 
@@ -44,6 +39,11 @@ contract("User", async function ([account]) {
       const profile = await this.user.getProfile();
 
       username.toString().should.be.equal(profile.username);
+
+      const balance = await this.tvt.balanceOf(this.wallet.address).should.be
+        .fulfilled;
+
+      price.toString().should.be.equal(balance.toString());
     });
   });
 });

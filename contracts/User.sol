@@ -43,7 +43,7 @@ contract User is OwnableUpgradeable {
 
         require(msg.value / 10**18 == price, "Amount is not equal");
 
-        _wallet.transferTo(sender, msg.value);
+        _wallet.transferTo(sender, price);
     }
 
     function setWallet(Wallet wallet) public onlyOwner {

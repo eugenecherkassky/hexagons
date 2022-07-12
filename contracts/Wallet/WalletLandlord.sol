@@ -63,7 +63,7 @@ abstract contract WalletLandlord is Initializable, OwnableUpgradeable {
     function setLandlordRents(Landlord.Rent[] memory rents) public onlyOwner {
         delete _landlordRents;
 
-        for (uint8 i = 0; i < _landlordRents.length; i++) {
+        for (uint8 i = 0; i < rents.length; i++) {
             _landlordRents.push(rents[i]);
         }
     }
