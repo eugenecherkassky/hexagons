@@ -1,0 +1,562 @@
+{
+  "contractName": "BankAccount",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferTo",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferTo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol\":\"BankAccount\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol\":{\"keccak256\":\"0x3ed2d13abbca21a8d64e9a434215642750c6c92b35f75420393db1401313e50e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9d390b337f6f8b99eea39a6143ecc263bfe1837266420bdb8e708a9962e3fd91\",\"dweb:/ipfs/QmfMnd36w2KQmVMLayboeRzNNsFEqu4jVmZ76BnNeArdtD\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountBase.sol\":{\"keccak256\":\"0xe51348fb899deae7ac15bebd25f8732f217f98c9a5951d7970d95298470faaaf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e468caaa7d1b2961736638da0c025803ee4fc01cf11c65cd8904a31d6ab17ccf\",\"dweb:/ipfs/QmbkSnLADCzbaAm1JDw5iNmzQLNchYCUx638iCvVam6Mc4\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol\":{\"keccak256\":\"0x798f716b4b00bc97b0c21645860a1b65ae290e196e98e5a5825ee38643bb2178\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9d1e41e7aba25abe01788a2eed3bcd455143f95e24106043ec40d0944aa9866\",\"dweb:/ipfs/QmbMujy8uQTi6jsAwxuCUQ6PMiTBYp2BDNZW1kjErJdJYt\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"@openzeppelin/contracts/utils/Context.sol\";\n\nimport \"./BankAccountBase.sol\";\n\nabstract contract BankAccount is Context, BankAccountBase {\n    constructor(IERC20 token) {\n        __BankAccountBase_init(token);\n    }\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol",
+    "exportedSymbols": {
+      "BankAccount": [
+        19
+      ],
+      "BankAccountBase": [
+        102
+      ],
+      "Context": [
+        15352
+      ],
+      "IBankAccount": [
+        574
+      ],
+      "IERC20": [
+        13160
+      ]
+    },
+    "id": 20,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
+        "file": "@openzeppelin/contracts/utils/Context.sol",
+        "id": 2,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 20,
+        "sourceUnit": 15353,
+        "src": "56:51:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountBase.sol",
+        "file": "./BankAccountBase.sol",
+        "id": 3,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 20,
+        "sourceUnit": 103,
+        "src": "109:31:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 4,
+              "name": "Context",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 15352,
+              "src": "175:7:0"
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "175:7:0"
+          },
+          {
+            "baseName": {
+              "id": 6,
+              "name": "BankAccountBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 102,
+              "src": "184:15:0"
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "184:15:0"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 19,
+        "linearizedBaseContracts": [
+          19,
+          102,
+          574,
+          15352
+        ],
+        "name": "BankAccount",
+        "nameLocation": "160:11:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "232:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 14,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "265:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$13160",
+                          "typeString": "contract IERC20"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IERC20_$13160",
+                          "typeString": "contract IERC20"
+                        }
+                      ],
+                      "id": 13,
+                      "name": "__BankAccountBase_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "242:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_IERC20_$13160_$returns$__$",
+                        "typeString": "function (contract IERC20)"
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "242:29:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "242:29:0"
+                }
+              ]
+            },
+            "id": 18,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "225:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "218:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13160",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13160,
+                      "src": "218:6:0"
+                    },
+                    "referencedDeclaration": 13160,
+                    "src": "218:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13160",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:14:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "232:0:0"
+            },
+            "scope": 19,
+            "src": "206:72:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 20,
+        "src": "142:138:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:249:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol",
+    "exportedSymbols": {
+      "BankAccount": [
+        19
+      ],
+      "BankAccountBase": [
+        102
+      ],
+      "Context": [
+        15352
+      ],
+      "IBankAccount": [
+        574
+      ],
+      "IERC20": [
+        13160
+      ]
+    },
+    "id": 20,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:0"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
+        "file": "@openzeppelin/contracts/utils/Context.sol",
+        "id": 2,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 20,
+        "sourceUnit": 15353,
+        "src": "56:51:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountBase.sol",
+        "file": "./BankAccountBase.sol",
+        "id": 3,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 20,
+        "sourceUnit": 103,
+        "src": "109:31:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 4,
+              "name": "Context",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 15352,
+              "src": "175:7:0"
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "175:7:0"
+          },
+          {
+            "baseName": {
+              "id": 6,
+              "name": "BankAccountBase",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 102,
+              "src": "184:15:0"
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "184:15:0"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 19,
+        "linearizedBaseContracts": [
+          19,
+          102,
+          574,
+          15352
+        ],
+        "name": "BankAccount",
+        "nameLocation": "160:11:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 17,
+              "nodeType": "Block",
+              "src": "232:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 14,
+                        "name": "token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "265:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IERC20_$13160",
+                          "typeString": "contract IERC20"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IERC20_$13160",
+                          "typeString": "contract IERC20"
+                        }
+                      ],
+                      "id": 13,
+                      "name": "__BankAccountBase_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38,
+                      "src": "242:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_IERC20_$13160_$returns$__$",
+                        "typeString": "function (contract IERC20)"
+                      }
+                    },
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "242:29:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "242:29:0"
+                }
+              ]
+            },
+            "id": 18,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "225:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "218:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$13160",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 8,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13160,
+                      "src": "218:6:0"
+                    },
+                    "referencedDeclaration": 13160,
+                    "src": "218:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$13160",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "217:14:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "232:0:0"
+            },
+            "scope": 19,
+            "src": "206:72:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 20,
+        "src": "142:138:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:249:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-07-17T22:08:55.118Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

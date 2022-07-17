@@ -25,53 +25,57 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
 
     struct Land {
         uint8 color;
-        string landId;
         License license;
         string message;
         uint8 purpose;
         Rent[] rents;
+        uint256 tokenId;
     }
-
-    string[] private _landIds;
-
-    // landId -> tokenId
-    mapping(string => uint256) private _landIdToTokenId;
 
     // tokenId -> Land
     mapping(uint256 => Land) private _lands;
 
+    uint256 private _initialSupply;
+
+    uint256[] private _tokenIds;
+
     Wallet private _wallet;
 
-    error TVTLRent(string landId);
+    event TVTLRent(Land land);
 
     function __TVTL_init(
         string memory name,
         string memory symbol,
         string memory baseTokenURI,
-        string[] memory landIds,
-        Wallet wallet
+        Wallet wallet,
+        uint16 initialSupply
     ) public initializer {
         __ERC721PresetMinterPauserAutoId_init(name, symbol, baseTokenURI);
         __Ownable_init();
 
         setWallet(wallet);
 
-        if (landIds.length != 0) {
-            return;
-        }
+        _initialSupply = initialSupply;
+    }
+
+    function init(uint256 tokens) public {
+        require(
+            _tokenIds.length < _initialSupply,
+            "All tokents already minted"
+        );
 
         address owner = owner();
 
-        for (uint256 i = 0; i < landIds.length; i++) {
-            _landIds.push(landIds[i]);
-
+        for (
+            uint256 i = 0;
+            i < tokens && _tokenIds.length < _initialSupply;
+            i++
+        ) {
             mint(owner);
         }
     }
 
-    function buyLicense(string memory landId, uint8 licenseId) public payable {
-        uint256 tokenId = _landIdToTokenId[landId];
-
+    function buyLicense(uint256 tokenId, uint8 licenseId) public payable {
         Land storage land = _lands[tokenId];
 
         Landlord.License memory license = _wallet.getLandlordLicense(licenseId);
@@ -92,33 +96,15 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
         _wallet.transferTo(_msgSender(), license.price);
     }
 
-    function getLand(string memory landId)
-        public
-        view
-        returns (Land memory land)
-    {
-        uint256 tokenId = _landIdToTokenId[landId];
-
+    function getLand(uint256 tokenId) public view returns (Land memory) {
         return _lands[tokenId];
-    }
-
-    function getLands() external view returns (Land[] memory) {
-        Land[] memory lands;
-
-        for (uint256 i = 0; i < _landIds.length - 1; i++) {
-            lands[i] = getLand(_landIds[i]);
-        }
-
-        return lands;
     }
 
     function getWallet() external view returns (Wallet) {
         return _wallet;
     }
 
-    function rent(string memory landId) public payable {
-        uint256 tokenId = _landIdToTokenId[landId];
-
+    function rent(uint256 tokenId) public payable {
         address landlord = owner();
         address tenant = _msgSender();
 
@@ -132,6 +118,10 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
             land.rents.length
         );
 
+        require(landlord == ownerOf(tokenId), "Land can't be rented");
+
+        require(rentParams.price == msg.value / 10**18, "Amount is not equal");
+
         land.rents.push(
             Rent({
                 landlord: landlord,
@@ -142,11 +132,11 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
         );
 
         _wallet.transferTo(tenant, rentParams.price);
+
+        emit TVTLRent(land);
     }
 
-    function setMessage(string memory landId, string memory message) public {
-        uint256 tokenId = _landIdToTokenId[landId];
-
+    function setMessage(uint256 tokenId, string memory message) public {
         require(
             _msgSender() == ownerOf(tokenId),
             "You are not authorize change message"
@@ -159,8 +149,7 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
         _wallet = wallet;
     }
 
-    function subRent(string memory landId, address tenant) public payable {
-        uint256 tokenId = _landIdToTokenId[landId];
+    function subRent(uint256 tokenId, address tenant) public payable {
         Land storage land = _lands[tokenId];
 
         require(land.rents.length == 1, "Land is not rent");
@@ -169,9 +158,9 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
 
         require(landlord == ownerOf(tokenId), "Land can't be sub rented");
 
-        _transfer(landlord, tenant, tokenId);
+        setMessage(tokenId, "");
 
-        delete land.message;
+        _transfer(landlord, tenant, tokenId);
 
         Landlord.Rent memory rentParams = _wallet.getLandlordRent(
             land.rents.length
@@ -195,30 +184,9 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
         super._afterTokenTransfer(from, to, tokenId);
 
         if (from == address(0)) {
-            // token miting
-            string memory landId = _landIds[_landIds.length - 1];
+            _tokenIds.push(tokenId);
 
-            _landIdToTokenId[landId] = tokenId;
-        } else {
-            Land storage land = _lands[tokenId];
-
-            bool found;
-
-            for (uint8 i = 0; i < land.rents.length; i++) {
-                if (found) {
-                    // dirty code, delete and pop two different elements from array
-                    delete land.rents[i];
-                    land.rents.pop();
-
-                    continue;
-                }
-
-                if (land.rents[i].landlord == to) {
-                    found = true;
-                }
-            }
-
-            revert TVTLRent({landId: land.landId});
+            _lands[tokenId].tokenId = tokenId;
         }
     }
 }

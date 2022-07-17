@@ -7,6 +7,7 @@ const Mint = artifacts.require("Mint");
 const Treasury = artifacts.require("Treasury");
 const TVT = artifacts.require("TVT/TVT");
 const TVTV = artifacts.require("TVTV/TVTV");
+const TVTL = artifacts.require("TVTL/TVTL");
 const User = artifacts.require("User");
 const Wallet = artifacts.require("Wallet/Wallet");
 
@@ -37,6 +38,27 @@ module.exports = {
         initializer: "__TVTV_init",
       }
     );
+  },
+  createTVTL: async (wallet, initialSupply) => {
+    const tvtl = await deployProxy(
+      TVTL,
+      [
+        process.env.TVTL_NAME,
+        process.env.TVTL_SYMBOL,
+        process.env.TVTL_URI,
+        wallet,
+        initialSupply,
+      ],
+      {
+        initializer: "__TVTL_init",
+      }
+    );
+
+    for (let tokens = 0; tokens < initialSupply; tokens += 25) {
+      await tvtl.init(Math.min(25, initialSupply - tokens));
+    }
+
+    return tvtl;
   },
   createUser: (wallet) => {
     return deployProxy(User, [wallet], {

@@ -43,7 +43,8 @@ contract("Wallet", async function () {
 
   describe("User", function () {
     it("Username setting price", async function () {
-      const price = await this.wallet.getUserSetUsernamePrice();
+      const price = await this.wallet.getUserSetUsernamePrice().should.be
+        .fulfilled;
 
       price.toString().should.be.equal("1");
     });

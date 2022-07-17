@@ -1,0 +1,241 @@
+{
+  "contractName": "IUpgradeable",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getName",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IUpgradeable.sol\":\"IUpgradeable\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IUpgradeable.sol\":{\"keccak256\":\"0x4b2a2f520b05a061f2cbc4e8fa09854f715490a04fbc44a3908f22b9325325ca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b364bf76d51145cd38ab8ad6efe472b54200a2f592acc54dea77bac17ed66edf\",\"dweb:/ipfs/QmazWC55NHVG3K3AaihK1JnqT6kieW7XhWamscgY7Tqzw1\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\ninterface IUpgradeable {\n    function getName() external view returns (string memory);\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IUpgradeable.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IUpgradeable.sol",
+    "exportedSymbols": {
+      "IUpgradeable": [
+        629
+      ]
+    },
+    "id": 630,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 623,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 629,
+        "linearizedBaseContracts": [
+          629
+        ],
+        "name": "IUpgradeable",
+        "nameLocation": "66:12:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "17d7de7c",
+            "id": 628,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getName",
+            "nameLocation": "94:7:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 624,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "101:2:7"
+            },
+            "returnParameters": {
+              "id": 627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 626,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 628,
+                  "src": "127:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 625,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "127:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:15:7"
+            },
+            "scope": 629,
+            "src": "85:57:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 630,
+        "src": "56:88:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:113:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IUpgradeable.sol",
+    "exportedSymbols": {
+      "IUpgradeable": [
+        629
+      ]
+    },
+    "id": 630,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 623,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 629,
+        "linearizedBaseContracts": [
+          629
+        ],
+        "name": "IUpgradeable",
+        "nameLocation": "66:12:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "17d7de7c",
+            "id": 628,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getName",
+            "nameLocation": "94:7:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 624,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "101:2:7"
+            },
+            "returnParameters": {
+              "id": 627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 626,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 628,
+                  "src": "127:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 625,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "127:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "126:15:7"
+            },
+            "scope": 629,
+            "src": "85:57:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 630,
+        "src": "56:88:7",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:113:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-07-17T22:08:55.124Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
