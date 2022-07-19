@@ -1,0 +1,3739 @@
+{
+  "contractName": "WalletLandlord",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "performance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "purpose",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Landlord.LicenseParams[]",
+          "name": "licensesParams",
+          "type": "tuple[]"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Landlord.RentParams[]",
+          "name": "rentsParams",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "__WalletLandlord_init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "licenseId",
+          "type": "uint8"
+        }
+      ],
+      "name": "getLandlordLicenseParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "performance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "purpose",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Landlord.LicenseParams",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLandlordLicensesParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "performance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "purpose",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Landlord.LicenseParams[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "rentId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLandlordRentParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Landlord.RentParams",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLandlordRentsParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Landlord.RentParams[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "performance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "purpose",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Landlord.LicenseParams[]",
+          "name": "licensesParams",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setLandlordLicensesParams",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "period",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "price",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Landlord.RentParams[]",
+          "name": "rentsParams",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setLandlordRentsParams",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"performance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"purpose\",\"type\":\"uint8\"}],\"internalType\":\"struct Landlord.LicenseParams[]\",\"name\":\"licensesParams\",\"type\":\"tuple[]\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"internalType\":\"struct Landlord.RentParams[]\",\"name\":\"rentsParams\",\"type\":\"tuple[]\"}],\"name\":\"__WalletLandlord_init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"licenseId\",\"type\":\"uint8\"}],\"name\":\"getLandlordLicenseParams\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"performance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"purpose\",\"type\":\"uint8\"}],\"internalType\":\"struct Landlord.LicenseParams\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLandlordLicensesParams\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"performance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"purpose\",\"type\":\"uint8\"}],\"internalType\":\"struct Landlord.LicenseParams[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"rentId\",\"type\":\"uint256\"}],\"name\":\"getLandlordRentParams\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"internalType\":\"struct Landlord.RentParams\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLandlordRentsParams\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"internalType\":\"struct Landlord.RentParams[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"performance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"purpose\",\"type\":\"uint8\"}],\"internalType\":\"struct Landlord.LicenseParams[]\",\"name\":\"licensesParams\",\"type\":\"tuple[]\"}],\"name\":\"setLandlordLicensesParams\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"period\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"internalType\":\"struct Landlord.RentParams[]\",\"name\":\"rentsParams\",\"type\":\"tuple[]\"}],\"name\":\"setLandlordRentsParams\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Wallet/WalletLandlord.sol\":\"WalletLandlord\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Landlord/Landlord.sol\":{\"keccak256\":\"0x6f5cbbcc97f088404e45228f685963d8955f56eeebe3d934df8a54ad9cc6c9c7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1109049a46d14c0dc361a296c5b84237cc1662608ca6d8c1d5b83c6ca75fbe20\",\"dweb:/ipfs/Qmed5BDrTLEAL8dHDBFBEsrgxTVYeDhmNnHHGFddzqxQ9y\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Wallet/WalletLandlord.sol\":{\"keccak256\":\"0xcd8b265d9d0aad3639a91b7760a506bfb2cafb3afd981c08e9837de8189f3fc5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://70fbede0234953118270e9c6d4d973e78bcd9422977473f106860f1e1bf9e381\",\"dweb:/ipfs/Qmc8Tk33RmBZGTCJqgWMhGUpnCyzH3n8oHfoVbJeNLjkcQ\"]},\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\";\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\";\n\nimport \"../Landlord/Landlord.sol\";\n\nabstract contract WalletLandlord is Initializable, OwnableUpgradeable {\n    Landlord.LicenseParams[] private _landlordLicensesParams;\n\n    Landlord.RentParams[] private _landlordRentsParams;\n\n    function __WalletLandlord_init(\n        Landlord.LicenseParams[] memory licensesParams,\n        Landlord.RentParams[] memory rentsParams\n    ) public initializer {\n        __Ownable_init();\n\n        setLandlordLicensesParams(licensesParams);\n        setLandlordRentsParams(rentsParams);\n    }\n\n    function getLandlordLicenseParams(uint8 licenseId)\n        public\n        view\n        returns (Landlord.LicenseParams memory)\n    {\n        return _landlordLicensesParams[licenseId];\n    }\n\n    function getLandlordLicensesParams()\n        public\n        view\n        returns (Landlord.LicenseParams[] memory)\n    {\n        return _landlordLicensesParams;\n    }\n\n    function getLandlordRentParams(uint256 rentId)\n        public\n        view\n        returns (Landlord.RentParams memory)\n    {\n        return _landlordRentsParams[rentId];\n    }\n\n    function getLandlordRentsParams()\n        public\n        view\n        returns (Landlord.RentParams[] memory)\n    {\n        return _landlordRentsParams;\n    }\n\n    function setLandlordLicensesParams(\n        Landlord.LicenseParams[] memory licensesParams\n    ) public onlyOwner {\n        delete _landlordLicensesParams;\n\n        for (uint8 i = 0; i < licensesParams.length; i++) {\n            _landlordLicensesParams.push(licensesParams[i]);\n        }\n    }\n\n    function setLandlordRentsParams(Landlord.RentParams[] memory rentsParams)\n        public\n        onlyOwner\n    {\n        delete _landlordRentsParams;\n\n        for (uint8 i = 0; i < rentsParams.length; i++) {\n            _landlordRentsParams.push(rentsParams[i]);\n        }\n    }\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Wallet/WalletLandlord.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Wallet/WalletLandlord.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        11328
+      ],
+      "ContextUpgradeable": [
+        11370
+      ],
+      "Initializable": [
+        8167
+      ],
+      "Landlord": [
+        646
+      ],
+      "OwnableUpgradeable": [
+        8025
+      ],
+      "WalletLandlord": [
+        7292
+      ]
+    },
+    "id": 7293,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7137,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:33"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "id": 7138,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 8026,
+        "src": "56:75:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "id": 7139,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 8168,
+        "src": "132:75:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Landlord/Landlord.sol",
+        "file": "../Landlord/Landlord.sol",
+        "id": 7140,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 647,
+        "src": "209:34:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 7141,
+              "name": "Initializable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8167,
+              "src": "281:13:33"
+            },
+            "id": 7142,
+            "nodeType": "InheritanceSpecifier",
+            "src": "281:13:33"
+          },
+          {
+            "baseName": {
+              "id": 7143,
+              "name": "OwnableUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8025,
+              "src": "296:18:33"
+            },
+            "id": 7144,
+            "nodeType": "InheritanceSpecifier",
+            "src": "296:18:33"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 7292,
+        "linearizedBaseContracts": [
+          7292,
+          8025,
+          11370,
+          8167
+        ],
+        "name": "WalletLandlord",
+        "nameLocation": "263:14:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7148,
+            "mutability": "mutable",
+            "name": "_landlordLicensesParams",
+            "nameLocation": "354:23:33",
+            "nodeType": "VariableDeclaration",
+            "scope": 7292,
+            "src": "321:56:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+              "typeString": "struct Landlord.LicenseParams[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7146,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7145,
+                  "name": "Landlord.LicenseParams",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 640,
+                  "src": "321:22:33"
+                },
+                "referencedDeclaration": 640,
+                "src": "321:22:33",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                  "typeString": "struct Landlord.LicenseParams"
+                }
+              },
+              "id": 7147,
+              "nodeType": "ArrayTypeName",
+              "src": "321:24:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                "typeString": "struct Landlord.LicenseParams[]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 7152,
+            "mutability": "mutable",
+            "name": "_landlordRentsParams",
+            "nameLocation": "414:20:33",
+            "nodeType": "VariableDeclaration",
+            "scope": 7292,
+            "src": "384:50:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+              "typeString": "struct Landlord.RentParams[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7150,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7149,
+                  "name": "Landlord.RentParams",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 645,
+                  "src": "384:19:33"
+                },
+                "referencedDeclaration": 645,
+                "src": "384:19:33",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                  "typeString": "struct Landlord.RentParams"
+                }
+              },
+              "id": 7151,
+              "nodeType": "ArrayTypeName",
+              "src": "384:21:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                "typeString": "struct Landlord.RentParams[]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7176,
+              "nodeType": "Block",
+              "src": "603:130:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 7165,
+                      "name": "__Ownable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7928,
+                      "src": "613:14:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7166,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "613:16:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7167,
+                  "nodeType": "ExpressionStatement",
+                  "src": "613:16:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 7169,
+                        "name": "licensesParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7156,
+                        "src": "666:14:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      ],
+                      "id": 7168,
+                      "name": "setLandlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7257,
+                      "src": "640:25:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Landlord.LicenseParams memory[] memory)"
+                      }
+                    },
+                    "id": 7170,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "640:41:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7171,
+                  "nodeType": "ExpressionStatement",
+                  "src": "640:41:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 7173,
+                        "name": "rentsParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7160,
+                        "src": "714:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      ],
+                      "id": 7172,
+                      "name": "setLandlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7291,
+                      "src": "691:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Landlord.RentParams memory[] memory)"
+                      }
+                    },
+                    "id": 7174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "691:35:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "691:35:33"
+                }
+              ]
+            },
+            "functionSelector": "b3fa45ca",
+            "id": 7177,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7163,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7162,
+                  "name": "initializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8069,
+                  "src": "591:11:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "591:11:33"
+              }
+            ],
+            "name": "__WalletLandlord_init",
+            "nameLocation": "450:21:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7156,
+                  "mutability": "mutable",
+                  "name": "licensesParams",
+                  "nameLocation": "513:14:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7177,
+                  "src": "481:46:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7154,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7153,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "481:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "481:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7155,
+                    "nodeType": "ArrayTypeName",
+                    "src": "481:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7160,
+                  "mutability": "mutable",
+                  "name": "rentsParams",
+                  "nameLocation": "566:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7177,
+                  "src": "537:40:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7158,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7157,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "537:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "537:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7159,
+                    "nodeType": "ArrayTypeName",
+                    "src": "537:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "471:112:33"
+            },
+            "returnParameters": {
+              "id": 7164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "603:0:33"
+            },
+            "scope": 7292,
+            "src": "441:292:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7189,
+              "nodeType": "Block",
+              "src": "870:58:33",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 7185,
+                      "name": "_landlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7148,
+                      "src": "887:23:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                        "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                      }
+                    },
+                    "id": 7187,
+                    "indexExpression": {
+                      "id": 7186,
+                      "name": "licenseId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7179,
+                      "src": "911:9:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "887:34:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LicenseParams_$640_storage",
+                      "typeString": "struct Landlord.LicenseParams storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7184,
+                  "id": 7188,
+                  "nodeType": "Return",
+                  "src": "880:41:33"
+                }
+              ]
+            },
+            "functionSelector": "9642c3a1",
+            "id": 7190,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordLicenseParams",
+            "nameLocation": "748:24:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7179,
+                  "mutability": "mutable",
+                  "name": "licenseId",
+                  "nameLocation": "779:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7190,
+                  "src": "773:15:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 7178,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "773:5:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "772:17:33"
+            },
+            "returnParameters": {
+              "id": 7184,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7183,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7190,
+                  "src": "835:29:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams"
+                  },
+                  "typeName": {
+                    "id": 7182,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7181,
+                      "name": "Landlord.LicenseParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 640,
+                      "src": "835:22:33"
+                    },
+                    "referencedDeclaration": 640,
+                    "src": "835:22:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "834:31:33"
+            },
+            "scope": 7292,
+            "src": "739:189:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7199,
+              "nodeType": "Block",
+              "src": "1053:47:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7197,
+                    "name": "_landlordLicensesParams",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7148,
+                    "src": "1070:23:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                      "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7196,
+                  "id": 7198,
+                  "nodeType": "Return",
+                  "src": "1063:30:33"
+                }
+              ]
+            },
+            "functionSelector": "fb305d9e",
+            "id": 7200,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordLicensesParams",
+            "nameLocation": "943:25:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7191,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "968:2:33"
+            },
+            "returnParameters": {
+              "id": 7196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7195,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7200,
+                  "src": "1016:31:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7193,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7192,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "1016:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "1016:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7194,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1016:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1015:33:33"
+            },
+            "scope": 7292,
+            "src": "934:166:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7212,
+              "nodeType": "Block",
+              "src": "1230:52:33",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 7208,
+                      "name": "_landlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7152,
+                      "src": "1247:20:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                        "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                      }
+                    },
+                    "id": 7210,
+                    "indexExpression": {
+                      "id": 7209,
+                      "name": "rentId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7202,
+                      "src": "1268:6:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1247:28:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RentParams_$645_storage",
+                      "typeString": "struct Landlord.RentParams storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7207,
+                  "id": 7211,
+                  "nodeType": "Return",
+                  "src": "1240:35:33"
+                }
+              ]
+            },
+            "functionSelector": "117f1c5b",
+            "id": 7213,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordRentParams",
+            "nameLocation": "1115:21:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7202,
+                  "mutability": "mutable",
+                  "name": "rentId",
+                  "nameLocation": "1145:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7213,
+                  "src": "1137:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7201,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1137:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1136:16:33"
+            },
+            "returnParameters": {
+              "id": 7207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7206,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7213,
+                  "src": "1198:26:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                    "typeString": "struct Landlord.RentParams"
+                  },
+                  "typeName": {
+                    "id": 7205,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7204,
+                      "name": "Landlord.RentParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 645,
+                      "src": "1198:19:33"
+                    },
+                    "referencedDeclaration": 645,
+                    "src": "1198:19:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                      "typeString": "struct Landlord.RentParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1197:28:33"
+            },
+            "scope": 7292,
+            "src": "1106:176:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7222,
+              "nodeType": "Block",
+              "src": "1401:44:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7220,
+                    "name": "_landlordRentsParams",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7152,
+                    "src": "1418:20:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                      "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7219,
+                  "id": 7221,
+                  "nodeType": "Return",
+                  "src": "1411:27:33"
+                }
+              ]
+            },
+            "functionSelector": "41b6ecc2",
+            "id": 7223,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordRentsParams",
+            "nameLocation": "1297:22:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7214,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:2:33"
+            },
+            "returnParameters": {
+              "id": 7219,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7218,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7223,
+                  "src": "1367:28:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7216,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7215,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "1367:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "1367:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7217,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1367:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1366:30:33"
+            },
+            "scope": 7292,
+            "src": "1288:157:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7256,
+              "nodeType": "Block",
+              "src": "1565:179:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1575:30:33",
+                    "subExpression": {
+                      "id": 7232,
+                      "name": "_landlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7148,
+                      "src": "1582:23:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                        "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1575:30:33"
+                },
+                {
+                  "body": {
+                    "id": 7254,
+                    "nodeType": "Block",
+                    "src": "1666:72:33",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 7249,
+                                "name": "licensesParams",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7227,
+                                "src": "1709:14:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                                  "typeString": "struct Landlord.LicenseParams memory[] memory"
+                                }
+                              },
+                              "id": 7251,
+                              "indexExpression": {
+                                "id": 7250,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7236,
+                                "src": "1724:1:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint8",
+                                  "typeString": "uint8"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1709:17:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                                "typeString": "struct Landlord.LicenseParams memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                                "typeString": "struct Landlord.LicenseParams memory"
+                              }
+                            ],
+                            "expression": {
+                              "id": 7246,
+                              "name": "_landlordLicensesParams",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 7148,
+                              "src": "1680:23:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                                "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                              }
+                            },
+                            "id": 7248,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "1680:28:33",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr_$_t_struct$_LicenseParams_$640_storage_$returns$__$bound_to$_t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr_$",
+                              "typeString": "function (struct Landlord.LicenseParams storage ref[] storage pointer,struct Landlord.LicenseParams storage ref)"
+                            }
+                          },
+                          "id": 7252,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1680:47:33",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7253,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1680:47:33"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 7242,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 7239,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7236,
+                      "src": "1634:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 7240,
+                        "name": "licensesParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7227,
+                        "src": "1638:14:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      },
+                      "id": 7241,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "1638:21:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1634:25:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7255,
+                  "initializationExpression": {
+                    "assignments": [
+                      7236
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 7236,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "1627:1:33",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 7255,
+                        "src": "1621:7:33",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": {
+                          "id": 7235,
+                          "name": "uint8",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1621:5:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 7238,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 7237,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1631:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1621:11:33"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 7244,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1661:3:33",
+                      "subExpression": {
+                        "id": 7243,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7236,
+                        "src": "1661:1:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 7245,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1661:3:33"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1616:122:33"
+                }
+              ]
+            },
+            "functionSelector": "29108d39",
+            "id": 7257,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7230,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7229,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7962,
+                  "src": "1555:9:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1555:9:33"
+              }
+            ],
+            "name": "setLandlordLicensesParams",
+            "nameLocation": "1460:25:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7227,
+                  "mutability": "mutable",
+                  "name": "licensesParams",
+                  "nameLocation": "1527:14:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7257,
+                  "src": "1495:46:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7225,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7224,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "1495:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "1495:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7226,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1495:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1485:62:33"
+            },
+            "returnParameters": {
+              "id": 7231,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1565:0:33"
+            },
+            "scope": 7292,
+            "src": "1451:293:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7290,
+              "nodeType": "Block",
+              "src": "1861:167:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7267,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1871:27:33",
+                    "subExpression": {
+                      "id": 7266,
+                      "name": "_landlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7152,
+                      "src": "1878:20:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                        "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7268,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1871:27:33"
+                },
+                {
+                  "body": {
+                    "id": 7288,
+                    "nodeType": "Block",
+                    "src": "1956:66:33",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 7283,
+                                "name": "rentsParams",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7261,
+                                "src": "1996:11:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                                  "typeString": "struct Landlord.RentParams memory[] memory"
+                                }
+                              },
+                              "id": 7285,
+                              "indexExpression": {
+                                "id": 7284,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7270,
+                                "src": "2008:1:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint8",
+                                  "typeString": "uint8"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1996:14:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                                "typeString": "struct Landlord.RentParams memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                                "typeString": "struct Landlord.RentParams memory"
+                              }
+                            ],
+                            "expression": {
+                              "id": 7280,
+                              "name": "_landlordRentsParams",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 7152,
+                              "src": "1970:20:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                                "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                              }
+                            },
+                            "id": 7282,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "1970:25:33",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr_$_t_struct$_RentParams_$645_storage_$returns$__$bound_to$_t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr_$",
+                              "typeString": "function (struct Landlord.RentParams storage ref[] storage pointer,struct Landlord.RentParams storage ref)"
+                            }
+                          },
+                          "id": 7286,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1970:41:33",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7287,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1970:41:33"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 7276,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 7273,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7270,
+                      "src": "1927:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 7274,
+                        "name": "rentsParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7261,
+                        "src": "1931:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      },
+                      "id": 7275,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "1931:18:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1927:22:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7289,
+                  "initializationExpression": {
+                    "assignments": [
+                      7270
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 7270,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "1920:1:33",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 7289,
+                        "src": "1914:7:33",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": {
+                          "id": 7269,
+                          "name": "uint8",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1914:5:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 7272,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 7271,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1924:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1914:11:33"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 7278,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1951:3:33",
+                      "subExpression": {
+                        "id": 7277,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7270,
+                        "src": "1951:1:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 7279,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1951:3:33"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1909:113:33"
+                }
+              ]
+            },
+            "functionSelector": "0033305f",
+            "id": 7291,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7264,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7263,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7962,
+                  "src": "1847:9:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1847:9:33"
+              }
+            ],
+            "name": "setLandlordRentsParams",
+            "nameLocation": "1759:22:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7261,
+                  "mutability": "mutable",
+                  "name": "rentsParams",
+                  "nameLocation": "1811:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7291,
+                  "src": "1782:40:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7259,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7258,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "1782:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "1782:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7260,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1782:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1781:42:33"
+            },
+            "returnParameters": {
+              "id": 7265,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1861:0:33"
+            },
+            "scope": 7292,
+            "src": "1750:278:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7293,
+        "src": "245:1785:33",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1999:33"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Wallet/WalletLandlord.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        11328
+      ],
+      "ContextUpgradeable": [
+        11370
+      ],
+      "Initializable": [
+        8167
+      ],
+      "Landlord": [
+        646
+      ],
+      "OwnableUpgradeable": [
+        8025
+      ],
+      "WalletLandlord": [
+        7292
+      ]
+    },
+    "id": 7293,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7137,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:33"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "id": 7138,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 8026,
+        "src": "56:75:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "id": 7139,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 8168,
+        "src": "132:75:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Landlord/Landlord.sol",
+        "file": "../Landlord/Landlord.sol",
+        "id": 7140,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7293,
+        "sourceUnit": 647,
+        "src": "209:34:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 7141,
+              "name": "Initializable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8167,
+              "src": "281:13:33"
+            },
+            "id": 7142,
+            "nodeType": "InheritanceSpecifier",
+            "src": "281:13:33"
+          },
+          {
+            "baseName": {
+              "id": 7143,
+              "name": "OwnableUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8025,
+              "src": "296:18:33"
+            },
+            "id": 7144,
+            "nodeType": "InheritanceSpecifier",
+            "src": "296:18:33"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 7292,
+        "linearizedBaseContracts": [
+          7292,
+          8025,
+          11370,
+          8167
+        ],
+        "name": "WalletLandlord",
+        "nameLocation": "263:14:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7148,
+            "mutability": "mutable",
+            "name": "_landlordLicensesParams",
+            "nameLocation": "354:23:33",
+            "nodeType": "VariableDeclaration",
+            "scope": 7292,
+            "src": "321:56:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+              "typeString": "struct Landlord.LicenseParams[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7146,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7145,
+                  "name": "Landlord.LicenseParams",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 640,
+                  "src": "321:22:33"
+                },
+                "referencedDeclaration": 640,
+                "src": "321:22:33",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                  "typeString": "struct Landlord.LicenseParams"
+                }
+              },
+              "id": 7147,
+              "nodeType": "ArrayTypeName",
+              "src": "321:24:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                "typeString": "struct Landlord.LicenseParams[]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 7152,
+            "mutability": "mutable",
+            "name": "_landlordRentsParams",
+            "nameLocation": "414:20:33",
+            "nodeType": "VariableDeclaration",
+            "scope": 7292,
+            "src": "384:50:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+              "typeString": "struct Landlord.RentParams[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7150,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7149,
+                  "name": "Landlord.RentParams",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 645,
+                  "src": "384:19:33"
+                },
+                "referencedDeclaration": 645,
+                "src": "384:19:33",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                  "typeString": "struct Landlord.RentParams"
+                }
+              },
+              "id": 7151,
+              "nodeType": "ArrayTypeName",
+              "src": "384:21:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                "typeString": "struct Landlord.RentParams[]"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 7176,
+              "nodeType": "Block",
+              "src": "603:130:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 7165,
+                      "name": "__Ownable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7928,
+                      "src": "613:14:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 7166,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "613:16:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7167,
+                  "nodeType": "ExpressionStatement",
+                  "src": "613:16:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 7169,
+                        "name": "licensesParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7156,
+                        "src": "666:14:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      ],
+                      "id": 7168,
+                      "name": "setLandlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7257,
+                      "src": "640:25:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Landlord.LicenseParams memory[] memory)"
+                      }
+                    },
+                    "id": 7170,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "640:41:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7171,
+                  "nodeType": "ExpressionStatement",
+                  "src": "640:41:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 7173,
+                        "name": "rentsParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7160,
+                        "src": "714:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      ],
+                      "id": 7172,
+                      "name": "setLandlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7291,
+                      "src": "691:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (struct Landlord.RentParams memory[] memory)"
+                      }
+                    },
+                    "id": 7174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "691:35:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "691:35:33"
+                }
+              ]
+            },
+            "functionSelector": "b3fa45ca",
+            "id": 7177,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7163,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7162,
+                  "name": "initializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 8069,
+                  "src": "591:11:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "591:11:33"
+              }
+            ],
+            "name": "__WalletLandlord_init",
+            "nameLocation": "450:21:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7156,
+                  "mutability": "mutable",
+                  "name": "licensesParams",
+                  "nameLocation": "513:14:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7177,
+                  "src": "481:46:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7154,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7153,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "481:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "481:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7155,
+                    "nodeType": "ArrayTypeName",
+                    "src": "481:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7160,
+                  "mutability": "mutable",
+                  "name": "rentsParams",
+                  "nameLocation": "566:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7177,
+                  "src": "537:40:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7158,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7157,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "537:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "537:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7159,
+                    "nodeType": "ArrayTypeName",
+                    "src": "537:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "471:112:33"
+            },
+            "returnParameters": {
+              "id": 7164,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "603:0:33"
+            },
+            "scope": 7292,
+            "src": "441:292:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7189,
+              "nodeType": "Block",
+              "src": "870:58:33",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 7185,
+                      "name": "_landlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7148,
+                      "src": "887:23:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                        "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                      }
+                    },
+                    "id": 7187,
+                    "indexExpression": {
+                      "id": 7186,
+                      "name": "licenseId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7179,
+                      "src": "911:9:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "887:34:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LicenseParams_$640_storage",
+                      "typeString": "struct Landlord.LicenseParams storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7184,
+                  "id": 7188,
+                  "nodeType": "Return",
+                  "src": "880:41:33"
+                }
+              ]
+            },
+            "functionSelector": "9642c3a1",
+            "id": 7190,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordLicenseParams",
+            "nameLocation": "748:24:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7179,
+                  "mutability": "mutable",
+                  "name": "licenseId",
+                  "nameLocation": "779:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7190,
+                  "src": "773:15:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 7178,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "773:5:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "772:17:33"
+            },
+            "returnParameters": {
+              "id": 7184,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7183,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7190,
+                  "src": "835:29:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams"
+                  },
+                  "typeName": {
+                    "id": 7182,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7181,
+                      "name": "Landlord.LicenseParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 640,
+                      "src": "835:22:33"
+                    },
+                    "referencedDeclaration": 640,
+                    "src": "835:22:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "834:31:33"
+            },
+            "scope": 7292,
+            "src": "739:189:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7199,
+              "nodeType": "Block",
+              "src": "1053:47:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7197,
+                    "name": "_landlordLicensesParams",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7148,
+                    "src": "1070:23:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                      "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7196,
+                  "id": 7198,
+                  "nodeType": "Return",
+                  "src": "1063:30:33"
+                }
+              ]
+            },
+            "functionSelector": "fb305d9e",
+            "id": 7200,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordLicensesParams",
+            "nameLocation": "943:25:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7191,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "968:2:33"
+            },
+            "returnParameters": {
+              "id": 7196,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7195,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7200,
+                  "src": "1016:31:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7193,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7192,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "1016:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "1016:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7194,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1016:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1015:33:33"
+            },
+            "scope": 7292,
+            "src": "934:166:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7212,
+              "nodeType": "Block",
+              "src": "1230:52:33",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 7208,
+                      "name": "_landlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7152,
+                      "src": "1247:20:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                        "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                      }
+                    },
+                    "id": 7210,
+                    "indexExpression": {
+                      "id": 7209,
+                      "name": "rentId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7202,
+                      "src": "1268:6:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1247:28:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RentParams_$645_storage",
+                      "typeString": "struct Landlord.RentParams storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7207,
+                  "id": 7211,
+                  "nodeType": "Return",
+                  "src": "1240:35:33"
+                }
+              ]
+            },
+            "functionSelector": "117f1c5b",
+            "id": 7213,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordRentParams",
+            "nameLocation": "1115:21:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7202,
+                  "mutability": "mutable",
+                  "name": "rentId",
+                  "nameLocation": "1145:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7213,
+                  "src": "1137:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7201,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1137:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1136:16:33"
+            },
+            "returnParameters": {
+              "id": 7207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7206,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7213,
+                  "src": "1198:26:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                    "typeString": "struct Landlord.RentParams"
+                  },
+                  "typeName": {
+                    "id": 7205,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 7204,
+                      "name": "Landlord.RentParams",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 645,
+                      "src": "1198:19:33"
+                    },
+                    "referencedDeclaration": 645,
+                    "src": "1198:19:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                      "typeString": "struct Landlord.RentParams"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1197:28:33"
+            },
+            "scope": 7292,
+            "src": "1106:176:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7222,
+              "nodeType": "Block",
+              "src": "1401:44:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7220,
+                    "name": "_landlordRentsParams",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7152,
+                    "src": "1418:20:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                      "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 7219,
+                  "id": 7221,
+                  "nodeType": "Return",
+                  "src": "1411:27:33"
+                }
+              ]
+            },
+            "functionSelector": "41b6ecc2",
+            "id": 7223,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLandlordRentsParams",
+            "nameLocation": "1297:22:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7214,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1319:2:33"
+            },
+            "returnParameters": {
+              "id": 7219,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7218,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7223,
+                  "src": "1367:28:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7216,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7215,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "1367:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "1367:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7217,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1367:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1366:30:33"
+            },
+            "scope": 7292,
+            "src": "1288:157:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7256,
+              "nodeType": "Block",
+              "src": "1565:179:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1575:30:33",
+                    "subExpression": {
+                      "id": 7232,
+                      "name": "_landlordLicensesParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7148,
+                      "src": "1582:23:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                        "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1575:30:33"
+                },
+                {
+                  "body": {
+                    "id": 7254,
+                    "nodeType": "Block",
+                    "src": "1666:72:33",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 7249,
+                                "name": "licensesParams",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7227,
+                                "src": "1709:14:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                                  "typeString": "struct Landlord.LicenseParams memory[] memory"
+                                }
+                              },
+                              "id": 7251,
+                              "indexExpression": {
+                                "id": 7250,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7236,
+                                "src": "1724:1:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint8",
+                                  "typeString": "uint8"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1709:17:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                                "typeString": "struct Landlord.LicenseParams memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_LicenseParams_$640_memory_ptr",
+                                "typeString": "struct Landlord.LicenseParams memory"
+                              }
+                            ],
+                            "expression": {
+                              "id": 7246,
+                              "name": "_landlordLicensesParams",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 7148,
+                              "src": "1680:23:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage",
+                                "typeString": "struct Landlord.LicenseParams storage ref[] storage ref"
+                              }
+                            },
+                            "id": 7248,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "1680:28:33",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr_$_t_struct$_LicenseParams_$640_storage_$returns$__$bound_to$_t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr_$",
+                              "typeString": "function (struct Landlord.LicenseParams storage ref[] storage pointer,struct Landlord.LicenseParams storage ref)"
+                            }
+                          },
+                          "id": 7252,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1680:47:33",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7253,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1680:47:33"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 7242,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 7239,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7236,
+                      "src": "1634:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 7240,
+                        "name": "licensesParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7227,
+                        "src": "1638:14:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.LicenseParams memory[] memory"
+                        }
+                      },
+                      "id": 7241,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "1638:21:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1634:25:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7255,
+                  "initializationExpression": {
+                    "assignments": [
+                      7236
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 7236,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "1627:1:33",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 7255,
+                        "src": "1621:7:33",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": {
+                          "id": 7235,
+                          "name": "uint8",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1621:5:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 7238,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 7237,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1631:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1621:11:33"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 7244,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1661:3:33",
+                      "subExpression": {
+                        "id": 7243,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7236,
+                        "src": "1661:1:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 7245,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1661:3:33"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1616:122:33"
+                }
+              ]
+            },
+            "functionSelector": "29108d39",
+            "id": 7257,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7230,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7229,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7962,
+                  "src": "1555:9:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1555:9:33"
+              }
+            ],
+            "name": "setLandlordLicensesParams",
+            "nameLocation": "1460:25:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7227,
+                  "mutability": "mutable",
+                  "name": "licensesParams",
+                  "nameLocation": "1527:14:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7257,
+                  "src": "1495:46:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.LicenseParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7225,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7224,
+                        "name": "Landlord.LicenseParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 640,
+                        "src": "1495:22:33"
+                      },
+                      "referencedDeclaration": 640,
+                      "src": "1495:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_LicenseParams_$640_storage_ptr",
+                        "typeString": "struct Landlord.LicenseParams"
+                      }
+                    },
+                    "id": 7226,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1495:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_LicenseParams_$640_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.LicenseParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1485:62:33"
+            },
+            "returnParameters": {
+              "id": 7231,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1565:0:33"
+            },
+            "scope": 7292,
+            "src": "1451:293:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7290,
+              "nodeType": "Block",
+              "src": "1861:167:33",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7267,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "1871:27:33",
+                    "subExpression": {
+                      "id": 7266,
+                      "name": "_landlordRentsParams",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7152,
+                      "src": "1878:20:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                        "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 7268,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1871:27:33"
+                },
+                {
+                  "body": {
+                    "id": 7288,
+                    "nodeType": "Block",
+                    "src": "1956:66:33",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "baseExpression": {
+                                "id": 7283,
+                                "name": "rentsParams",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7261,
+                                "src": "1996:11:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                                  "typeString": "struct Landlord.RentParams memory[] memory"
+                                }
+                              },
+                              "id": 7285,
+                              "indexExpression": {
+                                "id": 7284,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 7270,
+                                "src": "2008:1:33",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint8",
+                                  "typeString": "uint8"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1996:14:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                                "typeString": "struct Landlord.RentParams memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_RentParams_$645_memory_ptr",
+                                "typeString": "struct Landlord.RentParams memory"
+                              }
+                            ],
+                            "expression": {
+                              "id": 7280,
+                              "name": "_landlordRentsParams",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 7152,
+                              "src": "1970:20:33",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage",
+                                "typeString": "struct Landlord.RentParams storage ref[] storage ref"
+                              }
+                            },
+                            "id": 7282,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "src": "1970:25:33",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr_$_t_struct$_RentParams_$645_storage_$returns$__$bound_to$_t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr_$",
+                              "typeString": "function (struct Landlord.RentParams storage ref[] storage pointer,struct Landlord.RentParams storage ref)"
+                            }
+                          },
+                          "id": 7286,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1970:41:33",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 7287,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1970:41:33"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 7276,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 7273,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7270,
+                      "src": "1927:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 7274,
+                        "name": "rentsParams",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7261,
+                        "src": "1931:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Landlord.RentParams memory[] memory"
+                        }
+                      },
+                      "id": 7275,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "1931:18:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1927:22:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 7289,
+                  "initializationExpression": {
+                    "assignments": [
+                      7270
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 7270,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "1920:1:33",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 7289,
+                        "src": "1914:7:33",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        "typeName": {
+                          "id": 7269,
+                          "name": "uint8",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1914:5:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 7272,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 7271,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1924:1:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1914:11:33"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 7278,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1951:3:33",
+                      "subExpression": {
+                        "id": 7277,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7270,
+                        "src": "1951:1:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "id": 7279,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1951:3:33"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1909:113:33"
+                }
+              ]
+            },
+            "functionSelector": "0033305f",
+            "id": 7291,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7264,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7263,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7962,
+                  "src": "1847:9:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1847:9:33"
+              }
+            ],
+            "name": "setLandlordRentsParams",
+            "nameLocation": "1759:22:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7261,
+                  "mutability": "mutable",
+                  "name": "rentsParams",
+                  "nameLocation": "1811:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7291,
+                  "src": "1782:40:33",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_RentParams_$645_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Landlord.RentParams[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7259,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 7258,
+                        "name": "Landlord.RentParams",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 645,
+                        "src": "1782:19:33"
+                      },
+                      "referencedDeclaration": 645,
+                      "src": "1782:19:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_RentParams_$645_storage_ptr",
+                        "typeString": "struct Landlord.RentParams"
+                      }
+                    },
+                    "id": 7260,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1782:21:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_RentParams_$645_storage_$dyn_storage_ptr",
+                      "typeString": "struct Landlord.RentParams[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1781:42:33"
+            },
+            "returnParameters": {
+              "id": 7265,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1861:0:33"
+            },
+            "scope": 7292,
+            "src": "1750:278:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7293,
+        "src": "245:1785:33",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1999:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-07-19T21:11:27.380Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

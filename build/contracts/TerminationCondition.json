@@ -1,0 +1,1228 @@
+{
+  "contractName": "TerminationCondition",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "TerminationConstraint",
+      "type": "error"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"TerminationConstraint\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Termination condition.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/Condition/TerminationCondition.sol\":\"TerminationCondition\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccount.sol\":{\"keccak256\":\"0x3ed2d13abbca21a8d64e9a434215642750c6c92b35f75420393db1401313e50e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9d390b337f6f8b99eea39a6143ecc263bfe1837266420bdb8e708a9962e3fd91\",\"dweb:/ipfs/QmfMnd36w2KQmVMLayboeRzNNsFEqu4jVmZ76BnNeArdtD\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountBase.sol\":{\"keccak256\":\"0xe51348fb899deae7ac15bebd25f8732f217f98c9a5951d7970d95298470faaaf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e468caaa7d1b2961736638da0c025803ee4fc01cf11c65cd8904a31d6ab17ccf\",\"dweb:/ipfs/QmbkSnLADCzbaAm1JDw5iNmzQLNchYCUx638iCvVam6Mc4\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol\":{\"keccak256\":\"0x798f716b4b00bc97b0c21645860a1b65ae290e196e98e5a5825ee38643bb2178\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9d1e41e7aba25abe01788a2eed3bcd455143f95e24106043ec40d0944aa9866\",\"dweb:/ipfs/QmbMujy8uQTi6jsAwxuCUQ6PMiTBYp2BDNZW1kjErJdJYt\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/BaseDeposit.sol\":{\"keccak256\":\"0x10d3721d597db7e6f3f68c0774c0415ba6607ca30e30adc47a7c269f30b94e45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ea4c49c5e512104b376a8f2ad33ab364ad220da49bcf57df6d1a76a5ecdf20bd\",\"dweb:/ipfs/QmWTX2asKp2T7Z3SJRjJ3GRWh8VvsAaZJxc2YBbd3gRN3u\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/Condition/TerminationCondition.sol\":{\"keccak256\":\"0x45d530c3de6360bdb06dbf73479eb85fe5a410bd9d7c4d00581237f6d6f07076\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://486941d5c837b5b3f334c4d5a07acc175eef553faca584954deeb55962bc5292\",\"dweb:/ipfs/QmWcEdosLD7ebQH23fnA4PocPLUooyneSotXj1xQz3ap4e\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol\":{\"keccak256\":\"0x138a6a0e523df88d98a7509e2e8b689cdba8b1fd24f01a66012f6be1e2abc975\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ef29e87e6ef81b3ed66af0e14996e1e01cb3ab3a117c4707b99106efbe59e2b1\",\"dweb:/ipfs/QmbGLqMAFbSYymX5mR9a6Njuc8ejr312WgKKVD7wm5Hp3C\"]},\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xb4d87ee2ead4bd192b41c128f287d4b7f24b9e0cd740cc9b476881c461286007\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://861c3abaa2b388a0228469080470d2254e8e91fd09aa0abda8b9ef3babf03ee5\",\"dweb:/ipfs/QmZFg88WPesuMo6GMtf3fi9NHQ5tENYLDZsFQSWgoq13TN\"]},\"@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x24e0364e503a9bbde94c715d26573a76f14cd2a202d45f96f52134ab806b67b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e12cbaa7378fd9b62280e4e1d164bedcb4399ce238f5f98fc0eefb7e50577981\",\"dweb:/ipfs/QmXRoFGUgfsaRkoPT5bxNMtSayKTQ8GZATLPXf69HcRA51\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30\",\"dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2\"]},\"@openzeppelin/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"../BaseDeposit.sol\";\n\n/**\n * @dev Termination condition.\n */\nabstract contract TerminationCondition {\n    bool internal _isTerminatable;\n\n    uint8 internal _terminationPenalty;\n\n    error TerminationConstraint();\n\n    constructor(bool isTerminatable, uint8 terminationPenalty) {\n        _isTerminatable = isTerminatable;\n        _terminationPenalty = terminationPenalty;\n    }\n\n    function _preValidateWithdraw(\n        BaseDeposit.Transaction[] memory,\n        uint256 periodMinimumDateTime\n    ) internal view virtual {\n        if (!_isTerminatable && periodMinimumDateTime > block.timestamp) {\n            revert TerminationConstraint();\n        }\n    }\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/Condition/TerminationCondition.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/Condition/TerminationCondition.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        12622
+      ],
+      "BankAccount": [
+        19
+      ],
+      "BankAccountBase": [
+        102
+      ],
+      "BaseDeposit": [
+        1549
+      ],
+      "Context": [
+        15352
+      ],
+      "ERC165": [
+        15653
+      ],
+      "IAccessControl": [
+        12820
+      ],
+      "IBankAccount": [
+        574
+      ],
+      "IERC165": [
+        15665
+      ],
+      "IERC20": [
+        13160
+      ],
+      "ILaunchpool": [
+        2387
+      ],
+      "Ownable": [
+        12950
+      ],
+      "Strings": [
+        15629
+      ],
+      "TerminationCondition": [
+        1856
+      ]
+    },
+    "id": 1857,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1809,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:15"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/BaseDeposit.sol",
+        "file": "../BaseDeposit.sol",
+        "id": 1810,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1857,
+        "sourceUnit": 1550,
+        "src": "56:28:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1811,
+          "nodeType": "StructuredDocumentation",
+          "src": "86:38:15",
+          "text": " @dev Termination condition."
+        },
+        "fullyImplemented": true,
+        "id": 1856,
+        "linearizedBaseContracts": [
+          1856
+        ],
+        "name": "TerminationCondition",
+        "nameLocation": "143:20:15",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1813,
+            "mutability": "mutable",
+            "name": "_isTerminatable",
+            "nameLocation": "184:15:15",
+            "nodeType": "VariableDeclaration",
+            "scope": 1856,
+            "src": "170:29:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1812,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "170:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1815,
+            "mutability": "mutable",
+            "name": "_terminationPenalty",
+            "nameLocation": "221:19:15",
+            "nodeType": "VariableDeclaration",
+            "scope": 1856,
+            "src": "206:34:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1814,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "206:5:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 1817,
+            "name": "TerminationConstraint",
+            "nameLocation": "253:21:15",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 1816,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:2:15"
+            },
+            "src": "247:30:15"
+          },
+          {
+            "body": {
+              "id": 1832,
+              "nodeType": "Block",
+              "src": "342:99:15",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1826,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1824,
+                      "name": "_isTerminatable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1813,
+                      "src": "352:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1825,
+                      "name": "isTerminatable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1819,
+                      "src": "370:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "352:32:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1827,
+                  "nodeType": "ExpressionStatement",
+                  "src": "352:32:15"
+                },
+                {
+                  "expression": {
+                    "id": 1830,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1828,
+                      "name": "_terminationPenalty",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1815,
+                      "src": "394:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1829,
+                      "name": "terminationPenalty",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1821,
+                      "src": "416:18:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "394:40:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 1831,
+                  "nodeType": "ExpressionStatement",
+                  "src": "394:40:15"
+                }
+              ]
+            },
+            "id": 1833,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1819,
+                  "mutability": "mutable",
+                  "name": "isTerminatable",
+                  "nameLocation": "300:14:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1833,
+                  "src": "295:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1818,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "295:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1821,
+                  "mutability": "mutable",
+                  "name": "terminationPenalty",
+                  "nameLocation": "322:18:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1833,
+                  "src": "316:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1820,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "316:5:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "294:47:15"
+            },
+            "returnParameters": {
+              "id": 1823,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:0:15"
+            },
+            "scope": 1856,
+            "src": "283:158:15",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1854,
+              "nodeType": "Block",
+              "src": "586:136:15",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 1848,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1843,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "!",
+                      "prefix": true,
+                      "src": "600:16:15",
+                      "subExpression": {
+                        "id": 1842,
+                        "name": "_isTerminatable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1813,
+                        "src": "601:15:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1847,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 1844,
+                        "name": "periodMinimumDateTime",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "620:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">",
+                      "rightExpression": {
+                        "expression": {
+                          "id": 1845,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967292,
+                          "src": "644:5:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 1846,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "src": "644:15:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "620:39:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "600:59:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1853,
+                  "nodeType": "IfStatement",
+                  "src": "596:120:15",
+                  "trueBody": {
+                    "id": 1852,
+                    "nodeType": "Block",
+                    "src": "661:55:15",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1849,
+                            "name": "TerminationConstraint",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1817,
+                            "src": "682:21:15",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 1850,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "682:23:15",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 1851,
+                        "nodeType": "RevertStatement",
+                        "src": "675:30:15"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "id": 1855,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_preValidateWithdraw",
+            "nameLocation": "456:20:15",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1837,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1855,
+                  "src": "486:32:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$1225_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1835,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1834,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1225,
+                        "src": "486:23:15"
+                      },
+                      "referencedDeclaration": 1225,
+                      "src": "486:23:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$1225_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1836,
+                    "nodeType": "ArrayTypeName",
+                    "src": "486:25:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$1225_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1839,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "536:21:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1855,
+                  "src": "528:29:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1838,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "476:87:15"
+            },
+            "returnParameters": {
+              "id": 1841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "586:0:15"
+            },
+            "scope": 1856,
+            "src": "447:275:15",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1857,
+        "src": "125:599:15",
+        "usedErrors": [
+          1817
+        ]
+      }
+    ],
+    "src": "32:693:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/Condition/TerminationCondition.sol",
+    "exportedSymbols": {
+      "AccessControl": [
+        12622
+      ],
+      "BankAccount": [
+        19
+      ],
+      "BankAccountBase": [
+        102
+      ],
+      "BaseDeposit": [
+        1549
+      ],
+      "Context": [
+        15352
+      ],
+      "ERC165": [
+        15653
+      ],
+      "IAccessControl": [
+        12820
+      ],
+      "IBankAccount": [
+        574
+      ],
+      "IERC165": [
+        15665
+      ],
+      "IERC20": [
+        13160
+      ],
+      "ILaunchpool": [
+        2387
+      ],
+      "Ownable": [
+        12950
+      ],
+      "Strings": [
+        15629
+      ],
+      "TerminationCondition": [
+        1856
+      ]
+    },
+    "id": 1857,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1809,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:15"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/BaseDeposit.sol",
+        "file": "../BaseDeposit.sol",
+        "id": 1810,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 1857,
+        "sourceUnit": 1550,
+        "src": "56:28:15",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 1811,
+          "nodeType": "StructuredDocumentation",
+          "src": "86:38:15",
+          "text": " @dev Termination condition."
+        },
+        "fullyImplemented": true,
+        "id": 1856,
+        "linearizedBaseContracts": [
+          1856
+        ],
+        "name": "TerminationCondition",
+        "nameLocation": "143:20:15",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1813,
+            "mutability": "mutable",
+            "name": "_isTerminatable",
+            "nameLocation": "184:15:15",
+            "nodeType": "VariableDeclaration",
+            "scope": 1856,
+            "src": "170:29:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1812,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "170:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1815,
+            "mutability": "mutable",
+            "name": "_terminationPenalty",
+            "nameLocation": "221:19:15",
+            "nodeType": "VariableDeclaration",
+            "scope": 1856,
+            "src": "206:34:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1814,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "206:5:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 1817,
+            "name": "TerminationConstraint",
+            "nameLocation": "253:21:15",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 1816,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:2:15"
+            },
+            "src": "247:30:15"
+          },
+          {
+            "body": {
+              "id": 1832,
+              "nodeType": "Block",
+              "src": "342:99:15",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1826,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1824,
+                      "name": "_isTerminatable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1813,
+                      "src": "352:15:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1825,
+                      "name": "isTerminatable",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1819,
+                      "src": "370:14:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "352:32:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1827,
+                  "nodeType": "ExpressionStatement",
+                  "src": "352:32:15"
+                },
+                {
+                  "expression": {
+                    "id": 1830,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1828,
+                      "name": "_terminationPenalty",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1815,
+                      "src": "394:19:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1829,
+                      "name": "terminationPenalty",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1821,
+                      "src": "416:18:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "394:40:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 1831,
+                  "nodeType": "ExpressionStatement",
+                  "src": "394:40:15"
+                }
+              ]
+            },
+            "id": 1833,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1819,
+                  "mutability": "mutable",
+                  "name": "isTerminatable",
+                  "nameLocation": "300:14:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1833,
+                  "src": "295:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1818,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "295:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1821,
+                  "mutability": "mutable",
+                  "name": "terminationPenalty",
+                  "nameLocation": "322:18:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1833,
+                  "src": "316:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1820,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "316:5:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "294:47:15"
+            },
+            "returnParameters": {
+              "id": 1823,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:0:15"
+            },
+            "scope": 1856,
+            "src": "283:158:15",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1854,
+              "nodeType": "Block",
+              "src": "586:136:15",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 1848,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 1843,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "!",
+                      "prefix": true,
+                      "src": "600:16:15",
+                      "subExpression": {
+                        "id": 1842,
+                        "name": "_isTerminatable",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1813,
+                        "src": "601:15:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "&&",
+                    "rightExpression": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1847,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 1844,
+                        "name": "periodMinimumDateTime",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1839,
+                        "src": "620:21:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": ">",
+                      "rightExpression": {
+                        "expression": {
+                          "id": 1845,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967292,
+                          "src": "644:5:15",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 1846,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "src": "644:15:15",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "620:39:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "600:59:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1853,
+                  "nodeType": "IfStatement",
+                  "src": "596:120:15",
+                  "trueBody": {
+                    "id": 1852,
+                    "nodeType": "Block",
+                    "src": "661:55:15",
+                    "statements": [
+                      {
+                        "errorCall": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 1849,
+                            "name": "TerminationConstraint",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1817,
+                            "src": "682:21:15",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 1850,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "682:23:15",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 1851,
+                        "nodeType": "RevertStatement",
+                        "src": "675:30:15"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "id": 1855,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_preValidateWithdraw",
+            "nameLocation": "456:20:15",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1837,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1855,
+                  "src": "486:32:15",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Transaction_$1225_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct BaseDeposit.Transaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1835,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1834,
+                        "name": "BaseDeposit.Transaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1225,
+                        "src": "486:23:15"
+                      },
+                      "referencedDeclaration": 1225,
+                      "src": "486:23:15",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Transaction_$1225_storage_ptr",
+                        "typeString": "struct BaseDeposit.Transaction"
+                      }
+                    },
+                    "id": 1836,
+                    "nodeType": "ArrayTypeName",
+                    "src": "486:25:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Transaction_$1225_storage_$dyn_storage_ptr",
+                      "typeString": "struct BaseDeposit.Transaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1839,
+                  "mutability": "mutable",
+                  "name": "periodMinimumDateTime",
+                  "nameLocation": "536:21:15",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1855,
+                  "src": "528:29:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1838,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "528:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "476:87:15"
+            },
+            "returnParameters": {
+              "id": 1841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "586:0:15"
+            },
+            "scope": 1856,
+            "src": "447:275:15",
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1857,
+        "src": "125:599:15",
+        "usedErrors": [
+          1817
+        ]
+      }
+    ],
+    "src": "32:693:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-07-19T21:11:27.300Z",
+  "devdoc": {
+    "details": "Termination condition.",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

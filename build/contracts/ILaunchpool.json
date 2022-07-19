@@ -1,0 +1,317 @@
+{
+  "contractName": "ILaunchpool",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferTo",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "transferDailyRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"transferDailyRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferTo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol\":\"ILaunchpool\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol\":{\"keccak256\":\"0x798f716b4b00bc97b0c21645860a1b65ae290e196e98e5a5825ee38643bb2178\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9d1e41e7aba25abe01788a2eed3bcd455143f95e24106043ec40d0944aa9866\",\"dweb:/ipfs/QmbMujy8uQTi6jsAwxuCUQ6PMiTBYp2BDNZW1kjErJdJYt\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol\":{\"keccak256\":\"0x138a6a0e523df88d98a7509e2e8b689cdba8b1fd24f01a66012f6be1e2abc975\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ef29e87e6ef81b3ed66af0e14996e1e01cb3ab3a117c4707b99106efbe59e2b1\",\"dweb:/ipfs/QmbGLqMAFbSYymX5mR9a6Njuc8ejr312WgKKVD7wm5Hp3C\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.7;\n\nimport \"../IBankAccount.sol\";\n\ninterface ILaunchpool is IBankAccount {\n    function transferDailyRewards() external;\n}\n",
+  "sourcePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol",
+  "ast": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol",
+    "exportedSymbols": {
+      "IBankAccount": [
+        574
+      ],
+      "IERC20": [
+        13160
+      ],
+      "ILaunchpool": [
+        2387
+      ]
+    },
+    "id": 2388,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2380,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:17"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol",
+        "file": "../IBankAccount.sol",
+        "id": 2381,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 2388,
+        "sourceUnit": 575,
+        "src": "56:29:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2382,
+              "name": "IBankAccount",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 574,
+              "src": "112:12:17"
+            },
+            "id": 2383,
+            "nodeType": "InheritanceSpecifier",
+            "src": "112:12:17"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2387,
+        "linearizedBaseContracts": [
+          2387,
+          574
+        ],
+        "name": "ILaunchpool",
+        "nameLocation": "97:11:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "985bdacb",
+            "id": 2386,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferDailyRewards",
+            "nameLocation": "140:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "160:2:17"
+            },
+            "returnParameters": {
+              "id": 2385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "171:0:17"
+            },
+            "scope": 2387,
+            "src": "131:41:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2388,
+        "src": "87:87:17",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:143:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Launchpool/ILaunchpool.sol",
+    "exportedSymbols": {
+      "IBankAccount": [
+        574
+      ],
+      "IERC20": [
+        13160
+      ],
+      "ILaunchpool": [
+        2387
+      ]
+    },
+    "id": 2388,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2380,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:17"
+      },
+      {
+        "absolutePath": "/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol",
+        "file": "../IBankAccount.sol",
+        "id": 2381,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 2388,
+        "sourceUnit": 575,
+        "src": "56:29:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 2382,
+              "name": "IBankAccount",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 574,
+              "src": "112:12:17"
+            },
+            "id": 2383,
+            "nodeType": "InheritanceSpecifier",
+            "src": "112:12:17"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 2387,
+        "linearizedBaseContracts": [
+          2387,
+          574
+        ],
+        "name": "ILaunchpool",
+        "nameLocation": "97:11:17",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "985bdacb",
+            "id": 2386,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferDailyRewards",
+            "nameLocation": "140:20:17",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "160:2:17"
+            },
+            "returnParameters": {
+              "id": 2385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "171:0:17"
+            },
+            "scope": 2387,
+            "src": "131:41:17",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2388,
+        "src": "87:87:17",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:143:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2022-07-19T21:11:27.309Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
