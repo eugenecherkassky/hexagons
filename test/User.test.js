@@ -3,8 +3,8 @@ require("dotenv").config();
 require("chai").use(require("chai-as-promised")).should();
 const Web3 = require("web3");
 
-const licenses = require("../data/licenses");
-const rents = require("../data/rents");
+const licensesParams = require("../data/licensesParams");
+const rentsParams = require("../data/rentsParams");
 
 const ContractFactory = require("./ContractFactory");
 
@@ -13,8 +13,8 @@ contract("User", async function ([account]) {
     this.tvt = await ContractFactory.createTVT();
     this.wallet = await ContractFactory.createWallet(
       this.tvt.address,
-      licenses,
-      rents
+      licensesParams,
+      rentsParams
     );
     this.user = await ContractFactory.createUser(this.wallet.address);
   });

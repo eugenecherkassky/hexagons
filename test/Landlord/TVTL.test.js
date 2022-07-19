@@ -4,8 +4,8 @@ require("chai").use(require("chai-as-promised")).should();
 
 const Web3 = require("web3");
 
-const licenses = require("../../data/licenses");
-const rents = require("../../data/rents");
+const licensesParams = require("../../data/licensesParams");
+const rentsParams = require("../../data/rentsParams");
 
 const ContractFactory = require("../ContractFactory");
 
@@ -15,8 +15,8 @@ contract("TVTL", async function ([account]) {
 
     this.wallet = await ContractFactory.createWallet(
       this.tvt.address,
-      licenses,
-      rents
+      licensesParams,
+      rentsParams
     );
 
     this.tvtl = await ContractFactory.createTVTL(
@@ -35,7 +35,7 @@ contract("TVTL", async function ([account]) {
 
   describe("Api", function () {
     it("Rent", async function () {
-      const { price } = await this.wallet.getLandlordRent(0).should.be
+      const { price } = await this.wallet.getLandlordRentParams(0).should.be
         .fulfilled;
 
       await this.tvt.approve(

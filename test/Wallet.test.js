@@ -2,8 +2,8 @@ require("dotenv").config();
 
 require("chai").use(require("chai-as-promised")).should();
 
-const licenses = require("../data/licenses");
-const rents = require("../data/rents");
+const licensesParams = require("../data/licensesParams");
+const rentsParams = require("../data/rentsParams");
 
 const ContractFactory = require("./ContractFactory");
 
@@ -12,30 +12,34 @@ contract("Wallet", async function () {
     this.tvt = await ContractFactory.createTVT();
     this.wallet = await ContractFactory.createWallet(
       this.tvt.address,
-      licenses,
-      rents
+      licensesParams,
+      rentsParams
     );
   });
 
   describe("Landlord", function () {
-    it("Licenses", async function () {
-      const landlordLicenses = await this.wallet.getLandlordLicenses().should.be
-        .fulfilled;
+    it("Licenses params", async function () {
+      const landlordLicensesParams =
+        await this.wallet.getLandlordLicensesParams().should.be.fulfilled;
 
-      licenses.forEach((license, i) => {
+      licensesParams.forEach((licenseParams, i) => {
         ["performance", "period", "purpose", "price"].forEach((field) => {
-          landlordLicenses[i][field].should.be.equal(license[field].toString());
+          landlordLicensesParams[i][field].should.be.equal(
+            licenseParams[field].toString()
+          );
         });
       });
     });
 
-    it("Rents", async function () {
-      const landlordRents = await this.wallet.getLandlordRents().should.be
-        .fulfilled;
+    it("Rents params", async function () {
+      const landlordRentsParams = await this.wallet.getLandlordRentsParams()
+        .should.be.fulfilled;
 
-      rents.forEach((rent, i) => {
+      rentsParams.forEach((rentParams, i) => {
         ["period", "price"].forEach((field) => {
-          landlordRents[i][field].should.be.equal(rent[field].toString());
+          landlordRentsParams[i][field].should.be.equal(
+            rentParams[field].toString()
+          );
         });
       });
     });

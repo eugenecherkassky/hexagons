@@ -7,64 +7,70 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "../Landlord/Landlord.sol";
 
 abstract contract WalletLandlord is Initializable, OwnableUpgradeable {
-    Landlord.License[] private _landlordLicenses;
+    Landlord.LicenseParams[] private _landlordLicensesParams;
 
-    Landlord.Rent[] private _landlordRents;
+    Landlord.RentParams[] private _landlordRentsParams;
 
     function __WalletLandlord_init(
-        Landlord.License[] memory licenses,
-        Landlord.Rent[] memory rents
+        Landlord.LicenseParams[] memory licensesParams,
+        Landlord.RentParams[] memory rentsParams
     ) public initializer {
         __Ownable_init();
 
-        setLandlordLicenses(licenses);
-        setLandlordRents(rents);
+        setLandlordLicensesParams(licensesParams);
+        setLandlordRentsParams(rentsParams);
     }
 
-    function getLandlordLicense(uint8 licenseId)
+    function getLandlordLicenseParams(uint8 licenseId)
         public
         view
-        returns (Landlord.License memory)
+        returns (Landlord.LicenseParams memory)
     {
-        return _landlordLicenses[licenseId];
+        return _landlordLicensesParams[licenseId];
     }
 
-    function getLandlordLicenses()
+    function getLandlordLicensesParams()
         public
         view
-        returns (Landlord.License[] memory)
+        returns (Landlord.LicenseParams[] memory)
     {
-        return _landlordLicenses;
+        return _landlordLicensesParams;
     }
 
-    function getLandlordRent(uint256 rentId)
+    function getLandlordRentParams(uint256 rentId)
         public
         view
-        returns (Landlord.Rent memory)
+        returns (Landlord.RentParams memory)
     {
-        return _landlordRents[rentId];
+        return _landlordRentsParams[rentId];
     }
 
-    function getLandlordRents() public view returns (Landlord.Rent[] memory) {
-        return _landlordRents;
-    }
-
-    function setLandlordLicenses(Landlord.License[] memory licenses)
+    function getLandlordRentsParams()
         public
-        onlyOwner
+        view
+        returns (Landlord.RentParams[] memory)
     {
-        delete _landlordLicenses;
+        return _landlordRentsParams;
+    }
 
-        for (uint8 i = 0; i < licenses.length; i++) {
-            _landlordLicenses.push(licenses[i]);
+    function setLandlordLicensesParams(
+        Landlord.LicenseParams[] memory licensesParams
+    ) public onlyOwner {
+        delete _landlordLicensesParams;
+
+        for (uint8 i = 0; i < licensesParams.length; i++) {
+            _landlordLicensesParams.push(licensesParams[i]);
         }
     }
 
-    function setLandlordRents(Landlord.Rent[] memory rents) public onlyOwner {
-        delete _landlordRents;
+    function setLandlordRentsParams(Landlord.RentParams[] memory rentsParams)
+        public
+        onlyOwner
+    {
+        delete _landlordRentsParams;
 
-        for (uint8 i = 0; i < rents.length; i++) {
-            _landlordRents.push(rents[i]);
+        for (uint8 i = 0; i < rentsParams.length; i++) {
+            _landlordRentsParams.push(rentsParams[i]);
         }
     }
 }

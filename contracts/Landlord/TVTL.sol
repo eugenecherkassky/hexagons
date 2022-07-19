@@ -78,7 +78,8 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
     function buyLicense(uint256 tokenId, uint8 licenseId) public payable {
         Land storage land = _lands[tokenId];
 
-        Landlord.License memory license = _wallet.getLandlordLicense(licenseId);
+        Landlord.LicenseParams memory license = _wallet
+            .getLandlordLicenseParams(licenseId);
 
         require(
             license.price == msg.value,
@@ -114,7 +115,7 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
 
         Land storage land = _lands[tokenId];
 
-        Landlord.Rent memory rentParams = _wallet.getLandlordRent(
+        Landlord.RentParams memory rentParams = _wallet.getLandlordRentParams(
             land.rents.length
         );
 
@@ -162,7 +163,7 @@ contract TVTL is ERC721PresetMinterPauserAutoIdUpgradeable, OwnableUpgradeable {
 
         _transfer(landlord, tenant, tokenId);
 
-        Landlord.Rent memory rentParams = _wallet.getLandlordRent(
+        Landlord.RentParams memory rentParams = _wallet.getLandlordRentParams(
             land.rents.length
         );
 

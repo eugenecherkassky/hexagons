@@ -17,11 +17,11 @@ contract Wallet is
 {
     function __Wallet_init(
         IERC20 token,
-        Landlord.License[] memory licenses,
-        Landlord.Rent[] memory rents
+        Landlord.LicenseParams[] memory licensesParams,
+        Landlord.RentParams[] memory rentsParams
     ) public initializer {
         __BankAccount_init(token);
-        __WalletLandlord_init(licenses, rents);
+        __WalletLandlord_init(licensesParams, rentsParams);
         __WalletUser_init();
     }
 }
