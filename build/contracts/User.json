@@ -44,7 +44,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -97,7 +98,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -110,7 +112,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -123,7 +126,8 @@
       "name": "setUsername",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -7718,9 +7722,50 @@
     "name": "solc",
     "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1658266054606": {
+      "events": {
+        "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            }
+          ],
+          "name": "Initialized",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x69c0EF174406aa281c239F6F05eCf51e433E8cf0",
+      "transactionHash": "0x315d09d63e9336c0c1c0da83aa5aa36c27fba2059961a4c36252a34bb08f70a1"
+    }
+  },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-07-19T21:11:27.368Z",
+  "updatedAt": "2022-07-19T21:28:16.916Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

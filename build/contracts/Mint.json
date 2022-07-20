@@ -60,7 +60,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -100,7 +101,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -125,7 +127,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -138,7 +141,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -151,7 +155,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -296,7 +301,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"maxNumber\",\"type\":\"uint8\"}],\"name\":\"BankAccountSupplierTooMuchRecipients\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"BankAccountSuppliertTotalSharesIsNotValid\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"__Mint_init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distribute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"numberOfDays\",\"type\":\"uint256\"}],\"name\":\"getDistributionAmounts\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPayments\",\"outputs\":[{\"components\":[{\"internalType\":\"contract Refillable\",\"name\":\"agreement\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"payed\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"share\",\"type\":\"uint8\"}],\"internalType\":\"struct Payment[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecipients\",\"outputs\":[{\"components\":[{\"internalType\":\"contract Refillable\",\"name\":\"agreement\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"share\",\"type\":\"uint8\"}],\"internalType\":\"struct BankAccountRecipient[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"pay\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"contract Refillable\",\"name\":\"agreement\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"share\",\"type\":\"uint8\"}],\"internalType\":\"struct BankAccountRecipient[]\",\"name\":\"recipients\",\"type\":\"tuple[]\"}],\"name\":\"setRecipients\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferTo\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Mint.sol\":\"Mint\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountBase.sol\":{\"keccak256\":\"0xe51348fb899deae7ac15bebd25f8732f217f98c9a5951d7970d95298470faaaf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e468caaa7d1b2961736638da0c025803ee4fc01cf11c65cd8904a31d6ab17ccf\",\"dweb:/ipfs/QmbkSnLADCzbaAm1JDw5iNmzQLNchYCUx638iCvVam6Mc4\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountSupplier.sol\":{\"keccak256\":\"0x3fef526b2c43034975145278057df22ef3cc5bf320d54b0d76661d33af305e26\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e936705eb1fedb072914e2379e0949604253b3a12163bebf0802d1d1e3b70f88\",\"dweb:/ipfs/QmXYs2f2i9MA8LHEiEjgvrmN5pvwAKcbdYbNMHvMkeRu6d\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/BankAccountUpgradeable.sol\":{\"keccak256\":\"0xe5c8290bd2f7b0c5544c5b63644d2cd317ed22d1ffa613612638fdda622a0676\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://864cb070d07f7b3994510fc7019fffda2773562933817b348bf6a8e4ef8bc793\",\"dweb:/ipfs/QmYz4mgneumwR7pRWqFfoZgArLDGGCKniVkAcJ6PTnNZot\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Date.sol\":{\"keccak256\":\"0xefaa61f98c87713318e10766eae1777890fe8b93680144df91f16eec502aaabc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c4e5c98414db860a1113dd747e8f416ab0728ae6922a76cf4ac18d2ee0ad028d\",\"dweb:/ipfs/QmZLg1QtTngdS1G2cHZZnaGjcPsw61JFwkjVDPB6HWznQd\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccount.sol\":{\"keccak256\":\"0x798f716b4b00bc97b0c21645860a1b65ae290e196e98e5a5825ee38643bb2178\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b9d1e41e7aba25abe01788a2eed3bcd455143f95e24106043ec40d0944aa9866\",\"dweb:/ipfs/QmbMujy8uQTi6jsAwxuCUQ6PMiTBYp2BDNZW1kjErJdJYt\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/IBankAccountSupplier.sol\":{\"keccak256\":\"0xd701058e2dec5903f11846a451965c04bc272651fdefc3b2971a2bbd82157ff9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7bad47b7b9e2602a5353b9393d379b49a59d5e66794f95d6270255e13bb13441\",\"dweb:/ipfs/QmRUCGEPg3LJiVCXLJ8wZiZ64FwhqRaX4SzpES9n81SNot\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Mint.sol\":{\"keccak256\":\"0xf96cf45c91c98b7fb8967e225c5e887abe73466ed1564e47f503de5eeac240f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ac5c968a72e35a35bb3d131c58d9c219b6d250ee71c42207b2cc2359d84393b4\",\"dweb:/ipfs/QmeuQoVUhha5NBhRyzQLUiLAx14ogRkzHd6d8mNzjKCSgC\"]},\"/Users/ievgencherkaskyi/Projects/tivan/hexagons/contracts/Refillable.sol\":{\"keccak256\":\"0xcf714cc84180678e62cd5070b890db33443a8343f4e4a46f04a0e45ef046b5ef\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f9a7551bef250171e5ed14e9c5716ae837408329911c146ea1491b5c1f9a9b43\",\"dweb:/ipfs/Qmf8FhKs1u23xyT2nZSghrAiBsEZ1MfU9x6bqGt91PyxJy\"]},\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x652fee292f698d8dba81bf287cb71f1682f6483b67ebe601a5f7387dcfc30b34\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://98c7bba29bcab7240cdaada7dd7cbe3529fec83314801270c46239e72a9e84d7\",\"dweb:/ipfs/QmfHCc1KMygjXchXVwafWTkFjhbb2SQ3Cu5GzRTdV4CCCh\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x7454006cccb737612b00104d2f606d728e2818b778e7e55542f063c614ce46ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ec10894beb0f7537fba35e501fd1c5d35440e8c8f5ced1b8e57722a1d0879a8\",\"dweb:/ipfs/Qmbc3bNmtDewTGSmrPD93Ubp8saAz8xCxsgTjSmpNTqukz\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f\",\"dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]}},\"version\":1}",
@@ -13723,9 +13729,50 @@
     "name": "solc",
     "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1658266054606": {
+      "events": {
+        "0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8"
+            }
+          ],
+          "name": "Initialized",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x251cc34319EF36ac578C1e927b42AC3e9a5BD520",
+      "transactionHash": "0xb6700a196b57a5aee5679492295a25a2d5c5b6e732f8e418fb035c84833c0224"
+    }
+  },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2022-07-19T21:11:27.321Z",
+  "updatedAt": "2022-07-19T21:28:12.336Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
